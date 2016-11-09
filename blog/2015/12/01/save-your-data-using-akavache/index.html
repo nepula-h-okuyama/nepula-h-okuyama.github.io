@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -755,101 +623,102 @@ img {
       <a name="topofpage"></a>
       <p>　これは <a href="http://qiita.com/advent-calendar/2015/xamarin">Xamarin Advent Calendar 2015 1日目</a> の記事です。</p>
 
-<p>Xamarin Advent Calendar 2015、今日から開始です。<br>
+<p>Xamarin Advent Calendar 2015、今日から開始です。<br />
 3年目になってもネタに尽きない Xamarin 、まだまだ盛り上がっております。</p>
 
-<p>かくいう自分は、<a href="http://qiita.com/amay077/items/0a3fa3dfac7f29a2807d">前回の投稿</a> が約1年前と、完全に時代遅れになっております（仕事とスプラ...いえ何でもないです）。<br>
-最近のトピックスは他の方にお任せして、1年前からのネタを書きます。<br>
-&lt;!--more--&gt;</p>
+<p>かくいう自分は、<a href="http://qiita.com/amay077/items/0a3fa3dfac7f29a2807d">前回の投稿</a> が約1年前と、完全に時代遅れになっております（仕事とスプラ…いえ何でもないです）。<br />
+最近のトピックスは他の方にお任せして、1年前からのネタを書きます。<br />
+<!--more--></p>
 
 <p>Xamarin でギョームアプリを開発している時に、Android/iOS で使える ORM を探していたというか、JSON のデータをお手軽に保存・読み出し→インスタンス化できるライブラリないかなーと探していました。</p>
 
 <p>Xamarin の公式ドキュメント</p>
 
 <ul>
-<li><a href="https://developer.xamarin.com/guides/cross-platform/application_fundamentals/data/">Cross-Platform Data Access - Xamarin</a></li>
+  <li><a href="https://developer.xamarin.com/guides/cross-platform/application_fundamentals/data/">Cross-Platform Data Access - Xamarin</a></li>
 </ul>
 
 <p>には、 SQLite.NET や ADO.NET などが紹介されていますが、どれも面倒そう。そこで使ってみようと思ったのが <a href="http://qiita.com/amay077/items/f14e04d4e86c8a782c15">2年前の投稿</a> でチラッと触れていた Akavache です。</p>
 
-<h1>Akavache とは</h1>
+<h1 id="akavache-">Akavache とは</h1>
 
 <ul>
-<li>akavache/Akavache - <a href="https://github.com/akavache/Akavache">https://github.com/akavache/Akavache</a></li>
+  <li>akavache/Akavache - https://github.com/akavache/Akavache</li>
 </ul>
 
 <p>以下、README から引用です。</p>
 
 <blockquote>
-<p>Akavache is an asynchronous, persistent (i.e. writes to disk) key-value store created for writing desktop and mobile applications in C#, based on SQLite3. Akavache is great for both storing important data (i.e. user settings) as well as cached local data that expires.</p>
+  <p>Akavache is an asynchronous, persistent (i.e. writes to disk) key-value store created for writing desktop and mobile applications in C#, based on SQLite3. Akavache is great for both storing important data (i.e. user settings) as well as cached local data that expires.</p>
 </blockquote>
 
 <p>(意訳)Akavacheは、C# による、SQLite3 をベースとした非同期で永続的なデスクトップとモバイルアプリケーション向けのキーバリューストアです。 ユーザー設定やキャッシュなどのローカルデータを保存するのに最適です。</p>
 
 <p>バックエンドは SQLite3 なので、まあ得体の知れないデータ形式ではない、と。ちなみに <a href="https://github.com/paulcbetts/AkavacheExplorer">AkavacheExplorer</a> というデータビューアもあります。</p>
 
-<h1>対応プラットフォーム</h1>
+<h1 id="section">対応プラットフォーム</h1>
 
 <blockquote>
-<p>Akavache is currently compatible with:</p>
+  <p>Akavache is currently compatible with:</p>
 
-<ul>
-<li>Xamarin.iOS / Xamarin.Mac 32-bit</li>
-<li>Xamarin.Android</li>
-<li>.NET 4.5 Desktop (WPF)</li>
-<li>Windows Phone 8</li>
-<li>WinRT (Windows Store)</li>
-<li>Windows Phone 8.1 Universal Apps</li>
-</ul>
+  <ul>
+    <li>Xamarin.iOS / Xamarin.Mac 32-bit</li>
+    <li>Xamarin.Android</li>
+    <li>.NET 4.5 Desktop (WPF)</li>
+    <li>Windows Phone 8</li>
+    <li>WinRT (Windows Store)</li>
+    <li>Windows Phone 8.1 Universal Apps</li>
+  </ul>
 </blockquote>
 
 <p>ほぼ全てやないかい！</p>
 
-<h1>使ってみよう</h1>
+<h1 id="section-1">使ってみよう</h1>
 
 <p>せっかくなので Xamarin.Form で Akavache を使ったアプリを作ってみます。</p>
 
-<h3>1. プロジェクト（ソリューション）の作成</h3>
+<h3 id="section-2">1. プロジェクト（ソリューション）の作成</h3>
 
 <p>Xamarin.Forms App で、新しいプロジェクトを作成します。プロジェクト名は AkavacheSample とでもします。</p>
 
-<p>Shared Code: は、&#39;Use Portable Class Library&#39; を選択します。</p>
+<p>Shared Code: は、’Use Portable Class Library’ を選択します。</p>
 
 <p>プロジェクトが3つ（AkavacheSample, AkavacheSample.Droid, AkavacheSample.iOS）作成されます。</p>
 
-<h3>2. Akavache と、依存ライブラリの導入</h3>
+<h3 id="akavache--1">2. Akavache と、依存ライブラリの導入</h3>
 
-<p><strong>3つのプロジェクトそれぞれで</strong> 、NuGet(メニュー → プロジェクト → Add NuGet Packages...) から、以下のパッケージを追加します（執筆時点の Akavache の最新バージョンは 4.1.2 です。）。</p>
+<p><strong>3つのプロジェクトそれぞれで</strong> 、NuGet(メニュー → プロジェクト → Add NuGet Packages…) から、以下のパッケージを追加します（執筆時点の Akavache の最新バージョンは 4.1.2 です。）。</p>
 
 <ul>
-<li>Akavache.Core</li>
-<li>SQLitePCL.raw</li>
-<li>Akavache.SQLite3</li>
-<li>Akavache</li>
+  <li>Akavache.Core</li>
+  <li>SQLitePCL.raw</li>
+  <li>Akavache.SQLite3</li>
+  <li>Akavache</li>
 </ul>
 
 <p>検索ボックスに 「sqlite akavache」と入力すると全部表示されると思います(↓こんな感じに)。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_akavache_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_akavache_01.png" alt="" /></p>
 
 <p>追加に失敗する場合は、上のリストの順番で一つずつ追加するとうまくいくと思います。</p>
 
-<h3>3. サンプルアプリの画面を作る</h3>
+<h3 id="section-3">3. サンプルアプリの画面を作る</h3>
 
 <p>サンプルアプリの画面レイアウトを作ります。XAML とか面倒なのでコードでバリッと。</p>
 
 <p>AkavacheSample プロジェクトの App.cs を以下のようにします。テキストボックス２つとボタン２つが縦に並んでいるだけの簡単な画面です。</p>
 
-<p>```csharp AkavacheSample.cs<br>
-public class App : Application<br>
-{<br>
-    public App()<br>
-    {<br>
-        var nameEntry  = new Entry { Placeholder = &quot;名前を入力&quot; };<br>
-        var ageEntry   = new Entry { Placeholder = &quot;年齢を入力(数値のみ)&quot; };<br>
-        var saveButton = new Button { Text = &quot;保存&quot; };<br>
-        var loadButton = new Button { Text = &quot;読み出し&quot; };</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    // The root page of your application
+<p>```csharp AkavacheSample.cs<br />
+public class App : Application<br />
+{<br />
+    public App()<br />
+    {<br />
+        var nameEntry  = new Entry { Placeholder = “名前を入力” };<br />
+        var ageEntry   = new Entry { Placeholder = “年齢を入力(数値のみ)” };<br />
+        var saveButton = new Button { Text = “保存” };<br />
+        var loadButton = new Button { Text = “読み出し” };</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    // The root page of your application
     MainPage = new ContentPage
     {
         Padding = new Thickness(20),
@@ -867,102 +736,103 @@ public class App : Application<br>
     };
 }
 
-// 以下省略
-</code></pre></div>
-<p>}<br>
-```</p>
+// 以下省略 } ```
+</code></pre>
+</div>
 
-<h3>4. Akavache を使って保存と読み出し</h3>
+<h3 id="akavache--2">4. Akavache を使って保存と読み出し</h3>
 
 <p>名前と年齢をひとまとめに保存したいので、Person というクラスを作ります。</p>
 
-<p><code>csharp Person.cs<br>
-public class Person<br>
-{<br>
-    public string PersonName { get; set; }<br>
-    public int PersonAge { get; set; }<br>
-}<br>
-</code></p>
+<p>```csharp Person.cs<br />
+public class Person<br />
+{<br />
+    public string PersonName { get; set; }<br />
+    public int PersonAge { get; set; }<br />
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+あとはもう、一気に実装するだけです。
+保存ボタンを押した時に、入力値を Person に詰めて、Akavache を使って保存します。
+読み出しボタンを押した時に、Akavache から Person を読みだし、各テキストボックスにバラして設定します。
 
-<p>あとはもう、一気に実装するだけです。<br>
-保存ボタンを押した時に、入力値を Person に詰めて、Akavache を使って保存します。<br>
-読み出しボタンを押した時に、Akavache から Person を読みだし、各テキストボックスにバラして設定します。</p>
+Akavache はキー・バリュー・ストアなので、保存・読み出し時のキーを ```"person"``` としています。
 
-<p>Akavache はキー・バリュー・ストアなので、保存・読み出し時のキーを <code>&quot;person&quot;</code> としています。</p>
 
-<p>```csharp AkavacheSample.cs</p>
+```csharp AkavacheSample.cs
 
-<p>public class App : Application<br>
-{<br>
-    public App()<br>
-    {<br>
-        var nameEntry  = new Entry { Placeholder = &quot;名前を入力&quot; };<br>
-        var ageEntry   = new Entry { Placeholder = &quot;年齢を入力(数値のみ)&quot; };<br>
-        var saveButton = new Button { Text = &quot;保存&quot; };<br>
-        var loadButton = new Button { Text = &quot;読み出し&quot; };</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    saveButton.Clicked += async (sender, e) =&gt; 
+public class App : Application
+{
+    public App()
     {
-        // Person に詰めて…
-        var person = new Person { 
-            PersonName = nameEntry.Text, 
-            PersonAge  = Convert.ToInt16(ageEntry.Text) 
+        var nameEntry  = new Entry { Placeholder = "名前を入力" };
+        var ageEntry   = new Entry { Placeholder = "年齢を入力(数値のみ)" };
+        var saveButton = new Button { Text = "保存" };
+        var loadButton = new Button { Text = "読み出し" };
+
+        saveButton.Clicked += async (sender, e) =&gt; 
+        {
+            // Person に詰めて…
+            var person = new Person { 
+                PersonName = nameEntry.Text, 
+                PersonAge  = Convert.ToInt16(ageEntry.Text) 
+            };
+
+            // 保存
+            await BlobCache.LocalMachine.InsertObject("person", person); 
         };
 
-        // 保存
-        await BlobCache.LocalMachine.InsertObject("person", person); 
-    };
-
-    loadButton.Clicked += async (sender, e) =&gt; 
-    {
-        // Akavache で Person を読み出し
-        var loaded = await BlobCache.LocalMachine.GetObject&lt;Person&gt;("person");
-        // 各テキストボックスに設定
-        nameEntry.Text = loaded.PersonName;
-        ageEntry.Text  = loaded.PersonAge.ToString();
-    };
-
-    // The root page of your application
-    MainPage = new ContentPage
-    {
-        Padding = new Thickness(20),
-        Content = new StackLayout
+        loadButton.Clicked += async (sender, e) =&gt; 
         {
-            VerticalOptions = LayoutOptions.Center,
-            Children =
+            // Akavache で Person を読み出し
+            var loaded = await BlobCache.LocalMachine.GetObject&lt;Person&gt;("person");
+            // 各テキストボックスに設定
+            nameEntry.Text = loaded.PersonName;
+            ageEntry.Text  = loaded.PersonAge.ToString();
+        };
+            
+        // The root page of your application
+        MainPage = new ContentPage
+        {
+            Padding = new Thickness(20),
+            Content = new StackLayout
             {
-                nameEntry,
-                ageEntry,
-                saveButton,
-                loadButton
+                VerticalOptions = LayoutOptions.Center,
+                Children =
+                {
+                    nameEntry,
+                    ageEntry,
+                    saveButton,
+                    loadButton
+                }
             }
-        }
-    };
+        };
+    }
+
+    // 以下省略
 }
+</code></pre>
+</div>
 
-// 以下省略
-</code></pre></div>
-<p>}<br>
-```</p>
-
-<h3>5. 動かす！</h3>
+<h3 id="section-4">5. 動かす！</h3>
 
 <p>Android Player と iOS Simulater で動かしてみた、の図です。(途中、iPhone でキーボード出すのに苦労してるところは無視してください、Take2 の時間が無かったのですｗ)</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_akavache_02.gif" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_akavache_02.gif" alt="" /></p>
 
 <p>さすが Xamarin.Forms だ、(Android でも iPhone で動かしても)何とも無いぜ！</p>
 
-<h1>まとめ</h1>
+<h1 id="section-5">まとめ</h1>
 
-<p>Akavache を使って保存と読み出しを行う超簡単なサンプルを作ってみました。<br>
+<p>Akavache を使って保存と読み出しを行う超簡単なサンプルを作ってみました。<br />
 作ったサンプルは <a href="https://github.com/amay077/AkavacheSample">GitHub - amay077/AkavacheSample</a> においておきます。</p>
 
-<p>仕組みは理解できないけど、とても簡単に使えることが分かると思います。<br>
+<p>仕組みは理解できないけど、とても簡単に使えることが分かると思います。<br />
 追加されたパッケージを見ると、 JSON.NET とか、Reactive Extensions とかが入っているので、まあだいたい察しが付くかと。。。</p>
 
 <p>ギョームアプリでがっつり使ってますが、今のところパフォーマンスとかデータ破損とか、そういう問題はないです。POCO なオブジェクトをローカル保存するのに、とても役立っています。</p>
 
 <p>というわけで Advent Calendar 初日のネタは以上です。</p>
+
 
     </section>
     <footer class="post-footer">

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin.Forms と ReactiveProperty で快適MVVM生活</title>
-  <meta name="description" content="　Xamarin.Forms は、Xamarin に新たに搭載されたクロスプラットフォームUIフレームワーク＆MVVMフレームワークです。&lt;!--more--&gt;　ReactiveProperty は、MVVMの(特に ViewModelの)実装を強力にサポートしてくれる、Reactive Extens...">
+  <meta name="description" content="　Xamarin.Forms は、Xamarin に新たに搭載されたクロスプラットフォームUIフレームワーク＆MVVMフレームワークです。　ReactiveProperty は、MVVMの(特に ViewModelの)実装を強力にサポートしてくれる、Reactive Extensions を基盤としたライブラリです。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/09/09/using-xamarin-forms-with-reactiveproperty/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin.Forms と ReactiveProperty で快適MVVM生活",
   "datePublished": "2014-09-09T21:38:29+09:00",
   "dateModified": "2014-09-09T21:38:29+09:00",
-  "description": "　Xamarin.Forms は、Xamarin に新たに搭載されたクロスプラットフォームUIフレームワーク＆MVVMフレームワークです。&lt;!--more--&gt;　ReactiveProperty は、MVVMの(特に ViewModelの)実装を強力にサポートしてくれる、Reactive Extens...",
+  "description": "　Xamarin.Forms は、Xamarin に新たに搭載されたクロスプラットフォームUIフレームワーク＆MVVMフレームワークです。　ReactiveProperty は、MVVMの(特に ViewModelの)実装を強力にサポートしてくれる、Reactive Extensions を基盤としたライブラリです。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,65 +621,66 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>　<a href="http://www.buildinsider.net/mobile/xamarintips/0005">Xamarin.Forms</a> は、Xamarin に新たに搭載されたクロスプラットフォームUIフレームワーク＆MVVMフレームワークです。<br>
-&lt;!--more--&gt;<br>
+      <p>　<a href="http://www.buildinsider.net/mobile/xamarintips/0005">Xamarin.Forms</a> は、Xamarin に新たに搭載されたクロスプラットフォームUIフレームワーク＆MVVMフレームワークです。<br />
+<!--more--><br />
 　<a href="http://okazuki.hatenablog.com/entry/2014/05/07/014133">ReactiveProperty</a> は、MVVMの(特に ViewModelの)実装を強力にサポートしてくれる、<a href="http://www.atmarkit.co.jp/fdotnet/introrx/index/">Reactive Extensions</a> を基盤としたライブラリです。</p>
 
 <p>両者を組み合わせると、Android/iOSアプリが COOL な感じで書けるんじゃないか、という事で試してみました。</p>
 
-<h2>0. 環境など</h2>
+<h2 id="section">0. 環境など</h2>
 
 <p>Mac + Xamarin Studio を使いますが、Windows + Visual Studio + Xamarin-Addin でもイケると思います。</p>
 
-<h2>1. 導入</h2>
+<h2 id="section-1">1. 導入</h2>
 
-<h3>プロジェクトの作成</h3>
+<h3 id="section-2">プロジェクトの作成</h3>
 
 <p>新規ソリューションを、［C#］−［Mobile Apps］−［Blank App(Xamarin.Forms Portable)］で作成します。</p>
 
-<h3>PCL の Profile を変更</h3>
+<h3 id="pcl--profile-">PCL の Profile を変更</h3>
 
 <p>　作成されたソリューションの一番上にあるプロジェクト(.Android とか .iOS が付いていないやつ)のプロジェクト設定を開いて Profile を <strong>PCL 4.5 - Profile49</strong> に変更します。元々の Profile78 では ReactiveProperty が Nuget からインストールできないためです。最近のプラットフォームを対象にするなら、あまり影響はなさそうです。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_01.png" alt="" /></p>
 
-<h3>Nuget で Reactive Extensions と ReactiveProperty を追加</h3>
+<h3 id="nuget--reactive-extensions--reactiveproperty-">Nuget で Reactive Extensions と ReactiveProperty を追加</h3>
 
 <p>　メニューの［プロジェクト］ー［Add Packages］で Nuget のダイアログを開き、図のように 「Reactive Extensions - Main Library」と「ReactiveProperty Portable」を追加します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_02.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_02.png" alt="" /></p>
 
 <p>（Reactive Extensions の追加の際、なにやらWarningが出るようですが、とりあえず進めます。）</p>
 
-<h2>2. ViewModel の実装</h2>
+<h2 id="viewmodel-">2. ViewModel の実装</h2>
 
-<p>　PCL のプロジェクトに、<code>FirstViewModel.cs</code> を作成します。<br>
-　<code>FirstViewModel</code> は、以下のようなプロパティとコマンドを持ちます。</p>
+<p>　PCL のプロジェクトに、<code class="highlighter-rouge">FirstViewModel.cs</code> を作成します。<br />
+　<code class="highlighter-rouge">FirstViewModel</code> は、以下のようなプロパティとコマンドを持ちます。</p>
 
 <ul>
-<li>InputTextプロパティ : EditBox の入力に応じて更新</li>
-<li>DisplayTextプロパティ : InputText の変化から1秒後に、InputText を大文字にして更新</li>
-<li>Clearコマンド : InputText が &#39;clear&#39; の時のみ有効。実行すると InputText を空にする。</li>
+  <li>InputTextプロパティ : EditBox の入力に応じて更新</li>
+  <li>DisplayTextプロパティ : InputText の変化から1秒後に、InputText を大文字にして更新</li>
+  <li>Clearコマンド : InputText が ‘clear’ の時のみ有効。実行すると InputText を空にする。</li>
 </ul>
 
 <p>これらの実装が下のようになります。</p>
 
-<p>```csharp FirstViewModel.cs<br>
-using System;<br>
-using Codeplex.Reactive;<br>
+<p>```csharp FirstViewModel.cs<br />
+using System;<br />
+using Codeplex.Reactive;<br />
 using System.Reactive.Linq;</p>
 
-<p>namespace FormsWithRxProperty.ViewModels<br>
-{<br>
-    public class FirstViewModel<br>
-    {<br>
-        private readonly ReactiveProperty<string> _inputText = <br>
-            new ReactiveProperty<string>(&quot;Hoge&quot;);<br>
-        public ReactiveProperty<string> InputText <br>
-        { <br>
-            get { return _inputText; }<br>
-        }</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public ReactiveProperty&lt;string&gt; DisplayText
+<p>namespace FormsWithRxProperty.ViewModels<br />
+{<br />
+    public class FirstViewModel<br />
+    {<br />
+        private readonly ReactiveProperty<string> _inputText = 
+            new ReactiveProperty<string>("Hoge");
+        public ReactiveProperty<string> InputText 
+        { 
+            get { return _inputText; }
+        }</string></string></string></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    public ReactiveProperty&lt;string&gt; DisplayText
     {
         get; private set;
     }
@@ -836,40 +705,40 @@ using System.Reactive.Linq;</p>
         // 実行されたら、InputText を空にする
         this.Clear.Subscribe(_ =&gt; _inputText.Value = String.Empty);
     }
+    
+} } ```
+</code></pre>
+</div>
 
-}
-</code></pre></div>
-<p>}<br>
-```</p>
-
-<p>　面倒な <code>INotifyPropertyChanged</code> の実装が必要なく、すっきりと記述できます。<br>
+<p>　面倒な <code class="highlighter-rouge">INotifyPropertyChanged</code> の実装が必要なく、すっきりと記述できます。<br />
 　また、他のプロパティに関連して(反応して)値が変化するプロパティや、コマンドの利用可否などが、Reactive Extensions の機能により、流れるように記述できます。</p>
 
-<h2>3. 画面及び ViewModel との Binding の実装</h2>
+<h2 id="viewmodel--binding-">3. 画面及び ViewModel との Binding の実装</h2>
 
 <p>　画面(UI)は、Xamarin.Forms の恩恵で、Android/iOS 共通で実装できます。XAML も使えますが、よく知らないのでコードでUIを記述します。</p>
 
-<p>　PCL のプロジェクトに、 <code>FirstPage.cs</code> を作成し、以下のように実装します。</p>
+<p>　PCL のプロジェクトに、 <code class="highlighter-rouge">FirstPage.cs</code> を作成し、以下のように実装します。</p>
 
-<p>```csharp FirstPage.cs<br>
-using System;<br>
-using Xamarin.Forms;<br>
+<p>```csharp FirstPage.cs<br />
+using System;<br />
+using Xamarin.Forms;<br />
 using FormsWithRxProperty.ViewModels;</p>
 
-<p>namespace FormsWithRxProperty.Pages<br>
-{<br>
-    public class FirstPage : ContentPage<br>
-    {<br>
-        public FirstPage()<br>
-        {<br>
-            // UI<br>
-            var entry = new Entry<br>
-            {<br>
-                Text = &quot;Hello, Forms!&quot;,<br>
-                VerticalOptions = LayoutOptions.Center,<br>
-                HorizontalOptions = LayoutOptions.FillAndExpand,<br>
+<p>namespace FormsWithRxProperty.Pages<br />
+{<br />
+    public class FirstPage : ContentPage<br />
+    {<br />
+        public FirstPage()<br />
+        {<br />
+            // UI<br />
+            var entry = new Entry<br />
+            {<br />
+                Text = “Hello, Forms!”,<br />
+                VerticalOptions = LayoutOptions.Center,<br />
+                HorizontalOptions = LayoutOptions.FillAndExpand,<br />
             };</p>
-<div class="highlight"><pre><code class="language-" data-lang="">        var label = new Label
+
+<div class="highlighter-rouge"><pre class="highlight"><code>        var label = new Label
         {
             VerticalOptions = LayoutOptions.Center,
             HorizontalOptions = LayoutOptions.CenterAndExpand,
@@ -902,119 +771,137 @@ using FormsWithRxProperty.ViewModels;</p>
         label.SetBinding&lt;FirstViewModel&gt;(Label.TextProperty, vm=&gt;vm.DisplayText.Value);
         button.SetBinding&lt;FirstViewModel&gt;(Button.CommandProperty, vm=&gt;vm.Clear);
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
 <p>　ちょっと長いですが、画面に「エディットボックス」「ラベル」「ボタン」が縦に並んでいるだけです。</p>
 
-<p>　下部の４行で、<code>FirstViewModel</code> の各プロパティ、コマンドと Bind しています。</p>
+<p>　下部の４行で、<code class="highlighter-rouge">FirstViewModel</code> の各プロパティ、コマンドと Bind しています。</p>
 
-<p>　もともとあった <code>App.cs</code> は、<code>FirstPage</code> を生成するだけにします。</p>
+<p>　もともとあった <code class="highlighter-rouge">App.cs</code> は、<code class="highlighter-rouge">FirstPage</code> を生成するだけにします。</p>
 
-<p>```csharp App.cs<br>
-using System;<br>
-using Xamarin.Forms;<br>
+<p>```csharp App.cs<br />
+using System;<br />
+using Xamarin.Forms;<br />
 using FormsWithRxProperty.Pages;</p>
 
-<p>namespace FormsWithRxProperty<br>
-{<br>
-    public class App<br>
-    {<br>
-        public static Page GetMainPage()<br>
-        {<br><br>
-            return new FirstPage();<br>
-        }<br>
-    }<br>
-}<br>
-```</p>
+<p>namespace FormsWithRxProperty<br />
+{<br />
+    public class App<br />
+    {<br />
+        public static Page GetMainPage()<br />
+        {	<br />
+            return new FirstPage();<br />
+        }<br />
+    }<br />
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
 
-<h2>動かす！</h2>
+## 動かす！
 
-<p>.Android か .iOS の付いたプロジェクトをスタートアップにして、実行します。</p>
+ .Android か .iOS の付いたプロジェクトをスタートアップにして、実行します。
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_03.gif" alt=""></p>
+![](https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_03.gif)
 
-<h3>追記 2014.9.10</h3>
+### 追記 2014.9.10
 
-<p>実機で動作確認するの忘れてました（実機はAOTなのに対してiOSシミュレータはJITなのでリフレクションとかが普通に動いてしまう）。<br>
-実機でも問題なく動作しました！</p>
+実機で動作確認するの忘れてました（実機はAOTなのに対してiOSシミュレータはJITなのでリフレクションとかが普通に動いてしまう）。
+実機でも問題なく動作しました！
 
-<h2>追記 2014.9.11 INotifyPropertyChanged の利用</h2>
+## 追記 2014.9.11 INotifyPropertyChanged の利用
 
-<p>ViewModel は <code>INotifyPropertyChanged</code> を実装して作成するのが一般的です。既にそのようにして作られた ViewModel でも <code>IObservable</code> 化して、ReactiveProperty で利用できます。</p>
+ViewModel は ``INotifyPropertyChanged`` を実装して作成するのが一般的です。既にそのようにして作られた ViewModel でも ``IObservable`` 化して、ReactiveProperty で利用できます。
 
-<p>```csharp SecondViewModel.cs<br>
-public class SecondViewModel : INotifyPropertyChanged<br>
-{<br>
-    public ReactiveProperty<string> ValidationAttr { get; private set; }<br>
-    public event PropertyChangedEventHandler PropertyChanged;</p>
-<div class="highlight"><pre><code class="language-" data-lang="">private string _myName = "HoGe";
-public string MyName 
+```csharp SecondViewModel.cs
+public class SecondViewModel : INotifyPropertyChanged
 {
-    get { return _myName; }
-    set 
-    { 
-        if (_myName == value) return;
+    public ReactiveProperty&lt;string&gt; ValidationAttr { get; private set; }
+    public event PropertyChangedEventHandler PropertyChanged;
 
-        _myName = value;
-        PropertyChanged(this, new PropertyChangedEventArgs("MyName"));
-    }
-}
-
-public ReactiveProperty&lt;string&gt; LowerText { get; private set; }
-
-private ICommand _resetCommand;
-public ICommand ResetCommand
-{
-    get
+    private string _myName = "HoGe";
+    public string MyName 
     {
-        return _resetCommand ?? (_resetCommand = 
-            new Xamarin.Forms.Command(() =&gt; MyName = "XAAAAMAAARIN!!"));
+        get { return _myName; }
+        set 
+        { 
+            if (_myName == value) return;
+
+            _myName = value;
+            PropertyChanged(this, new PropertyChangedEventArgs("MyName"));
+        }
+    }
+
+    public ReactiveProperty&lt;string&gt; LowerText { get; private set; }
+
+    private ICommand _resetCommand;
+    public ICommand ResetCommand
+    {
+        get
+        {
+            return _resetCommand ?? (_resetCommand = 
+                new Xamarin.Forms.Command(() =&gt; MyName = "XAAAAMAAARIN!!"));
+        }
+    }
+
+    public SecondViewModel()
+    {
+        this.LowerText = this.ObserveProperty(x =&gt; x.MyName)
+            .Select(x =&gt; x.ToLower())
+            .ToReactiveProperty();
     }
 }
+</code></pre>
+</div>
 
-public SecondViewModel()
-{
-    this.LowerText = this.ObserveProperty(x =&gt; x.MyName)
-        .Select(x =&gt; x.ToLower())
-        .ToReactiveProperty();
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_04.png" alt="" /></p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_xamarin_forms_with_reactiveproperty_04.png" alt=""></p>
-
-<h2>まとめ</h2>
+<h2 id="section-3">まとめ</h2>
 
 <p>　Reactive Extensions のメリットを活かして MVVM を構築できる ReactiveProperty と、ワンソースで Android/iOS の画面を定義でき、さらに Binding までも共通にできる Xamarin.Forms の組み合わせは、今後のモバイルアプリケーション開発をとても効率的にしてくれます、 <strong>そしてなにより楽しい！</strong></p>
 
 <p>　今回のサンプルプログラムは</p>
 
 <ul>
-<li><a href="https://github.com/amay077/XamarinFormsWithReactivePropertySample/tree/master">amay077/XamarinFormsWithReactivePropertySample</a></li>
+  <li><a href="https://github.com/amay077/XamarinFormsWithReactivePropertySample/tree/master">amay077/XamarinFormsWithReactivePropertySample</a></li>
 </ul>
 
 <p>　に置きましたので、是非試してみてください。</p>
 
-<h3>ReactiveProperty</h3>
+<h3 id="reactiveproperty">ReactiveProperty</h3>
 
 <ul>
-<li><a href="http://okazuki.hatenablog.com/entry/2014/05/07/014133">ReactiveProperty オーバービュー - かずきのBlog@hatena</a></li>
-<li><a href="https://reactiveproperty.codeplex.com/releases/view/132232">ReactiveProperty - MVVM Extensions for Rx - Download: ReactiveProperty v1.0</a></li>
-<li><a href="http://neue.cc/2011/08/26_341.html">neue cc - ReactiveProperty : Rx + MVVMへの試み</a></li>
-<li><a href="http://yone64.wordpress.com/2014/06/20/reactiveproperty%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%80%81reactiveextensions%E5%85%A5%E9%96%80%EF%BC%88%E3%81%9D%E3%81%AE%EF%BC%91%EF%BC%89/">ReactivePropertyを使いたい人のための、ReactiveExtensions入門（その１） | 泥庭</a></li>
+  <li><a href="http://okazuki.hatenablog.com/entry/2014/05/07/014133">ReactiveProperty オーバービュー - かずきのBlog@hatena</a></li>
+  <li><a href="https://reactiveproperty.codeplex.com/releases/view/132232">ReactiveProperty - MVVM Extensions for Rx - Download: ReactiveProperty v1.0</a></li>
+  <li><a href="http://neue.cc/2011/08/26_341.html">neue cc - ReactiveProperty : Rx + MVVMへの試み</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[ReactivePropertyを使いたい人のための、ReactiveExtensions入門（その１）</td>
+          <td>泥庭](http://yone64.wordpress.com/2014/06/20/reactiveproperty%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%80%81reactiveextensions%E5%85%A5%E9%96%80%EF%BC%88%E3%81%9D%E3%81%AE%EF%BC%91%EF%BC%89/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
-<h3>Xamarin.Forms</h3>
+<h3 id="xamarinforms">Xamarin.Forms</h3>
 
 <ul>
-<li><a href="http://developer.xamarin.com/guides/cross-platform/xamarin-forms/">Xamarin.Forms | Xamarin</a></li>
-<li><a href="http://www.buildinsider.net/mobile/insidexamarin/14">Xamarin.Formsの基本構想と仕組み - Build Insider</a></li>
-<li><a href="http://www.buildinsider.net/tagcloud?tag=Xamarin.Forms">Xamarin.Forms - Build Insider</a></li>
-<li><a href="http://furuya02.hatenablog.com/entry/2014/08/08/003036">Xamarin.Forms ListViewでTwitter風のレイアウトを作成してみました（機種依存コードなし） - SIN@SAPPOROWORKSの覚書</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Xamarin.Forms</td>
+          <td>Xamarin](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://www.buildinsider.net/mobile/insidexamarin/14">Xamarin.Formsの基本構想と仕組み - Build Insider</a></li>
+  <li><a href="http://www.buildinsider.net/tagcloud?tag=Xamarin.Forms">Xamarin.Forms - Build Insider</a></li>
+  <li><a href="http://furuya02.hatenablog.com/entry/2014/08/08/003036">Xamarin.Forms ListViewでTwitter風のレイアウトを作成してみました（機種依存コードなし） - SIN@SAPPOROWORKSの覚書</a></li>
 </ul>
 
     </section>

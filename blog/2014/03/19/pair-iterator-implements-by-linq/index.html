@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -756,15 +624,16 @@ img {
       <p>ふたつの Iterator を LINQ で</p>
 
 <ul>
-<li><a href="http://d.hatena.ne.jp/Nagise/20140315/1394884271">ふたつのIterator - プログラマーの脳みそ</a></li>
+  <li><a href="http://d.hatena.ne.jp/Nagise/20140315/1394884271">ふたつのIterator - プログラマーの脳みそ</a></li>
 </ul>
 
-<p>を拝見しました。<br>
-&lt;!--more--&gt;<br>
+<p>を拝見しました。<br />
+<!--more--><br />
 コメントで「Zip じゃん」というのがあり、「確かに！」と思ったのでやってみました。</p>
 
-<h2>C＃ の場合</h2>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// using using System.Linq;
+<h2 id="c-">C＃ の場合</h2>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="c1">// using using System.Linq;
 </span>
 <span class="kt">var</span> <span class="n">arr1</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span> <span class="p">};</span>
 <span class="kt">var</span> <span class="n">arr2</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[]</span> <span class="p">{</span> <span class="s">"hoge"</span><span class="p">,</span> <span class="s">"fuga"</span><span class="p">,</span> <span class="s">"piyo"</span> <span class="p">};</span>
@@ -772,57 +641,68 @@ img {
 <span class="n">arr1</span><span class="p">.</span><span class="nf">Zip</span><span class="p">(</span><span class="n">arr2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">=&gt;</span>  <span class="k">new</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">})</span>
     <span class="p">.</span><span class="nf">ToList</span><span class="p">()</span>
     <span class="p">.</span><span class="nf">ForEach</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">);</span>
-</code></pre></div>
-<h4>結果</h4>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="w"> </span><span class="err">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">1,</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">hoge</span><span class="w"> </span><span class="p">}</span><span class="w">
+</code></pre>
+</div>
+
+<h4 id="section">結果</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="err">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">1,</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">hoge</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span><span class="p">{</span><span class="w"> </span><span class="err">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">2,</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">fuga</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span><span class="p">{</span><span class="w"> </span><span class="err">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">3,</span><span class="w"> </span><span class="err">y</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">piyo</span><span class="w"> </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre>
+</div>
+
 <p>うむ、シンプル。要素数が違ってても少ない方に合わせてくれます。</p>
 
-<h2>Java の場合</h2>
+<h2 id="java-">Java の場合</h2>
 
-<p><a href="https://code.google.com/p/reactive4java/">reactive4java</a> というライブラリがありまして、これは Java で Reactive Extensions を実現するライブラリなのですが、LINQ的な機能が <code>Interactive</code> というクラスで提供されています。</p>
+<p><a href="https://code.google.com/p/reactive4java/">reactive4java</a> というライブラリがありまして、これは Java で Reactive Extensions を実現するライブラリなのですが、LINQ的な機能が <code class="highlighter-rouge">Interactive</code> というクラスで提供されています。</p>
 
 <p>これを使うと Zip ができます。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//import hu.akarnokd.reactive4java.base.Func2;</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">//import hu.akarnokd.reactive4java.base.Func2;</span>
 <span class="c1">//import hu.akarnokd.reactive4java.interactive.Interactive;</span>
 
 <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">array1</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span>
 <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">array2</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"hoge"</span><span class="o">,</span> <span class="s">"fuga"</span><span class="o">,</span> <span class="s">"piyo"</span><span class="o">);</span>
 
 <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">zippedIter</span> <span class="o">=</span> 
-        <span class="n">Interactive</span><span class="o">.</span><span class="na">zip</span><span class="o">(</span><span class="n">array1</span><span class="o">,</span> <span class="n">array2</span><span class="o">,</span> 
-                <span class="k">new</span> <span class="n">Func2</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">,</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Integer</span> <span class="n">x</span><span class="o">,</span> <span class="n">String</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
-    <span class="o">}</span>
+		<span class="n">Interactive</span><span class="o">.</span><span class="na">zip</span><span class="o">(</span><span class="n">array1</span><span class="o">,</span> <span class="n">array2</span><span class="o">,</span> 
+				<span class="k">new</span> <span class="n">Func2</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">,</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">invoke</span><span class="o">(</span><span class="n">Integer</span> <span class="n">x</span><span class="o">,</span> <span class="n">String</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+	<span class="o">}</span>
 <span class="o">}).</span><span class="na">iterator</span><span class="o">();</span>
 
 <span class="k">while</span> <span class="o">(</span><span class="n">zippedIter</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
-    <span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">zippedIter</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"StartupActivity"</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"x=%d, y=%s"</span><span class="o">,</span> <span class="n">p</span><span class="o">.</span><span class="na">first</span><span class="o">,</span> <span class="n">p</span><span class="o">.</span><span class="na">second</span><span class="o">));</span>
+	<span class="n">Pair</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">zippedIter</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="s">"StartupActivity"</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"x=%d, y=%s"</span><span class="o">,</span> <span class="n">p</span><span class="o">.</span><span class="na">first</span><span class="o">,</span> <span class="n">p</span><span class="o">.</span><span class="na">second</span><span class="o">));</span>
 <span class="o">}</span>
-</code></pre></div>
-<p>ああ、Android で試したので <code>Pair</code> とか使ってしまった。<br>
+</code></pre>
+</div>
+
+<p>ああ、Android で試したので <code class="highlighter-rouge">Pair</code> とか使ってしまった。<br />
 普通の Java の場合は自作の Tuple などに置き換えを。</p>
 
-<h4>結果</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">x=1, y=hoge 
+<h4 id="section-1">結果</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>x=1, y=hoge 
 x=2, y=fuga 
 x=3, y=piyo 
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>C# より冗長ですけど、いい感じで利用できるのではと思います。</p>
 
 <p>reactive4java が Java8 のラムダ式に対応してくれると、上のコードはもっと簡潔に書けます。</p>
 
 <p><a href="https://code.google.com/p/reactive4java/wiki/Reactive4Java8">Reactive4Java8</a> には、対応してる感じが見られますが、<a href="https://code.google.com/p/reactive4java/">Top ページ</a> によると、どうやら、「reactive4java の開発は終了し、<a href="https://github.com/Netflix/RxJava">RxJava</a> の開発に参加するつもりだ」みたいなことが書いてあります。</p>
 
-<p>また、RxJava でなく reactive4java を使う利点として、<code>Interactive</code> 機能群の存在を挙げています。<br>
+<p>また、RxJava でなく reactive4java を使う利点として、<code class="highlighter-rouge">Interactive</code> 機能群の存在を挙げています。<br />
 単純に LINQ 的な機能を Java で使いたいならば、 reactive4java はまだまだ役に立つと思います。</p>
 
-<p>最後に、もしあなたが Android 開発をしていて、Java の冗長さに嫌気がさしているなら、<a href="http://xamarin.com/csharp"><strong>Xamarin へどうぞ</strong></a> </p>
+<p>最後に、もしあなたが Android 開発をしていて、Java の冗長さに嫌気がさしているなら、<a href="http://xamarin.com/csharp"><strong>Xamarin へどうぞ</strong></a></p>
 
     </section>
     <footer class="post-footer">

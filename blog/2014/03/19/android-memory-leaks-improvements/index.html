@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Activity がメモリリークしにくくなってる件</title>
-  <meta name="description" content="2009年の情報なんですけどね。&lt;!--more--&gt;* Avoiding memory leaks | Android Developers Blog* Avoiding memory leaks （超訳） - Android Zaurusの日記* 暇なメモ帳: Androidのソースコードレビュー...">
+  <meta name="description" content="2009年の情報なんですけどね。                              [Avoiding memory leaks          Android Developers Blog](http://android-developers.blogspot.jp/2009/01/avoiding...">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/03/19/android-memory-leaks-improvements/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Activity がメモリリークしにくくなってる件",
   "datePublished": "2014-03-19T15:12:00+09:00",
   "dateModified": "2014-03-19T15:12:00+09:00",
-  "description": "2009年の情報なんですけどね。&lt;!--more--&gt;* Avoiding memory leaks | Android Developers Blog* Avoiding memory leaks （超訳） - Android Zaurusの日記* 暇なメモ帳: Androidのソースコードレビュー...",
+  "description": "2009年の情報なんですけどね。                              [Avoiding memory leaks          Android Developers Blog](http://android-developers.blogspot.jp/2009/01/avoiding...",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,33 +621,44 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>2009年の情報なんですけどね。<br>
-&lt;!--more--&gt;<br>
-* <a href="http://android-developers.blogspot.jp/2009/01/avoiding-memory-leaks.html">Avoiding memory leaks | Android Developers Blog</a><br>
-* <a href="http://d.hatena.ne.jp/androidzaurus/20090121/1232519066">Avoiding memory leaks （超訳） - Android Zaurusの日記</a><br>
-* <a href="http://tomokey.blogspot.jp/2011/05/android.html">暇なメモ帳: Androidのソースコードレビュー(メモリリーク)</a></p>
+      <p>2009年の情報なんですけどね。<br />
+<!--more--></p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Avoiding memory leaks</td>
+          <td>Android Developers Blog](http://android-developers.blogspot.jp/2009/01/avoiding-memory-leaks.html)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://d.hatena.ne.jp/androidzaurus/20090121/1232519066">Avoiding memory leaks （超訳） - Android Zaurusの日記</a></li>
+  <li><a href="http://tomokey.blogspot.jp/2011/05/android.html">暇なメモ帳: Androidのソースコードレビュー(メモリリーク)</a></li>
+</ul>
 
 <p>Android でメモリリークする典型的なパターンとして上で紹介されているものがあって、日頃はこうならないように気をつけて実装をしているわけです。</p>
 
 <p>また、メモリリークの調査方法もたくさん情報があります。</p>
 
 <ul>
-<li><a href="http://rainbowdevil.jp/?p=1187">Androidでメモリリークの調査と、そのヒープダンプから画像を抽出する » RainbowDevilsLand</a></li>
-<li><a href="http://tlync.hateblo.jp/entry/20111220/1324372308">富豪的 Android プログラマの為の Eclipse Memory Analyzer Tool 入門 - sandbox</a></li>
+  <li><a href="http://rainbowdevil.jp/?p=1187">Androidでメモリリークの調査と、そのヒープダンプから画像を抽出する » RainbowDevilsLand</a></li>
+  <li><a href="http://tlync.hateblo.jp/entry/20111220/1324372308">富豪的 Android プログラマの為の Eclipse Memory Analyzer Tool 入門 - sandbox</a></li>
 </ul>
 
 <p>日頃、Xamarin.Android を触っているので、「Xamarin でも同じようにリークするよね」と思いやってみたところ全然リークしなかったので、もしや Android-Java でもリークしないんじゃ？と考え、試してみたのが以下の内容です。</p>
 
-<h2>試した</h2>
+<h2 id="section">試した</h2>
 
 <p>以下の2つのパターンについて試しました</p>
 
 <ol>
-<li>Avoiding memory leaks の 2番目の例。Activity への強参照を持った Drawable を static なメンバにキープしちゃう件。画面が回転した時に、Activity がリークしてしまう、とされる。</li>
-<li>暇なメモ帳さんの「問題3」＋α。非static な Inner クラスが Activity の強参照を持ってる、且つ、このオブジェクトを Activity の static メンバにしちゃう。</li>
+  <li>Avoiding memory leaks の 2番目の例。Activity への強参照を持った Drawable を static なメンバにキープしちゃう件。画面が回転した時に、Activity がリークしてしまう、とされる。</li>
+  <li>暇なメモ帳さんの「問題3」＋α。非static な Inner クラスが Activity の強参照を持ってる、且つ、このオブジェクトを Activity の static メンバにしちゃう。</li>
 </ol>
 
-<h2>結論</h2>
+<h2 id="section-1">結論</h2>
 
 <p>から言うと、</p>
 
@@ -787,116 +666,129 @@ img {
 
 <p>あれれ？</p>
 
-<h2>パターン1のテストコード</h2>
+<h2 id="section-2">パターン1のテストコード</h2>
 
-<p>ほぼ元コードのコピペだけど、クラスが破棄された(<code>finalize</code>)時にログ吐くようにしています。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
+<p>ほぼ元コードのコピペだけど、クラスが破棄された(<code class="highlighter-rouge">finalize</code>)時にログ吐くようにしています。</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TAG</span> <span class="o">=</span> <span class="s">"MainActivity"</span><span class="o">;</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="n">Drawable</span> <span class="n">sBackground</span><span class="o">;</span>
-
-    <span class="nd">@Override</span>
+    
+	<span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onCreate:"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
-
+		<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onCreate:"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+		
         <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Button</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
         <span class="n">button</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"Leaks are bad"</span><span class="o">);</span>
-
+        
         <span class="k">if</span> <span class="o">(</span><span class="n">sBackground</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">sBackground</span> <span class="o">=</span> <span class="n">getResources</span><span class="o">().</span><span class="na">getDrawable</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_launcher</span><span class="o">);</span>
         <span class="o">}</span>
         <span class="n">button</span><span class="o">.</span><span class="na">setBackgroundDrawable</span><span class="o">(</span><span class="n">sBackground</span><span class="o">);</span>
         <span class="n">setContentView</span><span class="o">(</span><span class="n">button</span><span class="o">);</span>
     <span class="o">}</span>
-
+	
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onDestroy:"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+    	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onDestroy:"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    	<span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
     <span class="o">}</span>
-
+    
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">finalize</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Throwable</span> <span class="o">{</span>
-        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"finalize:"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">finalize</span><span class="o">();</span>
+    	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"finalize:"</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">hashCode</span><span class="o">());</span>
+    	<span class="kd">super</span><span class="o">.</span><span class="na">finalize</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>確認手順</h3>
+</code></pre>
+</div>
+
+<h3 id="section-3">確認手順</h3>
 
 <ol>
-<li>このアプリを実行。Android2.3 のエミュレータ(4.0 の実機でも試した)。</li>
-<li>画面を回転させる（Ctrl+F11）</li>
-<li>DDMS から GC を走らせる</li>
-<li>LogCat を収集</li>
+  <li>このアプリを実行。Android2.3 のエミュレータ(4.0 の実機でも試した)。</li>
+  <li>画面を回転させる（Ctrl+F11）</li>
+  <li>DDMS から GC を走らせる</li>
+  <li>LogCat を収集</li>
 </ol>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/improve_activity_leaks_02.png" alt=""><br>
-<img src="https://dl.dropboxusercontent.com/u/264530/qiita/improve_activity_leaks_03.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/improve_activity_leaks_02.png" alt="" /><br />
+<img src="https://dl.dropboxusercontent.com/u/264530/qiita/improve_activity_leaks_03.png" alt="" /></p>
 
 <p>Logcat の出力結果はこう。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">03-19 21:28:09.539: D/MainActivity(382): onCreate:1079076320
+
+<div class="highlighter-rouge"><pre class="highlight"><code>03-19 21:28:09.539: D/MainActivity(382): onCreate:1079076320
 03-19 21:29:15.979: D/MainActivity(382): onDestroy:1079076320
 03-19 21:29:15.989: D/MainActivity(382): onCreate:1079106528 ←横画面のActivity
 03-19 21:29:33.939: D/MainActivity(382): finalize:1079076320
-</code></pre></div>
-<p>ちゃんと GC を走らせた後、 Activity の <code>finalize</code> が呼ばれています。<br>
+</code></pre>
+</div>
+
+<p>ちゃんと GC を走らせた後、 Activity の <code class="highlighter-rouge">finalize</code> が呼ばれています。<br />
 MAT でも確認したけど、リークは発見できませんでした。</p>
 
-<h2>パターン2のテストコード</h2>
+<h2 id="section-4">パターン2のテストコード</h2>
 
 <p>こんな実装は早々お目にかからないと思うけど、非static な Inner クラスのインスタンスを、Activity の static メンバにしちゃうぞ、と。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TAG</span> <span class="o">=</span> <span class="s">"MainActivity"</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="n">SomeInnerClass</span> <span class="n">innerClass</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="n">SomeInnerClass</span> <span class="n">innerClass</span><span class="o">;</span>
 
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
         <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onCreate"</span><span class="o">);</span>
-
+        
         <span class="k">if</span> <span class="o">(</span><span class="n">innerClass</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">innerClass</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SomeInnerClass</span><span class="o">();</span>
         <span class="o">}</span>
     <span class="o">}</span>
-
+    
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onDestroy"</span><span class="o">);</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+    	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onDestroy"</span><span class="o">);</span>
+    	<span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
     <span class="o">}</span>
-
+    
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">finalize</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Throwable</span> <span class="o">{</span>
-        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"finalize"</span><span class="o">);</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">finalize</span><span class="o">();</span>
+    	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"finalize"</span><span class="o">);</span>
+    	<span class="kd">super</span><span class="o">.</span><span class="na">finalize</span><span class="o">();</span>
     <span class="o">}</span>
 
     <span class="kd">class</span> <span class="nc">SomeInnerClass</span> <span class="o">{</span>
         <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span> <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>確認手順</h3>
+</code></pre>
+</div>
+
+<h3 id="section-5">確認手順</h3>
 
 <p>パターン1と同じです。</p>
 
 <p>Logcat の出力結果はこちら。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">03-19 21:42:55.289: D/MainActivity(476): onCreate
+
+<div class="highlighter-rouge"><pre class="highlight"><code>03-19 21:42:55.289: D/MainActivity(476): onCreate
 03-19 21:43:05.369: D/MainActivity(476): onDestroy
 03-19 21:43:05.549: D/MainActivity(476): onCreate
-</code></pre></div>
-<p>ご覧のとおり、<code>finalize</code> が呼ばれない、つまり Activity がリークしています。</p>
+</code></pre>
+</div>
 
-<h2>考察っぽいの</h2>
+<p>ご覧のとおり、<code class="highlighter-rouge">finalize</code> が呼ばれない、つまり Activity がリークしています。</p>
 
-<p>パターン2 がリークするのは当然と言えます。<br>
+<h2 id="section-6">考察っぽいの</h2>
+
+<p>パターン2 がリークするのは当然と言えます。<br />
 Activity への強参照を持ったオブジェクトを、static フィールドで保持し続けてしまうので、Activity が破棄されない。</p>
 
 <p>パターン1 も同じ理屈だと思うのですが（少なくとも冒頭の記事の説明ではそう）。これがリークしないのは、Android SDK が改善された(例えば、今まで Activity の強参照を持ってたのが弱参照に変わった)とか、Dalvik の GC が改善されたとかでしょうか？</p>
 
 <p>まあ4年も経てば常識も変わるということで、Activity に関しては以前ほど神経質にならなくてもいいかもしれませんが、メモリリークの可能性が消えることは有り得ないので、このアンチパターンはこれからも遵守していかないといけませんね。</p>
+
 
     </section>
     <footer class="post-footer">

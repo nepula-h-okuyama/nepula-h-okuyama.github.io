@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -759,35 +627,53 @@ img {
 
 <p>Xamarin.iOS は、 iOS の APIセットが全て C# で使えますので、 iBeacon 関連の API もそのまま使えます。さらに C# や .NET の強力な言語仕様により、より簡潔に、美しく書くことができます。</p>
 
-<h2>Xamarin.iOS で iBeacon を使うサンプル</h2>
+<h2 id="xamarinios--ibeacon-">Xamarin.iOS で iBeacon を使うサンプル</h2>
 
 <p>Xamarin で iBeacons を使うサンプルは、Xamarin 自体が既に公開しています。</p>
 
 <ul>
-<li><a href="http://blog.xamarin.com/play-find-the-monkey-with-ios-7-ibeacons/">Play ‘Find The Monkey’ with iOS 7 iBeacons | Xamarin Blog</a></li>
-<li><a href="https://github.com/mikebluestein/FindTheMonkey">mikebluestein/FindTheMonkey</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Play ‘Find The Monkey’ with iOS 7 iBeacons</td>
+          <td>Xamarin Blog](http://blog.xamarin.com/play-find-the-monkey-with-ios-7-ibeacons/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="https://github.com/mikebluestein/FindTheMonkey">mikebluestein/FindTheMonkey</a></li>
 </ul>
 
 <p>これらは iOS7 のリリースから僅か7日後のできごとであり、Xamarin の新OSへの対応力に驚いたものでした。</p>
 
 <p>この紹介だけで終わってもアレなので、このサンプルをより「C# っぽく」修正してみたいと思います。</p>
 
-<h2>サンプルをより「C# っぽく」する</h2>
+<h2 id="c-">サンプルをより「C# っぽく」する</h2>
 
 <p>対象にするのは iBeacon の受信の方です。</p>
 
 <ul>
-<li><a href="http://reinforce-lab.github.com/blog/2013/10/21/ibeacon/">iBeaconの解説 - Reinforce-Lab.&#39;s Blog</a></li>
-<li><a href="http://brightechno.com/blog/archives/220">iBeacon Tips: 正しいビーコン監視方法 | ブライテクノBlog</a></li>
+  <li><a href="http://reinforce-lab.github.com/blog/2013/10/21/ibeacon/">iBeaconの解説 - Reinforce-Lab.’s Blog</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[iBeacon Tips: 正しいビーコン監視方法</td>
+          <td>ブライテクノBlog](http://brightechno.com/blog/archives/220)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>などで勉強したところ、受信の流れは下図のようになるかと思います。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_ibeacon_with_xamarin_01.png" alt="img"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_ibeacon_with_xamarin_01.png" alt="img" /></p>
 
 <p>全てのメソッドが非同期でコールバックを受け取るタイプ、また並行処理＆同期とか、なんだか見やすいコードになる気がしません。</p>
 
-<p>C# といえば LINQ、そして LINQ を更に拡張する Rx(Reactive Extensions) を使って、この流れをもう少しスッキリと書いてみます。<br>
+<p>C# といえば LINQ、そして LINQ を更に拡張する Rx(Reactive Extensions) を使って、この流れをもう少しスッキリと書いてみます。<br />
 Rx は、非同期処理やイベントコールバックを一直線なストリームに変換します。また、ストリームの分配や結合の機能を提供します。最初は JavaScript の <a href="http://techblog.yahoo.co.jp/programming/jquery-deferred/">Deferred</a> みたいなもんだと思ってました。が、使ってく内にとんでもなく高機能なものだと分かり(はじめ)ました。</p>
 
 <p>これを使うと、上の図をそのままコードに落としたような、上から下へ辿れる感じで書くことができます。</p>
@@ -795,118 +681,118 @@ Rx は、非同期処理やイベントコールバックを一直線なスト�
 <p>まず、修正前のサンプルコードはこちら</p>
 
 <ul>
-<li><a href="https://github.com/mikebluestein/FindTheMonkey/blob/master/FindTheMonkey/FindTheMonkeyViewController.cs">FindTheMonkey / FindTheMonkeyViewController.cs</a></li>
+  <li><a href="https://github.com/mikebluestein/FindTheMonkey/blob/master/FindTheMonkey/FindTheMonkeyViewController.cs">FindTheMonkey / FindTheMonkeyViewController.cs</a></li>
 </ul>
 
 <p>このコード自体、上の流れに沿ってない気もしますが、まあいいや。</p>
 
 <p>これを Rx で書きなおすと、こうなります。</p>
 
-<h3>2014.4.2 追記</h3>
+<h3 id="section">2014.4.2 追記</h3>
 
 <p>実際には動かない空想のコードを掲載していたので、実機で動作したコードに書き換えました。</p>
 
-<p>```csharp FindTheMonkeyViewController_after.cs<br>
-if (!UserInterfaceIdiomIsPhone)<br>
-{<br>
-  /* 省略 */<br>
-} else<br>
-{<br>
-  InitPitchAndVolume();<br>
+<p>```csharp FindTheMonkeyViewController_after.cs<br />
+if (!UserInterfaceIdiomIsPhone)<br />
+{<br />
+  /* 省略 */<br />
+} else<br />
+{<br />
+  InitPitchAndVolume();<br />
   var man = new CLLocationManager();</p>
 
-<p>man.StartMonitoringAsObservable(beaconRegion) // 監視開始<br>
-  .SelectMany(r =&gt;<br>
-    man.RegionEnteredAsObservable() // A:進入の受信<br>
-    .Amb(man.RequestStateAsObservable(r) // B:リージョン状態要求<br>
-      .Where(e =&gt; e.State == CLRegionState.Inside) // 範囲内のみ<br>
-      .Select(x =&gt; x.Region as CLBeaconRegion) // CLRegion からcast<br>
-    .SelectMany(man.StartRangingBeaconsAsObservable) // A/B どちらかを受信したらレンジング開始<br>
-      .Where(x =&gt; x.Beacons.Length &gt; 0) // ビーコンが1個以上みつかった場合のみ<br>
-      .Select(x =&gt; x.Beacons [0]) // LINQ の Fisrt() でもOk<br>
-      .DistinctUntilChanged(x =&gt; x.Proximity) // Proximity が変わった時のみ流す<br>
-  .Subscribe((CLBeacon beacon) =&gt;<br>
-  {<br>
-    // Beacon が見つかった時に行う処理を書く<br>
-  });<br>
-}<br>
-```</p>
-
-<p>```csharp CLLocationManagerExtensions.cs<br>
-public static class CLLocationManagerExtensions<br>
-{<br>
-  // リージョン監視を開始して、開始通知を IObservable で得る拡張メソッド<br>
-  public static IObservable<CLBeaconRegion> StartMonitoringAsObservable(<br>
-    this CLLocationManager man, CLBeaconRegion beaconRegion)<br>
-  {<br>
-    return Observable.Defer(() =&gt;<br>
-    {<br>
-      var o = Observable.FromEventPattern<CLRegionEventArgs>(<br>
-            h =&gt; man.DidStartMonitoringForRegion += h, <br>
-            h =&gt; man.DidStartMonitoringForRegion -= h)<br>
-      .Select(x =&gt; x.EventArgs.Region as CLBeaconRegion);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  man.StartMonitoring(beaconRegion);          
-  return o;
-});
-</code></pre></div>
-<p>}</p>
-
-<p>// リージョンへの進入を IObservable で得る拡張メソッド<br>
-  public static IObservable<CLBeaconRegion> RegionEnteredAsObservable(<br>
-    this CLLocationManager man)<br>
-  {<br>
-    return Observable.FromEventPattern<CLRegionEventArgs>(<br>
-      h =&gt; man.RegionEntered += h, h =&gt; man.RegionEntered -= h)<br>
-        .Select(e =&gt; e.EventArgs.Region as CLBeaconRegion);<br>
-  }</p>
-
-<p>// リージョンの状態を要求して、結果を IObservable で得る拡張メソッド<br>
-  public static IObservable<CLRegionStateDeterminedEventArgs> RequestStateAsObservable(<br>
-    this CLLocationManager man, CLBeaconRegion beaconRegion)<br>
-  {<br>
-    return Observable.Defer<CLRegionStateDeterminedEventArgs>(() =&gt; <br>
-    {<br>
-      var o = Observable.FromEventPattern<CLRegionStateDeterminedEventArgs>(<br>
-      h =&gt; man.DidDetermineState += h, h =&gt; man.DidDetermineState -= h)<br>
-        .Select(e =&gt; e.EventArgs);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  man.RequestState(beaconRegion);
-  return o;
-});
-</code></pre></div>
-<p>}</p>
-
-<p>// レンジングを開始してビーコン信号を IObservable で得る拡張メソッド<br>
-  public static IObservable<CLRegionBeaconsRangedEventArgs> StartRangingBeaconsAsObservable(<br>
-    this CLLocationManager man, CLBeaconRegion beaconRegion)<br>
-  {<br>
-    return Observable.Defer(() =&gt; <br>
-    {<br>
-      var o = Observable.FromEventPattern<CLRegionBeaconsRangedEventArgs>(<br>
-      h =&gt; man.DidRangeBeacons += h, h =&gt; man.DidRangeBeacons -= h)<br>
-        .Select(e =&gt; e.EventArgs);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">  man.StartRangingBeacons(beaconRegion);
-  return o;
-});
-</code></pre></div>
-<p>}<br>
-}<br>
-```</p>
+<p>man.StartMonitoringAsObservable(beaconRegion) // 監視開始<br />
+  .SelectMany(r =&gt;<br />
+    man.RegionEnteredAsObservable() // A:進入の受信<br />
+    .Amb(man.RequestStateAsObservable(r) // B:リージョン状態要求<br />
+      .Where(e =&gt; e.State == CLRegionState.Inside) // 範囲内のみ<br />
+      .Select(x =&gt; x.Region as CLBeaconRegion) // CLRegion からcast<br />
+    .SelectMany(man.StartRangingBeaconsAsObservable) // A/B どちらかを受信したらレンジング開始<br />
+      .Where(x =&gt; x.Beacons.Length &gt; 0) // ビーコンが1個以上みつかった場合のみ<br />
+      .Select(x =&gt; x.Beacons [0]) // LINQ の Fisrt() でもOk<br />
+      .DistinctUntilChanged(x =&gt; x.Proximity) // Proximity が変わった時のみ流す<br />
+  .Subscribe((CLBeacon beacon) =&gt;<br />
+  {<br />
+    // Beacon が見つかった時に行う処理を書く<br />
+  });<br />
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+```csharp CLLocationManagerExtensions.cs
+public static class CLLocationManagerExtensions
+{
+  // リージョン監視を開始して、開始通知を IObservable で得る拡張メソッド
+  public static IObservable&lt;CLBeaconRegion&gt; StartMonitoringAsObservable(
+    this CLLocationManager man, CLBeaconRegion beaconRegion)
+  {
+    return Observable.Defer(() =&gt;
+    {
+      var o = Observable.FromEventPattern&lt;CLRegionEventArgs&gt;(
+            h =&gt; man.DidStartMonitoringForRegion += h, 
+            h =&gt; man.DidStartMonitoringForRegion -= h)
+      .Select(x =&gt; x.EventArgs.Region as CLBeaconRegion);
+      
+      man.StartMonitoring(beaconRegion);          
+      return o;
+    });
+  }
+  
+  // リージョンへの進入を IObservable で得る拡張メソッド
+  public static IObservable&lt;CLBeaconRegion&gt; RegionEnteredAsObservable(
+    this CLLocationManager man)
+  {
+    return Observable.FromEventPattern&lt;CLRegionEventArgs&gt;(
+      h =&gt; man.RegionEntered += h, h =&gt; man.RegionEntered -= h)
+        .Select(e =&gt; e.EventArgs.Region as CLBeaconRegion);
+  }
+  
+  // リージョンの状態を要求して、結果を IObservable で得る拡張メソッド
+  public static IObservable&lt;CLRegionStateDeterminedEventArgs&gt; RequestStateAsObservable(
+    this CLLocationManager man, CLBeaconRegion beaconRegion)
+  {
+    return Observable.Defer&lt;CLRegionStateDeterminedEventArgs&gt;(() =&gt; 
+    {
+      var o = Observable.FromEventPattern&lt;CLRegionStateDeterminedEventArgs&gt;(
+      h =&gt; man.DidDetermineState += h, h =&gt; man.DidDetermineState -= h)
+        .Select(e =&gt; e.EventArgs);
+      
+      man.RequestState(beaconRegion);
+      return o;
+    });
+  }
+  
+  // レンジングを開始してビーコン信号を IObservable で得る拡張メソッド
+  public static IObservable&lt;CLRegionBeaconsRangedEventArgs&gt; StartRangingBeaconsAsObservable(
+    this CLLocationManager man, CLBeaconRegion beaconRegion)
+  {
+    return Observable.Defer(() =&gt; 
+    {
+      var o = Observable.FromEventPattern&lt;CLRegionBeaconsRangedEventArgs&gt;(
+      h =&gt; man.DidRangeBeacons += h, h =&gt; man.DidRangeBeacons -= h)
+        .Select(e =&gt; e.EventArgs);
+      
+      man.StartRangingBeacons(beaconRegion);
+      return o;
+    });
+  }
+}
+</code></pre>
+</div>
 
 <p>実機で動作するサンプルを</p>
 
 <ul>
-<li><a href="https://github.com/amay077/FindTheMonkey">amay077/FindTheMonkey</a></li>
+  <li><a href="https://github.com/amay077/FindTheMonkey">amay077/FindTheMonkey</a></li>
 </ul>
 
 <p>に置きました。</p>
 
-<p><code>locationMgr.StartMonitoringAsObservable</code> で始まるところがキモですね。各々の機能は <code>CLLocationManagerExtensions.cs</code> の拡張メソッドで逃してます。これも C# の利点(たしか Objective-C にもあったっけ)。</p>
+<p><code class="highlighter-rouge">locationMgr.StartMonitoringAsObservable</code> で始まるところがキモですね。各々の機能は <code class="highlighter-rouge">CLLocationManagerExtensions.cs</code> の拡張メソッドで逃してます。これも C# の利点(たしか Objective-C にもあったっけ)。</p>
 
-<p>リージョン監視の開始通知を受け取ったら進入の検知(A)をしつつ、もうひとつの処理で開始位置のリージョン状態を得て、それがリージョン内だったら値を流す(B)。これらは <code>.Amb</code> で合流。 <code>.Amb</code> は右辺と左辺のどちらか先に返された最初の結果を後続に流すというものです。つまり、B がリージョン外だったら自動的に A の <code>didEnterRegion</code> を待つことになります。</p>
+<p>リージョン監視の開始通知を受け取ったら進入の検知(A)をしつつ、もうひとつの処理で開始位置のリージョン状態を得て、それがリージョン内だったら値を流す(B)。これらは <code class="highlighter-rouge">.Amb</code> で合流。 <code class="highlighter-rouge">.Amb</code> は右辺と左辺のどちらか先に返された最初の結果を後続に流すというものです。つまり、B がリージョン外だったら自動的に A の <code class="highlighter-rouge">didEnterRegion</code> を待つことになります。</p>
 
 <p>最後に、レンジングを開始して受信する度に結果(ビーコン信号)を流します。</p>
 
-<p>んで、これを購読(<code>.Subscribe</code>)することで処理を開始して、結果を <code>// Beacon が見つかった時に行う処理を書く</code> のところで受け取る仕組みです。</p>
+<p>んで、これを購読(<code class="highlighter-rouge">.Subscribe</code>)することで処理を開始して、結果を <code class="highlighter-rouge">// Beacon が見つかった時に行う処理を書く</code> のところで受け取る仕組みです。</p>
 
 <p>このように Rx を使うことで、非同期のコールバックを含む処理を直列に書け、処理の並列化や合成も簡単に行えます。</p>
 

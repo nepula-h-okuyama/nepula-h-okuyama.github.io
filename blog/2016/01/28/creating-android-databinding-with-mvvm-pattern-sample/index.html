@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Android Data Binding + MVVMパターンのサンプルを書いてみた</title>
-  <meta name="description" content="notifyPropertyChanged とか、どこかで見たことのある機能が満載の Android Data Binding ですが、登場以来あまり追えてなかったのでやっとサンプルをつくってみました。&lt;!--more--&gt;">
+  <meta name="description" content="notifyPropertyChanged とか、どこかで見たことのある機能が満載の Android Data Binding ですが、登場以来あまり追えてなかったのでやっとサンプルをつくってみました。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2016/01/28/creating-android-databinding-with-mvvm-pattern-sample/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Android Data Binding + MVVMパターンのサンプルを書いてみた",
   "datePublished": "2016-01-28T23:59:59+09:00",
   "dateModified": "2016-01-28T23:59:59+09:00",
-  "description": "notifyPropertyChanged とか、どこかで見たことのある機能が満載の Android Data Binding ですが、登場以来あまり追えてなかったのでやっとサンプルをつくってみました。&lt;!--more--&gt;",
+  "description": "notifyPropertyChanged とか、どこかで見たことのある機能が満載の Android Data Binding ですが、登場以来あまり追えてなかったのでやっとサンプルをつくってみました。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,197 +621,170 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><code>notifyPropertyChanged</code> とか、<a href="https://ufcpp.wordpress.com/2009/12/28/inotifypropertychanged-%E3%81%AE%E5%AE%9F%E8%A3%85/">どこかで見たことのある</a>機能が満載の <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html">Android Data Binding</a> ですが、登場以来あまり追えてなかったのでやっとサンプルをつくってみました。<br>
-&lt;!--more--&gt;</p>
+      <p><code class="highlighter-rouge">notifyPropertyChanged</code> とか、<a href="https://ufcpp.wordpress.com/2009/12/28/inotifypropertychanged-%E3%81%AE%E5%AE%9F%E8%A3%85/">どこかで見たことのある</a>機能が満載の <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html">Android Data Binding</a> ですが、登場以来あまり追えてなかったのでやっとサンプルをつくってみました。<br />
+<!--more--></p>
 
 <p>といっても</p>
 
 <ul>
-<li><a href="http://qiita.com/amay077/items/8464a22e3063642112ed">RxJava + MVVM パターンで作るストップウォッチアプリ - Qiita</a></li>
+  <li><a href="http://qiita.com/amay077/items/8464a22e3063642112ed">RxJava + MVVM パターンで作るストップウォッチアプリ - Qiita</a></li>
 </ul>
 
 <p>で作ったストップウォッチアプリを Data Binding 化しただけです。</p>
 
 <p><a href="http://qiita.com/amay077/items/8464a22e3063642112ed#model-viewmodel-viewmvvm-%E3%81%A7%E8%80%83%E3%81%88%E3%82%8B">前回</a> との違いを図に示します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/rxjava_mvvm_stopwatch_03.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/rxjava_mvvm_stopwatch_03.png" alt="" /></p>
 
 <ul>
-<li>View-ViewModel で全面的に使用していた <code>rx.Observable&lt;T&gt;</code> の代わりに、<code>ObservableField&lt;T&gt;</code> を使用。</li>
-<li>View側で「オレオレDataBinding」を実装していた箇所を、Android の Data Binding に置き換え。つまりバインディングの定義はレイアウトxmlへ記述。</li>
-<li>Model は相変わらず <code>rx.Observable&lt;T&gt;</code> のまま。なので ViewModel で <code>rx.Observable&lt;T&gt;</code> → <code>ObservableField&lt;T&gt;</code> へ変換。</li>
-<li>メソッドとのバインドに <code>Command</code> を使用していたが、Android Data Binding の <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html#binding_events">Binding Events</a> に置き換え。</li>
-<li>ListView とデータ群のバインディングの方法が分からなかったので、<a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html#custom_setters">カスタムBinding</a>で対応。(listItem のバインディングじゃなくて、リストの件数の増減を反映させるやつ。)</li>
-<li>ArrayAdapter 使ってたんだけどこいつは Binding に対応していない？ので Adapter を自作。 </li>
+  <li>View-ViewModel で全面的に使用していた <code class="highlighter-rouge">rx.Observable&lt;T&gt;</code> の代わりに、<code class="highlighter-rouge">ObservableField&lt;T&gt;</code> を使用。</li>
+  <li>View側で「オレオレDataBinding」を実装していた箇所を、Android の Data Binding に置き換え。つまりバインディングの定義はレイアウトxmlへ記述。</li>
+  <li>Model は相変わらず <code class="highlighter-rouge">rx.Observable&lt;T&gt;</code> のまま。なので ViewModel で <code class="highlighter-rouge">rx.Observable&lt;T&gt;</code> → <code class="highlighter-rouge">ObservableField&lt;T&gt;</code> へ変換。</li>
+  <li>メソッドとのバインドに <code class="highlighter-rouge">Command</code> を使用していたが、Android Data Binding の <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html#binding_events">Binding Events</a> に置き換え。</li>
+  <li>ListView とデータ群のバインディングの方法が分からなかったので、<a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html#custom_setters">カスタムBinding</a>で対応。(listItem のバインディングじゃなくて、リストの件数の増減を反映させるやつ。)</li>
+  <li>ArrayAdapter 使ってたんだけどこいつは Binding に対応していない？ので Adapter を自作。</li>
 </ul>
 
-<h2>MainActivity のバインディングの定義</h2>
+<h2 id="mainactivity-">MainActivity のバインディングの定義</h2>
 
-<p><code>activity_main.xml</code> はこんな感じ。</p>
+<p><code class="highlighter-rouge">activity_main.xml</code> はこんな感じ。</p>
 
-<p><code>@{ }</code> で  <code>MainViewModel</code> に用意した <code>ObservableField&lt;T&gt;</code> または、イベントハンドラとバインドしてます。</p>
+<p><code class="highlighter-rouge">@{ }</code> で  <code class="highlighter-rouge">MainViewModel</code> に用意した <code class="highlighter-rouge">ObservableField&lt;T&gt;</code> または、イベントハンドラとバインドしてます。</p>
 
-<p>```xml activity_main.xml<br>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"<br>
-    xmlns:tools="http://schemas.android.com/tools"<br>
-    xmlns:app="http://schemas.android.com/apk/res-auto"></p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;data&gt;
-    &lt;variable name="viewModel"
-        type="com.amay077.stopwatchapp.viewmodel.MainViewModel"/&gt;
-&lt;/data&gt;
-&lt;LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:orientation="vertical"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"&gt;
+<p>```xml activity_main.xml<br />
+<?xml version="1.0" encoding="utf-8"?></p>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    &lt;TextView android:id="@+id/textTime"
-        tools:text="00:00.000"
-        android:text="@{viewModel.formattedTime}"
-        android:textSize="50sp"
-        android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" /&gt;
+    <data>
+        <variable name="viewModel" type="com.amay077.stopwatchapp.viewmodel.MainViewModel" />
+    </data>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin" android:orientation="vertical" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    &lt;Button
-        android:id="@+id/buttonStartStop"
-        android:text="@{viewModel.runButtonTitle}"
-        android:onClick="@{viewModel.onClickStartOrStop}"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" /&gt;
-    &lt;Button
-        android:id="@+id/buttonLap"
-        android:text="Lap"
-        android:enabled="@{viewModel.isRunning}"
-        android:onClick="@{viewModel.onClickLap}"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" /&gt;
-    &lt;Switch
-        android:id="@+id/switchVisibleMillis"
-        android:checked="@{viewModel.isVisibleMillis}"
-        android:onClick="@{viewModel.onClickToggleVisibleMillis}"
-        android:text="小数点以下を表示"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" /&gt;
+        <TextView android:id="@+id/textTime" tools:text="00:00.000" android:text="@{viewModel.formattedTime}" android:textSize="50sp" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" />
 
-    &lt;ListView
-        android:id="@+id/listLaps"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:formattedLaps="@{viewModel}" /&gt;
-&lt;/LinearLayout&gt;
-</code></pre></div>
-<p></layout><br>
-```</p>
+        <button android:id="@+id/buttonStartStop" android:text="@{viewModel.runButtonTitle}" android:onclick="@{viewModel.onClickStartOrStop}" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <button android:id="@+id/buttonLap" android:text="Lap" android:enabled="@{viewModel.isRunning}" android:onclick="@{viewModel.onClickLap}" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Switch android:id="@+id/switchVisibleMillis" android:checked="@{viewModel.isVisibleMillis}" android:onClick="@{viewModel.onClickToggleVisibleMillis}" android:text="小数点以下を表示" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
-<p>ListView で <code>app:formattedLaps=&quot;@{viewModel}&quot;</code> としているところだけが特殊で、これは <code>MainActivity.java</code> に定義したカスタムSetter を呼び出します。</p>
+        <ListView android:id="@+id/listLaps" android:layout_width="match_parent" android:layout_height="match_parent" app:formattedLaps="@{viewModel}" />
+    </LinearLayout>
+</layout>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+ListView で ``app:formattedLaps="@{viewModel}"`` としているところだけが特殊で、これは ``MainActivity.java`` に定義したカスタムSetter を呼び出します。
 
-<p><code>MainActivity.java</code> はこんな感じ。</p>
+``MainActivity.java`` はこんな感じ。
 
-<p>```java MainActivity.java<br>
-public class MainActivity extends AppCompatActivity {</p>
-<div class="highlight"><pre><code class="language-" data-lang="">private /* final */  MainViewModel _viewModel;
-private CompositeSubscription _subscriptions = new CompositeSubscription();
+```java MainActivity.java
+public class MainActivity extends AppCompatActivity {
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+    private /* final */  MainViewModel _viewModel;
+    private CompositeSubscription _subscriptions = new CompositeSubscription();
 
-    _viewModel = new MainViewModel(this.getApplicationContext());
-    binding.setViewModel(_viewModel);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-    // ■ViewModel からの Message の受信（省略）
+        _viewModel = new MainViewModel(this.getApplicationContext());
+        binding.setViewModel(_viewModel);
+
+        // ■ViewModel からの Message の受信（省略）
+    }
+
+    /**
+     * ListView と ViewModel のカスタムバインディング
+     *
+     * TODO 本当は viewModel.formattedLaps とバインドしたい
+     */
+    @BindingAdapter("formattedLaps")
+    public static void setFormattedLaps(ListView listView, final MainViewModel viewModel) {
+        final LapAdapter adapter = new LapAdapter(listView.getContext());
+        listView.setAdapter(adapter);
+        
+        // formattedLaps が変化した時に呼ばれるイベントで、Adapterを洗い替え。
+        viewModel.formattedLaps.addOnPropertyChangedCallback(new android.databinding.Observable.OnPropertyChangedCallback() {
+            @Override
+            public void onPropertyChanged(android.databinding.Observable sender, int propertyId) {
+                adapter.clear();
+                adapter.addAll(viewModel.formattedLaps.get());
+            }
+        });
+
+        // バインド時に値を更新
+        adapter.clear();
+        adapter.addAll(viewModel.formattedLaps.get());
+    }
+
+    @Override
+    protected void onDestroy() {
+        _viewModel.unsubscribe();
+        super.onDestroy();
+    }
 }
+</code></pre>
+</div>
 
-/**
- * ListView と ViewModel のカスタムバインディング
- *
- * TODO 本当は viewModel.formattedLaps とバインドしたい
- */
-@BindingAdapter("formattedLaps")
-public static void setFormattedLaps(ListView listView, final MainViewModel viewModel) {
-    final LapAdapter adapter = new LapAdapter(listView.getContext());
-    listView.setAdapter(adapter);
-
-    // formattedLaps が変化した時に呼ばれるイベントで、Adapterを洗い替え。
-    viewModel.formattedLaps.addOnPropertyChangedCallback(new android.databinding.Observable.OnPropertyChangedCallback() {
-        @Override
-        public void onPropertyChanged(android.databinding.Observable sender, int propertyId) {
-            adapter.clear();
-            adapter.addAll(viewModel.formattedLaps.get());
-        }
-    });
-
-    // バインド時に値を更新
-    adapter.clear();
-    adapter.addAll(viewModel.formattedLaps.get());
-}
-
-@Override
-protected void onDestroy() {
-    _viewModel.unsubscribe();
-    super.onDestroy();
-}
-</code></pre></div>
-<p>}<br>
-```</p>
-
-<p>オレオレBindingがごっそり消えてスッキリ。<br>
-<code>setFormattedLaps</code> がカスタムSetterで、この中で <code>MainViewModel.formatterLaps</code> を監視し、値が変わったら Adapter を総入れ替えしてます。が、これが正しいやり方かわからない。<br>
+<p>オレオレBindingがごっそり消えてスッキリ。<br />
+<code class="highlighter-rouge">setFormattedLaps</code> がカスタムSetterで、この中で <code class="highlighter-rouge">MainViewModel.formatterLaps</code> を監視し、値が変わったら Adapter を総入れ替えしてます。が、これが正しいやり方かわからない。<br />
 <a href="https://android.googlesource.com/platform/frameworks/data-binding/+/android-6.0.0_r7/extensions/baseAdapters/src/main/java/android/databinding/adapters">extensions/baseAdapters/src/main/java/android/databinding/adapters</a> にはそれらしいのがないでござるよ。。。</p>
 
-<h2>ViewModel 側</h2>
+<h2 id="viewmodel-">ViewModel 側</h2>
 
 <p>この辺みてください。大したことはやってないです。（急に雑になったw）</p>
 
 <ul>
-<li><a href="https://github.com/amay077/StopWatchSample/blob/android_data_binding_v1_20160128/StopWatchAppAndroid/app/src/main/java/com/amay077/stopwatchapp/viewmodel/MainViewModel.java">StopWatchSample/MainViewModel.java</a></li>
-<li><a href="https://github.com/amay077/StopWatchSample/blob/android_data_binding_v1_20160128/StopWatchAppAndroid/app/src/main/java/com/amay077/stopwatchapp/viewmodel/ObservableUtil.java">StopWatchSample/ObservableUtil.java</a></li>
+  <li><a href="https://github.com/amay077/StopWatchSample/blob/android_data_binding_v1_20160128/StopWatchAppAndroid/app/src/main/java/com/amay077/stopwatchapp/viewmodel/MainViewModel.java">StopWatchSample/MainViewModel.java</a></li>
+  <li><a href="https://github.com/amay077/StopWatchSample/blob/android_data_binding_v1_20160128/StopWatchAppAndroid/app/src/main/java/com/amay077/stopwatchapp/viewmodel/ObservableUtil.java">StopWatchSample/ObservableUtil.java</a></li>
 </ul>
 
-<p><code>ObservableUtil.toObservableField</code> とか、もうどっかの誰かがやってそうだし、事実上標準の何かが出てきそうな気がすごくします。</p>
+<p><code class="highlighter-rouge">ObservableUtil.toObservableField</code> とか、もうどっかの誰かがやってそうだし、事実上標準の何かが出てきそうな気がすごくします。</p>
 
-<h2>おまけ</h2>
+<h2 id="section">おまけ</h2>
 
-<h3>Messenger を RxJava ベースにした</h3>
+<h3 id="messenger--rxjava-">Messenger を RxJava ベースにした</h3>
 
 <ul>
-<li><a href="http://qiita.com/yyaammaa/items/57d8baa1e80346e67e47">OttoからRxJavaへの移行ガイド - Qiita</a></li>
-<li><a href="http://qiita.com/kubode/items/a4ece37834446c9a39c8">Android - RxJavaでEventBusを作った - Qiita</a></li>
+  <li><a href="http://qiita.com/yyaammaa/items/57d8baa1e80346e67e47">OttoからRxJavaへの移行ガイド - Qiita</a></li>
+  <li><a href="http://qiita.com/kubode/items/a4ece37834446c9a39c8">Android - RxJavaでEventBusを作った - Qiita</a></li>
 </ul>
 
-<p>らしいので、自作してた <code>Messenger</code> を <a href="https://github.com/amay077/StopWatchSample/blob/android_data_binding_v1_20160128/StopWatchAppAndroid/app/src/main/java/com/amay077/stopwatchapp/frameworks/messengers/Messenger.java">RxJava ベースにしてみました</a>。<br>
-ViewModel→Viewの通知<br>
-にしか使ってないので、あまり <code>rx.Observable&lt;T&gt;</code> にする旨味はなかったですね。あ、<code>ofType</code> って便利ですね。</p>
+<p>らしいので、自作してた <code class="highlighter-rouge">Messenger</code> を <a href="https://github.com/amay077/StopWatchSample/blob/android_data_binding_v1_20160128/StopWatchAppAndroid/app/src/main/java/com/amay077/stopwatchapp/frameworks/messengers/Messenger.java">RxJava ベースにしてみました</a>。<br />
+ViewModel→Viewの通知<br />
+にしか使ってないので、あまり <code class="highlighter-rouge">rx.Observable&lt;T&gt;</code> にする旨味はなかったですね。あ、<code class="highlighter-rouge">ofType</code> って便利ですね。</p>
 
-<h2>まとめ</h2>
+<h2 id="section-1">まとめ</h2>
 
 <p>今回作ったアプリの全ソースは</p>
 
 <ul>
-<li><a href="https://github.com/amay077/StopWatchSample/tree/android_data_binding_v1_20160128/StopWatchAppXamarin/StopWatchApp.Android">StopWatchApp.Android</a></li>
+  <li><a href="https://github.com/amay077/StopWatchSample/tree/android_data_binding_v1_20160128/StopWatchAppXamarin/StopWatchApp.Android">StopWatchApp.Android</a></li>
 </ul>
 
 <p>です。</p>
 
 <p>.NETアプリケーション開発では、ViewModel を View にバインドすることが殆どなので、典型的な例としてやってみました。</p>
 
-<p>レイアウトに直接バインドを定義できるので、コードビハインド(Javaのソース)はスッキリしますが、個人的にはあまり好きではありません。<br>
-コードビハインドに(<code>textTime.SetBinding(v =&gt; v.Text, viewModel.Time)</code> みたく)書いた方が、定義情報がまとまっていて管理しやすい、デバッグしやすいと思うからです。（同じ理由で、xmlに直接記述する <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html#expression_language">Expression Language</a> も好きではありません。）<br>
+<p>レイアウトに直接バインドを定義できるので、コードビハインド(Javaのソース)はスッキリしますが、個人的にはあまり好きではありません。<br />
+コードビハインドに(<code class="highlighter-rouge">textTime.SetBinding(v =&gt; v.Text, viewModel.Time)</code> みたく)書いた方が、定義情報がまとまっていて管理しやすい、デバッグしやすいと思うからです。（同じ理由で、xmlに直接記述する <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html#expression_language">Expression Language</a> も好きではありません。）<br />
 が、今のところ、Android Data Binding では、レイアウトXMLでしかバインディングを定義できないようですね。</p>
 
 <p>ともあれ、<a href="https://github.com/gueei/AndroidBinding">AndroidBinding</a> とか Butter Knife はこれで駆逐されていく（前者はすでに息してなさそうですが）と思うので、新しいアプリ開発では積極的に使っていこうかなと思います。</p>
 
-<h2>参考</h2>
+<h2 id="section-2">参考</h2>
 
 <ul>
-<li><a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html">Data Binding Guide | Android Developers</a></li>
-<li><a href="http://qiita.com/izumin5210/items/2784576d86ce6b9b51e6#after-listview">Android - Butter Knife、今までありがとう。 Data Binding、これからよろしく。 - Qiita</a></li>
-<li><a href="http://tech.recruit-mp.co.jp/mobile/android-data-binding/">[Android] – Data Bindingつかってみた – NET BIZ DIV. TECH BLOG</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Data Binding Guide</td>
+          <td>Android Developers](http://developer.android.com/intl/ja/tools/data-binding/guide.html)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://qiita.com/izumin5210/items/2784576d86ce6b9b51e6#after-listview">Android - Butter Knife、今までありがとう。 Data Binding、これからよろしく。 - Qiita</a></li>
+  <li><a href="http://tech.recruit-mp.co.jp/mobile/android-data-binding/">[Android] – Data Bindingつかってみた – NET BIZ DIV. TECH BLOG</a></li>
 </ul>
 
     </section>

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -755,76 +623,79 @@ img {
       <a name="topofpage"></a>
       <p>今日も小ネタです。</p>
 
-<p>Xamarin.iOS の SingleView Application とか(storyboard じゃないやつ)でプロジェクトを作ると、唯一の ViewController の名称が 「プロジェクト名ViewController.cs(.xib)」ってなるんですけど、なんかカッコ悪い。<br>
-&lt;!--more--&gt;<br>
+<p>Xamarin.iOS の SingleView Application とか(storyboard じゃないやつ)でプロジェクトを作ると、唯一の ViewController の名称が 「プロジェクト名ViewController.cs(.xib)」ってなるんですけど、なんかカッコ悪い。<br />
+<!--more--><br />
 MainViewController とか、StartupViewController にしたいですね。その方法です。</p>
 
-<h2>1. プロジェクトを作る</h2>
+<h2 id="section">1. プロジェクトを作る</h2>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_01.png" alt="" /></p>
 
-<p>「RenameTest」という名称でプロジェクトを作ると、ViewController は <code>RenameTestViewController.cs</code> になります。</p>
+<p>「RenameTest」という名称でプロジェクトを作ると、ViewController は <code class="highlighter-rouge">RenameTestViewController.cs</code> になります。</p>
 
-<h2>2. クラス名をリファクタ機能で変更</h2>
+<h2 id="section-1">2. クラス名をリファクタ機能で変更</h2>
 
-<p><code>RenameTestViewController.cs</code> を開いてクラス名のところで右クリック→リファクタ。</p>
+<p><code class="highlighter-rouge">RenameTestViewController.cs</code> を開いてクラス名のところで右クリック→リファクタ。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_02.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_02.png" alt="" /></p>
 
-<p><code>MainViewController</code> に変更します。</p>
+<p><code class="highlighter-rouge">MainViewController</code> に変更します。</p>
 
 <p>これにより以下のようにファイルが変更されます。(git status を晒すことでスペースを稼ごう…)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">$ git status
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git status
  On branch master
  Changes to be committed:
-    modified:   AppDelegate.cs
-    renamed:    RenameTestViewController.cs -&gt; MainViewController.cs
-    renamed:    RenameTestViewController.designer.cs -&gt; MainViewController.designer.cs
-    modified:   RenameTest.csproj
-</code></pre></div>
-<h2>3. xib ファイル名を変更する</h2>
+	modified:   AppDelegate.cs
+	renamed:    RenameTestViewController.cs -&gt; MainViewController.cs
+	renamed:    RenameTestViewController.designer.cs -&gt; MainViewController.designer.cs
+	modified:   RenameTest.csproj
+</code></pre>
+</div>
 
-<p><code>RenameTestViewController.xib</code> はリファクタに追従しないので、手動でファイル名を変更します。</p>
+<h2 id="xib-">3. xib ファイル名を変更する</h2>
 
-<p>それから、<code>MainViewController</code> のコンストラクタで、リテラルに xib の名称を指定しているのでそこも修正します。</p>
+<p><code class="highlighter-rouge">RenameTestViewController.xib</code> はリファクタに追従しないので、手動でファイル名を変更します。</p>
 
-<p><code>csharp MainViewController.cs<br>
-namespace RenameTest<br>
-{<br>
-    public partial class MainViewController : UIViewController<br>
-    {<br>
-        public MainViewController() : base(“MainViewController&quot;, null) // ← ココ！<br>
-        {<br>
-        }<br>
+<p>それから、<code class="highlighter-rouge">MainViewController</code> のコンストラクタで、リテラルに xib の名称を指定しているのでそこも修正します。</p>
+
+<p><code class="highlighter-rouge">csharp MainViewController.cs
+namespace RenameTest
+{
+    public partial class MainViewController : UIViewController
+    {
+        public MainViewController() : base(“MainViewController", null) // ← ココ！
+        {
+        }
 </code></p>
 
-<h2>4. Xcode との連携確認</h2>
+<h2 id="xcode-">4. Xcode との連携確認</h2>
 
 <p>.xib ファイルをダブルクリックすると Xcode が起動します。これは OK。けどファイル一覧を見てみると…</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_03.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_03.png" alt="" /></p>
 
-<p><code>RenameTestViewController.h</code> ってファイルができてる！<br>
-<code>MainViewController.h</code> になってほしいのですが。。。</p>
+<p><code class="highlighter-rouge">RenameTestViewController.h</code> ってファイルができてる！<br />
+<code class="highlighter-rouge">MainViewController.h</code> になってほしいのですが。。。</p>
 
 <p>Xamarin Studio にもどって、「RenameTestViewController」 が残っているところを探します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_04.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_04.png" alt="" /></p>
 
 <p>お前らか！</p>
 
-<p><code>MainViewController.designer.cs</code> は、マニュアルで修正してはいけないのですが、試しに直してみます。</p>
+<p><code class="highlighter-rouge">MainViewController.designer.cs</code> は、マニュアルで修正してはいけないのですが、試しに直してみます。</p>
 
-<p><code>MainViewController.xib</code> 内の方も古い名前は抹殺しておきます。<br>
+<p><code class="highlighter-rouge">MainViewController.xib</code> 内の方も古い名前は抹殺しておきます。<br />
 これは Xamarin Studio ではソースコードエディタで開くか、別なテキストエディタで編集します。(これも推奨されない)</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_05.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_05.png" alt="" /></p>
 
-<p>どちらも直したら、再度 <code>MainViewController.xib</code> を実行して Xcode を起動。</p>
+<p>どちらも直したら、再度 <code class="highlighter-rouge">MainViewController.xib</code> を実行して Xcode を起動。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_06.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/xamarin_ios_rename_viewcontoller_06.png" alt="" /></p>
 
-<p>やったー、ようやく <code>RenameTestViewController</code> を抹殺できました。この状態で Xamarin 側との outlet の連携など、問題ないようです。</p>
+<p>やったー、ようやく <code class="highlighter-rouge">RenameTestViewController</code> を抹殺できました。この状態で Xamarin 側との outlet の連携など、問題ないようです。</p>
 
 <p>まあ、Xcode 用のプロジェクトファイルは Xamarin Studio が自動生成するもの(obj ディレクトリに作成される)で、名前が元のままでも問題はないです。</p>
 

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>RxJava で Observable の並列処理を直列化する</title>
-  <meta name="description" content="rx.Observable&lt;T&gt; のオペレータは、通常は非同期で、並列に処理されます。&lt;!--more--&gt;">
+  <meta name="description" content="rx.Observable&lt;T&gt; のオペレータは、通常は非同期で、並列に処理されます。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2016/02/08/serialize-operation-in-rxjava/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "RxJava で Observable の並列処理を直列化する",
   "datePublished": "2016-02-08T01:16:02+09:00",
   "dateModified": "2016-02-08T01:16:02+09:00",
-  "description": "rx.Observable&lt;T&gt; のオペレータは、通常は非同期で、並列に処理されます。&lt;!--more--&gt;",
+  "description": "rx.Observable&lt;T&gt; のオペレータは、通常は非同期で、並列に処理されます。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,16 +621,17 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><code>rx.Observable&lt;T&gt;</code> のオペレータは、通常は非同期で、並列に処理されます。<br>
-&lt;!--more--&gt;</p>
+      <p><code class="highlighter-rouge">rx.Observable&lt;T&gt;</code> のオペレータは、通常は非同期で、並列に処理されます。<br />
+<!--more--></p>
 
 <p>例えば以下のような場合:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">Observable</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
         <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">fatTask</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
         <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onNext - "</span> <span class="o">+</span> <span class="n">x</span><span class="o">));</span>
 <span class="o">}</span>
-
+ 
 <span class="kd">private</span> <span class="kd">final</span> <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
 <span class="kd">private</span> <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newScheduledThreadPool</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
 
@@ -778,37 +647,40 @@ img {
         <span class="o">},</span> <span class="n">sleep</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
     <span class="o">});</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>このプログラムの出力はこうなります。</p>
 
 <blockquote>
-<p>出力:<br/><br>
-fatTask(1) - start.<br/><br>
-fatTask(2) - start.<br/><br>
-fatTask(3) - start.<br/><br>
-fatTask(4) - start.<br/><br>
-fatTask(5) - start.<br/><br>
-onNext - 3<br/><br>
-onNext - 5<br/><br>
-onNext - 4<br/><br>
-onNext - 2<br/><br>
-onNext - 1<br/></p>
+  <p>出力:<br /><br />
+fatTask(1) - start.<br /><br />
+fatTask(2) - start.<br /><br />
+fatTask(3) - start.<br /><br />
+fatTask(4) - start.<br /><br />
+fatTask(5) - start.<br /><br />
+onNext - 3<br /><br />
+onNext - 5<br /><br />
+onNext - 4<br /><br />
+onNext - 2<br /><br />
+onNext - 1<br /></p>
 </blockquote>
 
-<p>fatTask は 1,2,3,4,5 の順で <em>完了を待たずに</em> 呼びだされます。<br>
-が、それぞれ処理にかかる時間が異なるので、 <code>onNext</code> が呼ばれる順は 1〜 とは限りません。</p>
+<p>fatTask は 1,2,3,4,5 の順で <em>完了を待たずに</em> 呼びだされます。<br />
+が、それぞれ処理にかかる時間が異なるので、 <code class="highlighter-rouge">onNext</code> が呼ばれる順は 1〜 とは限りません。</p>
 
-<p>ソースとなる Stream の順番を崩したくない場合は、 <code>fatTask(1)</code> が完了してから <code>fatTask(2)</code> を開始する、というように直列化しなければなりません。</p>
+<p>ソースとなる Stream の順番を崩したくない場合は、 <code class="highlighter-rouge">fatTask(1)</code> が完了してから <code class="highlighter-rouge">fatTask(2)</code> を開始する、というように直列化しなければなりません。</p>
 
-<h2>Observable.Concat(concatWith)</h2>
+<h2 id="observableconcatconcatwith">Observable.Concat(concatWith)</h2>
 
-<p>これを行うのが <code>Observable.Concat</code> です(RxJava では <code>Observable.concatWith</code> のようですね)。<br>
-複数の <code>Observable</code> を順に（完了してから次へ）処理していきます。</p>
+<p>これを行うのが <code class="highlighter-rouge">Observable.Concat</code> です(RxJava では <code class="highlighter-rouge">Observable.concatWith</code> のようですね)。<br />
+複数の <code class="highlighter-rouge">Observable</code> を順に（完了してから次へ）処理していきます。</p>
 
-<h3>使い方</h3>
+<h3 id="section">使い方</h3>
 
-<p><code>toList</code> で一旦ただの <code>List</code> にしてから、<code>concatWith</code> で数珠つなぎにします。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+<p><code class="highlighter-rouge">toList</code> で一旦ただの <code class="highlighter-rouge">List</code> にしてから、<code class="highlighter-rouge">concatWith</code> で数珠つなぎにします。</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">Observable</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
         <span class="o">.</span><span class="na">toList</span><span class="o">()</span>
         <span class="o">.</span><span class="na">flatMap</span><span class="o">(</span><span class="n">list</span> <span class="o">-&gt;</span> <span class="o">{</span>
@@ -826,44 +698,56 @@ onNext - 1<br/></p>
         <span class="o">})</span>
         <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onNext - "</span> <span class="o">+</span> <span class="n">x</span><span class="o">));</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>このプログラムの出力はこうなります。</p>
 
 <blockquote>
-<p>出力<br/><br>
-fatTask(1) - start.<br/><br>
-onNext - 1<br/><br>
-fatTask(2) - start.<br/><br>
-onNext - 2<br/><br>
-fatTask(3) - start.<br/><br>
-onNext - 3<br/><br>
-fatTask(4) - start.<br/><br>
-onNext - 4<br/><br>
-fatTask(5) - start.<br/><br>
-onNext - 5<br/></p>
+  <p>出力<br /><br />
+fatTask(1) - start.<br /><br />
+onNext - 1<br /><br />
+fatTask(2) - start.<br /><br />
+onNext - 2<br /><br />
+fatTask(3) - start.<br /><br />
+onNext - 3<br /><br />
+fatTask(4) - start.<br /><br />
+onNext - 4<br /><br />
+fatTask(5) - start.<br /><br />
+onNext - 5<br /></p>
 </blockquote>
 
-<p><code>fatTask(1)</code> の完了を待ってから、次の <code>fatTask(2)</code> が実行されています。</p>
+<p><code class="highlighter-rouge">fatTask(1)</code> の完了を待ってから、次の <code class="highlighter-rouge">fatTask(2)</code> が実行されています。</p>
 
-<p>※<br>
-Rx.NET では、 </p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">static</span> <span class="n">IObservable</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">Concat</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">IObservable</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;&gt;</span> <span class="n">sources</span><span class="p">)</span>
-</code></pre></div>
-<p>で、複数の <code>IObservable</code> を一括で渡せるのですが、 RxJava にはないようで、、、。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Observable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">concatEager</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Observable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">sources</span><span class="o">)</span>
-</code></pre></div>
+<p>※<br />
+Rx.NET では、</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">static</span> <span class="n">IObservable</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">Concat</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">IObservable</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;&gt;</span> <span class="n">sources</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>で、複数の <code class="highlighter-rouge">IObservable</code> を一括で渡せるのですが、 RxJava にはないようで、、、。</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Observable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">concatEager</span><span class="o">(</span><span class="n">Iterable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Observable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">sources</span><span class="o">)</span>
+</code></pre>
+</div>
+
 <p>というのがあったんですが、期待通りうごいてくれず、 Eager? なんでしょう？</p>
 
-<h2>ソースが無限リストだったら？</h2>
+<h2 id="section-1">ソースが無限リストだったら？</h2>
 
-<p><code>toList</code> で一旦ただの List にしているのが非常に気に入らないですね。<br>
-<code>range(1, 5)</code> が <code>interval(1, TimeUnit.SECONDS)</code> のように無限の Stream だったら使えません。</p>
+<p><code class="highlighter-rouge">toList</code> で一旦ただの List にしているのが非常に気に入らないですね。<br />
+<code class="highlighter-rouge">range(1, 5)</code> が <code class="highlighter-rouge">interval(1, TimeUnit.SECONDS)</code> のように無限の Stream だったら使えません。</p>
 
-<p>そこで、 <code>concat</code> には、こんな overload もあります。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Observable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">concat</span><span class="o">(</span><span class="n">Observable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Observable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">observables</span><span class="o">)</span>
-</code></pre></div>
-<p>Observable<T> を通知する Observable？ ややこしいですがこう使います。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+<p>そこで、 <code class="highlighter-rouge">concat</code> には、こんな overload もあります。</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">static</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Observable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">concat</span><span class="o">(</span><span class="n">Observable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Observable</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">observables</span><span class="o">)</span>
+</code></pre>
+</div>
+
+<p>Observable<T> を通知する Observable？ ややこしいですがこう使います。</T></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
     <span class="c1">// 2. を concat する</span>
     <span class="n">Observable</span><span class="o">.</span><span class="na">concat</span><span class="o">(</span> 
         <span class="c1">// 1. Observable&lt;Long&gt;</span>
@@ -873,46 +757,52 @@ Rx.NET では、 </p>
             <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">fatTask</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">intValue</span><span class="o">())))</span> 
         <span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"onNext - "</span> <span class="o">+</span> <span class="n">x</span><span class="o">));</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>このプログラムの出力はこうなります。</p>
 
 <blockquote>
-<p>出力<br/><br>
-fatTask(0) - start.<br/><br>
-onNext - 0<br/><br>
-fatTask(1) - start.<br/><br>
-onNext - 1<br/><br>
-fatTask(2) - start.<br/><br>
-onNext - 2<br/><br>
-…つづく<br/></p>
+  <p>出力<br /><br />
+fatTask(0) - start.<br /><br />
+onNext - 0<br /><br />
+fatTask(1) - start.<br /><br />
+onNext - 1<br /><br />
+fatTask(2) - start.<br /><br />
+onNext - 2<br /><br />
+…つづく<br /></p>
 </blockquote>
 
 <p>無限リストながら、並列処理せずに順序通り動いてくれます。</p>
 
-<p><code>interval</code> の値を単純に <code>map</code> で <code>Observable&lt;Integer&gt;</code> に変換してやります。するとこれは <code>Observable&lt;Observable&lt;Integer&gt;&gt;</code> になり、<code>concat</code> 可能になります。 <code>flatMap</code> だと平坦化されちゃうのでただの <code>map</code> です。</p>
+<p><code class="highlighter-rouge">interval</code> の値を単純に <code class="highlighter-rouge">map</code> で <code class="highlighter-rouge">Observable&lt;Integer&gt;</code> に変換してやります。するとこれは <code class="highlighter-rouge">Observable&lt;Observable&lt;Integer&gt;&gt;</code> になり、<code class="highlighter-rouge">concat</code> 可能になります。 <code class="highlighter-rouge">flatMap</code> だと平坦化されちゃうのでただの <code class="highlighter-rouge">map</code> です。</p>
 
-<h2>まとめ</h2>
+<h2 id="section-2">まとめ</h2>
 
-<p>Observable は普通は非同期で並列処理。<br>
-非同期ながら直列化したい場合は <code>Observable.concat</code> でできます。</p>
+<p>Observable は普通は非同期で並列処理。<br />
+非同期ながら直列化したい場合は <code class="highlighter-rouge">Observable.concat</code> でできます。</p>
 
 <ol>
-<li>GPS から緯度経度を取得</li>
-<li>なんか重い計算を行う</li>
-<li>結果をテキストファイルに書き出す</li>
+  <li>GPS から緯度経度を取得</li>
+  <li>なんか重い計算を行う</li>
+  <li>結果をテキストファイルに書き出す</li>
 </ol>
 
 <p>みたいな処理をするとき 3. を 1. の順序と同じにしたいのでこれを使います。</p>
 
-<p>はじめ自分は <code>flatMap</code> で繋いでいくだけですべて直列化されているのかなーと勘違いしていたので、これを知った時は目からウロコでした。</p>
+<p>はじめ自分は <code class="highlighter-rouge">flatMap</code> で繋いでいくだけですべて直列化されているのかなーと勘違いしていたので、これを知った時は目からウロコでした。</p>
 
-<h2>参考</h2>
+<h2 id="section-3">参考</h2>
 
 <ul>
-<li><a href="http://www.introtorx.com/content/v1.0.10621.0/12_CombiningSequences.html">Intro to Rx - Combining sequences</a></li>
-<li><a href="http://reactivex.io/documentation/operators/concat.html">ReactiveX - Concat operator</a></li>
-<li><a href="http://blog.okazuki.jp/entry/20120219/1329663635">Reactive Extensions再入門 その４１「どんどん合成するよ」 - かずきのBlog@hatena</a></li>
-<li><a href="https://twitter.com/neuecc/status/695604984763650050">https://twitter.com/neuecc/status/695604984763650050</a> - @neuecc さんありがとうございます！</li>
+  <li><a href="http://www.introtorx.com/content/v1.0.10621.0/12_CombiningSequences.html">Intro to Rx - Combining sequences</a></li>
+  <li><a href="http://reactivex.io/documentation/operators/concat.html">ReactiveX - Concat operator</a></li>
+  <li><a href="http://blog.okazuki.jp/entry/20120219/1329663635">Reactive Extensions再入門 その４１「どんどん合成するよ」 - かずきのBlog@hatena</a></li>
+  <li>
+    <p><a href="https://twitter.com/neuecc/status/695604984763650050">https://twitter.com/neuecc/status/695604984763650050</a></p>    <ul>
+      <li>@neuecc さんありがとうございます！</li>
+    </ul>
+  </li>
 </ul>
 
     </section>

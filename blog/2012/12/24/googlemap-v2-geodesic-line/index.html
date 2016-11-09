@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -763,61 +631,62 @@ img {
 
 <p>こんな感じ、赤がただの直線、青が大圏コースです。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/greatcircle.png" alt="greatcircle"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/greatcircle.png" alt="greatcircle" /></p>
 
-<p>やり方は以下のとおりで、<code>geodesic</code> を <code>true</code> にすれば大圏コースになります。</p>
+<p>やり方は以下のとおりで、<code class="highlighter-rouge">geodesic</code> を <code class="highlighter-rouge">true</code> にすれば大圏コースになります。</p>
 
-<p>```java GeodesicPolyline.java<br>
+<p>```java GeodesicPolyline.java<br />
 GoogleMap mMap;</p>
 
-<p>final LatLng TOKYO = new LatLng(35.691, 139.693);<br>
+<p>final LatLng TOKYO = new LatLng(35.691, 139.693);<br />
 final LatLng HAWAII = new LatLng(19.87, -155.56);</p>
 
-<p>// ただの直線<br>
-mMap.addPolyline(new PolylineOptions()<br>
-    .add(TOKYO, HAWAII)<br>
-    .width(5)<br>
-    .color(Color.RED)<br>
+<p>// ただの直線<br />
+mMap.addPolyline(new PolylineOptions()<br />
+	.add(TOKYO, HAWAII)<br />
+    .width(5)<br />
+    .color(Color.RED)<br />
     .geodesic(false));</p>
 
-<p>// 大圏コース<br>
-mMap.addPolyline(new PolylineOptions()<br>
-    .add(TOKYO, HAWAII)<br>
-    .width(5)<br>
-    .color(Color.BLUE)<br>
-    .geodesic(true));<br>
+<p>// 大圏コース<br />
+mMap.addPolyline(new PolylineOptions()<br />
+	.add(TOKYO, HAWAII)<br />
+    .width(5)<br />
+    .color(Color.BLUE)<br />
+    .geodesic(true));<br />
 ```</p>
 
 <p>Developper Guide に説明があります。</p>
 
 <ul>
-<li><a href="https://developers.google.com/maps/documentation/android/lines#geodesic_and_non-geodesic_lines">Polylines and Polygons - Google Maps Android API v2</a></li>
+  <li><a href="https://developers.google.com/maps/documentation/android/lines#geodesic_and_non-geodesic_lines">Polylines and Polygons - Google Maps Android API v2</a></li>
 </ul>
 
 <blockquote>
-<p>A Geodesic line is a line that follows the curvature of the earth. In contrast, a non-geodesic line will be drawn using the coordinate system of your screen. By Default, Polyline and Polygon objects will draw non-geodesic lines. You can change any Polyline or Polygon to use geodesic lines by setting the geodesic property to true.</p>
+  <p>A Geodesic line is a line that follows the curvature of the earth. In contrast, a non-geodesic line will be drawn using the coordinate system of your screen. By Default, Polyline and Polygon objects will draw non-geodesic lines. You can change any Polyline or Polygon to use geodesic lines by setting the geodesic property to true.</p>
+</blockquote>
 
-<p>適当訳<br>
+<blockquote>
+  <p>適当訳<br />
 Geodesic なラインとは地球上の曲がった線のことです。non-geodesic ってやつは画面座標系で描いた線で、これがデフォルトです。Polyline や Polygon を geodesic にしたければ geodesic プロパティを true にするとよろし。</p>
 </blockquote>
 
-<p>ちなみにこの「２点間の最短距離」は [Location.distanceBetween](<a href="http://developer.android.com/reference/android/location/Location.html#distanceBetween(double">http://developer.android.com/reference/android/location/Location.html#distanceBetween(double</a>, double, double, double, float[]) メソッドで求められます。</p>
+<p>ちなみにこの「２点間の最短距離」は [Location.distanceBetween](http://developer.android.com/reference/android/location/Location.html#distanceBetween(double, double, double, double, float[]) メソッドで求められます。</p>
 
 <p>どうやら、Javascript 版にはもともとこの機能があったようで、以下のサイトに例があります。</p>
 
 <ul>
-<li><a href="http://user.numazu-ct.ac.jp/%7Etsato/tsato/geoweb/googlemaps/great-circle/">Googleマップで大圏コースを表示する</a></li>
+  <li><a href="http://user.numazu-ct.ac.jp/~tsato/tsato/geoweb/googlemaps/great-circle/">Googleマップで大圏コースを表示する</a></li>
 </ul>
 
-<p>あと、iOS 版の Google Maps API にもあるみた…あれ、ないや。<br>
+<p>あと、iOS 版の Google Maps API にもあるみた…あれ、ないや。<br />
 (余談ですが iOS 版の API には Polygon を描く機能もないんですね)</p>
 
 <ul>
-<li><a href="https://developers.google.com/maps/documentation/ios/lines">Polylines - Google Maps SDK for iOS</a></li>
+  <li><a href="https://developers.google.com/maps/documentation/ios/lines">Polylines - Google Maps SDK for iOS</a></li>
 </ul>
 
-<h2>その他</h2>
-
+<h2 id="section">その他</h2>
 <p>つか、Android の GoogleMap さん、思いっきり縮小しても世界が画面内に収まらないので、大圏コースの例が見せにくいわ。</p>
 
     </section>

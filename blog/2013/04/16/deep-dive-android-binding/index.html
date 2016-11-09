@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Android-Binding の Binding の実装を深掘りしてみる</title>
-  <meta name="description" content="完全に自分用メモなので乱文です。&lt;!--more--&gt;MVVM とは">
+  <meta name="description" content="完全に自分用メモなので乱文です。MVVM とは">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/04/16/deep-dive-android-binding/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Android-Binding の Binding の実装を深掘りしてみる",
   "datePublished": "2013-04-16T21:28:00+09:00",
   "dateModified": "2013-04-16T21:28:00+09:00",
-  "description": "完全に自分用メモなので乱文です。&lt;!--more--&gt;MVVM とは",
+  "description": "完全に自分用メモなので乱文です。MVVM とは",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,63 +621,85 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>完全に自分用メモなので乱文です。<br>
-&lt;!--more--&gt;</p>
+      <p>完全に自分用メモなので乱文です。<br />
+<!--more--></p>
+<h2 id="mvvm-">MVVM とは</h2>
 
-<h2>MVVM とは</h2>
-
-<p>Model-View-ViewModel なアーキテクチャ。<br>
+<p>Model-View-ViewModel なアーキテクチャ。<br />
 View(画面)は、ViewModel のプロパティ(Android-binding では IObservable)の変更を検知し、コントロール(Android ではウィジェット)の内容を置き換える。(OneWay の場合)</p>
 
 <p>TowWay の場合、ユーザーの操作によってコントロールの値が変化した時、ViewModel のプロパティにその変更を適用する。</p>
 
 <p>超断片的なので、詳しくはおググりください。</p>
 
-<p>例：<br>
+<p>例：<br />
 EditText の Text と、ViewModel の Address プロパティが関連付け(バインド)されていた場合、</p>
 
 <ul>
-<li>ViewModel.Address がプログラム処理によって変更された時に、EditText.Text が自動的に変更されるのが OneWay。</li>
-<li>上記に加え、EditText にユーザーが文字を入力した時に、ViewModel.Address にその値が適用されるのが、TwoWay。</li>
+  <li>ViewModel.Address がプログラム処理によって変更された時に、EditText.Text が自動的に変更されるのが OneWay。</li>
+  <li>上記に加え、EditText にユーザーが文字を入力した時に、ViewModel.Address にその値が適用されるのが、TwoWay。</li>
 </ul>
 
-<h2>Android-Binding とは</h2>
+<h2 id="android-binding-">Android-Binding とは</h2>
+<p>Android で MVVM できるライブラリ。</p>
+<ul>
+  <li><a href="https://code.google.com/p/android-binding/">Android-Binding</a></li>
+</ul>
 
-<p>Android で MVVM できるライブラリ。<br>
-* <a href="https://code.google.com/p/android-binding/">Android-Binding</a></p>
-
-<h2>何が知りたいのか？</h2>
-
+<h2 id="section">何が知りたいのか？</h2>
 <p>TwoWay の時、EditText にユーザーが文字列を入力して、ViewModel.Address に新しい値を設定する。すると、その変更をまた View が検知して、EditText の値を書き換える処理が動いてしまう(OneWay 側の動きをする)のではないか？</p>
 
 <p>通常の文字列などでは、EditText に同じ値が再設定されるだけなので問題なさげだが、それでも意図しないUI更新は気持ち悪い。</p>
 
-<h2>調べてみる</h2>
+<h2 id="section-1">調べてみる</h2>
 
 <p>Android-Binding では、この辺りを上手く処理しているように見えるので、実装を見てみる。</p>
 
-<p>Android-Binding で、ViewModel 側のプロパティを &quot;Property&quot;、それをバインドする View 側の定義を &quot;Attribute&quot; という。というか勝手にそう呼ぶことにする。(実体はどちらも IObservable の実装だが、この辺を説明しだすと混乱するので割愛)<br>
-前述の例だと、「EditText の Text」が &quot;Attribute&quot;、ViewModel.Address が &quot;Property&quot; になる。</p>
+<p>Android-Binding で、ViewModel 側のプロパティを “Property”、それをバインドする View 側の定義を “Attribute” という。というか勝手にそう呼ぶことにする。(実体はどちらも IObservable の実装だが、この辺を説明しだすと混乱するので割愛)<br />
+前述の例だと、「EditText の Text」が “Attribute”、ViewModel.Address が “Property” になる。</p>
 
 <ol>
-<li><p>Attribute に Property がバインドされると、<code>Attribute#onBind</code> が呼び出され、この中で <code>Attribute#Bridge</code> クラス(これは Observer である)が生成され、Bridge が Property の変更を監視する。と同時に <code>this.subscribe(mBridge)</code> にて TextViewAttribute 自身の変更も監視する。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L120">[github]</a></p></li>
-<li><p>[TextViewAttribute]ユーザーが EditText の Text を変更すると、<code>TextViewAttribute#onTextChanged</code> が呼び出され、さらに <code>notifyChanged</code> が呼び出される。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/viewAttributes/textView/TextViewAttribute.java#L68">[github]</a></p></li>
-<li><p>[TextViewAttribute]notifyChanged() は Attribute の基底クラスである <code>Observable#notifyChanged()</code> が呼び出され、続いてオーバーロードである <code>notifyChanged(initiators)</code> が呼ばれる。 <a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L66">[github]</a></p></li>
-<li><p>[TextViewAttribute]<code>initiators</code> とは、.NET イベントの sender のようなもので、イベント(コールバック)発生元のオブジェクトを示す。ただし、<code>Observable#notifyChanged()</code> の時点では、initiators はまだ空っぽ。</p></li>
-<li><p>[TextViewAttribute]<code>notifyChanged(Collection&lt;Object&gt; initiators)</code> にて、initiators に <code>this</code> つまり TextViewAttribute 自身を追加して、監視している Observer の <code>onPropertyChanged</code> を呼び出す。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L55">[github]</a></p></li>
-<li><p>[TextViewAttribute]TextViewAttribute の監視者は <code>Attribute#Bridge</code> クラスであり、<code>Bridge#onPropertyChanged(prop, initiators)</code> が呼び出される。この時点で、<code>prop</code> は TextViewAttribute 自身、initiators にも TextViewAttribute 自身が格納されている。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L125">[github]</a></p></li>
-<li><p>[TextViewAttribute]<code>Bridge#onPropertyChanged</code> の最初の if文 <code>if (prop==mAttribute){</code> が true となり、<code>mBindedObservable._setObject(prop.get(), initiators);</code> が呼び出される。<code>mAttribute</code> は TextViewAttribute 自身であり、<code>mBindedObservable</code> はバインドした ViewModel の Property である。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L127">[github]</a></p></li>
-<li><p>[Property]呼び出されたのは、ViewModel の Property(Observable)、つまり <code>Observable#_setObject(newValue, initiators)</code> である。initiators には依然として TextViewAttbute が1件格納されている。ここから <code>Observable#set(newValue, initiators)</code> が呼び出される。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L82">[github]</a></p></li>
-<li><p>[Property]<code>Observable#set(newValue, initiators)</code> では、<code>doSetValue</code> で、自身(ViewModel の Property)の値を書き換え、その後、initiators に this、つまり ViewModel の Property を追加して <code>notifyChanged</code> を呼び出す。この時点で initiators は 2件(TextViewAttribute と ViewModelのProperty) である。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L74">[github]</a></p></li>
-<li><p>[Property]<code>notifyChanged(Collection&lt;Object&gt; initiators)</code> にて、initiators に更に this を追加して(この処理に意味があるのかは謎)、監視者である Observer の <code>onPropertyChanged(this, initiators)</code> を呼び出す。この時点で initiators は 3件(TextViewAttribute と ViewModelのProperty と ViewModelのProperty) <a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L55">[github]</a></p></li>
-<li><p>[TextViewAttribute]再び Bridge#onPropertyChanged(prop, initiators) が呼び出される。ここでは prop は ViewModelのProperty である。これにより、最初の if文 は <code>false</code> となる。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L130">[github]</a></p></li>
-<li><p>[TextViewAttribute]次の if文 <code>else if (prop==mBindedObservable){</code> は <code>true</code> となるが、更にその次の if文 <code>if (initiators.contains(Attribute.this))</code> は、initiators に TextViewAttribute が含まれている為 false となり、処理は終わる。これにより、次の行にある <code>mAttribute._setObject(prop.get(), initiators);</code> は呼び出されない、つまり、EditText の Text に値が再設定されることはない。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L131">[github]</a></p></li>
+  <li>
+    <p>Attribute に Property がバインドされると、<code class="highlighter-rouge">Attribute#onBind</code> が呼び出され、この中で <code class="highlighter-rouge">Attribute#Bridge</code> クラス(これは Observer である)が生成され、Bridge が Property の変更を監視する。と同時に <code class="highlighter-rouge">this.subscribe(mBridge)</code> にて TextViewAttribute 自身の変更も監視する。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L120">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]ユーザーが EditText の Text を変更すると、<code class="highlighter-rouge">TextViewAttribute#onTextChanged</code> が呼び出され、さらに <code class="highlighter-rouge">notifyChanged</code> が呼び出される。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/viewAttributes/textView/TextViewAttribute.java#L68">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]notifyChanged() は Attribute の基底クラスである <code class="highlighter-rouge">Observable#notifyChanged()</code> が呼び出され、続いてオーバーロードである <code class="highlighter-rouge">notifyChanged(initiators)</code> が呼ばれる。 <a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L66">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]<code class="highlighter-rouge">initiators</code> とは、.NET イベントの sender のようなもので、イベント(コールバック)発生元のオブジェクトを示す。ただし、<code class="highlighter-rouge">Observable#notifyChanged()</code> の時点では、initiators はまだ空っぽ。</p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]<code class="highlighter-rouge">notifyChanged(Collection&lt;Object&gt; initiators)</code> にて、initiators に <code class="highlighter-rouge">this</code> つまり TextViewAttribute 自身を追加して、監視している Observer の <code class="highlighter-rouge">onPropertyChanged</code> を呼び出す。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L55">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]TextViewAttribute の監視者は <code class="highlighter-rouge">Attribute#Bridge</code> クラスであり、<code class="highlighter-rouge">Bridge#onPropertyChanged(prop, initiators)</code> が呼び出される。この時点で、<code class="highlighter-rouge">prop</code> は TextViewAttribute 自身、initiators にも TextViewAttribute 自身が格納されている。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L125">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]<code class="highlighter-rouge">Bridge#onPropertyChanged</code> の最初の if文 <code class="highlighter-rouge">if (prop==mAttribute){</code> が true となり、<code class="highlighter-rouge">mBindedObservable._setObject(prop.get(), initiators);</code> が呼び出される。<code class="highlighter-rouge">mAttribute</code> は TextViewAttribute 自身であり、<code class="highlighter-rouge">mBindedObservable</code> はバインドした ViewModel の Property である。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L127">[github]</a></p>
+  </li>
+  <li>
+    <p>[Property]呼び出されたのは、ViewModel の Property(Observable)、つまり <code class="highlighter-rouge">Observable#_setObject(newValue, initiators)</code> である。initiators には依然として TextViewAttbute が1件格納されている。ここから <code class="highlighter-rouge">Observable#set(newValue, initiators)</code> が呼び出される。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L82">[github]</a></p>
+  </li>
+  <li>
+    <p>[Property]<code class="highlighter-rouge">Observable#set(newValue, initiators)</code> では、<code class="highlighter-rouge">doSetValue</code> で、自身(ViewModel の Property)の値を書き換え、その後、initiators に this、つまり ViewModel の Property を追加して <code class="highlighter-rouge">notifyChanged</code> を呼び出す。この時点で initiators は 2件(TextViewAttribute と ViewModelのProperty) である。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L74">[github]</a></p>
+  </li>
+  <li>
+    <p>[Property]<code class="highlighter-rouge">notifyChanged(Collection&lt;Object&gt; initiators)</code> にて、initiators に更に this を追加して(この処理に意味があるのかは謎)、監視者である Observer の <code class="highlighter-rouge">onPropertyChanged(this, initiators)</code> を呼び出す。この時点で initiators は 3件(TextViewAttribute と ViewModelのProperty と ViewModelのProperty) <a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Observable.java#L55">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]再び Bridge#onPropertyChanged(prop, initiators) が呼び出される。ここでは prop は ViewModelのProperty である。これにより、最初の if文 は <code class="highlighter-rouge">false</code> となる。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L130">[github]</a></p>
+  </li>
+  <li>
+    <p>[TextViewAttribute]次の if文 <code class="highlighter-rouge">else if (prop==mBindedObservable){</code> は <code class="highlighter-rouge">true</code> となるが、更にその次の if文 <code class="highlighter-rouge">if (initiators.contains(Attribute.this))</code> は、initiators に TextViewAttribute が含まれている為 false となり、処理は終わる。これにより、次の行にある <code class="highlighter-rouge">mAttribute._setObject(prop.get(), initiators);</code> は呼び出されない、つまり、EditText の Text に値が再設定されることはない。<a href="https://github.com/gueei/AndroidBinding/blob/master/Core/AndroidBinding/src/gueei/binding/Attribute.java#L131">[github]</a></p>
+  </li>
 </ol>
 
-<h2>まとめ</h2>
-
+<h2 id="section-2">まとめ</h2>
 <ul>
-<li>Binder の実装は、Bridge が EditText と ViewModelのProperty 両方の変更を監視し、また initiators という仕組みをうまく使うことで、EdtiText が起こした Property の変更は、Attribute が検知しないように工夫されていた。</li>
+  <li>Binder の実装は、Bridge が EditText と ViewModelのProperty 両方の変更を監視し、また initiators という仕組みをうまく使うことで、EdtiText が起こした Property の変更は、Attribute が検知しないように工夫されていた。</li>
 </ul>
 
 <p>Android-Binding の仕組みはなんとかわかったー。.NET の XAML はどうやってんのかな？</p>

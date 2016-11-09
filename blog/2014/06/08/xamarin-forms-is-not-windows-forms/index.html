@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin.Forms は Windows.Forms じゃないよ</title>
-  <meta name="description" content="iOS／Androidの画面レイアウトを共通化するには？（Xamarin.Forms） - Build Insider">
+  <meta name="description" content="  iOS／Androidの画面レイアウトを共通化するには？（Xamarin.Forms） - Build Insider">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/06/08/xamarin-forms-is-not-windows-forms/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin.Forms は Windows.Forms じゃないよ",
   "datePublished": "2014-06-08T15:28:00+09:00",
   "dateModified": "2014-06-08T15:28:00+09:00",
-  "description": "iOS／Androidの画面レイアウトを共通化するには？（Xamarin.Forms） - Build Insider",
+  "description": "  iOS／Androidの画面レイアウトを共通化するには？（Xamarin.Forms） - Build Insider",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -754,53 +622,53 @@ img {
     <section class="post-content">
       <a name="topofpage"></a>
       <ul>
-<li><a href="http://www.buildinsider.net/mobile/xamarintips/0005">iOS／Androidの画面レイアウトを共通化するには？（Xamarin.Forms） - Build Insider</a></li>
+  <li><a href="http://www.buildinsider.net/mobile/xamarintips/0005">iOS／Androidの画面レイアウトを共通化するには？（Xamarin.Forms） - Build Insider</a></li>
 </ul>
 
-<p>に書ききれなかったことなど。<br>
-&lt;!--more--&gt;</p>
+<p>に書ききれなかったことなど。<br />
+<!--more--></p>
 
-<h2>名前どうよ？</h2>
+<h2 id="section">名前どうよ？</h2>
 
 <p><strong>Xamarin.Forms</strong> って名前、どうしても Windows.Forms を連想するけど全然別ものだから。とはいえ、あんまり WPF の経験がないので、Windows.Forms にそれほどイヤな印象がない。VB6時代なんて、画面に Fill するのすらゴリゴリ実装が必要だったし。</p>
 
-<h2>前身は MonoTouch.Dialog じゃないかと思います</h2>
+<h2 id="monotouchdialog-">前身は MonoTouch.Dialog じゃないかと思います</h2>
 
 <p>MonoTouch.Dialog というのは、Xamarin の CTO でありスーパーハッカーのミゲル氏が開発した、簡単なコードで iOS の UI を実装できるライブラリ（「Dialog」だけど、「ダイアログボックス」とは関係ない。 ）</p>
 
 <ul>
-<li><a href="https://github.com/migueldeicaza/MonoTouch.Dialog">migueldeicaza/MonoTouch.Dialog</a></li>
+  <li><a href="https://github.com/migueldeicaza/MonoTouch.Dialog">migueldeicaza/MonoTouch.Dialog</a></li>
 </ul>
 
 <p>たぶんだけど、Xamarin.Forms はこれの思想がベースにあって、他のプラットフォームやXAML対応が行われたんじゃないかと勝手に思ってます。（いつか紹介しようと思ってたけどこれでお役御免になってしまったかも）</p>
 
-<h2>Android の UIフレームワークに似てるような…</h2>
+<h2 id="android--ui">Android の UIフレームワークに似てるような…</h2>
 
 <p><a href="http://developer.xamarin.com/guides/cross-platform/xamarin-forms/controls/layouts/">StackLayout</a> は LinearLayout相当、RelativeLayout も、同名クラスがあるし、割と Android の UI の考え方をベースにしてるのかなと予想。Windows Phone はあまり経験がないので知らない。。。</p>
 
-<h2>Hoge.iOS というプロジェクト名がキライ</h2>
+<h2 id="hogeios-">Hoge.iOS というプロジェクト名がキライ</h2>
 
-<p>プラットフォームの識別子をプロジェクト名につけるのが良いんだけど、 <code>HelloForms.iOS</code> とか「iOS」とつけるのが嫌い。名前空間名とかが小文字で始まってしまうのが気持ち悪くて。<br>
-MvvmCross などでは、iOS は <code>XXX.Touch</code> 、Android は <code>XXX.Droid</code> としていて、こっちの方が好み。</p>
+<p>プラットフォームの識別子をプロジェクト名につけるのが良いんだけど、 <code class="highlighter-rouge">HelloForms.iOS</code> とか「iOS」とつけるのが嫌い。名前空間名とかが小文字で始まってしまうのが気持ち悪くて。<br />
+MvvmCross などでは、iOS は <code class="highlighter-rouge">XXX.Touch</code> 、Android は <code class="highlighter-rouge">XXX.Droid</code> としていて、こっちの方が好み。</p>
 
-<h2>XAML はデザイナーが無いとツラい</h2>
+<h2 id="xaml-">XAML はデザイナーが無いとツラい</h2>
 
-<p>WPFじゃなくてもXAMLって言っていいんだ、というのを初めて知ったｗ<br>
+<p>WPFじゃなくてもXAMLって言っていいんだ、というのを初めて知ったｗ<br />
 Xamarin Studio のXMLデザイナーは補完も効かないしツラい。コードでUI作るのにも限界があるので、今年の <a href="https://evolve.xamarin.com/">Evolve</a> あたりで「Xamarin.Forms のUIデザイナー発表ばばーん！！」を期待してます。</p>
 
-<h2>タブの位置が上とか下とかどうでもいい</h2>
+<h2 id="section-1">タブの位置が上とか下とかどうでもいい</h2>
 
-<p>「UIはプラットフォームの流儀に合わせるべき」という説明に必ずと言っていいほど登場するのがタブバーの位置が Androidだと上で、iOSだと下、ってやつ。<br>
+<p>「UIはプラットフォームの流儀に合わせるべき」という説明に必ずと言っていいほど登場するのがタブバーの位置が Androidだと上で、iOSだと下、ってやつ。<br />
 個人的にはどうでもいい。タブの切り替えをよく使うなら指の届きやすい画面下部に配置すべきだし、同じアプリならiOS版とAndroid版でUIを変えるべきでないと思っている。（かと言って、iOS版のUIをそっくりそのままAndroidに移植すればいいという話でもない）。 <strong>プロダクトのUXは、プラットフォームのUXより優先されるべき</strong> 、と思ってる。</p>
 
-<h2>上司への提案には好材料かと</h2>
+<h2 id="section-2">上司への提案には好材料かと</h2>
 
 <ul>
-<li>私「iOS/Android 両方開発するなら Xamarin 使いましょう！」</li>
-<li>上「そうか、それは１ソースで両対応できるのか？」</li>
-<li>私「いえ、画面はプラットフォーム毎に書きます、カメラとかも別です。共通化できるのはコアロジックです。」</li>
-<li>上「なんだその程度か」</li>
-<li>私「…」</li>
+  <li>私「iOS/Android 両方開発するなら Xamarin 使いましょう！」</li>
+  <li>上「そうか、それは１ソースで両対応できるのか？」</li>
+  <li>私「いえ、画面はプラットフォーム毎に書きます、カメラとかも別です。共通化できるのはコアロジックです。」</li>
+  <li>上「なんだその程度か」</li>
+  <li>私「…」</li>
 </ul>
 
 <p>というよくある話には、「画面が１ソースで共通にできる Xamarin.Forms」は、説得材料としては、とりわけ対PhoneGapには効果高いんじゃないかと思います。毒りんごかどうかはともかく。。。</p>

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -756,7 +624,7 @@ img {
       <p>だんだん自力でサンプルプログラム書くのに疲れてきたので、MonoDroid のサンプル集に頼ることにします。</p>
 
 <ul>
-<li><a href="https://github.com/xamarin/monodroid-samples">xamarin / monodroid-samples</a></li>
+  <li><a href="https://github.com/xamarin/monodroid-samples">xamarin / monodroid-samples</a></li>
 </ul>
 
 <!--more-->
@@ -765,87 +633,85 @@ img {
 
 <p>というわけで、この中の <a href="https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v2">MapsAndLocationDemo_v2</a> を動かしてみます。Readme.md に沿って。</p>
 
-<h2>ソースを取得する</h2>
-
+<h2 id="section">ソースを取得する</h2>
 <p>まず monodroid-samples を Clone しときます。</p>
 
 <blockquote>
-<p>$git clone git://github.com/xamarin/monodroid-samples.git</p>
+  <p>$git clone git://github.com/xamarin/monodroid-samples.git</p>
 </blockquote>
 
-<h2>クライアントライブラリをビルドする(Building the Client Library)</h2>
-
-<p>ここでいうクライアントライブラリとは、Android SDK に含まれる <strong>Google Play services</strong> の事です。<br>
+<h2 id="building-the-client-library">クライアントライブラリをビルドする(Building the Client Library)</h2>
+<p>ここでいうクライアントライブラリとは、Android SDK に含まれる <strong>Google Play services</strong> の事です。<br />
 この準備は本家Android開発で Google Maps Android API v2 を使うときに必要なので、これが何者かは、</p>
 
 <ul>
-<li><a href="http://www.adamrocker.com/blog/334/google-maps-android-api-v2.html">throw Life - Google Maps Android API v2を使ってみた</a></li>
+  <li><a href="http://www.adamrocker.com/blog/334/google-maps-android-api-v2.html">throw Life - Google Maps Android API v2を使ってみた</a></li>
 </ul>
 
-<p>などを参考に。<br>
+<p>などを参考に。<br />
 SDK で Google Play services が取得できていれば、</p>
 
-<p><code>{※あなたのAndroidSDKディレクトリ}/extras/google/google_play_services/libproject/google-play-services_lib</code> ができているはず。</p>
+<p><code class="highlighter-rouge"><span class="p">{</span><span class="err">※あなたのAndroidSDKディレクトリ</span><span class="p">}</span><span class="err">/extras/google/google_play_services/libproject/google-play-services_lib</span></code> ができているはず。</p>
 
 <p>※Xamarin.Android で使われる Android SDK は、Xamarin Studio のPreferences → SDK Locations → Android で確認できます。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_android_sdk_locations.png" alt="&quot;sdklocations&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_android_sdk_locations.png" alt="&quot;sdklocations&quot;" /></p>
 
-<p><code>google-play-services_lib</code> へ移動して、Ant 用のビルドファイルを生成します。</p>
+<p><code class="highlighter-rouge">google-play-services_lib</code> へ移動して、Ant 用のビルドファイルを生成します。</p>
 
 <blockquote>
-<p>$cd google-play-services_lib<br>
-$Android update project --path .<br>
+  <p>$cd google-play-services_lib<br />
+$Android update project –path .<br />
 $ant debug</p>
 </blockquote>
 
-<p>Readme.md では <code>android project update -p .</code> って書いてあるけど上のコマンドじゃないとうまくいかないんですけど？<br>
-あと <code>{あなたのAndroidSDKディレクトリ}/tools</code> にパス通しておかないと android コマンド使えないです。ant も(ry</p>
+<p>Readme.md では <code class="highlighter-rouge">android project update -p .</code> って書いてあるけど上のコマンドじゃないとうまくいかないんですけど？<br />
+あと <code class="highlighter-rouge"><span class="p">{</span><span class="err">あなたのAndroidSDKディレクトリ</span><span class="p">}</span><span class="err">/tools</span></code> にパス通しておかないと android コマンド使えないです。ant も(ry</p>
 
 <p>ant の実行に成功すると /bin の中に classes.jar とかができてるはずです。</p>
 
-<p>次に、Xamarin Studio で <code>MapsAndLocationDemo.sln</code> を開いて、GooglePlayService プロジェクトを展開します。<br>
-すると、<code>project.properties</code>` ファイルが赤くなってる(ちゃんと指定した位置に google-play-services_lib をコピってれば赤くなってないかも)ので、これを一度削除して、追加しなおします。リンクファイルとして、ね。</p>
+<p>次に、Xamarin Studio で <code class="highlighter-rouge">MapsAndLocationDemo.sln</code> を開いて、GooglePlayService プロジェクトを展開します。<br />
+すると、<code class="highlighter-rouge">project.properties</code>` ファイルが赤くなってる(ちゃんと指定した位置に google-play-services_lib をコピってれば赤くなってないかも)ので、これを一度削除して、追加しなおします。リンクファイルとして、ね。</p>
 
 <p>一連の画像貼っときます。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_delete_file.png" alt="&quot;red&quot;"><br>
-<img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_add_exist_file.png" alt="&quot;red&quot;"><br>
-<img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_add_a_link.png" alt="&quot;red&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_delete_file.png" alt="&quot;red&quot;" /><br />
+<img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_add_exist_file.png" alt="&quot;red&quot;" /><br />
+<img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_add_a_link.png" alt="&quot;red&quot;" /></p>
 
-<h2>Google Maps v2 API Key</h2>
+<h2 id="google-maps-v2-api-key">Google Maps v2 API Key</h2>
 
-<p>Google Maps v2 API Key の取得も本家と同じですが、<br>
-ディレクトリが、<code>/Users/[USERNAME]/.local/share/Xamarin/Mono for Android/debug.keystore</code> なのでそこだけ注意。(←Mac の場合。Win は Readme.md 見て)</p>
+<p>Google Maps v2 API Key の取得も本家と同じですが、<br />
+ディレクトリが、<code class="highlighter-rouge">/Users/[USERNAME]/.local/share/Xamarin/Mono for Android/debug.keystore</code> なのでそこだけ注意。(←Mac の場合。Win は Readme.md 見て)</p>
 
 <p>該当のディレクトリへ移動して、以下のコマンドで表示されるキーの内、SHA-1 をコピーします。</p>
 
 <blockquote>
-<p>$ keytool -V -list -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android</p>
+  <p>$ keytool -V -list -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android</p>
 </blockquote>
 
 <p>あとは、</p>
 
 <ul>
-<li><a href="http://www.adamrocker.com/blog/334/google-maps-android-api-v2.html">throw Life - Google Maps Android API v2を使ってみた</a></li>
+  <li><a href="http://www.adamrocker.com/blog/334/google-maps-android-api-v2.html">throw Life - Google Maps Android API v2を使ってみた</a></li>
 </ul>
 
-<p>を参考に、Google API Console から、API key を取得します。<br>
+<p>を参考に、Google API Console から、API key を取得します。<br />
 API Key を取得する際に必要なパッケージ名、取得した API Key を貼り付ける場所は、いずれも MapsAndLocationDemo プロジェクトの AndroidManifest.xml にあるので、先に開いておくとよいでしょう。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_android_manifest.png" alt="&quot;apikey&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_android_manifest.png" alt="&quot;apikey&quot;" /></p>
 
-<p>API Key を取得したら、<code>com.google.android.maps.v2.API_KEY</code> のところに貼り付けて準備完了です。</p>
+<p>API Key を取得したら、<code class="highlighter-rouge">com.google.android.maps.v2.API_KEY</code> のところに貼り付けて準備完了です。</p>
 
-<h2>A Note About Google Play Services</h2>
+<h2 id="a-note-about-google-play-services">A Note About Google Play Services</h2>
 
 <p>Google Play Services が端末にインストールされてないと動かんよ、つまりエミュレータでは動かんよ。Google Play Services のインストールの仕方など、私の知ったことではない。だそうです。</p>
 
-<h2>動かしてみる</h2>
+<h2 id="section-1">動かしてみる</h2>
 
 <p>「実機で」動かしてみます。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_android_google_maps_api_v2.png" alt="&quot;play&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_studio_android_google_maps_api_v2.png" alt="&quot;play&quot;" /></p>
 
 <p>動いてます。(上は Show Map with Overlays を動かしたところ)</p>
 

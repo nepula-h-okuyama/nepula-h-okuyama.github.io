@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,90 +621,93 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><a href="http://qiita.com/items/07762776102dbc84b1c7">前回</a>に続き、 reactive4java ネタ。<br>
+      <p><a href="http://qiita.com/items/07762776102dbc84b1c7">前回</a>に続き、 reactive4java ネタ。<br />
 調子に乗って Android で位置を取得し続けるのを reactive4java を使ってやってみた。</p>
 
 <!--more-->
 
-<p>```java LocationFunctions.java<br>
-/**<br>
- * 位置を取得し続ける(finish は呼ばれない)<br>
- */<br>
-public static Observable<Location> getCurrentLocationAsObservable(<br><br>
-        final Context context, final String provider) {<br>
-    return Reactive.createWithCloseable(new Func1<Observer<? super Location>, Closeable&gt;() {<br>
-        private volatile boolean _stop = false;</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    @Override
-    public Closeable invoke(final Observer&lt;? super Location&gt; observer) {
-        final LocationManager locMan = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
+<p>```java LocationFunctions.java<br />
+/**</p>
+<ul>
+  <li>
+    <p>位置を取得し続ける(finish は呼ばれない)<br />
+ */<br />
+public static Observable<Location> getCurrentLocationAsObservable(			
+     final Context context, final String provider) {
+ return Reactive.createWithCloseable(new Func1&lt;Observer&lt;? super Location&gt;, Closeable&gt;() {
+     private volatile boolean _stop = false;</Location></p>
 
-        final LocationListener listener = new LocationListener() {
+    <div class="highlighter-rouge"><pre class="highlight"><code> @Override
+ public Closeable invoke(final Observer&lt;? super Location&gt; observer) {
+     final LocationManager locMan = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
+		
+     final LocationListener listener = new LocationListener() {
+			
+         @Override
+         public void onStatusChanged(String provider, int status, Bundle extras) { }
+			
+         @Override
+         public void onProviderEnabled(String provider) { }
+			
+         @Override
+         public void onProviderDisabled(String provider) {
+             observer.error(
+                 new InvalidParameterException("LocationProvider disabled."));
+         }
+			
+         @Override
+         public void onLocationChanged(Location location) {
+             if (_stop) {
+                 return;
+             }
+				
+             // 発火
+             observer.next(location);
+         }
+     };
+		
+     // 位置取得開始
+     locMan.requestLocationUpdates(provider, 0, 0, listener, Looper.getMainLooper());
 
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) { }
-
-            @Override
-            public void onProviderEnabled(String provider) { }
-
-            @Override
-            public void onProviderDisabled(String provider) {
-                observer.error(
-                    new InvalidParameterException("LocationProvider disabled."));
-            }
-
-            @Override
-            public void onLocationChanged(Location location) {
-                if (_stop) {
-                    return;
-                }
-
-                // 発火
-                observer.next(location);
-            }
-        };
-
-        // 位置取得開始
-        locMan.requestLocationUpdates(provider, 0, 0, listener, Looper.getMainLooper());
-
-        return new Closeable() {
-            @Override
-            public void close() throws IOException {
-                if (_stop) {
-                    return;
-                }
-                _stop = true;
-                locMan.removeUpdates(listener);
-                observer.finish();
-            }
-        };
-    }
-});
-</code></pre></div>
-<p>}<br>
-```</p>
+     return new Closeable() {
+         @Override
+         public void close() throws IOException {
+             if (_stop) {
+                 return;
+             }
+             _stop = true;
+             locMan.removeUpdates(listener);
+             observer.finish();
+         }
+     };
+ }  }); } ```
+</code></pre>
+    </div>
+  </li>
+</ul>
 
 <p>使い方は、方位の時とほとんど同じ。パラメータが Float から Location に代わっただけ。</p>
 
-<p><code>_stop</code> フラグは、Listener を unregister しても溜まってるデータは流しちゃうんじゃないか、という事で用意した。<br>
-方位のやつは AtomicBoolean を使ったけどこっちは volatile でやってる。確かどっかで &#39;AtomicBoolean の方が確実に Atomic&#39; って言ってた気がするけど、そもそもそんなに神経質になるところじゃないか。</p>
+<p><code class="highlighter-rouge">_stop</code> フラグは、Listener を unregister しても溜まってるデータは流しちゃうんじゃないか、という事で用意した。<br />
+方位のやつは AtomicBoolean を使ったけどこっちは volatile でやってる。確かどっかで ‘AtomicBoolean の方が確実に Atomic’ って言ってた気がするけど、そもそもそんなに神経質になるところじゃないか。</p>
 
 <p>Observable にすることで、「ｎ秒間位置を取得して貯めて、その中で一番精度の良いものを通す」みたいなことも簡単にできる。</p>
 
-<p>Android の場合、購読開始時に registerXXXListener、Close で unregisterXXXEventListener てのがひとつのパターン。<br>
+<p>Android の場合、購読開始時に registerXXXListener、Close で unregisterXXXEventListener てのがひとつのパターン。<br />
 たぶん BroadcastReceiver にも適用できる。</p>
 
 <p>XXXListener も BroadcastReceiver も Observable でラップしちゃえば、その後は同じように扱えるので便利♪</p>
 
-<h2>追記 9.27</h2>
-
-<p>実はこのプログラム、Cold でしたー。というわけで、Hot についての記事を書きました。<br>
-* <a href="http://qiita.com/items/3a7bda9d0fdcb9248800">Cold を Hot にできる。そう、Publish ならね。 - Qiita</a></p>
-
-<h2>参考</h2>
-
+<p>##追記 9.27<br />
+実はこのプログラム、Cold でしたー。というわけで、Hot についての記事を書きました。</p>
 <ul>
-<li><a href="http://qiita.com/items/07762776102dbc84b1c7">reactive4java で端末の方位を取得しつづける - Qiita</a></li>
-<li><a href="http://stackoverflow.com/questions/3786825/java-volatile-boolean-vs-atomicboolean">Java: volatile boolean vs AtomicBoolean - Stack Overflow</a></li>
+  <li><a href="http://qiita.com/items/3a7bda9d0fdcb9248800">Cold を Hot にできる。そう、Publish ならね。 - Qiita</a></li>
+</ul>
+
+<p>##参考</p>
+<ul>
+  <li><a href="http://qiita.com/items/07762776102dbc84b1c7">reactive4java で端末の方位を取得しつづける - Qiita</a></li>
+  <li><a href="http://stackoverflow.com/questions/3786825/java-volatile-boolean-vs-atomicboolean">Java: volatile boolean vs AtomicBoolean - Stack Overflow</a></li>
 </ul>
 
     </section>

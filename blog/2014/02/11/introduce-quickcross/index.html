@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>MvvmCross だけじゃない！クロスプラットフォームMVVMフレームワーク「QuickCross」を試す</title>
-  <meta name="description" content="以前、MvvmCross を紹介しました が、Xamarin で使える同種のフレームワークはまだいくつかあります。&lt;!--more--&gt;今回は、その中の一つ、「QuickCross」を見てみます">
+  <meta name="description" content="以前、MvvmCross を紹介しました が、Xamarin で使える同種のフレームワークはまだいくつかあります。今回は、その中の一つ、「QuickCross」を見てみます">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/02/11/introduce-quickcross/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "MvvmCross だけじゃない！クロスプラットフォームMVVMフレームワーク「QuickCross」を試す",
   "datePublished": "2014-02-11T19:47:00+09:00",
   "dateModified": "2014-02-11T19:47:00+09:00",
-  "description": "以前、MvvmCross を紹介しました が、Xamarin で使える同種のフレームワークはまだいくつかあります。&lt;!--more--&gt;今回は、その中の一つ、「QuickCross」を見てみます",
+  "description": "以前、MvvmCross を紹介しました が、Xamarin で使える同種のフレームワークはまだいくつかあります。今回は、その中の一つ、「QuickCross」を見てみます",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,67 +621,67 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><a href="http://amay077.github.io/blog/2013/12/25/using-mvvmcross-the-x-platform-mvvm-framework/">以前、MvvmCross を紹介しました</a> が、Xamarin で使える同種のフレームワークはまだいくつかあります。<br>
-&lt;!--more--&gt;<br>
+      <p><a href="http://amay077.github.io/blog/2013/12/25/using-mvvmcross-the-x-platform-mvvm-framework/">以前、MvvmCross を紹介しました</a> が、Xamarin で使える同種のフレームワークはまだいくつかあります。<br />
+<!--more--><br />
 今回は、その中の一つ、「QuickCross」を見てみます</p>
 
 <ul>
-<li><a href="https://github.com/MacawNL/QuickCross">MacawNL/QuickCross</a></li>
+  <li><a href="https://github.com/MacawNL/QuickCross">MacawNL/QuickCross</a></li>
 </ul>
 
-<h2>なぜ他のMVVMフレームワークが必要なのか？</h2>
+<h2 id="mvvm">なぜ他のMVVMフレームワークが必要なのか？</h2>
 
 <p><a href="https://github.com/MacawNL/QuickCross#why-another-cross-platform-mvvm-framework">Why another cross-platform Mvvm framework?</a> にて、MvvmCross があるのになぜ？という事を説明しています。</p>
 
 <p>要約すると、MvvmCross は、高機能だが Fat で複雑で、拡張が大変であるのに対し、QuickCross は、軽量で生産性が高く、拡張が簡単である、との事です。</p>
 
-<h2>主な機能</h2>
+<h2 id="section">主な機能</h2>
 
 <p><a href="https://github.com/MacawNL/QuickCross#features">Features</a> より。</p>
 
 <ul>
-<li>Xamarin.iOS, Xamarin.Android, Windows Phone, Windows Store Apps に対応。</li>
-<li>バイナリは使ってない！Snippet と、プロジェクトにソースコードの追加を行うだけです。</li>
-<li>ViewModel や View の追加は package manager console からコマンドを実行して行います。</li>
-<li>いくつかのコードスニペットを提供します。</li>
-<li>以下略…</li>
+  <li>Xamarin.iOS, Xamarin.Android, Windows Phone, Windows Store Apps に対応。</li>
+  <li>バイナリは使ってない！Snippet と、プロジェクトにソースコードの追加を行うだけです。</li>
+  <li>ViewModel や View の追加は package manager console からコマンドを実行して行います。</li>
+  <li>いくつかのコードスニペットを提供します。</li>
+  <li>以下略…</li>
 </ul>
 
-<h2>仕組み</h2>
+<h2 id="section-1">仕組み</h2>
 
-<p><img src="https://raw.github.com/MacawNL/QuickCross/master/assets/quickcross_pattern.png" alt=""> <br>
-via <a href="https://github.com/MacawNL/QuickCross#features">https://github.com/MacawNL/QuickCross#features</a></p>
+<p><img src="https://raw.github.com/MacawNL/QuickCross/master/assets/quickcross_pattern.png" alt="" /> <br />
+via https://github.com/MacawNL/QuickCross#features</p>
 
 <p>Navigator って概念があるのが MvvmCross と違うとこですかね。</p>
 
-<h2>使い方</h2>
+<h2 id="section-2">使い方</h2>
 
 <p><a href="https://github.com/MacawNL/QuickCross#getting-started">Getting Started</a> を見てください。</p>
 
-<p>Nuget の Package manager console を使う必要があるので、Mac と Xamarin Studio 、そして Indie Edition では試せません、残念。<br>
+<p>Nuget の Package manager console を使う必要があるので、Mac と Xamarin Studio 、そして Indie Edition では試せません、残念。<br />
 Visual Studio ＋ Xamarin Business Edition以上を使ってる方、試してみてください。</p>
 
-<h2>サンプルを動かしてみた</h2>
+<h2 id="section-3">サンプルを動かしてみた</h2>
 
 <p>Getting Started は試せませんでしたが、github に含まれるサンプルは Mac + Xamarin Studio でも動かせました。</p>
 
 <p><a href="https://github.com/MacawNL/QuickCross/blob/master/QuickCross.ios.sln">QuickCross.ios.sln</a> を Xamarin Studio で開いて実行したところ↓</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/introduce_quickcross_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/introduce_quickcross_01.png" alt="" /></p>
 
-<p>MvvmCross と同じく、ViewModel などは Shared プロジェクトの方にあります。<br>
+<p>MvvmCross と同じく、ViewModel などは Shared プロジェクトの方にあります。<br />
 Shared プロジェクトは PCL にできるんじゃないかなーと思いやってみましたが、</p>
 
 <ul>
-<li>Profile147(.NET4.0) では <code>System.Windows.Input.ICommand</code> が無いと言われ</li>
-<li>Profile78(.NET4.5) では、この<a href="https://bugzilla.xamarin.com/show_bug.cgi?id=17247">バグ</a> にエンカウント</li>
+  <li>Profile147(.NET4.0) では <code class="highlighter-rouge">System.Windows.Input.ICommand</code> が無いと言われ</li>
+  <li>Profile78(.NET4.5) では、この<a href="https://bugzilla.xamarin.com/show_bug.cgi?id=17247">バグ</a> にエンカウント</li>
 </ul>
 
 <p>してビルドできませんでした、残念。</p>
 
-<h2>まとめ</h2>
+<h2 id="section-4">まとめ</h2>
 
-<p>MvvmCross は確かに大規模すぎて使うのが大変です。拡張するには Plugin を自作する事になりますし。<br>
+<p>MvvmCross は確かに大規模すぎて使うのが大変です。拡張するには Plugin を自作する事になりますし。<br />
 QuickCross は、すべてのソースコードがプロジェクトにあるので、カスタマイズが手軽に行えそうだというのは分かりました。</p>
 
 <p>Xamarin Starter Edition の場合、64kbyte までのバイナリ制限があるので、MvvmCross は使えませんが、QuickCross なら使えるかも知れません。</p>

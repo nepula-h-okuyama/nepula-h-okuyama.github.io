@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -757,41 +625,41 @@ img {
 
 <!-- more -->
 
-<h2>Activity を追加する</h2>
+<h2 id="activity-">Activity を追加する</h2>
 
 <p>メニュー → 新規 → ファイル と選択するとこんなダイアログが出るので Activity クラス名を入力して決定します。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_percelable_create_activity.png" alt="&quot;new_file_dialog&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_percelable_create_activity.png" alt="&quot;new_file_dialog&quot;" /></p>
 
-<p>すると <code>NextActivity.cs</code> ができます。</p>
+<p>すると <code class="highlighter-rouge">NextActivity.cs</code> ができます。</p>
 
-<p>```c# NextActivity.cs<br>
-using System;<br>
-using System.Collections.Generic;<br>
-using System.Linq;<br>
+<p>```c# NextActivity.cs<br />
+using System;<br />
+using System.Collections.Generic;<br />
+using System.Linq;<br />
 using System.Text;</p>
 
-<p>using Android.App;<br>
-using Android.Content;<br>
-using Android.OS;<br>
-using Android.Runtime;<br>
-using Android.Views;<br>
+<p>using Android.App;<br />
+using Android.Content;<br />
+using Android.OS;<br />
+using Android.Runtime;<br />
+using Android.Views;<br />
 using Android.Widget;</p>
 
-<p>namespace HelloXamarinAndroid<br>
-{<br>
-    [Activity (Label = &quot;NextActivity&quot;)]<br><br>
-    public class NextActivity : Activity<br>
-    {<br>
-        protected override void OnCreate(Bundle bundle)<br>
-        {<br>
+<p>namespace HelloXamarinAndroid<br />
+{<br />
+    [Activity (Label = “NextActivity”)]			<br />
+    public class NextActivity : Activity<br />
+    {<br />
+        protected override void OnCreate(Bundle bundle)<br />
+        {<br />
             base.OnCreate(bundle);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">        // Create your application here
+
+<div class="highlighter-rouge"><pre class="highlight"><code>        // Create your application here
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
 <p>作ってくれるのはここまでです。レイアウト用の Next.axml やリソースファイルは別途作成する必要があります。今回は必要ないのでスルーで。</p>
 
@@ -799,78 +667,78 @@ using Android.Widget;</p>
 
 <p>ちなみに Xamarin.Android では AndroidManifest.xml への登録は必要ありません。</p>
 
-<h2>画面遷移してみる</h2>
+<h2 id="section">画面遷移してみる</h2>
 
 <p>画面遷移は本家と同じく Intent を使います。</p>
 
-<p><code>c# MainActivity.cs<br>
-button.Click += (sender, e) =&gt; <br>
-{<br>
-    // Goto NextActivity<br>
-    var intent = new Intent(this, typeof(NextActivity));<br>
-    this.StartActivity(intent);<br>
-};<br>
-</code></p>
+<p>```c# MainActivity.cs<br />
+button.Click += (sender, e) =&gt; <br />
+{<br />
+    // Goto NextActivity<br />
+    var intent = new Intent(this, typeof(NextActivity));<br />
+    this.StartActivity(intent);<br />
+};</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+本家だと ``NextActivity.class`` としていたところは ``typeof(NextActivity)`` になってますね。
 
-<p>本家だと <code>NextActivity.class</code> としていたところは <code>typeof(NextActivity)</code> になってますね。</p>
+## 自作クラスを Intent に含める
 
-<h2>自作クラスを Intent に含める</h2>
+さて、画面遷移時にデータを渡すという、よくある処理をやってみたいと思います。
+データは ``Card`` というクラスにします。
 
-<p>さて、画面遷移時にデータを渡すという、よくある処理をやってみたいと思います。<br>
-データは <code>Card</code> というクラスにします。</p>
+```c# Card.cs
+namespace HelloXamarinAndroid
+{
+    class Card
+    {
+        public string Name { get; set; }
+        public string Phone { get; set; }
+    }
+}
+</code></pre>
+</div>
 
-<p><code>c# Card.cs<br>
-namespace HelloXamarinAndroid<br>
-{<br>
-    class Card<br>
-    {<br>
-        public string Name { get; set; }<br>
-        public string Phone { get; set; }<br>
-    }<br>
-}<br>
-</code></p>
-
-<p>C# なので、プロパティ作るのも楽でいいですね。getter/setter なんてアホらしくて…。<br>
+<p>C# なので、プロパティ作るのも楽でいいですね。getter/setter なんてアホらしくて…。<br />
 この Card クラスのインスタンスを、MainActivity から NextActivity に渡したいと思います。</p>
 
-<h2>IParcelable を実装したいが？</h2>
+<h2 id="iparcelable-">IParcelable を実装したいが？</h2>
 
-<p>Android では、Activity とか Service をまたぐオブジェクトは Percelable インターフェースを実装しなければならないのでした。<br>
-「じゃあ Xamarin では？」「IParcelable でしょ」というわけで <code>IParcelable</code> インターフェースを実装するわけですが、こいつが <code>IDisposable</code> や <code>IJavaObject</code> を継承していてこれらも実装させられます。</p>
+<p>Android では、Activity とか Service をまたぐオブジェクトは Percelable インターフェースを実装しなければならないのでした。<br />
+「じゃあ Xamarin では？」「IParcelable でしょ」というわけで <code class="highlighter-rouge">IParcelable</code> インターフェースを実装するわけですが、こいつが <code class="highlighter-rouge">IDisposable</code> や <code class="highlighter-rouge">IJavaObject</code> を継承していてこれらも実装させられます。</p>
 
 <p>なんか違う・・・とあきらめてググったところ、こんなんでました。</p>
 
 <ul>
-<li><a href="http://dan.clarke.name/2012/09/implementing-iparcelable-in-mono-for-android/">Implementing IParcelable in Mono for Android » Dan Clarke</a></li>
+  <li><a href="http://dan.clarke.name/2012/09/implementing-iparcelable-in-mono-for-android/">Implementing IParcelable in Mono for Android » Dan Clarke</a></li>
 </ul>
 
 <p>以降、これに習うことにします。</p>
 
-<h3>Mono.Android.Export を参照に追加する</h3>
+<h3 id="monoandroidexport-">Mono.Android.Export を参照に追加する</h3>
 
 <p>いきなりこれを忘れて、謎のビルドエラーと１０分程格闘しました(汗)</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_assenbly_reference.png" alt="&quot;assembly_reference&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_assenbly_reference.png" alt="&quot;assembly_reference&quot;" /></p>
 
-<p>ソリューションツリーの参照の右クリックメニューからアセンブリ参照ダイアログが出るので、<code>Mono.Android.Export</code> を見つけて追加します。</p>
+<p>ソリューションツリーの参照の右クリックメニューからアセンブリ参照ダイアログが出るので、<code class="highlighter-rouge">Mono.Android.Export</code> を見つけて追加します。</p>
 
-<h4>Free 版で使ってる人はここで「Trial するか、買うか、どっちかにせいや」と言われます。</h4>
-
+<h4 id="free-trial-">Free 版で使ってる人はここで「Trial するか、買うか、どっちかにせいや」と言われます。</h4>
 <p>Free 版はプログラムのサイズに制限があるのですが、アセンブリを追加することでその制限を超えてしまうものと思われます。</p>
 
-<h3>IParcelable を実装する</h3>
+<h3 id="iparcelable--1">IParcelable を実装する</h3>
 
-<p>Card クラスを、<code>IParcelable</code> を実装するのと共に <code>Java.Lang.Object</code> から派生させます。<br>
+<p>Card クラスを、<code class="highlighter-rouge">IParcelable</code> を実装するのと共に <code class="highlighter-rouge">Java.Lang.Object</code> から派生させます。<br />
 あーそういうことですか。</p>
 
-<p>```c# Card.cs<br>
-namespace HelloXamarinAndroid<br>
-{<br>
-    class Card  : Java.Lang.Object, IParcelable<br>
-    {<br>
-        public string Name { get; set; }<br>
+<p>```c# Card.cs<br />
+namespace HelloXamarinAndroid<br />
+{<br />
+    class Card  : Java.Lang.Object, IParcelable<br />
+    {<br />
+        public string Name { get; set; }<br />
         public string Phone { get; set; }</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public Card(string name, string phone)
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    public Card(string name, string phone)
     {
         this.Name = name;
         this.Phone = phone;
@@ -890,34 +758,34 @@ namespace HelloXamarinAndroid<br>
     }
 
     #endregion
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
 <p>まだ何か足りません。あ、CREATOR だ。</p>
 
-<h2>CREATOR フィールドを準備する</h2>
+<h2 id="creator-">CREATOR フィールドを準備する</h2>
 
-<p>本家では <code>public static final Parcelable.Creator&lt;MyParcelable&gt; CREATOR = …</code> な感じで用意していましたが、Xamarin.Android では次の２点が異なります。</p>
+<p>本家では <code class="highlighter-rouge">public static final Parcelable.Creator&lt;MyParcelable&gt; CREATOR = …</code> な感じで用意していましたが、Xamarin.Android では次の２点が異なります。</p>
 
 <ol>
-<li>匿名クラスが使えないので、<code>IParcelableCreator</code> インターフェースを実装したクラスを用意する。</li>
-<li>CREATOR フィールドの代わりに <code>IParcelableCreator</code> を返す static メソッドを用意し、<code>[ExportField(&quot;CREATOR&quot;)]</code> 属性を付ける。</li>
+  <li>匿名クラスが使えないので、<code class="highlighter-rouge">IParcelableCreator</code> インターフェースを実装したクラスを用意する。</li>
+  <li>CREATOR フィールドの代わりに <code class="highlighter-rouge">IParcelableCreator</code> を返す static メソッドを用意し、<code class="highlighter-rouge">[ExportField("CREATOR")]</code> 属性を付ける。</li>
 </ol>
 
 <p>これらを実装すると、 Card クラスはこうなります。</p>
 
-<p>```c# Card.cs<br>
+<p>```c# Card.cs<br />
 using Java.Interop;</p>
 
-<p>namespace HelloXamarinAndroid<br>
-{<br>
-    class Card  : Java.Lang.Object, IParcelable<br>
-    {<br>
-        public string Name { get; set; }<br>
+<p>namespace HelloXamarinAndroid<br />
+{<br />
+    class Card  : Java.Lang.Object, IParcelable<br />
+    {<br />
+        public string Name { get; set; }<br />
         public string Phone { get; set; }</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public Card(string name, string phone)
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    public Card(string name, string phone)
     {
         this.Name = name;
         this.Phone = phone;
@@ -962,42 +830,42 @@ using Java.Interop;</p>
         }
         #endregion
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
 <p>これでやっと、「受け渡し可能な」クラスが作成できました。</p>
 
-<h2>受け渡ししてみる</h2>
+<h2 id="section-1">受け渡ししてみる</h2>
 
 <p>まず渡す方。Intent に詰めます。</p>
 
-<p>```c# MainActivity.cs<br>
-button.Click += (sender, e) =&gt; <br>
-{<br>
-    var card = new Card(&quot;amay&quot;, &quot;987-654-3321&quot;);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">// Goto NextActivity
+<p>```c# MainActivity.cs<br />
+button.Click += (sender, e) =&gt; <br />
+{<br />
+    var card = new Card(“amay”, “987-654-3321”);</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// Goto NextActivity
 var intent = new Intent(this, typeof(NextActivity));
 intent.PutExtra("card", card); // intent に Card を詰める
 
-this.StartActivity(intent);
-</code></pre></div>
-<p>};<br>
-```</p>
+this.StartActivity(intent); }; ```
+</code></pre>
+</div>
 
 <p>次に取り出す方。Intent から取り出します。</p>
 
-<p>```c# NextActivity.cs<br>
-namespace HelloXamarinAndroid<br>
-{<br>
-    [Activity (Label = &quot;NextActivity&quot;)]<br>
-    public class NextActivity : Activity<br>
-    {<br>
-        protected override void OnCreate(Bundle bundle)<br>
-        {<br>
+<p>```c# NextActivity.cs<br />
+namespace HelloXamarinAndroid<br />
+{<br />
+    [Activity (Label = “NextActivity”)]<br />
+    public class NextActivity : Activity<br />
+    {<br />
+        protected override void OnCreate(Bundle bundle)<br />
+        {<br />
             base.OnCreate(bundle);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">        // Create your application here
+
+<div class="highlighter-rouge"><pre class="highlight"><code>        // Create your application here
 
         var card = this.Intent.GetParcelableExtra("card") as Card;
 
@@ -1006,36 +874,43 @@ namespace HelloXamarinAndroid<br>
             String.Format("name:{0}, phone:{1}", card.Name, card.Phone), 
             ToastLength.Long).Show();
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
-<p><code>〜 as Type</code> 句は型が違っていたら null にしてくれる書き方です。<br>
-あと Toast。<code>.Show()</code> は忘れずに。</p>
+<p><code class="highlighter-rouge">〜 as Type</code> 句は型が違っていたら null にしてくれる書き方です。<br />
+あと Toast。<code class="highlighter-rouge">.Show()</code> は忘れずに。</p>
 
 <p>これで実装完了。動かしてみます。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_parcel_received.png" alt="&quot;receive_parcel&quot;"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/xamarin_parcel_received.png" alt="&quot;receive_parcel&quot;" /></p>
 
 <p>以上、受け渡し可能なクラスの実装方法でした。</p>
 
-<h2>まとめ</h2>
-
+<h2 id="section-2">まとめ</h2>
 <ul>
-<li>Mono.Android.Export の追加を忘れない</li>
-<li>CREATOR フィールドの代わりに [ExportField(&quot;CREATOR&quot;)] 属性を付ける</li>
-<li>Java の匿名クラスは意外と便利だった</li>
-<li>せっかくプロジェクト作ったので GitHub に置いておきます - <a href="https://github.com/amay077/XamarinAndroid_ParcelableSample/tree/Posted_Qiita">amay077 / XamarinAndroid_ParcelableSample</a></li>
+  <li>Mono.Android.Export の追加を忘れない</li>
+  <li>CREATOR フィールドの代わりに [ExportField(“CREATOR”)] 属性を付ける</li>
+  <li>Java の匿名クラスは意外と便利だった</li>
+  <li>せっかくプロジェクト作ったので GitHub に置いておきます - <a href="https://github.com/amay077/XamarinAndroid_ParcelableSample/tree/Posted_Qiita">amay077 / XamarinAndroid_ParcelableSample</a></li>
 </ul>
 
-<h2>参考</h2>
-
+<h2 id="section-3">参考</h2>
 <ul>
-<li><a href="http://dan.clarke.name/2012/09/implementing-iparcelable-in-mono-for-android/">Implementing IParcelable in Mono for Android » Dan Clarke</a></li>
-<li><a href="https://github.com/xamarin/monodroid-samples/tree/master/ExportAttribute">monodroid-samples/ExportAttribute at master · xamarin/monodroid-samples</a> なんだ、本家のサンプルあるじゃん</li>
-<li><a href="http://docs.xamarin.com/guides/android/advanced_topics/limitations">Limitations | xamarin</a> 制限だったり、制限が解除された情報が載ってるので要チェック</li>
+  <li><a href="http://dan.clarke.name/2012/09/implementing-iparcelable-in-mono-for-android/">Implementing IParcelable in Mono for Android » Dan Clarke</a></li>
+  <li><a href="https://github.com/xamarin/monodroid-samples/tree/master/ExportAttribute">monodroid-samples/ExportAttribute at master · xamarin/monodroid-samples</a> なんだ、本家のサンプルあるじゃん</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Limitations</td>
+          <td>xamarin](http://docs.xamarin.com/guides/android/advanced_topics/limitations) 制限だったり、制限が解除された情報が載ってるので要チェック</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
+
 
     </section>
     <footer class="post-footer">

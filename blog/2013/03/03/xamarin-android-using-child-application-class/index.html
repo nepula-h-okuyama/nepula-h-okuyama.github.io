@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin.Android でオレオレ Application クラスを使う</title>
-  <meta name="description" content="オレオレApplicationクラスって、コレのことなんですが、正式名称知らないので勝手にこう呼んでます(^_^;)&lt;!-- more --&gt;Xamarin.Android では、Application クラスを継承するのに加えてもう二手間くらい必要みたいです。割と苦労したのでメモしておきます。">
+  <meta name="description" content="オレオレApplicationクラスって、コレのことなんですが、正式名称知らないので勝手にこう呼んでます(^_^;)Xamarin.Android では、Application クラスを継承するのに加えてもう二手間くらい必要みたいです。割と苦労したのでメモしておきます。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/03/03/xamarin-android-using-child-application-class/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin.Android でオレオレ Application クラスを使う",
   "datePublished": "2013-03-03T17:48:00+09:00",
   "dateModified": "2013-03-03T17:48:00+09:00",
-  "description": "オレオレApplicationクラスって、コレのことなんですが、正式名称知らないので勝手にこう呼んでます(^_^;)&lt;!-- more --&gt;Xamarin.Android では、Application クラスを継承するのに加えてもう二手間くらい必要みたいです。割と苦労したのでメモしておきます。",
+  "description": "オレオレApplicationクラスって、コレのことなんですが、正式名称知らないので勝手にこう呼んでます(^_^;)Xamarin.Android では、Application クラスを継承するのに加えてもう二手間くらい必要みたいです。割と苦労したのでメモしておきます。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,68 +621,73 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>オレオレApplicationクラスって、<a href="http://techbooster.org/android/application/2353/">コレ</a>のことなんですが、正式名称知らないので勝手にこう呼んでます(^_^;)<br>
-&lt;!-- more --&gt;<br>
+      <p>オレオレApplicationクラスって、<a href="http://techbooster.org/android/application/2353/">コレ</a>のことなんですが、正式名称知らないので勝手にこう呼んでます(^_^;)<br />
+<!-- more --><br />
 Xamarin.Android では、Application クラスを継承するのに加えてもう二手間くらい必要みたいです。割と苦労したのでメモしておきます。</p>
 
-<h2>AndroidManifest.xml へ追記</h2>
-
+<h2 id="androidmanifestxml-">AndroidManifest.xml へ追記</h2>
 <p>Xamarin.Android では最初は AndroidManifest.xml は存在しないのですが、<a href="http://amay077.github.com/blog/2013/03/02/xamarin-android-permission/">このような手順</a>で追加できます。</p>
 
-<p>んで、&lt;application&gt; タグに <code>android:name</code> 属性を追記します。ここは Android本家と同じ要領です。</p>
+<p>んで、&lt;application&gt; タグに <code class="highlighter-rouge">android:name</code> 属性を追記します。ここは Android本家と同じ要領です。</p>
 
-<p><code>xml AndroidManifest.xml<br>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br>
-&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; <br>
-    android:versionCode=&quot;1&quot; android:versionName=&quot;1.0&quot; package=&quot;HelloXamarinAndroiid.HelloXamarinAndroiid&quot;&gt;<br>
-    &lt;uses-sdk /&gt;<br>
-    &lt;application android:label=&quot;HelloXamarinAndroiid&quot; android:name=&quot;.MyApplication&quot;&gt;<br>
-    &lt;/application&gt;<br>
-&lt;/manifest&gt;<br>
-</code></p>
+<p>```xml AndroidManifest.xml<br />
+<?xml version="1.0" encoding="utf-8"?></p>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="HelloXamarinAndroiid.HelloXamarinAndroiid">
+	<uses-sdk />
+	<application android:label="HelloXamarinAndroiid" android:name=".MyApplication">
+	</application>
+</manifest>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+## Application クラスを継承したクラスを作る
 
-<h2>Application クラスを継承したクラスを作る</h2>
+次に、クラスの実装ですが、Application クラスから派生させる他、
 
-<p>次に、クラスの実装ですが、Application クラスから派生させる他、</p>
+* [Application] 属性を付ける
+* ``(IntPtr, JniHandleOwnership)`` なコンストラクタを用意する
 
-<ul>
-<li>[Application] 属性を付ける</li>
-<li><code>(IntPtr, JniHandleOwnership)</code> なコンストラクタを用意する</li>
-</ul>
+ことが必要なようです。
 
-<p>ことが必要なようです。</p>
+こんなかんじ。
 
-<p>こんなかんじ。</p>
-
-<p>```c# MyApplication.cs<br>
-namespace HelloXamarinAndroiid<br>
-{<br>
-    [Application] // この属性が必要らしい<br>
-    class MyApplication : Application<br>
-    {<br>
-        // このコンストラクタを明示的に override 剃る必要があるらしい<br>
-        public MyApplication (IntPtr javaReference, JniHandleOwnership transfer)<br>
-            : base(javaReference, transfer)<br>
-        {<br>
-        }</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public override void OnCreate()
+```c# MyApplication.cs
+namespace HelloXamarinAndroiid
+{
+    [Application] // この属性が必要らしい
+    class MyApplication : Application
     {
-        base.OnCreate();
-        // Test
-        Android.Util.Log.Debug("MyApplication", "OnCreate called.");
+        // このコンストラクタを明示的に override 剃る必要があるらしい
+        public MyApplication (IntPtr javaReference, JniHandleOwnership transfer)
+            : base(javaReference, transfer)
+        {
+        }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+            // Test
+            Android.Util.Log.Debug("MyApplication", "OnCreate called.");
+        }
     }
 }
-</code></pre></div>
-<p>}<br>
-```</p>
+</code></pre>
+</div>
 
 <p>アプリを動かすと、ログが出力されてるのでこの手順でいいのかと。</p>
 
-<h2>参考</h2>
+<h2 id="section">参考</h2>
 
 <ul>
-<li><a href="http://docs.xamarin.com/guides/android/advanced_topics/working_with_androidmanifest.xml">Working with AndroidManifest.xml | xamarin</a> 公式。ちょっとこれだけじゃ分かんなかったっす。</li>
-<li><a href="http://stackoverflow.com/questions/9928386/custom-application-child-class-in-mono-for-android">c# - Custom Application child class in Mono for Android - Stack Overflow</a> Application そして StackOverflow のお世話に。</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Working with AndroidManifest.xml</td>
+          <td>xamarin](http://docs.xamarin.com/guides/android/advanced_topics/working_with_androidmanifest.xml) 公式。ちょっとこれだけじゃ分かんなかったっす。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://stackoverflow.com/questions/9928386/custom-application-child-class-in-mono-for-android">c# - Custom Application child class in Mono for Android - Stack Overflow</a> Application そして StackOverflow のお世話に。</li>
 </ul>
 
     </section>

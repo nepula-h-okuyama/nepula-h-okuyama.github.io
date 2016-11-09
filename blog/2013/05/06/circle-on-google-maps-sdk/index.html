@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Google Maps SDK(Android/iOS) で円を描く</title>
-  <meta name="description" content="Google Maps Android API v2 にいつの間にか Circle が追加されてました。Google Maps SDK for iOS も同様に。&lt;!--more--&gt;ということで使ってみました。なぜか Xamarin でｗとはいえ、Xamarin.Android の場合、Google...">
+  <meta name="description" content="Google Maps Android API v2 にいつの間にか Circle が追加されてました。Google Maps SDK for iOS も同様に。ということで使ってみました。なぜか Xamarin でｗとはいえ、Xamarin.Android の場合、GoogleMaps の jar からラッパー...">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/05/06/circle-on-google-maps-sdk/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Google Maps SDK(Android/iOS) で円を描く",
   "datePublished": "2013-05-06T16:11:00+09:00",
   "dateModified": "2013-05-06T16:11:00+09:00",
-  "description": "Google Maps Android API v2 にいつの間にか Circle が追加されてました。Google Maps SDK for iOS も同様に。&lt;!--more--&gt;ということで使ってみました。なぜか Xamarin でｗとはいえ、Xamarin.Android の場合、Google...",
+  "description": "Google Maps Android API v2 にいつの間にか Circle が追加されてました。Google Maps SDK for iOS も同様に。ということで使ってみました。なぜか Xamarin でｗとはいえ、Xamarin.Android の場合、GoogleMaps の jar からラッパー...",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,44 +621,44 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><a href="https://developers.google.com/maps/documentation/android/">Google Maps Android API v2</a> にいつの間にか <code>Circle</code> が追加されてました。<a href="https://developers.google.com/maps/documentation/ios/?hl=ja">Google Maps SDK for iOS</a> も同様に。<br>
-&lt;!--more--&gt;<br>
-ということで使ってみました。なぜか Xamarin でｗ<br>
+      <p><a href="https://developers.google.com/maps/documentation/android/">Google Maps Android API v2</a> にいつの間にか <code class="highlighter-rouge">Circle</code> が追加されてました。<a href="https://developers.google.com/maps/documentation/ios/?hl=ja">Google Maps SDK for iOS</a> も同様に。<br />
+<!--more--><br />
+ということで使ってみました。なぜか Xamarin でｗ<br />
 とはいえ、Xamarin.Android の場合、GoogleMaps の jar からラッパーを生成しているので API は Java 版と(ほぼ)同じです。</p>
 
 <p>Xamarin.Android での Google Maps API v2 の使い方は、手前味噌ながら弊ブログをどうぞ。</p>
 
 <ul>
-<li><a href="http://amay077.github.com/blog/2013/03/05/xamarin-android-using-google-maps-android-api-v2/">Xamarin.Android で Google Maps Android API v2 を使う - Experiments Never Fail</a></li>
+  <li><a href="http://amay077.github.com/blog/2013/03/05/xamarin-android-using-google-maps-android-api-v2/">Xamarin.Android で Google Maps Android API v2 を使う - Experiments Never Fail</a></li>
 </ul>
 
 <p>今回も、<a href="https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v2/SimpleMapDemo">monodroid-samples</a> をベースにします。</p>
 
 <p>SampleMapActivity.cs の、<a href="https://github.com/xamarin/monodroid-samples/blob/master/MapsAndLocationDemo_v2/SimpleMapDemo/SampleMapActivity.cs#L88">ここら辺</a> に以下のコードを挿入します。</p>
 
-<p>```c# SampleMapActivity.cs<br>
-var ICELAND = new LatLng(64.88, -18.32);<br>
+<p>```c# SampleMapActivity.cs<br />
+var ICELAND = new LatLng(64.88, -18.32);<br />
 var LIBREVILLE = new LatLng(0.401, 9.459);</p>
 
-<p>_map.AddCircle(new CircleOptions()<br>
-               .InvokeCenter(ICELAND)<br>
-               .InvokeStrokeColor(Color.Blue.ToArgb())<br>
-               .InvokeStrokeWidth(5f)<br>
+<p>_map.AddCircle(new CircleOptions()<br />
+               .InvokeCenter(ICELAND)<br />
+               .InvokeStrokeColor(Color.Blue.ToArgb())<br />
+               .InvokeStrokeWidth(5f)<br />
                .InvokeRadius(5000000)); // 500km</p>
 
-<p>_map.AddCircle(new CircleOptions()<br>
-               .InvokeCenter(LIBREVILLE)<br>
-               .InvokeStrokeColor(Color.DarkGreen.ToArgb())<br>
-               .InvokeStrokeWidth(5f)<br>
-               .InvokeRadius(500000)); // 500km<br>
+<p>_map.AddCircle(new CircleOptions()<br />
+               .InvokeCenter(LIBREVILLE)<br />
+               .InvokeStrokeColor(Color.DarkGreen.ToArgb())<br />
+               .InvokeStrokeWidth(5f)<br />
+               .InvokeRadius(500000)); // 500km<br />
 ```</p>
 
-<p>Xamarin.Android と Java で違いは無いと言っておきながら、<br>
-Java では <code>new CircleOptions().center(…).storokeColor(…).</code> と書いていた所が、Xamarin では <code>new CircleOptions().InvokeCenter(…).InvokeStorokeColor(…).</code> になっていますね。[Xamarin の Binding a Java Library (.jar)](<a href="http://docs.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_(.jar)">http://docs.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_(.jar)</a> 辺りに情報があるでしょうか。</p>
+<p>Xamarin.Android と Java で違いは無いと言っておきながら、<br />
+Java では <code class="highlighter-rouge">new CircleOptions().center(…).storokeColor(…).</code> と書いていた所が、Xamarin では <code class="highlighter-rouge">new CircleOptions().InvokeCenter(…).InvokeStorokeColor(…).</code> になっていますね。[Xamarin の Binding a Java Library (.jar)](http://docs.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_(.jar) 辺りに情報があるでしょうか。</p>
 
 <p>動かすとこんな感じになります。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/circle_on_google_maps_sdk.png" alt="image1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/circle_on_google_maps_sdk.png" alt="image1" /></p>
 
 <p>北緯65度付近のアイスランドと、赤道付近のリーブルヴィルという所に、どちらも半径500kmの円を追加していますが、Googleマップはメルカトル表示なので、見ての通り北へ行くほど円が大きくなります。</p>
 
@@ -798,11 +666,11 @@ Java では <code>new CircleOptions().center(…).storokeColor(…).</code> と�
 
 <p>円をポリゴナイズした多角形と重ねてみると違いが分かるかもしれません。</p>
 
-<h3>2013.5.8追記:大きな円を描いて調べてみました</h3>
+<h3 id="section">2013.5.8追記:大きな円を描いて調べてみました</h3>
 
 <p>大きな円を描いてみたら、ちゃんと geodesic な(北へいけばいくほど距離が長くなる)形状になりました。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/circle-on-google-maps-sdk2.png" alt="image2"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/circle-on-google-maps-sdk2.png" alt="image2" /></p>
 
     </section>
     <footer class="post-footer">

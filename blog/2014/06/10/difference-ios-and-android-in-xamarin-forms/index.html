@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin.Forms でどうにかしたい iOS と Android の違い</title>
-  <meta name="description" content="Xamarin.Forms で簡単な iOS/Android 両対応アプリを作ってみてて、悩ましい点がいくつか見つかってるので、挙げてみる。&lt;!--more--&gt;">
+  <meta name="description" content="Xamarin.Forms で簡単な iOS/Android 両対応アプリを作ってみてて、悩ましい点がいくつか見つかってるので、挙げてみる。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/06/10/difference-ios-and-android-in-xamarin-forms/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin.Forms でどうにかしたい iOS と Android の違い",
   "datePublished": "2014-06-10T15:30:00+09:00",
   "dateModified": "2014-06-10T15:30:00+09:00",
-  "description": "Xamarin.Forms で簡単な iOS/Android 両対応アプリを作ってみてて、悩ましい点がいくつか見つかってるので、挙げてみる。&lt;!--more--&gt;",
+  "description": "Xamarin.Forms で簡単な iOS/Android 両対応アプリを作ってみてて、悩ましい点がいくつか見つかってるので、挙げてみる。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,90 +621,91 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Xamarin.Forms で簡単な iOS/Android 両対応アプリを作ってみてて、悩ましい点がいくつか見つかってるので、挙げてみる。<br>
-&lt;!--more--&gt;</p>
+      <p>Xamarin.Forms で簡単な iOS/Android 両対応アプリを作ってみてて、悩ましい点がいくつか見つかってるので、挙げてみる。<br />
+<!--more--></p>
 
-<h2>~~不可視の扱い~~</h2>
+<h2 id="section"><del>不可視の扱い</del></h2>
 
-<p>~~Forms 側のパーツには <code>IsVisible = true | false</code> がある。<br>
-iOS は <code>true | false</code> なのでいいけど、Android の Visibility は、 <code>Visible | Invisible | Gone</code> の3つある。~~</p>
+<p><del>Forms 側のパーツには <code class="highlighter-rouge">IsVisible = true | false</code> がある。
+iOS は <code class="highlighter-rouge">true | false</code> なのでいいけど、Android の Visibility は、 <code class="highlighter-rouge">Visible | Invisible | Gone</code> の3つある。</del></p>
 
-<p>~~Forms 側での <code>IsVisible = false</code> は、Android では <code>Invisible</code> に相当するみたい。つまり StackLayout とかで「不可視なパーツが <strong>詰められない</strong>」。 iOS の <code>Visible = false</code> は <strong>詰められる</strong> 模様。~~</p>
+<p><del>Forms 側での <code class="highlighter-rouge">IsVisible = false</code> は、Android では <code class="highlighter-rouge">Invisible</code> に相当するみたい。つまり StackLayout とかで「不可視なパーツが <strong>詰められない</strong>」。 iOS の <code class="highlighter-rouge">Visible = false</code> は <strong>詰められる</strong> 模様。</del></p>
 
-<p><code>IsVisible = false</code> は Android ではちゃんと <code>Gone</code> になってました、すいませんでした。</p>
+<p><code class="highlighter-rouge">IsVisible = false</code> は Android ではちゃんと <code class="highlighter-rouge">Gone</code> になってました、すいませんでした。</p>
 
-<h2>空文字の扱い</h2>
+<h2 id="section-1">空文字の扱い</h2>
 
 <p>IsVisible と勘違いしてたのはこっちだった。</p>
 
 <p>StackLayout に、Label を2つ積んで、上の Label を空文字にすると、iOSでは詰められるけど、Androidでは空白が空くみたい。こっちはちゃんと裏をとった(汗)</p>
 
 <p><a href="https://gist.github.com/amay077/cf0f4ca1aa14d54bac9a">https://gist.github.com/amay077/cf0f4ca1aa14d54bac9a</a></p>
+<h2 id="section-2">画面回転時の再構築</h2>
 
-<h2>画面回転時の再構築</h2>
-
-<p>Android だと、画面を回転させると <code>onCreate</code> からやり直しなのは常識。<br>
+<p>Android だと、画面を回転させると <code class="highlighter-rouge">onCreate</code> からやり直しなのは常識。<br />
 Forms アプリを Android で動かして回転させると、なんと <strong>RootPage まで戻って</strong> しまう。なんじゃこりゃ。</p>
 
-<h2>回避方法</h2>
+<h2 id="section-3">回避方法</h2>
 
-<blockquote class="twitter-tweet" lang="ja"><p><a href="https://twitter.com/amay077">@amay077</a> あとAndroidの回転問題（バグです）はとりあえず ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation で回避するといいそうです（そりゃそうだ…）</p>&mdash; Atsushi Eno (@atsushieno) <a href="https://twitter.com/atsushieno/statuses/476645011602165760">2014, 6月 11</a></blockquote>
+<blockquote class="twitter-tweet" lang="ja">
+  <p><a href="https://twitter.com/amay077">@amay077</a> あとAndroidの回転問題（バグです）はとりあえず ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation で回避するといいそうです（そりゃそうだ…）</p>
+  <p>— Atsushi Eno (@atsushieno) <a href="https://twitter.com/atsushieno/statuses/476645011602165760">2014, 6月 11</a>&lt;/blockquote&gt;
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <p>こんな感じっすね。</p>
 
-<p>こんな感じっすね。</p>
+  <p>```csharp MainActivity.cs
+[Activity(MainLauncher = true, 
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation )]
+public class MainActivity : AndroidActivity
+{</p>
+  <div class="highlighter-rouge"><pre class="highlight"><code>
+## BACKキーの扱い
 
-<p><code>csharp MainActivity.cs<br>
-[Activity(MainLauncher = true, <br>
-    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation )]<br>
-public class MainActivity : AndroidActivity<br>
-{<br>
-</code></p>
+iOS なら ``NavigationPage.SetHasNavigationBar(page, false)`` としてしまえば、ナビゲーションバーが表示されなくなるので、前の画面に戻ることはできなくなるが、Android の BACKキーを無効にするにはどうしたら。。。
 
-<h2>BACKキーの扱い</h2>
+### 自己解決
 
-<p>iOS なら <code>NavigationPage.SetHasNavigationBar(page, false)</code> としてしまえば、ナビゲーションバーが表示されなくなるので、前の画面に戻ることはできなくなるが、Android の BACKキーを無効にするにはどうしたら。。。</p>
+``AndroidActivity`` のサブクラスで、``OnBackPressed`` を override して実装を潰してしまえばよい。けど画面毎に「戻る／戻れない／Confirm出す」とか細かい制御ができるのかは不明。
 
-<h3>自己解決</h3>
+## デフォルトスタイル
 
-<p><code>AndroidActivity</code> のサブクラスで、<code>OnBackPressed</code> を override して実装を潰してしまえばよい。けど画面毎に「戻る／戻れない／Confirm出す」とか細かい制御ができるのかは不明。</p>
+iOS は白基調、Androidは黒基調なので、Forms側で ``TextColor = Color.Black`` などとすると、当たり前だが Android で見えない。
+iOS はスタイル変えるのしんどいので、Android側の Theme を ``Theme.Holo.Light`` にしとく。
 
-<h2>デフォルトスタイル</h2>
+```csharp MainActivity.cs
+[Activity(Label = "MyApp",  
+ MainLauncher = true, 
+ Theme = "@android:style/Theme.Holo.Light")]
+public class MainActivity : AndroidActivity
+{
+    protected override void OnCreate(Bundle bundle)
+    {
+        /* 以下省略 */
+</code></pre>
+  </div>
 
-<p>iOS は白基調、Androidは黒基調なので、Forms側で <code>TextColor = Color.Black</code> などとすると、当たり前だが Android で見えない。<br>
-iOS はスタイル変えるのしんどいので、Android側の Theme を <code>Theme.Holo.Light</code> にしとく。</p>
+  <h2 id="section-4">起動時</h2>
 
-<p><code>csharp MainActivity.cs<br>
-[Activity(Label = &quot;MyApp&quot;,  <br>
- MainLauncher = true, <br>
- Theme = &quot;@android:style/Theme.Holo.Light&quot;)]<br>
-public class MainActivity : AndroidActivity<br>
-{<br>
-    protected override void OnCreate(Bundle bundle)<br>
-    {<br>
-        /* 以下省略 */<br>
-</code></p>
+  <p>Android 側の起動時に ActionBar の付いた空白画面が表示される時間が割とながくて気になる(Galaxy Nexus だけど)。Forms の画面をロードするのに時間がかかるのだろうか？
+ActionBar だけでも消したくて Theme を <code class="highlighter-rouge">Theme.Holo.Light.NoActionBar</code> にしてみたら Page が表示されなくなった。。。</p>
 
-<h2>起動時</h2>
+  <p>NoActionBar な Theme を使うと Activity.ActionBar が null になるんだけど、Xamarin.Forms がそれに対応してない気がした（スタックトレース見ると UpdateActionBar で NullReferenceException だし）ので、<a href="https://bugzilla.xamarin.com/buglist.cgi?product=Forms&amp;component=Forms&amp;resolution=---&amp;list_id=92025">Bugzilla</a> に登録してみた、初めて。どうなるやら。</p>
 
-<p>Android 側の起動時に ActionBar の付いた空白画面が表示される時間が割とながくて気になる(Galaxy Nexus だけど)。Forms の画面をロードするのに時間がかかるのだろうか？<br>
-ActionBar だけでも消したくて Theme を <code>Theme.Holo.Light.NoActionBar</code> にしてみたら Page が表示されなくなった。。。</p>
+  <h2 id="section-5">文字の自動縮小</h2>
 
-<p>NoActionBar な Theme を使うと Activity.ActionBar が null になるんだけど、Xamarin.Forms がそれに対応してない気がした（スタックトレース見ると UpdateActionBar で NullReferenceException だし）ので、<a href="https://bugzilla.xamarin.com/buglist.cgi?product=Forms&amp;component=Forms&amp;resolution=---&amp;list_id=92025">Bugzilla</a> に登録してみた、初めて。どうなるやら。</p>
+  <p>iOS の <code class="highlighter-rouge">UITextField</code> は <code class="highlighter-rouge">adjustsFontSizeToFitWidth</code> を設定するとパーツのサイズに合わせて文字サイズを自動拡縮してくれる機能があったけど、Forms の <code class="highlighter-rouge">Label</code> にはそんなものはありません。<code class="highlighter-rouge">PageRenderer</code> を使って iOS 独自処理しないとダメ。</p>
 
-<h2>文字の自動縮小</h2>
+  <h3 id="section-6">自己解決</h3>
 
-<p>iOS の <code>UITextField</code> は <code>adjustsFontSizeToFitWidth</code> を設定するとパーツのサイズに合わせて文字サイズを自動拡縮してくれる機能があったけど、Forms の <code>Label</code> にはそんなものはありません。<code>PageRenderer</code> を使って iOS 独自処理しないとダメ。</p>
+  <p>やはり PageRenderer 使うとできた → <a href="http://qiita.com/amay077/items/8eaa595cc2fc88797b2f">Xamarin.Forms の Label から iOS の UILabel を取り出す</a></p>
 
-<h3>自己解決</h3>
+  <h2 id="iphone--ipad">iPhone と iPad</h2>
 
-<p>やはり PageRenderer 使うとできた → <a href="http://qiita.com/amay077/items/8eaa595cc2fc88797b2f">Xamarin.Forms の Label から iOS の UILabel を取り出す</a></p>
+  <p>StackLayout や RelativeLayout でUIを書けば、相対的な位置関係は iPhone と同じものが iPad でも再現されるが、サイズをリテラルで指定するところは、特にインテグレーションしてくれるわけでないので、プラットフォーム毎に調整が必要。例えば文字サイズは、iPad では iPhone より大きな値にしないと残念な感じに。</p>
 
-<h2>iPhone と iPad</h2>
-
-<p>StackLayout や RelativeLayout でUIを書けば、相対的な位置関係は iPhone と同じものが iPad でも再現されるが、サイズをリテラルで指定するところは、特にインテグレーションしてくれるわけでないので、プラットフォーム毎に調整が必要。例えば文字サイズは、iPad では iPhone より大きな値にしないと残念な感じに。</p>
-
-<p>他にも見つけたら書きます。</p>
+  <p>他にも見つけたら書きます。</p>
+</blockquote>
 
     </section>
     <footer class="post-footer">

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>爆速エミュレータで Google Maps Android API v2 を動かす</title>
-  <meta name="description" content="Google APIs のエミュレータで Google Map Android API v2 が動くようになったのですが、やっぱり遅い、使えん。という訳で、Intel の爆速エミュレータで GMapV2 を使う手順の備忘録です。(ご利用は自己責任で)&lt;!--more--&gt;爆速エミュレータの導入">
+  <meta name="description" content="Google APIs のエミュレータで Google Map Android API v2 が動くようになったのですが、やっぱり遅い、使えん。という訳で、Intel の爆速エミュレータで GMapV2 を使う手順の備忘録です。(ご利用は自己責任で)爆速エミュレータの導入">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/10/20/using-gmapv2-on-intel-emulator/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "爆速エミュレータで Google Maps Android API v2 を動かす",
   "datePublished": "2013-10-20T21:58:00+09:00",
   "dateModified": "2013-10-20T21:58:00+09:00",
-  "description": "Google APIs のエミュレータで Google Map Android API v2 が動くようになったのですが、やっぱり遅い、使えん。という訳で、Intel の爆速エミュレータで GMapV2 を使う手順の備忘録です。(ご利用は自己責任で)&lt;!--more--&gt;爆速エミュレータの導入",
+  "description": "Google APIs のエミュレータで Google Map Android API v2 が動くようになったのですが、やっぱり遅い、使えん。という訳で、Intel の爆速エミュレータで GMapV2 を使う手順の備忘録です。(ご利用は自己責任で)爆速エミュレータの導入",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,58 +621,72 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Google APIs のエミュレータで Google Map Android API v2 が動くようになったのですが、やっぱり遅い、使えん。<br>
-という訳で、Intel の爆速エミュレータで GMapV2 を使う手順の備忘録です。(ご利用は自己責任で)<br>
-&lt;!--more--&gt;</p>
-
-<h2>爆速エミュレータの導入</h2>
+      <p>Google APIs のエミュレータで Google Map Android API v2 が動くようになったのですが、やっぱり遅い、使えん。<br />
+という訳で、Intel の爆速エミュレータで GMapV2 を使う手順の備忘録です。(ご利用は自己責任で)<br />
+<!--more--></p>
+<h2 id="section">爆速エミュレータの導入</h2>
 
 <p>こちら等を参考にセットアップします。</p>
 
 <ul>
-<li><a href="http://qiita.com/gabu/items/8bc1a11f1382409f1d2a">Android再入門 - エミュレータの作成</a></li>
+  <li><a href="http://qiita.com/gabu/items/8bc1a11f1382409f1d2a">Android再入門 - エミュレータの作成</a></li>
 </ul>
 
-<h2>エミュレータで Google Maps Android API v2 を動かす</h2>
+<h2 id="google-maps-android-api-v2-">エミュレータで Google Maps Android API v2 を動かす</h2>
 
-<p><code>com.google.android.gms.apk</code> と <code>com.android.vending.apk</code> が必要なのでどうにかして入手しインストールします。(ほとんど答えだけど下記参照)</p>
+<p><code class="highlighter-rouge">com.google.android.gms.apk</code> と <code class="highlighter-rouge">com.android.vending.apk</code> が必要なのでどうにかして入手しインストールします。(ほとんど答えだけど下記参照)</p>
 
 <ul>
-<li><a href="http://stackoverflow.com/questions/14040185/running-google-maps-v2-on-android-emulator">Running Google Maps v2 on Android Emulator - Stack Overflow</a></li>
+  <li><a href="http://stackoverflow.com/questions/14040185/running-google-maps-v2-on-android-emulator">Running Google Maps v2 on Android Emulator - Stack Overflow</a></li>
 </ul>
 
 <p>apk が古いとうまく動作しません。なるべく新しいものを探しましょう。(ﾎﾞｿ</p>
 
-<h2>AndroidManifest.xml から com.google.android.maps の定義を消す</h2>
+<h2 id="androidmanifestxml--comgoogleandroidmaps-">AndroidManifest.xml から com.google.android.maps の定義を消す</h2>
 
 <p>意外とハマったのがコレ。</p>
 
-<p><code>AndroidManifest.xml</code> で</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;uses-library android:name="com.google.android.maps" /&gt;
-</code></pre></div>
+<p><code class="highlighter-rouge">AndroidManifest.xml</code> で</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;uses-library android:name="com.google.android.maps" /&gt;
+</code></pre>
+</div>
+
 <p>が定義してあると、</p>
-<div class="highlight"><pre><code class="language-" data-lang="">10-20 11:35:52.977: E/PackageManager(1178): Package xxxx requires unavailable shared library com.google.android.maps; failing!
-</code></pre></div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>10-20 11:35:52.977: E/PackageManager(1178): Package xxxx requires unavailable shared library com.google.android.maps; failing!
+</code></pre>
+</div>
+
 <p>というエラーになります。</p>
 
-<p>この <code>com.google.android.maps</code> は Google Maps API v1 で必要だったもので、v2 では必要ありません。削除しましょう。</p>
+<p>この <code class="highlighter-rouge">com.google.android.maps</code> は Google Maps API v1 で必要だったもので、v2 では必要ありません。削除しましょう。</p>
 
 <p>v2 の使い方を説明するブログやサイトで、これが含まれてしまってるものがあるようです。(かくいう自分もそんなサイトからコピペしてきたまま使ってたのでエラーになりました（汗）</p>
 
-<h2>動かす</h2>
+<h2 id="section-1">動かす</h2>
 
 <p>あとは、実機と変わりません。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_gmapv2_on_intel_emulator_01.png" alt="img"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_gmapv2_on_intel_emulator_01.png" alt="img" /></p>
 
 <p>やばい、PC性能とネットワーク環境のおかげで実機より快適になったｗ</p>
 
-<h2>参考</h2>
+<h2 id="section-2">参考</h2>
 
 <ul>
-<li><a href="http://d.hatena.ne.jp/ria10/20121218/1355794748">AndroidでGoogle Maps v2 をエミュレータで動かしてしかも爆速 - リア充爆発日記</a></li>
-<li><a href="http://denshikousaku.net/how-to-make-android-google-maps-v2-work-in-android-emulator">エミュレータでGoogle Maps for Android V2を動かす方法 | アプリ開発とRaspberry PIとArduino実験</a></li>
-<li><a href="http://stackoverflow.com/questions/14040185/running-google-maps-v2-on-android-emulator">Running Google Maps v2 on Android Emulator - Stack Overflow</a></li>
+  <li><a href="http://d.hatena.ne.jp/ria10/20121218/1355794748">AndroidでGoogle Maps v2 をエミュレータで動かしてしかも爆速 - リア充爆発日記</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[エミュレータでGoogle Maps for Android V2を動かす方法</td>
+          <td>アプリ開発とRaspberry PIとArduino実験](http://denshikousaku.net/how-to-make-android-google-maps-v2-work-in-android-emulator)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://stackoverflow.com/questions/14040185/running-google-maps-v2-on-android-emulator">Running Google Maps v2 on Android Emulator - Stack Overflow</a></li>
 </ul>
 
     </section>

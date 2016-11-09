@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -755,87 +623,86 @@ img {
       <a name="topofpage"></a>
       <p>クロージャとかラムダとか匿名** とか名前はいろいろですけど、各言語の書き方と動き（特に変数の扱い）について比べてみました。</p>
 
-<p>ついでに非同期処理の例にもなってしまいました。<br>
-&lt;!--more--&gt;</p>
-
-<h3>Objective-C</h3>
+<p>ついでに非同期処理の例にもなってしまいました。<br />
+<!--more--></p>
+<h3 id="objective-c">Objective-C</h3>
 
 <p>Blocks を使います。</p>
 
-<p>```objc Obj-C<br>
-int x = 1;<br>
+<p>```objc Obj-C<br />
+int x = 1;<br />
 __block int y = 2;</p>
 
-<p>dispatch<em>queue</em>t q<em>global = dispatch</em>get<em>global</em>queue(0, 0);<br>
-dispatch<em>async(q</em>global, ^{<br>
-    x = 10; // できない(コンパイルエラー<br>
+<p>dispatch_queue_t q_global = dispatch_get_global_queue(0, 0);<br />
+dispatch_async(q_global, ^{<br />
+    x = 10; // できない(コンパイルエラー<br />
     y = 20; // できる</p>
-<div class="highlight"><pre><code class="language-" data-lang="">int z = x + y;
 
-[self dispValue:z]; // self の参照カウンタが+1される
-</code></pre></div>
-<p>});<br>
-```</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>int z = x + y;
 
-<p>普通に宣言した変数を Block の中で使うと、自動的に「キャプチャ」され、変数の複製される。この変数には、 Block 内では代入できずコンパイルエラーとなる。<br>
-<code>__block</code> を付けた変数は、Block 内外で同じ実体を参照でき、代入もできる。<br>
-<code>self</code> やプロパティを Block 内で使用すると参照カウンタがインクリメントされ、明示的に release しないとリークする。<br>
-あるいは、Block 外で <code>__weak</code> を付けた変数に代入しておくと、これは参照カウンタがインクリメントされない。</p>
+[self dispValue:z]; // self の参照カウンタが+1される }); ```
+</code></pre>
+</div>
 
-<h3>Java 6 (Android ベースなので…)</h3>
+<p>普通に宣言した変数を Block の中で使うと、自動的に「キャプチャ」され、変数の複製される。この変数には、 Block 内では代入できずコンパイルエラーとなる。<br />
+<code class="highlighter-rouge">__block</code> を付けた変数は、Block 内外で同じ実体を参照でき、代入もできる。<br />
+<code class="highlighter-rouge">self</code> やプロパティを Block 内で使用すると参照カウンタがインクリメントされ、明示的に release しないとリークする。<br />
+あるいは、Block 外で <code class="highlighter-rouge">__weak</code> を付けた変数に代入しておくと、これは参照カウンタがインクリメントされない。</p>
+
+<h3 id="java-6-android-">Java 6 (Android ベースなので…)</h3>
 
 <p>匿名クラスです。</p>
 
-<p>```java Java<br>
-int x = 1;<br>
+<p>```java Java<br />
+int x = 1;<br />
 final int y = 2;</p>
 
-<p>ExecutorService executor = Executors.newSingleThreadExecutor();<br>
-executor.submit(new Runnable() {<br>
-    @Override<br>
-    public void run() {<br>
-        y = 20; // できない(コンパイルエラー<br>
-        int z = x + y; // できない(コンパイルエラー</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    String typeName = this.getClass().getInterfaces()[0].getName(); // Runnable になる
-}
-</code></pre></div>
-<p>});<br>
-```</p>
+<p>ExecutorService executor = Executors.newSingleThreadExecutor();<br />
+executor.submit(new Runnable() {<br />
+	@Override<br />
+	public void run() {<br />
+		y = 20; // できない(コンパイルエラー<br />
+		int z = x + y; // できない(コンパイルエラー</p>
 
-<p>Java は匿名クラスの実装中に使える変数はかなり制限がある。<br>
-普通に宣言した変数は、匿名クラス内では使えない(コンパイルエラー)。<br>
-<code>final</code> を付けて宣言した変数は、匿名クラス内では参照のみ可能。ちょうど Objective-C の通常変数を Block 内で使った時と同じ。<br>
-Obj-C の <code>self</code> にあたる <code>this</code> は匿名クラス内では、その匿名クラスを示す。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>	String typeName = this.getClass().getInterfaces()[0].getName(); // Runnable になる
+} }); ```
+</code></pre>
+</div>
 
-<h3>C＃</h3>
+<p>Java は匿名クラスの実装中に使える変数はかなり制限がある。<br />
+普通に宣言した変数は、匿名クラス内では使えない(コンパイルエラー)。<br />
+<code class="highlighter-rouge">final</code> を付けて宣言した変数は、匿名クラス内では参照のみ可能。ちょうど Objective-C の通常変数を Block 内で使った時と同じ。<br />
+Obj-C の <code class="highlighter-rouge">self</code> にあたる <code class="highlighter-rouge">this</code> は匿名クラス内では、その匿名クラスを示す。</p>
+
+<h3 id="c">C＃</h3>
 
 <p>ラムダ式です。</p>
 
-<p>```csharp C#<br>
-int x = 1;<br>
-const int y = 2;<br>
-Task.Factory.StartNew(() =&gt; <br>
-{<br>
-    x = 10; // OK<br>
-    y = 20; // これはダメ、const だから。<br>
+<p>```csharp C#<br />
+int x = 1;<br />
+const int y = 2;<br />
+Task.Factory.StartNew(() =&gt; <br />
+{<br />
+    x = 10; // OK<br />
+    y = 20; // これはダメ、const だから。<br />
     var z = x + y;</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var typeName = this.GetType().Name;
-</code></pre></div>
-<p>});<br>
-```</p>
 
-<p>C# はかなりゆる〜い印象。<br>
-普通に宣言した変数を、ラムダ式の中でも自由に read/write できてしまう。write できちゃうのはこわい。<br>
-<code>this</code> は、ラムダ式の外側のクラスを示す。<br>
+<div class="highlighter-rouge"><pre class="highlight"><code>var typeName = this.GetType().Name; }); ```
+</code></pre>
+</div>
+
+<p>C# はかなりゆる〜い印象。<br />
+普通に宣言した変数を、ラムダ式の中でも自由に read/write できてしまう。write できちゃうのはこわい。<br />
+<code class="highlighter-rouge">this</code> は、ラムダ式の外側のクラスを示す。<br />
 　</p>
 
-<h2>所感</h2>
+<h2 id="section">所感</h2>
 
-<p>個人的には、Java のガチガチなのが好きかも。できる事が限定されているのでミスしにくい。<br>
-Objective-C は、ローカル変数は良いけど、self とか使っちゃうミス起こしそう。<br>
-C# は、普通に書き換えられて超不安、という感じ。なるべく const 使うようにしたい。<br>
-　<br>
-　<br>
+<p>個人的には、Java のガチガチなのが好きかも。できる事が限定されているのでミスしにくい。<br />
+Objective-C は、ローカル変数は良いけど、self とか使っちゃうミス起こしそう。<br />
+C# は、普通に書き換えられて超不安、という感じ。なるべく const 使うようにしたい。<br />
+　<br />
+　<br />
 　</p>
 
 <p>しかし記述量は C# が一番少ないですね、Xamarin いいよ Xamarin。。。</p>

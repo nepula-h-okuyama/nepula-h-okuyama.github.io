@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -760,74 +628,72 @@ img {
 <p>そのため、</p>
 
 <ul>
-<li><a href="http://qiita.com/items/07762776102dbc84b1c7">reactive4java で端末の方位を取得しつづける - Qiita</a></li>
-<li><a href="http://qiita.com/items/e15ba88d51938531b1a3">reactive4java で位置を取得し続ける - Qiita</a></li>
+  <li><a href="http://qiita.com/items/07762776102dbc84b1c7">reactive4java で端末の方位を取得しつづける - Qiita</a></li>
+  <li><a href="http://qiita.com/items/e15ba88d51938531b1a3">reactive4java で位置を取得し続ける - Qiita</a></li>
 </ul>
 
 <p>で作ったサンプルプログラム、盛大にバグってましたorz</p>
 
-<h2>Cold な Observable と Hot な Observable</h2>
-
-<p>音楽プレーヤ iPod に例えると自分なりにしっくり来ました。<br>
-Observable が iPod で、Observer は聴く人。<br>
-なんとこの iPod はイヤホンジャックがたくさんあります。<br>
+<h2 id="cold--observable--hot--observable">Cold な Observable と Hot な Observable</h2>
+<p>音楽プレーヤ iPod に例えると自分なりにしっくり来ました。<br />
+Observable が iPod で、Observer は聴く人。<br />
+なんとこの iPod はイヤホンジャックがたくさんあります。<br />
 そしてさらにこの iPod はイヤホンを接続するだけで再生が始まり、抜くと停止します。</p>
 
-<p>Cold な iPod では、聴く人がイヤホンを接続すると、音楽が最初から再生されます。<br>
+<p>Cold な iPod では、聴く人がイヤホンを接続すると、音楽が最初から再生されます。<br />
 次の人がイヤホンを接続すると、また音楽が最初から再生されます。(最初の人は、再生されなおすわけじゃないよ。)</p>
 
-<p>Hot な iPod では、最初に聴く人がイヤホンを接続すると、音楽が再生され始めます。<br>
-次の人が、イヤホンを接続すると、その人は途中から聴くことになります。一つのストリーミング放送をみんなで聴くみたいな。<br>
+<p>Hot な iPod では、最初に聴く人がイヤホンを接続すると、音楽が再生され始めます。<br />
+次の人が、イヤホンを接続すると、その人は途中から聴くことになります。一つのストリーミング放送をみんなで聴くみたいな。<br />
 最後の人がイヤホンを外すと、再生が止まります(この辺はストリーミングと微妙に感覚が異なる、ストリーミングって、聴いてる人が居ようが居まいが流され続けるってイメージだから)。</p>
 
-<h2>何が問題か</h2>
+<h2 id="section">何が問題か</h2>
 
 <p>以上を踏まえた上で、<a href="http://qiita.com/items/e15ba88d51938531b1a3">reactive4java で位置を取得し続ける - Qiita</a> で作ったプログラムのどこが問題だったかというと。</p>
 
-<p>位置を聞くために接続をすると、その都度、<code>locMan.requestLocationUpdates</code> が呼ばれているという事です。上記の音楽プレーヤで例えると、<code>player.start()</code> です。</p>
+<p>位置を聞くために接続をすると、その都度、<code class="highlighter-rouge">locMan.requestLocationUpdates</code> が呼ばれているという事です。上記の音楽プレーヤで例えると、<code class="highlighter-rouge">player.start()</code> です。</p>
 
 <p>位置情報の取得は、ホントに無限ストリーミングなので、一見問題無さげに見えますが、２つリスナを登録するのは頂けません。(中には複数のリスナを登録できない API もあるでしょう、ありました。それで気づいたんです。)</p>
 
-<p>これは最初の register でのみ <code>locMan.requestLocationUpdates</code> が実行され、2番目以降の register では、observer.next だけが呼ばれるようにしないといけません。<br>
+<p>これは最初の register でのみ <code class="highlighter-rouge">locMan.requestLocationUpdates</code> が実行され、2番目以降の register では、observer.next だけが呼ばれるようにしないといけません。<br />
 そのためには、register した複数の observer を保持・管理する必要があります。うげー。</p>
 
-<h2>そこで Publish ですよ。</h2>
-
+<h2 id="publish-">そこで Publish ですよ。</h2>
 <p>.publish() を Observable のおしりにくっつけます。はい、これだけ。本当に。簡単すぎて「いいの？」って思っちゃうくらい。</p>
 
-<p><code>java getCurrectLocationAsHotObservable.java<br>
-/**<br>
- * 位置を取得し続ける(Hot)<br>
- */<br>
-public static ObservableBuilder&lt;Location&gt; getCurrentLocationAsHotObservable(          <br>
-    final Context context, final String provider) {<br>
-    return ObservableBuilder.from(<br>
-        getCurrentlocationAsObservable(context, provider)<br>
-        ).publish(); // Cold → Hot へ変換！<br>
-}<br>
-</code>`</p>
+<p>``java getCurrectLocationAsHotObservable.java<br />
+/**</p>
+<ul>
+  <li>位置を取得し続ける(Hot)<br />
+ */<br />
+public static ObservableBuilder<Location> getCurrentLocationAsHotObservable(          
+ final Context context, final String provider) {
+ return ObservableBuilder.from(
+     getCurrentlocationAsObservable(context, provider)
+     ).publish(); // Cold → Hot へ変換！
+}
+```</Location></li>
+</ul>
 
-<p>これだけで、複数の人が位置を聴きに来ても、<code>locMan.requestLocationUpdates</code> が呼ばれるのは１回だけである、Hot な Observable になります。Rx すげえよ Rx！</p>
+<p>これだけで、複数の人が位置を聴きに来ても、<code class="highlighter-rouge">locMan.requestLocationUpdates</code> が呼ばれるのは１回だけである、Hot な Observable になります。Rx すげえよ Rx！</p>
 
 <p>reactive4java のソースを読んだところ、前述の「複数の observer を保持・管理して、最初だけリスナ登録して、誰もいなくなったらリスナ解除する」みたいな面倒なことを publish の中(正確には observeOn)で行なってくれているようです。</p>
 
 <p>ますます Reactive Extensions が好きになりましたよ。</p>
 
-<h2>.NET の Reactive Extensions と reactive4java の違い</h2>
+<h2 id="net--reactive-extensions--reactive4java-">.NET の Reactive Extensions と reactive4java の違い</h2>
+<p>.NET の Reactive Extenstions では、Publish は、<code class="highlighter-rouge">IConnectableObservable&lt;T&gt;</code> を返すそうです。そして <code class="highlighter-rouge">Subscribe</code> しただけでは再生は開始されず、<code class="highlighter-rouge">Connect</code> した時に再生されるのだ、とも。</p>
 
-<p>.NET の Reactive Extenstions では、Publish は、<code>IConnectableObservable&lt;T&gt;</code> を返すそうです。そして <code>Subscribe</code> しただけでは再生は開始されず、<code>Connect</code> した時に再生されるのだ、とも。</p>
+<p>一方、<a href="http://reactive4java.googlecode.com/svn/trunk/Reactive4Java/docs/javadoc/index.html">reactive4java</a> では、<code class="highlighter-rouge">publish</code> は、普通の <code class="highlighter-rouge">Observable&lt;T&gt;</code> を返します。Observable には register(.NET の Subscribe に相当)しかないので、これを呼び出した時に再生が開始されます。</p>
 
-<p>一方、<a href="http://reactive4java.googlecode.com/svn/trunk/Reactive4Java/docs/javadoc/index.html">reactive4java</a> では、<code>publish</code> は、普通の <code>Observable&lt;T&gt;</code> を返します。Observable には register(.NET の Subscribe に相当)しかないので、これを呼び出した時に再生が開始されます。</p>
-
-<p>特に reactive4java の挙動で困っていませんが、今後のバージョンアップで .NET 側に合わせられるかも知れません。<br>
+<p>特に reactive4java の挙動で困っていませんが、今後のバージョンアップで .NET 側に合わせられるかも知れません。<br />
 ConnecableObservable という interface は既に用意されていますが、使われていないようです。</p>
 
-<h2>参考</h2>
-
+<h2 id="section-1">参考</h2>
 <ul>
-<li><a href="http://xin9le.net/archives/104">Rx入門 (14) – Cold to Hot変換 : xin9le note</a></li>
-<li><a href="http://d.hatena.ne.jp/okazuki/20120212/1329059831">Reactive Extensions再入門 その３６「ColdからHotへ！Publishメソッドと参照カウンタ？RefCountメソッド」 - かずきのBlog@Hatena</a></li>
-<li><a href="http://neue.cc/2010/06/24_263.html">neue cc - Reactive Extensions for .NET (Rx) メソッド探訪第7回:IEnumerable vs IObservable</a></li>
+  <li><a href="http://xin9le.net/archives/104">Rx入門 (14) – Cold to Hot変換 : xin9le note</a></li>
+  <li><a href="http://d.hatena.ne.jp/okazuki/20120212/1329059831">Reactive Extensions再入門 その３６「ColdからHotへ！Publishメソッドと参照カウンタ？RefCountメソッド」 - かずきのBlog@Hatena</a></li>
+  <li><a href="http://neue.cc/2010/06/24_263.html">neue cc - Reactive Extensions for .NET (Rx) メソッド探訪第7回:IEnumerable vs IObservable</a></li>
 </ul>
 
 <p>Rx の神々のみなさんが懇切丁寧に解説してくださってるのに、失敗しないと気づかない自分のバカバカ！</p>

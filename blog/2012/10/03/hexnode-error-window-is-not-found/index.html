@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>haxenode でエラー window is not defined</title>
-  <meta name="description" content="HaxeでつくるWebアプリ開発(node.js + Express) | 深追い Fukaoi.org を参考に、haxenodeを使ってみたときにハマったこと。">
+  <meta name="description" content="            [HaxeでつくるWebアプリ開発(node.js + Express)      深追い Fukaoi.org](http://blog.fukaoi.org/2012/06/19/haxe_nodejs_express) を参考に、haxenodeを使ってみたときにハマったこと。      ">
 
   <link rel="canonical" href="http://localhost:4000/blog/2012/10/03/hexnode-error-window-is-not-found/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "haxenode でエラー window is not defined",
   "datePublished": "2012-10-03T22:06:00+09:00",
   "dateModified": "2012-10-03T22:06:00+09:00",
-  "description": "HaxeでつくるWebアプリ開発(node.js + Express) | 深追い Fukaoi.org を参考に、haxenodeを使ってみたときにハマったこと。",
+  "description": "            [HaxeでつくるWebアプリ開発(node.js + Express)      深追い Fukaoi.org](http://blog.fukaoi.org/2012/06/19/haxe_nodejs_express) を参考に、haxenodeを使ってみたときにハマったこと。      ",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,68 +621,78 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><a href="http://blog.fukaoi.org/2012/06/19/haxe_nodejs_express">HaxeでつくるWebアプリ開発(node.js + Express) | 深追い Fukaoi.org</a> を参考に、<a href="http://haxenode.org/">haxenode</a>を使ってみたときにハマったこと。</p>
+      <table>
+  <tbody>
+    <tr>
+      <td>[HaxeでつくるWebアプリ開発(node.js + Express)</td>
+      <td>深追い Fukaoi.org](http://blog.fukaoi.org/2012/06/19/haxe_nodejs_express) を参考に、<a href="http://haxenode.org/">haxenode</a>を使ってみたときにハマったこと。</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- more -->
 
-<p>```as rootnode.hx<br>
+<p>```as rootnode.hx<br />
 import js.Node;</p>
 
-<p>class RootNode {<br>
-    static function main() {<br>
-     var server = Node.http.createServer( function(<br>
-          req:NodeHttpServerReq, res:NodeHttpServerResp){<br>
-            res.setHeader(&quot;Content-Type&quot;,&quot;text/plain&quot;);<br>
-            res.writeHead(200);<br>
-            res.end(Hoge.print());<br>
-          }<br>
-        );</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    server.listen(1337,"localhost");
-    trace( 'Server running at http://127.0.0.1:1337/' );
-}   
-</code></pre></div>
-<p>}</p>
+<p>class RootNode {<br />
+	static function main() {<br />
+	 var server = Node.http.createServer( function(<br />
+	      req:NodeHttpServerReq, res:NodeHttpServerResp){<br />
+	        res.setHeader(“Content-Type”,”text/plain”);<br />
+	        res.writeHead(200);<br />
+	        res.end(Hoge.print());<br />
+	      }<br />
+	    );</p>
 
-<p>@:keep<br>
-@:expose<br>
-class Hoge {<br>
-    public static function print():String {<br>
-        return &quot;Hello World.\n&quot;;<br>
-    }<br>
-}<br>
+<div class="highlighter-rouge"><pre class="highlight"><code>    server.listen(1337,"localhost");
+    trace( 'Server running at http://127.0.0.1:1337/' );
+   	}	 }
+</code></pre>
+</div>
+
+<p>@:keep<br />
+@:expose<br />
+class Hoge {<br />
+	public static function print():String {<br />
+		return “Hello World.\n”;<br />
+	}<br />
+}<br />
 ```</p>
 
 <p>こんな感じでサンプル作って、</p>
-<div class="highlight"><pre><code class="language-" data-lang="">node rootnode.js
-</code></pre></div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>node rootnode.js
+</code></pre>
+</div>
+
 <p>を実行したところ、</p>
 
 <blockquote>
-<p>/.../bin/haxenode.js:53<br>
-    var o = window;<br>
-            ^<br>
-ReferenceError: window is not defined<br>
-    at $hxExpose (/.../bin/haxenode.js:53:10)<br>
-    at /.../bin/haxenode.js:13:1<br>
-    at Object.<anonymous> (/.../bin/haxenode.js:62:3)<br>
-    at Module.<em>compile (module.js:449:26)<br>
-    at Object.Module.</em>extensions..js (module.js:467:10)<br>
-    at Module.load (module.js:356:32)<br>
-    at Function.Module.<em>load (module.js:312:12)<br>
-    at Module.runMain (module.js:492:10)<br>
-    at process.startup.processNextTick.process.</em>tickCallback (node.js:244:9)</p>
+  <p>/…/bin/haxenode.js:53<br />
+	var o = window;<br />
+	        ^<br />
+ReferenceError: window is not defined<br />
+    at $hxExpose (/…/bin/haxenode.js:53:10)<br />
+    at /…/bin/haxenode.js:13:1<br />
+    at Object.<anonymous> (/.../bin/haxenode.js:62:3)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Module.runMain (module.js:492:10)
+    at process.startup.processNextTick.process._tickCallback (node.js:244:9)</anonymous></p>
 </blockquote>
 
 <p>こんなエラーが出ました。</p>
 
-<p>いろいろ試したところ、Hoge クラスに <code>@:keep</code> と <code>@:expose</code> をどちらも指定するとダメみたい。どちらか片方だけなら正常。<br>
-<a href="http://haxe.org/doc/compiler">--dead-code-elimination</a> をあきらめて、minify とかすればいいのかな。<br>
-<code>@:keep</code> と <code>@:expose</code> は意味が被る、というか expose は keep を包括するような感じなので、@:expose だけでよさそうな気もします。</p>
+<p>いろいろ試したところ、Hoge クラスに <code class="highlighter-rouge">@:keep</code> と <code class="highlighter-rouge">@:expose</code> をどちらも指定するとダメみたい。どちらか片方だけなら正常。<br />
+<a href="http://haxe.org/doc/compiler">–dead-code-elimination</a> をあきらめて、minify とかすればいいのかな。<br />
+<code class="highlighter-rouge">@:keep</code> と <code class="highlighter-rouge">@:expose</code> は意味が被る、というか expose は keep を包括するような感じなので、@:expose だけでよさそうな気もします。</p>
 
-<h2>参考</h2>
-
+<p>##参考</p>
 <ul>
-<li><a href="http://haxe.org/manual/tips_and_tricks">Tips and Tricks - Haxe</a></li>
+  <li><a href="http://haxe.org/manual/tips_and_tricks">Tips and Tricks - Haxe</a></li>
 </ul>
 
     </section>

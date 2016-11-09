@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>フラットな感じのボタンを作ってみた</title>
-  <meta name="description" content="Foursquare の Android 版をマネて、XML だけで作ってみた。仕組みをすぐ忘れるので、ここにメモしておく。&lt;!--more--&gt;xml flat_panel.xml&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?...">
+  <meta name="description" content="Foursquare の Android 版をマネて、XML だけで作ってみた。仕組みをすぐ忘れるので、ここにメモしておく。```xml flat_panel.xml                                                                          ...">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/10/23/android-flat-button-sample/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "フラットな感じのボタンを作ってみた",
   "datePublished": "2013-10-23T01:53:00+09:00",
   "dateModified": "2013-10-23T01:53:00+09:00",
-  "description": "Foursquare の Android 版をマネて、XML だけで作ってみた。仕組みをすぐ忘れるので、ここにメモしておく。&lt;!--more--&gt;xml flat_panel.xml&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?...",
+  "description": "Foursquare の Android 版をマネて、XML だけで作ってみた。仕組みをすぐ忘れるので、ここにメモしておく。```xml flat_panel.xml                                                                          ...",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,93 +621,91 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Foursquare の Android 版をマネて、XML だけで作ってみた。<br>
-仕組みをすぐ忘れるので、ここにメモしておく。<br>
-&lt;!--more--&gt;<br>
-<code>xml flat_panel.xml<br>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br>
-&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; &gt;<br>
-    &lt;item android:id=&quot;@+id/padding&quot;&gt;<br>
-        &lt;shape&gt;<br>
-            &lt;solid android:color=&quot;#00FFFFFF&quot; /&gt;<br>
-            &lt;padding android:bottom=&quot;8dp&quot; android:left=&quot;8dp&quot;<br>
-                android:right=&quot;8dp&quot; android:top=&quot;8dp&quot; /&gt;<br>
-        &lt;/shape&gt;<br>
-    &lt;/item&gt;<br>
-    &lt;item android:id=&quot;@+id/shadow&quot;&gt;<br>
-        &lt;shape&gt;<br>
-            &lt;solid android:color=&quot;#D3CEC7&quot; /&gt;<br>
-            &lt;padding android:bottom=&quot;2px&quot; /&gt;<br>
-        &lt;/shape&gt;<br>
-    &lt;/item&gt;<br>
-    &lt;item android:id=&quot;@+id/face&quot;&gt;<br>
-        &lt;shape&gt;<br>
-            &lt;stroke android:width=&quot;1px&quot; android:color=&quot;#AEA8A3&quot; /&gt;<br>
-            &lt;solid android:color=&quot;#FFFFFF&quot; /&gt;<br>
-        &lt;/shape&gt;<br>
-    &lt;/item&gt;<br>
-    &lt;item android:id=&quot;@+id/state&quot;&gt;<br>
-        &lt;selector&gt;<br>
-            &lt;item android:state_pressed=&quot;true&quot;&gt;<br>
-                &lt;shape android:shape=&quot;rectangle&quot;&gt;<br>
-                    &lt;solid android:color=&quot;#FF82DEFF&quot; /&gt;<br>
-                &lt;/shape&gt;<br>
-            &lt;/item&gt;<br>
-            &lt;item android:state_focused=&quot;true&quot;&gt;<br>
-                &lt;shape android:shape=&quot;rectangle&quot; &gt;<br>
-                    &lt;solid android:color=&quot;#4082DEFF&quot; /&gt;<br>
-                &lt;/shape&gt;<br>
-            &lt;/item&gt;<br>
-          &lt;/selector&gt;<br>
-    &lt;/item&gt;<br>
-    &lt;item android:id=&quot;@+id/child&quot;&gt;<br>
-        &lt;shape&gt;<br>
-            &lt;solid android:color=&quot;#00FFFFFF&quot; /&gt;<br>
-            &lt;padding android:bottom=&quot;8dp&quot; android:left=&quot;8dp&quot;<br>
-                android:right=&quot;8dp&quot; android:top=&quot;8dp&quot; /&gt;<br>
-        &lt;/shape&gt;<br>
-    &lt;/item&gt;<br>
-&lt;/layer-list&gt;<br>
-</code></p>
+      <p>Foursquare の Android 版をマネて、XML だけで作ってみた。<br />
+仕組みをすぐ忘れるので、ここにメモしておく。<br />
+<!--more--><br />
+```xml flat_panel.xml<br />
+<?xml version="1.0" encoding="utf-8"?></p>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/padding">
+        <shape>
+            <solid android:color="#00FFFFFF" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+        </shape>
+    </item>
+    <item android:id="@+id/shadow">
+        <shape>
+            <solid android:color="#D3CEC7" />
+            <padding android:bottom="2px" />
+        </shape>
+    </item>
+    <item android:id="@+id/face">
+        <shape>
+            <stroke android:width="1px" android:color="#AEA8A3" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <item android:id="@+id/state">
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#FF82DEFF" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#4082DEFF" />
+                </shape>
+            </item>
+          </selector>
+    </item>
+    <item android:id="@+id/child">
+        <shape>
+            <solid android:color="#00FFFFFF" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+        </shape>
+    </item>
+</layer-list>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+## 使い方
 
-<h2>使い方</h2>
+上のファイル ``flat_panel.xml`` を、``res/drawable`` ディレクトリに入れて、適用したい Button などに↓のように設定。
 
-<p>上のファイル <code>flat_panel.xml</code> を、<code>res/drawable</code> ディレクトリに入れて、適用したい Button などに↓のように設定。</p>
-
-<p><code>xml part_of_activity_main.xml<br>
-    &lt;Button<br>
-        android:layout_width=&quot;match_parent&quot;<br>
-        android:layout_height=&quot;wrap_content&quot;<br>
-        android:background=&quot;@drawable/flat_panel&quot;<br>
-        android:text=&quot;フラットなボタン&quot; /&gt;<br>
-</code></p>
+```xml part_of_activity_main.xml
+    &lt;Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/flat_panel"
+        android:text="フラットなボタン" /&gt;
+</code></pre>
+</div>
 
 <p>Theme とかにまとめたいけど、今日は割愛。</p>
 
-<h2>ボタンに適用した結果</h2>
+<h2 id="section">ボタンに適用した結果</h2>
 
-<h3>通常</h3>
+<h3 id="section-1">通常</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/android_flat_button_sample_01.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/android_flat_button_sample_01.png" alt="img1" /></p>
 
-<h3>押した時</h3>
+<h3 id="section-2">押した時</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/android_flat_button_sample_02.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/android_flat_button_sample_02.png" alt="img1" /></p>
 
-<h2>仕組み</h2>
+<h2 id="section-3">仕組み</h2>
 
-<p><code>&lt;layer-list&gt;</code> タグの中の要素は、上から順に描画される。また、下位(手前)の要素は、上位(奥)の要素の入れ子になるみたい。</p>
+<p><code class="highlighter-rouge">&lt;layer-list&gt;</code> タグの中の要素は、上から順に描画される。また、下位(手前)の要素は、上位(奥)の要素の入れ子になるみたい。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/android_flat_button_sample_03.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/android_flat_button_sample_03.png" alt="img1" /></p>
 
 <p>（図の id は flat_panel.xml と対応してます。）</p>
 
 <ol>
-<li>padding - ボタンの周りに少し余白を付ける役割（要らないなら消してもOK）</li>
-<li>shadow - ボタンの下部にちょっとだけ見えてる影の部分。大部分が face によって隠れてるけど、実際はほとんど同じ領域を持つ。ここで padding bottom を 2px としているので、face の高さが 2px 縮んで、影っぽく見える仕組み。つまり影の強さはここで調整。</li>
-<li>face - ボタンの「面」に該当。stroke でフチを、solid で面を塗りつぶしている。</li>
-<li>state - ボタンの状態によって色などを変える役割。ここでは state<em>pressed=true（押された状態）と、state</em>focused=true（フォーカスを持ってる状態）だけ対応してる。face を描画した「後」で評価されるので、face の色を置き換えるものではない事に注意（透過時）。あと、状態は上から評価される。</li>
-<li>child - LinearLayout など Group な View にこのスタイルを適用した時、子View への余白となる。</li>
+  <li>padding - ボタンの周りに少し余白を付ける役割（要らないなら消してもOK）</li>
+  <li>shadow - ボタンの下部にちょっとだけ見えてる影の部分。大部分が face によって隠れてるけど、実際はほとんど同じ領域を持つ。ここで padding bottom を 2px としているので、face の高さが 2px 縮んで、影っぽく見える仕組み。つまり影の強さはここで調整。</li>
+  <li>face - ボタンの「面」に該当。stroke でフチを、solid で面を塗りつぶしている。</li>
+  <li>state - ボタンの状態によって色などを変える役割。ここでは state_pressed=true（押された状態）と、state_focused=true（フォーカスを持ってる状態）だけ対応してる。face を描画した「後」で評価されるので、face の色を置き換えるものではない事に注意（透過時）。あと、状態は上から評価される。</li>
+  <li>child - LinearLayout など Group な View にこのスタイルを適用した時、子View への余白となる。</li>
 </ol>
 
 <p>みんなの大好きな方眼紙EXCEL とオートシェイプで再現してみた → <a href="https://dl.dropboxusercontent.com/u/264530/qiita/flat_panel.xlsx">DL</a></p>

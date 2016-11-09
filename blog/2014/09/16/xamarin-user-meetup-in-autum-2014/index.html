@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -755,39 +623,38 @@ img {
       <a name="topofpage"></a>
       <p>　なんか今年(2014年)の秋は Xamarin についての勉強会がめじろ押しで、嬉しいというか羨ましい限りです。</p>
 
-<p>　ざっとまとめて見ました。あ、ほぼ関東圏です。<br>
-&lt;!--more--&gt;</p>
-
-<h2>【9/20・品川】<a href="https://atnd.org/events/55564">Xamarin.iOS でデバイスを超えるプログラミング : ATND</a></h2>
+<p>　ざっとまとめて見ました。あ、ほぼ関東圏です。<br />
+<!--more--></p>
+<h2 id="xamarinios---atndhttpsatndorgevents55564">【9/20・品川】<a href="https://atnd.org/events/55564">Xamarin.iOS でデバイスを超えるプログラミング : ATND</a></h2>
 
 <p>　Xamarin.iOS の、特に Objective-C で作成されたライブラリを Xamarin.iOS で使う「Binding」についてのお話が聞けるのは大変希少です。</p>
 
-<h2>【9/20・品川】<a href="http://kokucheese.com/event/index/215384/">9月20日 .NETラボ 勉強会 2014年9月(東京都)</a></h2>
+<h2 id="net--20149httpkokucheesecomeventindex215384">【9/20・品川】<a href="http://kokucheese.com/event/index/215384/">9月20日 .NETラボ 勉強会 2014年9月(東京都)</a></h2>
 
 <p>セッションの一つに</p>
 
 <ul>
-<li>「Xamarin.FormsのMVVM」のお話（Microsoft MVP for Visual C# 増田 智明）</li>
+  <li>「Xamarin.FormsのMVVM」のお話（Microsoft MVP for Visual C# 増田 智明）</li>
 </ul>
 
 <p>があります。Xamarin.Forms は iOS/Android/WinPhone でUIを共通化する新しいフレームワークで、且つ、MVVMフレームワークでもあります。これも大変価値のあるセッションです。</p>
 
-<h2>【9/30・渋谷】<a href="http://connpass.com/event/8706/">「Xamarin」って何？ Wエバンジェリストによる特濃「Xamarin」勉強会 - connpass</a></h2>
+<h2 id="xamarin-wxamarin---connpasshttpconnpasscomevent8706">【9/30・渋谷】<a href="http://connpass.com/event/8706/">「Xamarin」って何？ Wエバンジェリストによる特濃「Xamarin」勉強会 - connpass</a></h2>
 
 <p>「Xamarinって何？」というタイトルの通り、Xamarin を知らない／興味のある方向けのセッションと思います。エクセルソフト田淵さんとMS渡辺さんは Xamarin について各所でプレゼンしまくってるので、これからXamarinを始めてみようという方にはピッタリだと思います。</p>
 
-<h2>【10/18・渋谷】<a href="http://www.wankuma.com/seminar/20141018tokyo92/">Xamarin Day - わんくま同盟</a></h2>
+<h2 id="xamarin-day---httpwwwwankumacomseminar20141018tokyo92">【10/18・渋谷】<a href="http://www.wankuma.com/seminar/20141018tokyo92/">Xamarin Day - わんくま同盟</a></h2>
 
-<p>　わんくま同盟で、一日Xamarinぶち抜きしてくれるとは嬉しい限りですね。<br>
+<p>　わんくま同盟で、一日Xamarinぶち抜きしてくれるとは嬉しい限りですね。<br />
 勝手なイメージですが、わんくまはマイクロソフト系開発者が多いと思うので、Windows や Visual Studio での Xamarin 開発についてのセッションが多いのではないでしょうか。</p>
 
-<h2>【10/6-10・アメリカ】<a href="https://evolve.xamarin.com/">Xamarin Evolve 2014</a></h2>
+<h2 id="xamarin-evolve-2014httpsevolvexamarincom">【10/6-10・アメリカ】<a href="https://evolve.xamarin.com/">Xamarin Evolve 2014</a></h2>
 
-<p>　Xamarin 社主催の年に一度の大イベント「Evolve 2014」です。Apple でいうところの WWDC、Google で言えば I/O のような大きなイベントです。<br>
-Microsoft, IBM, Amazon, Salesforce とかなんだこの豪華なスポンサーは！<br>
+<p>　Xamarin 社主催の年に一度の大イベント「Evolve 2014」です。Apple でいうところの WWDC、Google で言えば I/O のような大きなイベントです。<br />
+Microsoft, IBM, Amazon, Salesforce とかなんだこの豪華なスポンサーは！<br />
 昨年は KeyNote がライブ配信されたので、今年もあるんじゃないかと思います。新しい Feature の発表もあるかもしれないので、必見です。日本のXamarin開発の第一人者 @iseebi さんも現地で参加されるとのことで、Live で盛り上がりましょう！</p>
 
-<h2>【時期未定】第2回 Japan Xamarin User Group Conference</h2>
+<h2 id="japan-xamarin-user-group-conference">【時期未定】第2回 Japan Xamarin User Group Conference</h2>
 
 <p>日本唯一の Xamarin ユーザーコミュニティ JXUG の第2回コンファレンス、秋くらいに開催されるんじゃないかなーと、期待も込めて書かせて頂きました。</p>
 

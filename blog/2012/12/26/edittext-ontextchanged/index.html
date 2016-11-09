@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -757,12 +625,21 @@ img {
 
 <!-- more -->
 
-<p>じゃあ [onTextChanged](<a href="http://developer.android.com/reference/android/text/TextWatcher.html#onTextChanged(java.lang.CharSequence">http://developer.android.com/reference/android/text/TextWatcher.html#onTextChanged(java.lang.CharSequence</a>, int, int, int) だぜ、って仕込んでみると、Android のこれは IME で変換中の文字列もバンバン飛んで来まして大変使い勝手が悪い。(サジェストなんかする際には必要なんでしょうけども)</p>
+<p>じゃあ [onTextChanged](http://developer.android.com/reference/android/text/TextWatcher.html#onTextChanged(java.lang.CharSequence, int, int, int) だぜ、って仕込んでみると、Android のこれは IME で変換中の文字列もバンバン飛んで来まして大変使い勝手が悪い。(サジェストなんかする際には必要なんでしょうけども)</p>
 
 <p>例えば、以下で紹介されている方法</p>
 
 <ul>
-<li><a href="http://blog.global-eng.co.jp/android/2011/04/08/textwatcher%e3%81%a7edittext%e3%81%ae%e5%85%a5%e5%8a%9b%e5%86%85%e5%ae%b9%e3%82%92%e3%83%aa%e3%82%a2%e3%83%ab%e3%82%bf%e3%82%a4%e3%83%a0%e3%81%ab%e5%8f%8d%e6%98%a0%e3%81%99%e3%82%8b/">TextWatcherでEditTextの入力内容をリアルタイムに反映する | GE Android Blog</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[TextWatcherでEditTextの入力内容をリアルタイムに反映する</td>
+          <td>GE Android Blog](http://blog.global-eng.co.jp/android/2011/04/08/textwatcher%e3%81%a7edittext%e3%81%ae%e5%85%a5%e5%8a%9b%e5%86%85%e5%ae%b9%e3%82%92%e3%83%aa%e3%82%a2%e3%83%ab%e3%82%bf%e3%82%a4%e3%83%a0%e3%81%ab%e5%8f%8d%e6%98%a0%e3%81%99%e3%82%8b/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>を実装しますと、IME確定前の文字列もじゃんじゃん同期してくれちゃいます。</p>
@@ -772,24 +649,34 @@ img {
 <p>そんな時、こちら↓</p>
 
 <ul>
-<li><a href="http://www.spiritek.co.jp/spkblog/2012/10/25/androidedittext%e3%81%a7ime%e3%81%ae%e6%9c%aa%e7%a2%ba%e5%ae%9a%e6%96%87%e5%ad%97%e5%88%97%e3%81%8c%e7%a2%ba%e5%ae%9a%e3%81%95%e3%82%8c%e3%81%9f%e7%9e%ac%e9%96%93/">Android/EditTextでIMEの未確定文字列が確定された瞬間 | SpiriteK Blog</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Android/EditTextでIMEの未確定文字列が確定された瞬間</td>
+          <td>SpiriteK Blog](http://www.spiritek.co.jp/spkblog/2012/10/25/androidedittext%e3%81%a7ime%e3%81%ae%e6%9c%aa%e7%a2%ba%e5%ae%9a%e6%96%87%e5%ad%97%e5%88%97%e3%81%8c%e7%a2%ba%e5%ae%9a%e3%81%95%e3%82%8c%e3%81%9f%e7%9e%ac%e9%96%93/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>の記事にめぐり逢いまして、まさに私が求めていたそのもの。</p>
 
-<p>ですが、未確定文字＝下線付き(<code>UnderlineSpan</code>)である、という前提がどうにもしっくり来ませんで(未確定文字に下線を付けない IME もそりゃあるだろうなーという意味で)。</p>
+<p>ですが、未確定文字＝下線付き(<code class="highlighter-rouge">UnderlineSpan</code>)である、という前提がどうにもしっくり来ませんで(未確定文字に下線を付けない IME もそりゃあるだろうなーという意味で)。</p>
 
-<p>もちろん、その前で言及されている内部クラス <code>android.view.inputmethod.ComposingText</code> を文字列比較するのもうーん…。</p>
+<p>もちろん、その前で言及されている内部クラス <code class="highlighter-rouge">android.view.inputmethod.ComposingText</code> を文字列比較するのもうーん…。</p>
 
-<p>で、自分でも試行錯誤してみたところ、[Spanned.getSpanFlags](<a href="http://developer.android.com/reference/android/text/Spanned.html#getSpanFlags(java.lang.Object)">http://developer.android.com/reference/android/text/Spanned.html#getSpanFlags(java.lang.Object)</a> というメソッドがあるのに気づきました。あと、<a href="http://developer.android.com/reference/android/text/Spanned.html#SPAN_COMPOSING">SPAN_COMPOSING</a> というフラグも。</p>
+<p>で、自分でも試行錯誤してみたところ、[Spanned.getSpanFlags](http://developer.android.com/reference/android/text/Spanned.html#getSpanFlags(java.lang.Object) というメソッドがあるのに気づきました。あと、<a href="http://developer.android.com/reference/android/text/Spanned.html#SPAN_COMPOSING">SPAN_COMPOSING</a> というフラグも。</p>
 
 <p>これらを使って、文字列が確定されているかどうか？を識別することができるのではないかと考え、前出の記事のコードを以下のように修正してみました。</p>
 
-<p>```java DetermineComposingText.java<br>
-edit1.addTextChangedListener(new TextWatcher()<br>
-{<br>
+<p>```java DetermineComposingText.java<br />
+edit1.addTextChangedListener(new TextWatcher()<br />
+{<br />
     int currentLength = 0;</p>
-<div class="highlight"><pre><code class="language-" data-lang="">@Override
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@Override
 public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
 @Override
@@ -818,16 +705,16 @@ public void afterTextChanged(Editable s) {
         Toast toast = Toast.makeText(getApplicationContext(), "確定", Toast.LENGTH_SHORT);
         toast.show();
     }
-}
-</code></pre></div>
-<p>});<br>
-```</p>
+} }); ```
+</code></pre>
+</div>
 
-<p><code>s.getSpanFlags(obj) &amp; Spanned.SPAN_COMPOSING) == Spanned.SPAN_COMPOSING)</code> で SPAN_COMPOSING(未確定文字)のフラグが立っているかを判定しています。</p>
+<p><code class="highlighter-rouge">s.getSpanFlags(obj) &amp; Spanned.SPAN_COMPOSING) == Spanned.SPAN_COMPOSING)</code> で SPAN_COMPOSING(未確定文字)のフラグが立っているかを判定しています。</p>
 
 <p>とりあえず手持ちの ATOK では修正前と同じように動作しているようです。</p>
 
 <p>IME 側で「未確定文字は SPAN_COMPOSING を必ず設定する」ものかどうかは分かりませんが、個人的には UnderlineSpan を使った手法よりもすっきりしました、というお話でした。</p>
+
 
     </section>
     <footer class="post-footer">

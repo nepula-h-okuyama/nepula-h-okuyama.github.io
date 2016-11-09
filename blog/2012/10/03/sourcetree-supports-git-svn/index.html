@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>SourceTree は git-svn したリポジトリも使えます</title>
-  <meta name="description" content="Mac 最強の git/Mercurial クライアントである SourceTree ですが、git-svn した Subversion リポジトリもほとんどシームレス い扱うことができます。&lt;!--more--&gt;以下、方法です。">
+  <meta name="description" content="Mac 最強の git/Mercurial クライアントである SourceTree ですが、git-svn した Subversion リポジトリもほとんどシームレス い扱うことができます。以下、方法です。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2012/10/03/sourcetree-supports-git-svn/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "SourceTree は git-svn したリポジトリも使えます",
   "datePublished": "2012-10-03T16:19:00+09:00",
   "dateModified": "2012-10-03T16:19:00+09:00",
-  "description": "Mac 最強の git/Mercurial クライアントである SourceTree ですが、git-svn した Subversion リポジトリもほとんどシームレス い扱うことができます。&lt;!--more--&gt;以下、方法です。",
+  "description": "Mac 最強の git/Mercurial クライアントである SourceTree ですが、git-svn した Subversion リポジトリもほとんどシームレス い扱うことができます。以下、方法です。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,26 +621,28 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Mac 最強の git/Mercurial クライアントである <a href="http://www.sourcetreeapp.com/">SourceTree</a> ですが、git-svn した Subversion リポジトリもほとんどシームレス い扱うことができます。<br>
-&lt;!--more--&gt;<br>
+      <p>Mac 最強の git/Mercurial クライアントである <a href="http://www.sourcetreeapp.com/">SourceTree</a> ですが、git-svn した Subversion リポジトリもほとんどシームレス い扱うことができます。<br />
+<!--more--><br />
 以下、方法です。</p>
 
 <p>I. Terminal で git svn clone する。※リポジトリがデカイと結構時間かかります。</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git svn clone -s http://osmdroid.googlecode.com/svn osmdroid
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git svn clone -s http://osmdroid.googlecode.com/svn osmdroid
+</code></pre>
+</div>
 <p>-s オプションをつけているので、最後 /trunk としない所がミソ。</p>
 
 <p>II. SourceTree の ファイル → 開く で I. のフォルダを作業フォルダとして開く。</p>
 
 <p>III. ごらんの通り、普通に SourceTree で開けました。</p>
 
-<p><img src="https://dl.dropbox.com/u/264530/qiita/sourcetree01.png" alt="sourcetree"></p>
+<p><img src="https://dl.dropbox.com/u/264530/qiita/sourcetree01.png" alt="sourcetree" /></p>
 
 <ul>
-<li>プッシュは <code>git svn dcommit</code> と同じ、つまり SVN へのコミットになります。</li>
-<li>プルは <code>git svn rebase</code> つまり SVN からの Update になります。</li>
-<li>ブランチは少し注意が必要で、git のローカルブランチとして作成するか、SVN のブランチとして作成するかを選択するダイアログが表示されます。前者を選択した場合は、SVN へは手動でマージしなければなりません。
-<img src="https://dl.dropbox.com/u/264530/qiita/sourcetree02.png" alt="sourcetree_branch"></li>
+  <li>プッシュは <code class="highlighter-rouge">git svn dcommit</code> と同じ、つまり SVN へのコミットになります。</li>
+  <li>プルは <code class="highlighter-rouge">git svn rebase</code> つまり SVN からの Update になります。</li>
+  <li>ブランチは少し注意が必要で、git のローカルブランチとして作成するか、SVN のブランチとして作成するかを選択するダイアログが表示されます。前者を選択した場合は、SVN へは手動でマージしなければなりません。<br />
+<img src="https://dl.dropbox.com/u/264530/qiita/sourcetree02.png" alt="sourcetree_branch" /></li>
 </ul>
 
 <p>git svn のコマンドは普通の git と少し違うのですが、SourceTree がそのあたりを吸収してくれて、SVN をリモートリポジトリと見立てて動作します。</p>
@@ -783,11 +653,10 @@ img {
 
 <p>Mac の SVNクライアントで「これだ！」というのがなかったのですが、これで満足です。</p>
 
-<h2>参考</h2>
-
+<p>##参考</p>
 <ul>
-<li><a href="http://d.hatena.ne.jp/idesaku/20090323/1237825080">git-svnの使い方を覚えた - idesaku blog</a></li>
-<li><a href="http://www.sourcetreeapp.com/">SourceTree</a> - なんか &quot;Supports SVN via git-svn or hgsubversion&quot; って書いてあるので git-svn の代わりに hgsubversion でもいけそうですね。</li>
+  <li><a href="http://d.hatena.ne.jp/idesaku/20090323/1237825080">git-svnの使い方を覚えた - idesaku blog</a></li>
+  <li><a href="http://www.sourcetreeapp.com/">SourceTree</a> - なんか “Supports SVN via git-svn or hgsubversion” って書いてあるので git-svn の代わりに hgsubversion でもいけそうですね。</li>
 </ul>
 
     </section>

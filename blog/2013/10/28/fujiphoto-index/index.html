@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>富士フォトというアプリをリリースしました</title>
-  <meta name="description" content="富士山の撮影スポットを探して、そこへ案内するアプリです。&lt;!--more--&gt;">
+  <meta name="description" content="富士山の撮影スポットを探して、そこへ案内するアプリです。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/10/28/fujiphoto-index/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "富士フォトというアプリをリリースしました",
   "datePublished": "2013-10-28T18:22:00+09:00",
   "dateModified": "2013-10-28T18:22:00+09:00",
-  "description": "富士山の撮影スポットを探して、そこへ案内するアプリです。&lt;!--more--&gt;",
+  "description": "富士山の撮影スポットを探して、そこへ案内するアプリです。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,24 +621,24 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>富士山の撮影スポットを探して、そこへ案内するアプリです。<br>
-&lt;!--more--&gt;</p>
+      <p>富士山の撮影スポットを探して、そこへ案内するアプリです。<br />
+<!--more--></p>
 
-<h3>Android 版はこちら</h3>
+<h3 id="android-">Android 版はこちら</h3>
 
-<p><a href="https://play.google.com/store/apps/details?id=com.amay077.android.fujiphoto"><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_00.png" alt="img1"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=com.amay077.android.fujiphoto"><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_00.png" alt="img1" /></a></p>
 
-<h3>iPhone版はこちら</h3>
+<h3 id="iphone">iPhone版はこちら</h3>
 
 <iframe src="http://spsns.net/tools/app.php?url=https://itunes.apple.com/jp/app/fu-shifoto/id806913229" frameborder="0" width="450" height="250"></iframe>
 
-<h2>受賞しました！</h2>
+<h2 id="section">受賞しました！</h2>
 
 <p><a href="http://ma9.mashupaward.jp/">マッシュアップアワード9(MA9)</a> にて</p>
 
 <ul>
-<li><a href="http://mashupawards.tumblr.com/post/67725217749/3-ma9">ピーシーフェーズ株式会社賞</a></li>
-<li><a href="http://fin.der.jp/2013/11/ma9/">いのしし一頭（finder）賞</a></li>
+  <li><a href="http://mashupawards.tumblr.com/post/67725217749/3-ma9">ピーシーフェーズ株式会社賞</a></li>
+  <li><a href="http://fin.der.jp/2013/11/ma9/">いのしし一頭（finder）賞</a></li>
 </ul>
 
 <p>を受賞しました。</p>
@@ -778,54 +646,54 @@ img {
 <p><a href="http://aigid.jp/GIS/udct/2013/">アーバンデータチャレンジ東京2013</a> にて、</p>
 
 <ul>
-<li><a href="http://internet.watch.impress.co.jp/docs/column/chizu/20140306_638357.html">自治体特別賞</a></li>
+  <li><a href="http://internet.watch.impress.co.jp/docs/column/chizu/20140306_638357.html">自治体特別賞</a></li>
 </ul>
 
 <p>を受賞しました。</p>
 
-<h2>概要</h2>
+<h2 id="section-1">概要</h2>
 
 <p>撮影スポットは、静岡県が提供している「ふじのくにオープンデータ」の「<a href="http://open-data.pref.shizuoka.jp/htdocs/index.php?action=pages_view_main&amp;active_action=multidatabase_view_main_detail&amp;content_id=33&amp;multidatabase_id=2&amp;block_id=15#_15">富士山ビューポイント</a>」を使用しています。</p>
 
 <p>以下のことができます。</p>
 
 <ul>
-<li>GPS を使って、現在地付近にある撮影スポットを検索</li>
-<li>スポットで撮影された富士山の写真を表示</li>
-<li>現在地と撮影スポット、富士山の位置関係を地図で確認</li>
-<li>撮影スポットと富士山付近の(雨)雲の状況を地図に表示</li>
-<li>現在地から撮影スポットへ行くまでを AR で案内(Googleマップナビも使用できます)
-
-<ul>
-<li>AR は単純に富士山の方向を確認するのにも使えます。</li>
-</ul></li>
+  <li>GPS を使って、現在地付近にある撮影スポットを検索</li>
+  <li>スポットで撮影された富士山の写真を表示</li>
+  <li>現在地と撮影スポット、富士山の位置関係を地図で確認</li>
+  <li>撮影スポットと富士山付近の(雨)雲の状況を地図に表示</li>
+  <li>現在地から撮影スポットへ行くまでを AR で案内(Googleマップナビも使用できます)
+    <ul>
+      <li>AR は単純に富士山の方向を確認するのにも使えます。</li>
+    </ul>
+  </li>
 </ul>
 
-<h2>使い方</h2>
+<h2 id="section-2">使い方</h2>
 
-<h3>近くの撮影スポット</h3>
+<h3 id="section-3">近くの撮影スポット</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_01.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_01.png" alt="img1" /></p>
 
-<h3>撮影スポットの詳細</h3>
+<h3 id="section-4">撮影スポットの詳細</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_02.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_02.png" alt="img1" /></p>
 
-<h3>ARナビ</h3>
+<h3 id="ar">ARナビ</h3>
 
 <p>田舎すぎるだろ…</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_03.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/fujiphoto_03.png" alt="img1" /></p>
 
-<h2>技術的なアレ</h2>
+<h2 id="section-5">技術的なアレ</h2>
 
-<p>このアプリで <a href="http://ma9.mashupaward.jp/works/348">MashUpAward9</a> に応募してます。<br>
+<p>このアプリで <a href="http://ma9.mashupaward.jp/works/348">MashUpAward9</a> に応募してます。<br />
 使用した API は、</p>
 
 <ul>
-<li><a href="http://ma9.mashupaward.jp/apis/216">Yahoo! Android マップ SDK</a> の MapView と雨雲タイルと ARナビ</li>
-<li><a href="http://ma9.mashupaward.jp/apis/218">Yahoo! Open Local Platform</a> のリバースジオコーダ</li>
-<li><a href="http://ma9.mashupaward.jp/apis/145">datastore API</a></li>
+  <li><a href="http://ma9.mashupaward.jp/apis/216">Yahoo! Android マップ SDK</a> の MapView と雨雲タイルと ARナビ</li>
+  <li><a href="http://ma9.mashupaward.jp/apis/218">Yahoo! Open Local Platform</a> のリバースジオコーダ</li>
+  <li><a href="http://ma9.mashupaward.jp/apis/145">datastore API</a></li>
 </ul>
 
 <p>です。本当は Googleマップの代わりに <a href="http://ma9.mashupaward.jp/apis/36">Mapion</a> の「3D風地図」を使いたかったのですが、時間がなくてあきらめました。(ピンチズームとかを自前実装しなければならなさそうだったので)</p>
@@ -835,10 +703,10 @@ img {
 <p>データは、冒頭で紹介した、</p>
 
 <ul>
-<li><a href="http://open-data.pref.shizuoka.jp/htdocs/index.php?action=pages_view_main&amp;active_action=multidatabase_view_main_detail&amp;content_id=33&amp;multidatabase_id=2&amp;block_id=15#_15">富士山ビューポイント - ふじのくにオープンデータ</a></li>
+  <li><a href="http://open-data.pref.shizuoka.jp/htdocs/index.php?action=pages_view_main&amp;active_action=multidatabase_view_main_detail&amp;content_id=33&amp;multidatabase_id=2&amp;block_id=15#_15">富士山ビューポイント - ふじのくにオープンデータ</a></li>
 </ul>
 
-<p>を使っています。<br>
+<p>を使っています。<br />
 日頃アプリを開発したり、アイデアを練ったりしていて、どうしても行き詰まるのがコンテンツです。隣県でこのようなコンテンツを公開してくれる事はとてもありがたく、ぜひ活用してみたいと思って作りました。</p>
 
 <p>まだまだ不安定な感じ（メモリ不足でたびたび落ちる(汗)）ですが、ちまちまブラッシュアップしていきたいと思います。</p>

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Google Maps SDK for iOS を Xamarin.iOS で使う</title>
-  <meta name="description" content="Googleマップの iOS版とともに公開された iOS用のMaps SDK ですが、Xamarin.iOS でも使うことができます。(ちなみに Android用の Google Maps API v2 を Xamarin.Android で使う方法は以前書きました。)&lt;!--more--&gt;Xamar...">
+  <meta name="description" content="Googleマップの iOS版とともに公開された iOS用のMaps SDK ですが、Xamarin.iOS でも使うことができます。(ちなみに Android用の Google Maps API v2 を Xamarin.Android で使う方法は以前書きました。)Xamarin Component Stor...">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/04/22/xamarin-ios-using-gmap-ios-sdk/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Google Maps SDK for iOS を Xamarin.iOS で使う",
   "datePublished": "2013-04-22T22:13:00+09:00",
   "dateModified": "2013-04-22T22:13:00+09:00",
-  "description": "Googleマップの iOS版とともに公開された iOS用のMaps SDK ですが、Xamarin.iOS でも使うことができます。(ちなみに Android用の Google Maps API v2 を Xamarin.Android で使う方法は以前書きました。)&lt;!--more--&gt;Xamar...",
+  "description": "Googleマップの iOS版とともに公開された iOS用のMaps SDK ですが、Xamarin.iOS でも使うことができます。(ちなみに Android用の Google Maps API v2 を Xamarin.Android で使う方法は以前書きました。)Xamarin Component Stor...",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,103 +621,102 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Googleマップの iOS版とともに公開された <a href="https://developers.google.com/maps/documentation/ios/">iOS用のMaps SDK</a> ですが、Xamarin.iOS でも使うことができます。(ちなみに Android用の Google Maps API v2 を Xamarin.Android で使う方法は<a href="http://amay077.github.io/blog/2013/03/05/xamarin-android-using-google-maps-android-api-v2/">以前</a>書きました。)<br>
-&lt;!--more--&gt;<br>
+      <p>Googleマップの iOS版とともに公開された <a href="https://developers.google.com/maps/documentation/ios/">iOS用のMaps SDK</a> ですが、Xamarin.iOS でも使うことができます。(ちなみに Android用の Google Maps API v2 を Xamarin.Android で使う方法は<a href="http://amay077.github.io/blog/2013/03/05/xamarin-android-using-google-maps-android-api-v2/">以前</a>書きました。)<br />
+<!--more--><br />
 <a href="http://components.xamarin.com/">Xamarin Component Store</a> にて Free で(ラッパー)ライブラリが公開されているので、それを使います。</p>
 
 <p>コンポーネントをダウンロードすると、中にサンプルプロジェクトが含まれているのでそれを動かしてみます。</p>
 
-<h2>適当な Xamarin.iOS プロジェクトを作る</h2>
+<h2 id="xamarinios-">適当な Xamarin.iOS プロジェクトを作る</h2>
 
-<p>メニュー -&gt; ファイル -&gt; 新規 -&gt; ソリューション -&gt; C# -&gt; iOS -&gt; iPhone -&gt; Single View Application を選択。ソリューションはなんでもいいです。どうせ後で捨てるので。テキトーに <code>HogeApp</code> とでもしましょうか。</p>
+<p>メニュー -&gt; ファイル -&gt; 新規 -&gt; ソリューション -&gt; C# -&gt; iOS -&gt; iPhone -&gt; Single View Application を選択。ソリューションはなんでもいいです。どうせ後で捨てるので。テキトーに <code class="highlighter-rouge">HogeApp</code> とでもしましょうか。</p>
 
-<h2>プロジェクトに Google Maps コンポーネントを追加する</h2>
+<h2 id="google-maps-">プロジェクトに Google Maps コンポーネントを追加する</h2>
 
 <p>メニュー -&gt; プロジェクト -&gt; Get More Components を選択します。</p>
 
 <p><strong>Google Maps</strong> を探しだして [Add to App] します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_1.png" alt="image1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_1.png" alt="image1" /></p>
 
-<p>しばらくすると、左側のビューの Components の中に &quot;Google Maps&quot; が作成されるので、それをダブルクリックして開きます。</p>
+<p>しばらくすると、左側のビューの Components の中に “Google Maps” が作成されるので、それをダブルクリックして開きます。</p>
 
 <p>右に表示されるコンテンツのタブから「Samples」を選択します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_2.png" alt="image2"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_2.png" alt="image2" /></p>
 
-<p>さらに &quot;iOS Sample&quot; の「Open Sample」を押します。<br>
+<p>さらに “iOS Sample” の「Open Sample」を押します。<br />
 すると、左側のビューに「GoogleMapsSample」プロジェクトが追加されます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_3.png" alt="image3"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_3.png" alt="image3" /></p>
 
 <p>この時点で HogeApp は意味がなくなってしまいましたが、ディスクから削除すると GoogleMapsSample も一緒に消えてしまうので、無視しておきます。GoogleMapsSample がどこにあるかは、上図のように「親フォルダを開く」すると Finder で確認できます。</p>
 
 <p>以降はこの GoogleMapsSample プロジェクトを使います。</p>
 
-<h2>APIキーを取得する</h2>
+<h2 id="api">APIキーを取得する</h2>
 
 <p>ここからは、Component -&gt; GoogleMaps をダブルクリックすると表示される「Getting Started」の「The Google Maps API Key」に沿っていきます。</p>
 
-<h4>1. Create an API project in the <a href="https://code.google.com/apis/console">Google API Console</a></h4>
+<h4 id="create-an-api-project-in-the-google-api-consolehttpscodegooglecomapisconsole">1. Create an API project in the <a href="https://code.google.com/apis/console">Google API Console</a></h4>
 
 <p>ブラウザで Google API Console へ移動して、左上のドロップダウンから「Create…」にてプロジェクトを作成します。既に存在しているなら、それを使ってもいいです。</p>
 
-<h4>2. Select the Services pane in your API project, and enable the Google Maps SDK for iOS. This displays the Google Maps Terms of Service.</h4>
+<h4 id="select-the-services-pane-in-your-api-project-and-enable-the-google-maps-sdk-for-ios-this-displays-the-google-maps-terms-of-service">2. Select the Services pane in your API project, and enable the Google Maps SDK for iOS. This displays the Google Maps Terms of Service.</h4>
 
 <p>左側のメニュー「Services」の中にある「Google Maps SDK for iOS」を ON にします。利用規約にも同意しましょう。</p>
 
-<h4>3. Select the API Access pane in the console, and click Create new iOS key.</h4>
+<h4 id="select-the-api-access-pane-in-the-console-and-click-create-new-ios-key">3. Select the API Access pane in the console, and click Create new iOS key.</h4>
 
 <p>左側のメニュー「API Access」を開き、ページの一番下に表示される「Create new iOS key」ボタンを押します。</p>
 
-<h4>4. Enter one or more bundle identifiers as listed in your application&#39;s .plist file, such as com.example.myapp.</h4>
+<h4 id="enter-one-or-more-bundle-identifiers-as-listed-in-your-applications-plist-file-such-as-comexamplemyapp">4. Enter one or more bundle identifiers as listed in your application’s .plist file, such as com.example.myapp.</h4>
 
 <p>入力欄に「com.example.myapp」とタイプします。本来はちゃんとした「あなたのアプリの固有ID」を入れるのでしょうが、当方 iOS 開発は詳しくないのでここでは例のままにします。</p>
 
-<h4>5. Click Create.</h4>
+<h4 id="click-create">5. Click Create.</h4>
 
 <p>「Create」を押します。</p>
 
-<h4>6. In the API Access page, locate the section Key for iOS apps (with bundle identifiers) and note or copy the 40-character *API key.</h4>
+<h4 id="in-the-api-access-page-locate-the-section-key-for-ios-apps-with-bundle-identifiers-and-note-or-copy-the-40-character-api-key">6. In the API Access page, locate the section Key for iOS apps (with bundle identifiers) and note or copy the 40-character *API key.</h4>
 
 <p>すると、<strong>Key for iOS apps</strong> に 作成されたAPIキーが表示されるはずです。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_4.png" alt="image4"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_4.png" alt="image4" /></p>
 
 <p>この API key をコピーしておいて、Xamarin Studio に戻ります。</p>
 
-<h2>Info.plist を開いて、Identifier を設定します</h2>
+<h2 id="infoplist-identifier-">Info.plist を開いて、Identifier を設定します</h2>
 
 <p>Google API Console で設定した Identifier と一致させる必要があるので「com.example.myapp」を設定します。(普通は先にアプリの Identifier を決めてから API key を取得するのでしょうが)</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_5.png" alt="image5"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_5.png" alt="image5" /></p>
 
-<h2>AppDelegate.cs を開いて、API key を設定する</h2>
+<h2 id="appdelegatecs-api-key-">AppDelegate.cs を開いて、API key を設定する</h2>
 
 <p>コピーしておいた API key を、下図の位置に貼り付けます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_6.png" alt="image6"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_6.png" alt="image6" /></p>
 
-<h2>動かす！</h2>
+<h2 id="section">動かす！</h2>
 
-<p>以上で準備完了です。<br>
+<p>以上で準備完了です。<br />
 実行してみましょう。Android版の Google Maps API v2 は、エミュレータでは実行できませんが、iOS版は、シミュレータでも実行できます。</p>
 
 <p>ばばーん！</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_7.png" alt="image7"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/gmap_on_xamarin_ios_7.png" alt="image7" /></p>
 
 <p>あれ？ズームコントロールとか表示されないのね。</p>
 
 <p>とりあえず動く所までできたので、今日はこの辺で。</p>
 
-<h2>まとめ</h2>
-
+<h2 id="section-1">まとめ</h2>
 <ul>
-<li>Google Maps SDK for iOS も Xamarin で普通に使える！</li>
-<li>Xamarin さん、Component に含まれるサンプルの「よりよい取り出し方」教えてください</li>
-<li><code>CLLocationCoordinate2D</code> とか長ェよ、ただの <code>LatLng</code> だろ</li>
-<li>というように Google Maps Android API v2 とは設計思想は同じですが、インターフェースが違う(CLLocationCoordinate2D は CoreLocation のクラスですね)ので共通にはなりません。SDK が提供する機能にも差異があります。(さすがに Android &gt; iOS です)</li>
+  <li>Google Maps SDK for iOS も Xamarin で普通に使える！</li>
+  <li>Xamarin さん、Component に含まれるサンプルの「よりよい取り出し方」教えてください</li>
+  <li><code class="highlighter-rouge">CLLocationCoordinate2D</code> とか長ェよ、ただの <code class="highlighter-rouge">LatLng</code> だろ</li>
+  <li>というように Google Maps Android API v2 とは設計思想は同じですが、インターフェースが違う(CLLocationCoordinate2D は CoreLocation のクラスですね)ので共通にはなりません。SDK が提供する機能にも差異があります。(さすがに Android &gt; iOS です)</li>
 </ul>
 
     </section>

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -756,225 +624,225 @@ img {
       <p>MVVM + Messenger パターンとは、</p>
 
 <ul>
-<li><a href="http://tnakamura.hatenablog.com/entry/20110218/mvvm_messenger">いまさら聞けない「MVVM + Messenger パターン」超入門 - present</a></li>
+  <li><a href="http://tnakamura.hatenablog.com/entry/20110218/mvvm_messenger">いまさら聞けない「MVVM + Messenger パターン」超入門 - present</a></li>
 </ul>
 
 <p>らへんを参照。</p>
 
 <!-- more -->
 
-<p>勉強がてら、Android(Java) で、Messenger を実装してみようとした。<br>
-要は、View 側で regist された Action<Message> を溜めておき、ViewModel 側から send(new Message()) した時に invoke させればいいんでしょ？と。</p>
+<p>勉強がてら、Android(Java) で、Messenger を実装してみようとした。<br />
+要は、View 側で regist された Action<Message> を溜めておき、ViewModel 側から send(new Message()) した時に invoke させればいいんでしょ？と。</Message></p>
 
 <p>とりあえずこんな感じになると思われる。</p>
 
-<p>```java common_interfaces<br>
-public interface Message {<br>
+<p>```java common_interfaces<br />
+public interface Message {<br />
 }</p>
 
-<p>public interface Action1<T> {<br>
-    public void invoke(T arg);<br>
-}<br>
-```</p>
+<p>public interface Action1<T> {
+	public void invoke(T arg);
+}</T></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+```java Messenger.java
+public final class Messenger {
+	
+	private Map&lt;String, Action1&lt;? extends Message&gt;&gt; _actions = 
+			new HashMap&lt;String, Action1&lt;? extends Message&gt;&gt;();
 
-<p>```java Messenger.java<br>
-public final class Messenger {</p>
-<div class="highlight"><pre><code class="language-" data-lang="">private Map&lt;String, Action1&lt;? extends Message&gt;&gt; _actions = 
-        new HashMap&lt;String, Action1&lt;? extends Message&gt;&gt;();
+	public &lt;T extends Message&gt; void register(Action1&lt;T&gt; action) {
+		String nameOfT = /* TODO action から T を取得 */
+		_actions.put(nameOfT, action);
+	}
 
-public &lt;T extends Message&gt; void register(Action1&lt;T&gt; action) {
-    String nameOfT = /* TODO action から T を取得 */
-    _actions.put(nameOfT, action);
+	public void send(Message message) {
+		/* TODO message の型をキーにして _actions から取り出して invoke */
+	}
 }
-
-public void send(Message message) {
-    /* TODO message の型をキーにして _actions から取り出して invoke */
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+</code></pre>
+</div>
 
 <p>これの実装中、いくつか問題にハマった。</p>
 
-<h2>問題1:X&lt;T&gt; の T が取れない</h2>
+<p>##問題1:X&lt;T&gt; の T が取れない</p>
 
-<p>Action<Message> を溜める時に、Message をキーにして Map に入れておけばいいでしょ、と思ったのだが、できない。<br>
-<code>Action&lt;T&gt;</code> の <code>T</code> が取り出せない。</p>
+<p>Action<Message> を溜める時に、Message をキーにして Map に入れておけばいいでしょ、と思ったのだが、できない。
+``Action<T>`` の ``T`` が取り出せない。</T></Message></p>
 
 <p>よく調べてみると</p>
 
 <ul>
-<li><a href="http://www.ne.jp/asahi/hishidama/home/tech/java/generics.html#erasure">Java総称型メモ(Hishidama&#39;s Java Generics Memo)</a></li>
-<li><a href="http://blogs.wankuma.com/nagise/archive/2008/10/13/158708.aspx">イレイジャではジェネリクスの何が消えるのか</a></li>
+  <li><a href="http://www.ne.jp/asahi/hishidama/home/tech/java/generics.html#erasure">Java総称型メモ(Hishidama’s Java Generics Memo)</a></li>
+  <li><a href="http://blogs.wankuma.com/nagise/archive/2008/10/13/158708.aspx">イレイジャではジェネリクスの何が消えるのか</a></li>
 </ul>
 
 <p>だそうです。ふむーなるほど、実行時には T は消えてしまっていると。</p>
 
 <p>しかしいろいろ試していたら、こんな方法で文字列としては取り出すことができました。</p>
 
-<p>```java Messenger.java<br>
+<p>```java Messenger.java<br />
 public final class Messenger {</p>
-<div class="highlight"><pre><code class="language-" data-lang="">private Map&lt;String, Action1&lt;? extends Message&gt;&gt; _actions = 
-        new HashMap&lt;String, Action1&lt;? extends Message&gt;&gt;();
+
+<div class="highlighter-rouge"><pre class="highlight"><code>private Map&lt;String, Action1&lt;? extends Message&gt;&gt; _actions = 
+		new HashMap&lt;String, Action1&lt;? extends Message&gt;&gt;();
 
 public &lt;T extends Message&gt; void register(Action1&lt;T&gt; action) {
-    // action が使ってる Generics な型を取り出す(という意味？)。
-    // action.getClass().getInterfaces(); でもいけるかと思ったら、Action1 までしか取り出せなかった。
-    Type[] types = action.getClass().getGenericInterfaces();
-    // 文字列化したら Action1&lt;T&gt; の T の部分も実際の型名が得られた。
-    // ex: "hoge.mvvm.Action1&lt;com.piyo.MyMessage&gt;"
-    String typeString = types[0].toString();
+	// action が使ってる Generics な型を取り出す(という意味？)。
+	// action.getClass().getInterfaces(); でもいけるかと思ったら、Action1 までしか取り出せなかった。
+	Type[] types = action.getClass().getGenericInterfaces();
+	// 文字列化したら Action1&lt;T&gt; の T の部分も実際の型名が得られた。
+	// ex: "hoge.mvvm.Action1&lt;com.piyo.MyMessage&gt;"
+	String typeString = types[0].toString();
 
-    // &lt; &gt; 内だけ取り出す        
-    int start = typeString.indexOf("&lt;");
-    int end = typeString.lastIndexOf("&gt;");
-    String nameOfT = typeString.subSequence(start + 1, end).toString();
+	// &lt; &gt; 内だけ取り出す		
+	int start = typeString.indexOf("&lt;");
+	int end = typeString.lastIndexOf("&gt;");
+	String nameOfT = typeString.subSequence(start + 1, end).toString();
 
-    _actions.put(nameOfT, action);
+	_actions.put(nameOfT, action);
 }
 
 public void send(Message message) {
-    /* TODO message の型をキーにして _actions から取り出して invoke */
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+	/* TODO message の型をキーにして _actions から取り出して invoke */
+} } ```
+</code></pre>
+</div>
 
-<h2>問題2:&lt;? extend T&gt; or &lt;? super T&gt; ?</h2>
+<p>##問題2:&lt;? extend T&gt; or &lt;? super T&gt; ?</p>
 
-<p>次の問題、今度は send の方。<br>
-<code>_actions.get(nameOfMessage)</code> で取り出した <code>Action1&lt;? extend Message&gt;</code> は、invoke メソッドの型が <code>null</code> になってて、使えませんでした。<br>
-なので仕方なく、Generics パラメータなしの <code>Action1</code> で受けることに。</p>
+<p>次の問題、今度は send の方。<br />
+<code class="highlighter-rouge">_actions.get(nameOfMessage)</code> で取り出した <code class="highlighter-rouge">Action1&lt;? extend Message&gt;</code> は、invoke メソッドの型が <code class="highlighter-rouge">null</code> になってて、使えませんでした。<br />
+なので仕方なく、Generics パラメータなしの <code class="highlighter-rouge">Action1</code> で受けることに。</p>
 
-<p>```java Messenger.java<br>
+<p>```java Messenger.java<br />
 public final class Messenger {</p>
-<div class="highlight"><pre><code class="language-" data-lang="">private Map&lt;String, Action1&lt;? extends Message&gt;&gt; _actions = 
-        new HashMap&lt;String, Action1&lt;? extends Message&gt;&gt;();
+
+<div class="highlighter-rouge"><pre class="highlight"><code>private Map&lt;String, Action1&lt;? extends Message&gt;&gt; _actions = 
+		new HashMap&lt;String, Action1&lt;? extends Message&gt;&gt;();
 
 public &lt;T extends Message&gt; void register(Action1&lt;T&gt; action) {
-    // action が使ってる Generics な型を取り出す(という意味？)。
-    // action.getClass().getInterfaces(); でもいけるかと思ったら、Action1 までしか取り出せなかった。
-    Type[] types = action.getClass().getGenericInterfaces();
-    // 文字列化したら Action1&lt;T&gt; の T の部分も実際の型名が得られた。
-    // ex: "hoge.mvvm.Action1&lt;com.piyo.MyMessage&gt;"
-    String typeString = types[0].toString();
+	// action が使ってる Generics な型を取り出す(という意味？)。
+	// action.getClass().getInterfaces(); でもいけるかと思ったら、Action1 までしか取り出せなかった。
+	Type[] types = action.getClass().getGenericInterfaces();
+	// 文字列化したら Action1&lt;T&gt; の T の部分も実際の型名が得られた。
+	// ex: "hoge.mvvm.Action1&lt;com.piyo.MyMessage&gt;"
+	String typeString = types[0].toString();
 
-    // &lt; &gt; 内だけ取り出す        
-    int start = typeString.indexOf("&lt;");
-    int end = typeString.lastIndexOf("&gt;");
-    String nameOfT = typeString.subSequence(start + 1, end).toString();
+	// &lt; &gt; 内だけ取り出す		
+	int start = typeString.indexOf("&lt;");
+	int end = typeString.lastIndexOf("&gt;");
+	String nameOfT = typeString.subSequence(start + 1, end).toString();
 
-    _actions.put(nameOfT, action);
+	_actions.put(nameOfT, action);
 }
 
 @SuppressWarnings("unchecked")
 public void send(Message message) {
-    final String messengerTypeName = message.getClass().getName();
+	final String messengerTypeName = message.getClass().getName();
+	
+	if (!_actions.containsKey(messengerTypeName)) {
+		return;
+	}
 
-    if (!_actions.containsKey(messengerTypeName)) {
-        return;
-    }
-
-    // Action1&lt;? extends Message&gt; だと、invoke の型が null になってしまう。
-    // が、_actions は追加/取得を兼ねているので Action1&lt;? super Message&gt; にすることもできず…      
-    // 仕方なく Generics 未使用で。
-    @SuppressWarnings("rawtypes")
-    Action1 action = _actions.get(messengerTypeName);
-    action.invoke(message);
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+	// Action1&lt;? extends Message&gt; だと、invoke の型が null になってしまう。
+	// が、_actions は追加/取得を兼ねているので Action1&lt;? super Message&gt; にすることもできず…		
+	// 仕方なく Generics 未使用で。
+	@SuppressWarnings("rawtypes")
+	Action1 action = _actions.get(messengerTypeName);
+	action.invoke(message);
+} } ```
+</code></pre>
+</div>
 
 <p>とりあえず動くけど、なんかスッキリしない。。。</p>
 
-<h2>ここまで実装しておいて…</h2>
+<p>##ここまで実装しておいて…</p>
 
 <ul>
-<li><a href="http://gushwell.ldblog.jp/archives/52146816.html">MVVM：Messengerを理解するために自作してみた(2):Gushwell&#39;s C# Dev Notes</a></li>
+  <li><a href="http://gushwell.ldblog.jp/archives/52146816.html">MVVM：Messengerを理解するために自作してみた(2):Gushwell’s C# Dev Notes</a></li>
 </ul>
 
-<p>を発見。<br>
-あれ、Map じゃなくて List でしたか。1回の Send で複数の Callback が走るのね。ま、いいや Android で使うだけだし。<br>
-.NET はいいなあ <code>typeof(T)</code> が使えて。</p>
+<p>を発見。<br />
+あれ、Map じゃなくて List でしたか。1回の Send で複数の Callback が走るのね。ま、いいや Android で使うだけだし。<br />
+.NET はいいなあ <code class="highlighter-rouge">typeof(T)</code> が使えて。</p>
 
-<h2>使い方</h2>
+<p>##使い方<br />
+だいたいこんな感じで使える。</p>
 
-<p>だいたいこんな感じで使える。</p>
+<p>```java usage<br />
+/** ダイアログを表示させるメッセージ */<br />
+public class DialogMessage implements Message {<br />
+	public String message;<br />
+	public Action1<Boolean> callback;</Boolean></p>
 
-<p>```java usage<br>
-/** ダイアログを表示させるメッセージ */<br>
-public class DialogMessage implements Message {<br>
-    public String message;<br>
-    public Action1<Boolean> callback; </p>
-<div class="highlight"><pre><code class="language-" data-lang="">public DialogMessage(String message, Action1&lt;Boolean&gt; callback) {
-    this.message = message;
-    this.callback = callback;
-}
-</code></pre></div>
-<p>}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>public DialogMessage(String message, Action1&lt;Boolean&gt; callback) {
+	this.message = message;
+	this.callback = callback;
+} }
+</code></pre>
+</div>
 
-<p>/** View側 */<br>
+<p>/** View側 */<br />
 public class MyActivity extends Activity {</p>
-<div class="highlight"><pre><code class="language-" data-lang="">private MyViewModel _vm = new MyViewModel();
+
+<div class="highlighter-rouge"><pre class="highlight"><code>private MyViewModel _vm = new MyViewModel();
 
 @Override
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_my);
-
-    // Messenger に Message に対応する Action を登録する。
-    Messenger messenger = _vm.getMessenger();
-    messenger.register(new Action1&lt;DialogMessage&gt;() {
-        @Override
-        public void invoke(DialogMessage dlgMsg) {
-            boolean isOk = showDialog(dlgMsg.message); // ホントは非同期なのでもう少し複雑
-            if (isOk) {
-                finish();
-            }
-            dlgMsg.callback.invoke(isOk); // VM に結果を通知する
-        }
-    });
+	
+	// Messenger に Message に対応する Action を登録する。
+	Messenger messenger = _vm.getMessenger();
+	messenger.register(new Action1&lt;DialogMessage&gt;() {
+		@Override
+		public void invoke(DialogMessage dlgMsg) {
+			boolean isOk = showDialog(dlgMsg.message); // ホントは非同期なのでもう少し複雑
+			if (isOk) {
+				finish();
+			}
+			dlgMsg.callback.invoke(isOk); // VM に結果を通知する
+		}
+	});
 }
 
 // 終了ボタンが押されたら Finish コマンドを実行。
 public void exitButton_Click(View view) {
-    _vm.commandExit.execute();
-}
-</code></pre></div>
-<p>}</p>
+	_vm.commandExit.execute();
+} }
+</code></pre>
+</div>
 
-<p>/** ViewModel ※ Command インターフェースの定義とかは省略 */<br>
-public class MyViewModel {<br>
-    private final Messenger _messenger = new Messenger();</p>
-<div class="highlight"><pre><code class="language-" data-lang="">public Messenger getMessenger() {
-    return _messenger;
+<p>/** ViewModel ※ Command インターフェースの定義とかは省略 */<br />
+public class MyViewModel {<br />
+	private final Messenger _messenger = new Messenger();</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public Messenger getMessenger() {
+	return _messenger;
 }
 
 public final Command commandExit = new Command() {
-    @Override
-    public void execute() {
-        // ダイアログを表示する Message を送る
-        _messenger.send(new DialogMessage("終了します", new Action1&lt;Boolean&gt;() {
-            @Override
-            public void invoke(Boolean pushOk) {
-                // ダイアログの表示結果を受ける
-                Log.d(TAG, "Pushed button is OK? -&gt; " + pushOk);
-            }
-        }));
-    }
-};
-</code></pre></div>
-<p>}<br>
-```</p>
+	@Override
+	public void execute() {
+		// ダイアログを表示する Message を送る
+		_messenger.send(new DialogMessage("終了します", new Action1&lt;Boolean&gt;() {
+			@Override
+			public void invoke(Boolean pushOk) {
+				// ダイアログの表示結果を受ける
+				Log.d(TAG, "Pushed button is OK? -&gt; " + pushOk);
+			}
+		}));
+	}
+}; } ```
+</code></pre>
+</div>
 
-<h2>その他</h2>
-
+<p>##その他</p>
 <ul>
-<li>.NET の Messenger はなぜ Singleton なんだろう？VM と View の関係が 1:n だから？</li>
-<li>Messenger に否定的な見解もあるようで。確かに「View の変化は ViewModel の状態変化でのみ行われるべき」という主張にも一理ある。 → <a href="http://torokonbu.blogspot.com/2011/12/mvvmmvvm-dialog-behavior.html">トロこんぶ: MVVMでメッセンジャーを使わずにダイアログを表示する(MVVM Dialog Behaviorライブラリ提供)</a></li>
-<li>ちょっと Trigger まで頭回ってません → <a href="http://ugaya40.net/wpf/mvvm_viewmodel_to_vew.html">MVVMパターンでViewModelからViewを操作したい - the sea of fertility</a></li>
-<li>register/send を持ってる Messenger を View と ViewModel が使うのはちょっと違和感。View には register だけ、ViewModel には send のみを公開する interface を公開すべきかな。</li>
+  <li>.NET の Messenger はなぜ Singleton なんだろう？VM と View の関係が 1:n だから？</li>
+  <li>Messenger に否定的な見解もあるようで。確かに「View の変化は ViewModel の状態変化でのみ行われるべき」という主張にも一理ある。 → <a href="http://torokonbu.blogspot.com/2011/12/mvvmmvvm-dialog-behavior.html">トロこんぶ: MVVMでメッセンジャーを使わずにダイアログを表示する(MVVM Dialog Behaviorライブラリ提供)</a></li>
+  <li>ちょっと Trigger まで頭回ってません → <a href="http://ugaya40.net/wpf/mvvm_viewmodel_to_vew.html">MVVMパターンでViewModelからViewを操作したい - the sea of fertility</a></li>
+  <li>register/send を持ってる Messenger を View と ViewModel が使うのはちょっと違和感。View には register だけ、ViewModel には send のみを公開する interface を公開すべきかな。</li>
 </ul>
 
     </section>

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin で Windows Azure モバイルサービスを使う(その3:プッシュ通知編)</title>
-  <meta name="description" content="たぶん最終回です。前回 は、OAuth認証を実装しました。今回は、前回のサンプルの続きとして、Xamarin.iOS + Azure Mobile Service によるプッシュ通知を実装してみます。&lt;!--more--&gt;プッシュ通知を組み込むためのチュートリアルはこちら">
+  <meta name="description" content="たぶん最終回です。前回 は、OAuth認証を実装しました。今回は、前回のサンプルの続きとして、Xamarin.iOS + Azure Mobile Service によるプッシュ通知を実装してみます。プッシュ通知を組み込むためのチュートリアルはこちら">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/12/19/using-azure-mobile-services-in-xamarin-3/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin で Windows Azure モバイルサービスを使う(その3:プッシュ通知編)",
   "datePublished": "2013-12-19T00:00:00+09:00",
   "dateModified": "2013-12-19T00:00:00+09:00",
-  "description": "たぶん最終回です。前回 は、OAuth認証を実装しました。今回は、前回のサンプルの続きとして、Xamarin.iOS + Azure Mobile Service によるプッシュ通知を実装してみます。&lt;!--more--&gt;プッシュ通知を組み込むためのチュートリアルはこちら",
+  "description": "たぶん最終回です。前回 は、OAuth認証を実装しました。今回は、前回のサンプルの続きとして、Xamarin.iOS + Azure Mobile Service によるプッシュ通知を実装してみます。プッシュ通知を組み込むためのチュートリアルはこちら",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,243 +621,269 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>たぶん最終回です。<a href="http://qiita.com/amay077/items/ea510071bee85569dc18">前回</a> は、OAuth認証を実装しました。<br>
-今回は、前回のサンプルの続きとして、Xamarin.iOS + Azure Mobile Service によるプッシュ通知を実装してみます。<br>
-&lt;!--more--&gt;<br>
+      <p>たぶん最終回です。<a href="http://qiita.com/amay077/items/ea510071bee85569dc18">前回</a> は、OAuth認証を実装しました。<br />
+今回は、前回のサンプルの続きとして、Xamarin.iOS + Azure Mobile Service によるプッシュ通知を実装してみます。<br />
+<!--more--><br />
 プッシュ通知を組み込むためのチュートリアルはこちら</p>
 
 <ul>
-<li><a href="http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-xamarin-ios/?fb=ja-jp">Get started with push notifications (Xamarin iOS) | Mobile Dev Center</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Get started with push notifications (Xamarin iOS)</td>
+          <td>Mobile Dev Center](http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-xamarin-ios/?fb=ja-jp)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>では、早速いってみましょう。</p>
 
-<h2>プッシュ通知用の証明書ファイルを作成する</h2>
+<h2 id="section">プッシュ通知用の証明書ファイルを作成する</h2>
 
 <blockquote>
-<ol>
-<li>Generate the Certificate Signing Request file</li>
-<li>Register your app and enable push notifications</li>
-<li>Create a provisioning profile for the app</li>
-</ol>
+  <ol>
+    <li>Generate the Certificate Signing Request file</li>
+    <li>Register your app and enable push notifications</li>
+    <li>Create a provisioning profile for the app</li>
+  </ol>
 </blockquote>
 
 <p>についてです。</p>
 
-<p>iOS でプッシュ通知を行うには Apple Push Notification Service(APNS) を使用しますので、その準備から始まります。<br>
+<p>iOS でプッシュ通知を行うには Apple Push Notification Service(APNS) を使用しますので、その準備から始まります。<br />
 「もう知ってるよ」という人は 「4. Configure Mobile Services」から読んでも良いかと思います。</p>
 
 <p>初めて行う人は、こちら↓の説明の方が日本語で分かりやすいかと思います。</p>
 
 <ul>
-<li><a href="http://blog.katty.in/4040">iPhoneのプッシュ通知(APNS)の証明書の作り方 | 三度の飯とエレクトロン</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[iPhoneのプッシュ通知(APNS)の証明書の作り方</td>
+          <td>三度の飯とエレクトロン](http://blog.katty.in/4040)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>この手順で最後に必要なのは「p12ファイル」です。パスワードはかかっていても問題ありません。</p>
 
-<h2>Azure モバイルサービスにプッシュの設定をする</h2>
+<h2 id="azure-">Azure モバイルサービスにプッシュの設定をする</h2>
 
 <blockquote>
-<p>4 Configure Mobile Services</p>
+  <p>4 Configure Mobile Services</p>
 </blockquote>
 
 <p>についてです。</p>
 
-<p>まず、Azure マネージメントポータル (<a href="https://manage.windowsazure.com/">https://manage.windowsazure.com/</a>) から、モバイルサービス → 項目 → を選んで、上部にある「プッシュ」を選択します。<br>
+<p>まず、Azure マネージメントポータル (https://manage.windowsazure.com/) から、モバイルサービス → 項目 → を選んで、上部にある「プッシュ」を選択します。<br />
 次に「apple プッシュ通知の設定」の証明書に、先に手順で入手した 「.p12ファイル」をアップロードします。パスワードはその時決めたものを入力します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_02.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_02.png" alt="" /></p>
 
-<h2>アプリケーションにプッシュ通知を実装する</h2>
+<h2 id="section-1">アプリケーションにプッシュ通知を実装する</h2>
 
 <blockquote>
-<p>5 Add push notifications to your app</p>
+  <p>5 Add push notifications to your app</p>
 </blockquote>
 
 <p>について。ここ、ハマりどころ多いです。</p>
 
 <p>Xamarin Studio で、前回のサンプルを開いてコードを追加していきます。</p>
 
-<p><code>AppDelegate.cs</code> に、端末を識別するためのIDを保持するプロパティを作ります。</p>
+<p><code class="highlighter-rouge">AppDelegate.cs</code> に、端末を識別するためのIDを保持するプロパティを作ります。</p>
 
-<p><code>csharp AppDelegate.cs<br>
-public string DeviceToken { get; set; }<br>
-</code></p>
+<p>```csharp AppDelegate.cs<br />
+public string DeviceToken { get; set; }</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+``ToDoItem.cs`` にも同じく DeviceToken を追加します。
+が、説明にある ``[DataMember…`` は間違いです。正しくは ``[JsonProperty…`` です。
 
-<p><code>ToDoItem.cs</code> にも同じく DeviceToken を追加します。<br>
-が、説明にある <code>[DataMember…</code> は間違いです。正しくは <code>[JsonProperty…</code> です。</p>
+```csharp ToDoItem.cs
+×[DataMember(Name = "deviceToken")]
+[JsonProperty(PropertyName = "deviceToken")]
+public string DeviceToken { get; set; }
+</code></pre>
+</div>
 
-<p><code>csharp ToDoItem.cs<br>
-×[DataMember(Name = &quot;deviceToken&quot;)]<br>
-[JsonProperty(PropertyName = &quot;deviceToken&quot;)]<br>
-public string DeviceToken { get; set; }<br>
-</code></p>
+<p>再び <code class="highlighter-rouge">AppDelegate.cs</code> に戻って、アプリが起動完了した時に、APNS サーバにアプリを登録するコードを追加します。</p>
 
-<p>再び <code>AppDelegate.cs</code> に戻って、アプリが起動完了した時に、APNS サーバにアプリを登録するコードを追加します。</p>
+<p>```csharp AppDelegate.cs<br />
+public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)<br />
+{<br />
+    UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | <br />
+        UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;<br />
+    UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);</p>
 
-<p>```csharp AppDelegate.cs<br>
-public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)<br>
-{<br>
-    UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | <br>
-        UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;<br>
-    UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes); </p>
-<div class="highlight"><pre><code class="language-" data-lang="">return true;
-</code></pre></div>
-<p>}<br>
-```</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>return true; } ```
+</code></pre>
+</div>
 
-<p>次に同じく  <code>AppDelegate.cs</code> に、アプリ登録完了時にデバイストークンを受け取るコールバックを実装します。</p>
+<p>次に同じく  <code class="highlighter-rouge">AppDelegate.cs</code> に、アプリ登録完了時にデバイストークンを受け取るコールバックを実装します。</p>
 
-<p><strong>ここが2つ目のハマりポイントです。</strong><br>
-<code>deviceToken.Description</code> を使用していますが、これは iOSネイティブと異なり <strong>空白入りの文字列を返す</strong> ようです。そのためそのまま DeviceToken として利用すると、通知が来ません。エラーにもならないので原因究明に数時間要しました…。<code>Replace</code> で空白も取り除きます。</p>
+<p><strong>ここが2つ目のハマりポイントです。</strong><br />
+<code class="highlighter-rouge">deviceToken.Description</code> を使用していますが、これは iOSネイティブと異なり <strong>空白入りの文字列を返す</strong> ようです。そのためそのまま DeviceToken として利用すると、通知が来ません。エラーにもならないので原因究明に数時間要しました…。<code class="highlighter-rouge">Replace</code> で空白も取り除きます。</p>
 
-<p><code>csharp AppDelegate.cs<br>
-public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)<br>
-{<br>
-    string trimmedDeviceToken = deviceToken.Description;<br>
-    if (!string.IsNullOrWhiteSpace(trimmedDeviceToken))<br>
-    {<br>
-        trimmedDeviceToken = trimmedDeviceToken.Trim(&#39;&lt;&#39;);<br>
-        trimmedDeviceToken = trimmedDeviceToken.Trim(&#39;&gt;&#39;);<br>
-        trimmedDeviceToken = trimmedDeviceToken.Replcae(“ “, “”); // ←追加<br>
-    }<br>
-    DeviceToken = trimmedDeviceToken;<br>
-}<br>
-</code></p>
+<p>```csharp AppDelegate.cs<br />
+public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)<br />
+{<br />
+    string trimmedDeviceToken = deviceToken.Description;<br />
+    if (!string.IsNullOrWhiteSpace(trimmedDeviceToken))<br />
+    {<br />
+        trimmedDeviceToken = trimmedDeviceToken.Trim(‘&lt;’);<br />
+        trimmedDeviceToken = trimmedDeviceToken.Trim(‘&gt;’);<br />
+        trimmedDeviceToken = trimmedDeviceToken.Replcae(“ “, “”); // ←追加<br />
+    }<br />
+    DeviceToken = trimmedDeviceToken;<br />
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+そして、``AppDelegate.cs`` に、プッシュ通知受信時のコードを書きます。
 
-<p>そして、<code>AppDelegate.cs</code> に、プッシュ通知受信時のコードを書きます。</p>
-
-<p>```csharp AppDelegate.cs<br>
-public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)<br>
-{<br>
-    Debug.WriteLine(userInfo.ToString());<br>
-    NSObject inAppMessage;</p>
-<div class="highlight"><pre><code class="language-" data-lang="">bool success = userInfo.TryGetValue(new NSString("inAppMessage"), out inAppMessage);
-
-if (success)
+```csharp AppDelegate.cs
+public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
 {
-    var alert = new UIAlertView("Got push notification", inAppMessage.ToString(), null, "OK", null);
-    alert.Show();
+    Debug.WriteLine(userInfo.ToString());
+    NSObject inAppMessage;
+
+    bool success = userInfo.TryGetValue(new NSString("inAppMessage"), out inAppMessage);
+
+    if (success)
+    {
+        var alert = new UIAlertView("Got push notification", inAppMessage.ToString(), null, "OK", null);
+        alert.Show();
+    }
 }
-</code></pre></div>
-<p>}<br>
-```</p>
+</code></pre>
+</div>
 
-<p>最後に <code>QSTodoListViewController.cs</code> の <code>OnAdd</code> を次のように変更して、追加するデータに DeviceToken を含めるようにします。この値を使って、Azure 側でプッシュ通知を送ります。</p>
+<p>最後に <code class="highlighter-rouge">QSTodoListViewController.cs</code> の <code class="highlighter-rouge">OnAdd</code> を次のように変更して、追加するデータに DeviceToken を含めるようにします。この値を使って、Azure 側でプッシュ通知を送ります。</p>
 
-<p>```csharp QSTodoListViewController.cs<br>
+<p>```csharp QSTodoListViewController.cs<br />
 var deviceToken = ((AppDelegate)UIApplication.SharedApplication.Delegate).DeviceToken;</p>
 
-<p>var newItem = new ToDoItem() <br>
-{<br>
-    Text = itemText.Text, <br>
-    Complete = false,<br>
-    DeviceToken = deviceToken<br>
-};<br>
-```</p>
+<p>var newItem = new ToDoItem() <br />
+{<br />
+    Text = itemText.Text, <br />
+    Complete = false,<br />
+    DeviceToken = deviceToken<br />
+};</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+コードの記述はこれで終わりですが、Xamarin Studio から、iOS アプリを実機で動かしたことがない人は、iOS Developer Account の設定をしておきましょう。
 
-<p>コードの記述はこれで終わりですが、Xamarin Studio から、iOS アプリを実機で動かしたことがない人は、iOS Developer Account の設定をしておきましょう。</p>
+システムメニュー → Preferences、Environment → Developer Accounts から追加しておきます。
 
-<p>システムメニュー → Preferences、Environment → Developer Accounts から追加しておきます。</p>
+![](https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_03.png)
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_03.png" alt=""></p>
+## マネージメントポータルで、データの追加時のスクリプトを登録する
 
-<h2>マネージメントポータルで、データの追加時のスクリプトを登録する</h2>
+&gt; 6 Update the registered insert script in the Management Portal
 
-<blockquote>
-<p>6 Update the registered insert script in the Management Portal</p>
-</blockquote>
+についてです。
 
-<p>についてです。</p>
+まず、マネージメントポータル https://manage.windowsazure.com/ を開き、モバイルサービス → サービス名 → データ → テーブル名 と選択します。
 
-<p>まず、マネージメントポータル <a href="https://manage.windowsazure.com/">https://manage.windowsazure.com/</a> を開き、モバイルサービス → サービス名 → データ → テーブル名 と選択します。</p>
+![](https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_04.png)
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_04.png" alt=""></p>
+次に、スクリプト を選択し、ドロップダウンから「挿入」を選択します。テーブルにデータが追加された時に実行するスクリプトが表示されます。
 
-<p>次に、スクリプト を選択し、ドロップダウンから「挿入」を選択します。テーブルにデータが追加された時に実行するスクリプトが表示されます。</p>
+![](https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_05.png)
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_05.png" alt=""></p>
+スクリプトを以下に置き換えます。
 
-<p>スクリプトを以下に置き換えます。</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">insert</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">user</span><span class="p">,</span> <span class="nx">request</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">execute</span><span class="p">();</span>
-    <span class="c1">// Set timeout to delay the notification, to provide time for the </span>
-    <span class="c1">// app to be closed on the device to demonstrate toast notifications</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">push</span><span class="p">.</span><span class="nx">apns</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">deviceToken</span><span class="p">,</span> <span class="p">{</span>
-            <span class="na">alert</span><span class="p">:</span> <span class="s2">"Toast: "</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span>
-            <span class="na">payload</span><span class="p">:</span> <span class="p">{</span>
-                <span class="na">inAppMessage</span><span class="p">:</span> <span class="s2">"Hey, a new item arrived: '"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">text</span> <span class="o">+</span> <span class="s2">"'"</span>
-            <span class="p">}</span>
-        <span class="p">});</span>
-    <span class="p">},</span> <span class="mi">2500</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+```js
+function insert(item, user, request) {
+    request.execute();
+    // Set timeout to delay the notification, to provide time for the 
+    // app to be closed on the device to demonstrate toast notifications
+    setTimeout(function() {
+        push.apns.send(item.deviceToken, {
+            alert: "Toast: " + item.text,
+            payload: {
+                inAppMessage: "Hey, a new item arrived: '" + item.text + "'"
+            }
+        });
+    }, 2500);
+}
+</code></pre>
+</div>
+
 <p>これにより、データの追加から 2.5秒後に、APNS にプッシュ通知のリクエストを投げます。</p>
 
-<h2>動かす</h2>
+<h2 id="section-2">動かす</h2>
 
 <blockquote>
-<p>7 Test push notifications in your app</p>
+  <p>7 Test push notifications in your app</p>
 </blockquote>
 
 <p>やっと試せます。</p>
 
 <p>Xamarin Studio から、実機で実行します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_06.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_06.png" alt="" /></p>
 
 <p>アプリ起動直後、通知の受信を許可するかどうかを尋ねられますので「Yes」で。(一度答えると二度と出ないのでしょうか？なのでチュートリアルの画像で。)</p>
 
-<p><img src="http://www.windowsazure.com/media/devcenter/mobile/mobile-quickstart-push1-ios.png" alt=""></p>
+<p><img src="http://www.windowsazure.com/media/devcenter/mobile/mobile-quickstart-push1-ios.png" alt="" /></p>
 
 <p>Twitter 認証後、適当に項目を追加します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_07.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_07.png" alt="" /></p>
 
 <p>しばらく待っていると…</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_08.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_08.png" alt="" /></p>
 
-<p>無事、プッシュ通知を受信できましたー。<br>
+<p>無事、プッシュ通知を受信できましたー。<br />
 (実はここに辿り着くまで数十回試しているので最初に通知を受け取った時の感激と言ったら…)</p>
 
 <p>まあ、たぶんどっかでハマるだろうなーと思いながら、やっぱりハマった！という感じでしたので、皆さんも最初はどこかでハマるんじゃないかと。</p>
 
 <p>ハマりどころは文中にも書きましたが、下にもトラブルシューティングとして書きました。何かのお役に立てば。</p>
 
-<h2>トラブルシューティング</h2>
+<h2 id="section-3">トラブルシューティング</h2>
 
-<h3>iOS Dev Center で Bundle ID 入力したらエラーになった</h3>
+<h3 id="ios-dev-center--bundle-id-">iOS Dev Center で Bundle ID 入力したらエラーになった</h3>
 
-<p>プロジェクト名に アンダースコア が含まれてるとダメです。<br>
+<p>プロジェクト名に アンダースコア が含まれてるとダメです。<br />
 Xamarin Studio のプロジェクト プロパティ → iOS Application で直しましょう。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_09.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_09.png" alt="" /></p>
 
-<h3>アプリが起動直後(認証を通過した後)に落ちるようになった</h3>
+<h3 id="section-4">アプリが起動直後(認証を通過した後)に落ちるようになった</h3>
 
 <p><a href="http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-xamarin-ios/?fb=ja-jp">チュートリアル</a>にある、</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="na">[DataMember(Name = "deviceToken")]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="n">DeviceToken</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div>
-<p>は間違いです。下記が正しいです。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="na">[JsonProperty(PropertyName = "deviceToken")]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="n">DeviceToken</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div>
-<h3>クライアントで「追加」しても、プッシュ通知が来ません</h3>
 
-<p>まずは、Azure マネージメントポータルで「ログ」を見てみましょう。<br>
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="na">[DataMember(Name = "deviceToken")]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="n">DeviceToken</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>は間違いです。下記が正しいです。</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="na">[JsonProperty(PropertyName = "deviceToken")]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="n">DeviceToken</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="section-5">クライアントで「追加」しても、プッシュ通知が来ません</h3>
+
+<p>まずは、Azure マネージメントポータルで「ログ」を見てみましょう。<br />
 下記からアクセスできます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_3_01.png" alt="" /></p>
 
-<p>データ挿入時のスクリプトでエラーが出ていれば、ここに出力されるはずです。スクリプト内で <code>console.log</code> した内容もここに出力されます。</p>
+<p>データ挿入時のスクリプトでエラーが出ていれば、ここに出力されるはずです。スクリプト内で <code class="highlighter-rouge">console.log</code> した内容もここに出力されます。</p>
 
-<h3>それでもまだ、プッシュ通知が来ません</h3>
+<h3 id="section-6">それでもまだ、プッシュ通知が来ません</h3>
 
 <p><a href="http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-xamarin-ios/?fb=ja-jp">チュートリアル</a>にある、</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">RegisteredForRemoteNotifications</span><span class="p">(</span><span class="n">UIApplication</span> <span class="n">application</span><span class="p">,</span> <span class="n">NSData</span> <span class="n">deviceToken</span><span class="p">)</span>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">RegisteredForRemoteNotifications</span><span class="p">(</span><span class="n">UIApplication</span> <span class="n">application</span><span class="p">,</span> <span class="n">NSData</span> <span class="n">deviceToken</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">string</span> <span class="n">trimmedDeviceToken</span> <span class="p">=</span> <span class="n">deviceToken</span><span class="p">.</span><span class="n">Description</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="nf">IsNullOrWhiteSpace</span><span class="p">(</span><span class="n">trimmedDeviceToken</span><span class="p">))</span>
@@ -999,9 +893,12 @@ Xamarin Studio のプロジェクト プロパティ → iOS Application で直�
     <span class="p">}</span>
     <span class="n">DeviceToken</span> <span class="p">=</span> <span class="n">trimmedDeviceToken</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
-<p>は、コードが足りません。これでは <code>trimmedDeviceToken</code> の文字列内に空白が含まれてしまい、正しい DeviceToken にならないようです。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">RegisteredForRemoteNotifications</span><span class="p">(</span><span class="n">UIApplication</span> <span class="n">application</span><span class="p">,</span> <span class="n">NSData</span> <span class="n">deviceToken</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>は、コードが足りません。これでは <code class="highlighter-rouge">trimmedDeviceToken</code> の文字列内に空白が含まれてしまい、正しい DeviceToken にならないようです。</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">RegisteredForRemoteNotifications</span><span class="p">(</span><span class="n">UIApplication</span> <span class="n">application</span><span class="p">,</span> <span class="n">NSData</span> <span class="n">deviceToken</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">string</span> <span class="n">trimmedDeviceToken</span> <span class="p">=</span> <span class="n">deviceToken</span><span class="p">.</span><span class="n">Description</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="nf">IsNullOrWhiteSpace</span><span class="p">(</span><span class="n">trimmedDeviceToken</span><span class="p">))</span>
@@ -1012,10 +909,12 @@ Xamarin Studio のプロジェクト プロパティ → iOS Application で直�
 </span>    <span class="p">}</span>
     <span class="n">DeviceToken</span> <span class="p">=</span> <span class="n">trimmedDeviceToken</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>と、空白を除去する必要があります。</p>
 
-<h3>しかしそれでもまだ、プッシュ通知が来ません</h3>
+<h3 id="section-7">しかしそれでもまだ、プッシュ通知が来ません</h3>
 
 <p>最初の手順、キーチェーンアクセスで CSR を作る時、「ユーザーのメールアドレス」「通称」を iOS Developer Center に登録しているものと同じにする必要があるみたいです。これが間違っていると、.p12 ファイルを書き出す時に選択すべき「Apple Development IOS Push Services: net.azure-mobile.amay077-baas-test」という鍵が見つからない(文字化けしてる)はずです。</p>
 
@@ -1023,11 +922,11 @@ Xamarin Studio のプロジェクト プロパティ → iOS Application で直�
 
 <p>これらを忘れると通知が来ません。そしてエラーにもならないので厄介です。</p>
 
-<h2>雑感</h2>
+<h2 id="section-8">雑感</h2>
 
 <p>しかし <a href="http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-xamarin-ios/?fb=ja-jp#add-push">Azure のチュートリアル</a>、これ一度も試してないんじゃないの？</p>
 
-<p>クラス名の接頭辞や大文字小文字の間違いはまだかわいいものだけど、ここミスると致命的という点が２つも。一度辿れば気づくと思うんだけどなあ。<br>
+<p>クラス名の接頭辞や大文字小文字の間違いはまだかわいいものだけど、ここミスると致命的という点が２つも。一度辿れば気づくと思うんだけどなあ。<br />
 最後にある completed example project ではちゃっかり正しいコードだったりするので、コンテンツの修正漏れなんだろうか。。。</p>
 
 <p>それはともかく、何かトラブルがあると Xamarin のようなネイティブに皮を被せてるプラットフォームは途端に不安になります。どこに原因があるのか追求しづらいから。</p>

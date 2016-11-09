@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>総務省のデータを Elasticsearch にぶち込んで、緯度経度から市区町村の何丁目までを取り出す</title>
-  <meta name="description" content="いわゆる「逆ジオコーディング」と呼ばれる機能ですが、きっかけはこれら２つの記事です。&lt;!--more--&gt;* PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す* PostgreSQL - 国土交通省のデータを使って、緯度経度から市区町村までを取り出す">
+  <meta name="description" content="いわゆる「逆ジオコーディング」と呼ばれる機能ですが、きっかけはこれら２つの記事です。  PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す  PostgreSQL - 国土交通省のデータを使って、緯度経度から市区町村までを取り出す">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/09/10/implementing-reverse-geocoding-using-elasticsearch/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "総務省のデータを Elasticsearch にぶち込んで、緯度経度から市区町村の何丁目までを取り出す",
   "datePublished": "2013-09-10T21:13:00+09:00",
   "dateModified": "2013-09-10T21:13:00+09:00",
-  "description": "いわゆる「逆ジオコーディング」と呼ばれる機能ですが、きっかけはこれら２つの記事です。&lt;!--more--&gt;* PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す* PostgreSQL - 国土交通省のデータを使って、緯度経度から市区町村までを取り出す",
+  "description": "いわゆる「逆ジオコーディング」と呼ばれる機能ですが、きっかけはこれら２つの記事です。  PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す  PostgreSQL - 国土交通省のデータを使って、緯度経度から市区町村までを取り出す",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,27 +621,29 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>いわゆる「逆ジオコーディング」と呼ばれる機能ですが、きっかけはこれら２つの記事です。<br>
-&lt;!--more--&gt;<br>
-* <a href="http://qiita.com/hamichamp/items/ac9e80f1078febb9f1b9">PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す</a><br>
-* <a href="http://qiita.com/masuidrive/items/21a282c7bf54fd6a4985">PostgreSQL - 国土交通省のデータを使って、緯度経度から市区町村までを取り出す</a></p>
+      <p>いわゆる「逆ジオコーディング」と呼ばれる機能ですが、きっかけはこれら２つの記事です。<br />
+<!--more--></p>
+<ul>
+  <li><a href="http://qiita.com/hamichamp/items/ac9e80f1078febb9f1b9">PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す</a></li>
+  <li><a href="http://qiita.com/masuidrive/items/21a282c7bf54fd6a4985">PostgreSQL - 国土交通省のデータを使って、緯度経度から市区町村までを取り出す</a></li>
+</ul>
 
 <p>Solr や Elasticsearch でも同じことができるのでは、という事で Elasticsearch でやってみました。</p>
 
-<h2>Elasticsearch の導入</h2>
+<h2 id="elasticsearch-">Elasticsearch の導入</h2>
 
 <p>は、</p>
 
 <ul>
-<li><a href="http://amay077.github.io/blog/2013/09/09/using-spatialdata-with-elasticsearch/">Elasticsearch で位置情報を検索する手順 - Experiments Never Fail</a></li>
+  <li><a href="http://amay077.github.io/blog/2013/09/09/using-spatialdata-with-elasticsearch/">Elasticsearch で位置情報を検索する手順 - Experiments Never Fail</a></li>
 </ul>
 
 <p>をご覧ください。</p>
 
-<h2>1. 総務省のデータをダウンロードする</h2>
+<h2 id="section">1. 総務省のデータをダウンロードする</h2>
 
 <ul>
-<li><a href="http://qiita.com/hamichamp/items/ac9e80f1078febb9f1b9">PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す</a></li>
+  <li><a href="http://qiita.com/hamichamp/items/ac9e80f1078febb9f1b9">PHP - 総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す</a></li>
 </ul>
 
 <p>とほぼ同じですが、「世界測地系緯度経度・G-XML形式」ではなく、 <strong>「世界測地系緯度経度・shape形式」</strong> を使います。</p>
@@ -781,89 +651,86 @@ img {
 <p>一応再掲すると、</p>
 
 <ol>
-<li><a href="http://e-stat.go.jp/SG2/eStatGIS/page/download.html">http://e-stat.go.jp/SG2/eStatGIS/page/download.html</a> へ行く。</li>
-<li>左から「平成22年度国勢調査（小地域）」を選ぶ。</li>
-<li>「男女別人口総数及び世帯総数」（←なんでもいい）を選択して、「統計表各種データダウンロードへ」を押す。</li>
-<li>「世界測地系緯度経度・Shape形式」のデータ（下図参照）をダウンロードする。ダウンロードしたら zip ファイルのまま置いといて。</li>
+  <li><a href="http://e-stat.go.jp/SG2/eStatGIS/page/download.html">http://e-stat.go.jp/SG2/eStatGIS/page/download.html</a> へ行く。</li>
+  <li>左から「平成22年度国勢調査（小地域）」を選ぶ。</li>
+  <li>「男女別人口総数及び世帯総数」（←なんでもいい）を選択して、「統計表各種データダウンロードへ」を押す。</li>
+  <li>「世界測地系緯度経度・Shape形式」のデータ（下図参照）をダウンロードする。ダウンロードしたら zip ファイルのまま置いといて。</li>
 </ol>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/implementing_reverse_geocoding_using_elasticsearch_01.png" alt="img"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/implementing_reverse_geocoding_using_elasticsearch_01.png" alt="img" /></p>
 
-<h2>2. Shapefile を GeoJSON 形式に変換する</h2>
+<h2 id="shapefile--geojson-">2. Shapefile を GeoJSON 形式に変換する</h2>
 
 <p>Elasticsearch へ投入できるデータ形式は JSON なので、ダウンロードした Shape形式のデータを JSON 形式の地理空間拡張である GeoJSON 形式に変換します。</p>
 
 <p>スクリプトを書いてもできますが面倒なので、便利なオンラインツールに頼ることにします。</p>
 
 <ul>
-<li><a href="http://converter.mygeodata.eu/#convertVector">Free on-line GIS data format and coordinates converter</a></li>
+  <li><a href="http://converter.mygeodata.eu/#convertVector">Free on-line GIS data format and coordinates converter</a></li>
 </ul>
 
 <p>手順は、</p>
 
 <ol>
-<li>上記サイトへ行き、「Run vector converter」を押す。</li>
-<li>「ファイルを選択」で、さっきダウンロードした ZIP ファイルを指定し、「Send ZIP File」を押す。</li>
-<li>&quot;Datasets description&quot; というページになったら、その最下部にある「Chack available operations」を押す。(ここでは、不要なデータ項目を除外できるのだけど、面倒なので割愛)</li>
-<li> ”Export to format:” で &quot;GeoJSON&quot; を選択。それ以外はそのままで「Proceed selected operation」を押す。</li>
-<li>しばらく待つと、「Download the ZIP file」リンクが表れるので、押して変換結果をダウンロードする。</li>
+  <li>上記サイトへ行き、「Run vector converter」を押す。</li>
+  <li>「ファイルを選択」で、さっきダウンロードした ZIP ファイルを指定し、「Send ZIP File」を押す。</li>
+  <li>“Datasets description” というページになったら、その最下部にある「Chack available operations」を押す。(ここでは、不要なデータ項目を除外できるのだけど、面倒なので割愛)</li>
+  <li>”Export to format:” で “GeoJSON” を選択。それ以外はそのままで「Proceed selected operation」を押す。</li>
+  <li>しばらく待つと、「Download the ZIP file」リンクが表れるので、押して変換結果をダウンロードする。</li>
 </ol>
 
-<p>ダウンロードした ZIP ファイルを解凍すると、「xxx.json」ファイルが見つかります。それをテキストエディタで開くと、<code>features</code> 以下に、住所エリアの情報が1行ずつ出力されています。</p>
+<p>ダウンロードした ZIP ファイルを解凍すると、「xxx.json」ファイルが見つかります。それをテキストエディタで開くと、<code class="highlighter-rouge">features</code> 以下に、住所エリアの情報が1行ずつ出力されています。</p>
 
 <p>試しに1行取り出して、JSON を整形（見やすいよう適宜省略）してみると次のようになります。</p>
 
-<p><code>javascript town.json<br>
-{<br>
-    &quot;type&quot;: &quot;Feature&quot;,<br>
-    &quot;properties&quot;: {<br>
-        &quot;KEN_NAME&quot;: &quot;愛知県&quot;, <br>
-        &quot;GST_NAME&quot;: &quot;名古屋市&quot;, <br>
-        &quot;CSS_NAME&quot;: &quot;中区&quot;, <br>
-        &quot;MOJI&quot;: &quot;本丸&quot;, <br>
-        …省略…<br>
-    }, <br>
-    &quot;geometry&quot;: {<br>
-        &quot;type&quot;: &quot;Polygon&quot;,<br>
-        &quot;coordinates&quot;: [<br>
-            [[136.895888, 35.187236], <br>
-             [136.897375, 35.187357], <br>
-              …中略… <br>
-             [136.895888, 35.187236]]<br>
-        ]<br>
-    }<br>
-}<br>
-</code></p>
+<p>```javascript town.json<br />
+{<br />
+    “type”: “Feature”,<br />
+    “properties”: {<br />
+        “KEN_NAME”: “愛知県”, <br />
+        “GST_NAME”: “名古屋市”, <br />
+        “CSS_NAME”: “中区”, <br />
+        “MOJI”: “本丸”, <br />
+        …省略…<br />
+    }, <br />
+    “geometry”: {<br />
+        “type”: “Polygon”,<br />
+        “coordinates”: [<br />
+            [[136.895888, 35.187236], <br />
+             [136.897375, 35.187357], <br />
+              …中略… <br />
+             [136.895888, 35.187236]]<br />
+        ]<br />
+    }<br />
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+これは「愛知県名古屋市中区本丸」のデータですね。
+``properties`` 以下は、この住所エリアの属性情報を示しています。
+``geometry`` 以下が、この住所エリアの位置情報（ポリゴン）を示しています。
 
-<p>これは「愛知県名古屋市中区本丸」のデータですね。<br>
-<code>properties</code> 以下は、この住所エリアの属性情報を示しています。<br>
-<code>geometry</code> 以下が、この住所エリアの位置情報（ポリゴン）を示しています。</p>
+## 3. Elasticsearch にスキーマを定義する
 
-<h2>3. Elasticsearch にスキーマを定義する</h2>
+Elasticseach はスキーマフリーですが、位置情報のところだけは明示的に宣言しないといけないらしいので、下のようなコマンドを実行して定義します。
 
-<p>Elasticseach はスキーマフリーですが、位置情報のところだけは明示的に宣言しないといけないらしいので、下のようなコマンドを実行して定義します。</p>
+あ、ここでは、
 
-<p>あ、ここでは、</p>
+* Index名 : towns
+* Type名 : town
 
-<ul>
-<li>Index名 : towns</li>
-<li>Type名 : town</li>
-</ul>
+としています。
 
-<p>としています。</p>
+「Index や Type って何？」という方は
 
-<p>「Index や Type って何？」という方は</p>
+* [Elasticsearch用語の適当なまとめ](http://qiita.com/ise_daisuke/items/5e10e0b3ef9dffed08a9)
 
-<ul>
-<li><a href="http://qiita.com/ise_daisuke/items/5e10e0b3ef9dffed08a9">Elasticsearch用語の適当なまとめ</a></li>
-</ul>
+をどうぞ。
 
-<p>をどうぞ。</p>
+ではコマンドです。
 
-<p>ではコマンドです。</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">curl -XPUT <span class="s1">'http://localhost:9200/towns/'</span>
+```sh
+curl -XPUT 'http://localhost:9200/towns/'
 
-curl -XPUT <span class="s1">'http://localhost:9200/towns/town/_mapping'</span> -d <span class="s1">'
+curl -XPUT 'http://localhost:9200/towns/town/_mapping' -d '
 {
     "town" : {
         "properties": {
@@ -874,23 +741,36 @@ curl -XPUT <span class="s1">'http://localhost:9200/towns/town/_mapping'</span> -
             }
         }
     }
-}'</span>
-</code></pre></div>
-<p><code>properties.geometry</code> は、「geo_shape」 として扱う事を宣言しています。他の２つの設定は、インデックスの種類と精度を意味しますが、よく分かってません。</p>
+}'
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">properties.geometry</code> は、「geo_shape」 として扱う事を宣言しています。他の２つの設定は、インデックスの種類と精度を意味しますが、よく分かってません。</p>
 
 <ul>
-<li><a href="http://www.elasticsearch.org/guide/reference/mapping/geo-shape-type/">Geo Shape Type | Reference Guide | Elasticsearch</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Geo Shape Type</td>
+          <td>Reference Guide</td>
+          <td>Elasticsearch](http://www.elasticsearch.org/guide/reference/mapping/geo-shape-type/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>で勉強しましょう。</p>
 
-<h2>4. データを Elasticsearch に投入する</h2>
+<h2 id="elasticsearch--1">4. データを Elasticsearch に投入する</h2>
 
-<p>さて、いよいよこの「1行1JSON」のデータを、1行ずつ、Elasticsearch に投入します。<br>
+<p>さて、いよいよこの「1行1JSON」のデータを、1行ずつ、Elasticsearch に投入します。<br />
 先の xxxx.json を置換なり何なりを駆使して、スクリプトにしちゃうのがてっとり早いでしょう。(json ファイルは Shift-jis なので、UTF-8 に変換しておきましょう。）</p>
 
 <p>1行のデータを投入するコマンドは次のようになります。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">curl -XPUT 'http://localhost:9200/towns/town/1' -d '{
+
+<div class="highlighter-rouge"><pre class="highlight"><code>curl -XPUT 'http://localhost:9200/towns/town/1' -d '{
     "type": "Feature",
     "properties": {
         "KEN_NAME": "愛知県", 
@@ -909,26 +789,29 @@ curl -XPUT <span class="s1">'http://localhost:9200/towns/town/_mapping'</span> -
         ]
     }
 }'
-</code></pre></div>
-<p><code>towns/town/1</code> の最後の「1」のところは、連番にする必要があります。(オートインクリメントとかないのかな？)</p>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">towns/town/1</code> の最後の「1」のところは、連番にする必要があります。(オートインクリメントとかないのかな？)</p>
 
 <p>全件を PUT すつスクリプトファイルは、下の画像のような感じになると思います。(データのライセンスがどうか分からないのでスクリプトファイル自体を公開するのはやめておきます)</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/implementing_reverse_geocoding_using_elasticsearch_02.png" alt="img"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/implementing_reverse_geocoding_using_elasticsearch_02.png" alt="img" /></p>
 
 <p>これをTerminal で実行すると、数分かからずに Elasticsearch にデータが投入完了します。</p>
 
-<p><code>curl -XGET &#39;http://localhost:9200/towns/town/1&#39;</code> などを実行すれば、正しくデータが登録できたか確認できます。</p>
+<p><code class="highlighter-rouge">curl -XGET 'http://localhost:9200/towns/town/1'</code> などを実行すれば、正しくデータが登録できたか確認できます。</p>
 
-<h2>5. 検索してみる</h2>
+<h2 id="section-1">5. 検索してみる</h2>
 
-<p>ついに来ました。<br>
+<p>ついに来ました。<br />
 では、緯度経度を与えて住所が返ってくるところ、やってみましょう。</p>
 
 <p>Elasticsearch では検索クエリも JSON で書きます。</p>
 
 <p>例えば、<a href="http://yahoo.jp/zsXYL2">大須観音駅</a> らへんの緯度経度(35.1613077,136.898282)の住所で検索する場合は、次のようにします。</p>
-<div class="highlight"><pre><code class="language-" data-lang="">curl -XPOST 'http://localhost:9200/towns/town/_search' -d '{
+
+<div class="highlighter-rouge"><pre class="highlight"><code>curl -XPOST 'http://localhost:9200/towns/town/_search' -d '{
     "query": {
         "filtered" : {
             "query" : {
@@ -947,14 +830,17 @@ curl -XPUT <span class="s1">'http://localhost:9200/towns/town/_mapping'</span> -
         }
     }
 }'
-</code></pre></div>
-<p><code>geo_shape</code> フィルタを使い、条件に envelople(左上〜右下の領域) を指定します。今は「点」での検索をしたいので、左上、右下に同じ座標を指定します。<br>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">geo_shape</code> フィルタを使い、条件に envelople(左上〜右下の領域) を指定します。今は「点」での検索をしたいので、左上、右下に同じ座標を指定します。<br />
 注意点は、 <strong>「経度, 緯度」</strong> の順であることです。</p>
 
-<p>※ <a href="http://www.elasticsearch.org/guide/reference/query-dsl/geo-distance-filter/"><code>geo_distance</code></a> というフィルタもありますが、こちらはデータが「点」専用なようで、今回のような「ポリゴン」には使えませんでした。</p>
+<p>※ <a href="http://www.elasticsearch.org/guide/reference/query-dsl/geo-distance-filter/"><code class="highlighter-rouge">geo_distance</code></a> というフィルタもありますが、こちらはデータが「点」専用なようで、今回のような「ポリゴン」には使えませんでした。</p>
 
 <p>さて、上のコマンドを実行すると、下のような結果が得られます。(整形、省略済)</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="w">
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"took"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nt">"timed_out"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"_shards"</span><span class="p">:{</span><span class="w">
@@ -978,23 +864,25 @@ curl -XPUT <span class="s1">'http://localhost:9200/towns/town/_mapping'</span> -
           </span><span class="nt">"CSS_NAME"</span><span class="p">:</span><span class="w"> </span><span class="s2">"中区"</span><span class="p">,</span><span class="w"> 
           </span><span class="nt">"MOJI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"大須２丁目"</span><span class="p">,</span><span class="w"> 
           </span><span class="err">…以下省略…</span><span class="w">
-</span></code></pre></div>
+</span></code></pre>
+</div>
+
 <p>はい、「緯度経度(35.1613077,136.898282)」の住所は「愛知県名古屋市中区大須２丁目」であることが取得できました。</p>
 
-<h2>まとめ</h2>
+<h2 id="section-2">まとめ</h2>
 
 <p>いかがでしょうか、Elasticsearch でも逆ジオコーディングの実装が、簡単にできることが分かりました。</p>
 
 <p>PostGIS、MongoDB との対比では、</p>
 
 <ul>
-<li>セットアップが簡単</li>
-<li>REST API なので直接他のサービスとマッシュアップできる</li>
+  <li>セットアップが簡単</li>
+  <li>REST API なので直接他のサービスとマッシュアップできる</li>
 </ul>
 
 <p>あたりがメリットでしょうか。</p>
 
-<p>逆にデータの取り込みはひと工夫必要で、PostGIS の方が簡単です。<br>
+<p>逆にデータの取り込みはひと工夫必要で、PostGIS の方が簡単です。<br />
 このデータ用の River plugin を作ればよいのでしょうが、方法がさっぱり…。</p>
 
 <p>最後に、</p>
@@ -1002,13 +890,13 @@ curl -XPUT <span class="s1">'http://localhost:9200/towns/town/_mapping'</span> -
 <p><a href="http://qiita.com/hamichamp/items/ac9e80f1078febb9f1b9">総務省のデータを使って、緯度経度から市区町村の何丁目までを取り出す</a></p>
 
 <blockquote>
-<p>実は、データをダウンロードするのが、一番手間がかかります・・・。</p>
+  <p>実は、データをダウンロードするのが、一番手間がかかります・・・。</p>
 </blockquote>
 
-<p>でも言われていますが、まったくその通りです。<br>
+<p>でも言われていますが、まったくその通りです。<br />
 １市区町村ずつダウンロードとか正直やってられません。</p>
 
-<p>総務省でも国土交通省でもどちらでも良いのですが、<br>
+<p>総務省でも国土交通省でもどちらでも良いのですが、<br />
 <strong>「全国の大字境界＋属性データを一括入手する方法」</strong> を用意して欲しいものです。</p>
 
     </section>

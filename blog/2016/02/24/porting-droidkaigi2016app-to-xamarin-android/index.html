@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>DroidKaigi2016アプリを Xamarin.Android に移植した話</title>
-  <meta name="description" content="　DroidKaigi2016 の開催前、公式アプリが有志によって開発中 とのツイート(だったかな？)を見て、ふとこれを「Xamarin.Android に移植してみよう」と思い、夜な夜なぼちぼちと始めました。&lt;!--more--&gt;">
+  <meta name="description" content="　DroidKaigi2016 の開催前、公式アプリが有志によって開発中 とのツイート(だったかな？)を見て、ふとこれを「Xamarin.Android に移植してみよう」と思い、夜な夜なぼちぼちと始めました。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2016/02/24/porting-droidkaigi2016app-to-xamarin-android/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "DroidKaigi2016アプリを Xamarin.Android に移植した話",
   "datePublished": "2016-02-24T00:19:01+09:00",
   "dateModified": "2016-02-24T00:19:01+09:00",
-  "description": "　DroidKaigi2016 の開催前、公式アプリが有志によって開発中 とのツイート(だったかな？)を見て、ふとこれを「Xamarin.Android に移植してみよう」と思い、夜な夜なぼちぼちと始めました。&lt;!--more--&gt;",
+  "description": "　DroidKaigi2016 の開催前、公式アプリが有志によって開発中 とのツイート(だったかな？)を見て、ふとこれを「Xamarin.Android に移植してみよう」と思い、夜な夜なぼちぼちと始めました。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,194 +621,194 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>　DroidKaigi2016 の開催前、<a href="https://github.com/konifar/droidkaigi2016">公式アプリが有志によって開発中</a> とのツイート(だったかな？)を見て、ふとこれを「Xamarin.Android に移植してみよう」と思い、夜な夜なぼちぼちと始めました。<br>
-&lt;!--more--&gt;</p>
+      <p>　DroidKaigi2016 の開催前、<a href="https://github.com/konifar/droidkaigi2016">公式アプリが有志によって開発中</a> とのツイート(だったかな？)を見て、ふとこれを「Xamarin.Android に移植してみよう」と思い、夜な夜なぼちぼちと始めました。<br />
+<!--more--></p>
 
 <p>　後付けですが、移植するにあたり調査したかったのは主に、</p>
 
 <ul>
-<li>Android-Java の OSSライブラリがどのくらい Xamarin.Android でも利用可能か？</li>
-<li>(勉強をサボっていた)Xamarin.Android での Material Design の適用方法</li>
+  <li>Android-Java の OSSライブラリがどのくらい Xamarin.Android でも利用可能か？</li>
+  <li>(勉強をサボっていた)Xamarin.Android での Material Design の適用方法</li>
 </ul>
 
 <p>です。</p>
 
-<h2>Xamarin.Android について(知らない人向け)</h2>
+<h2 id="xamarinandroid-">Xamarin.Android について(知らない人向け)</h2>
 
-<p>　Xamarin.Android は、Android API(Javaクラスライブラリを含む)の薄いラッパーで、クラス・メソッド名などは殆どそのままに、言語が Java から C# になったようなものです。<br>
-　なので、 <code>activity_main.xml</code> などのリソースファイルもほぼそのまま転用可能です。</p>
+<p>　Xamarin.Android は、Android API(Javaクラスライブラリを含む)の薄いラッパーで、クラス・メソッド名などは殆どそのままに、言語が Java から C# になったようなものです。<br />
+　なので、 <code class="highlighter-rouge">activity_main.xml</code> などのリソースファイルもほぼそのまま転用可能です。</p>
 
 <ul>
-<li><a href="http://qiita.com/amay077/items/3232064cc8880c809aee">Xamarin.Android で作った HelloWorld のソースを眺めてみる</a></li>
+  <li><a href="http://qiita.com/amay077/items/3232064cc8880c809aee">Xamarin.Android で作った HelloWorld のソースを眺めてみる</a></li>
 </ul>
 
 <p>　尚、 Xamarin.Forms というワンソースで複数プラットフォームで動作するアプリを開発できるフレームワークとは別のものです。</p>
 
-<h2>Android プロジェクトの Xamarin.Android への移植方法</h2>
+<h2 id="android--xamarinandroid-">Android プロジェクトの Xamarin.Android への移植方法</h2>
 
 <p>すごく大雑把に、以下のような手順で移植します。</p>
 
 <ol>
-<li>Androidプロジェクト(以下 Java と表記)の <code>/res</code> 以下を Xamarin.Androidプロジェクト(以下 Xamarin)配下にコピー</li>
-<li>Java のソースコード群を、 package構成を崩さずに Xamarin.Android で再構成（結局のところコードの書き直し）</li>
-<li>Java側で使われているOSSライブラリと同等のものを、nuget・Xamarin Components で探してXamarin側に追加（なければ <code>.jar</code> ファイルを入手して Xamarin で使えるように Binding Library を作成）</li>
-<li>あとはひたすら try and error and error and error...</li>
+  <li>Androidプロジェクト(以下 Java と表記)の <code class="highlighter-rouge">/res</code> 以下を Xamarin.Androidプロジェクト(以下 Xamarin)配下にコピー</li>
+  <li>Java のソースコード群を、 package構成を崩さずに Xamarin.Android で再構成（結局のところコードの書き直し）</li>
+  <li>Java側で使われているOSSライブラリと同等のものを、nuget・Xamarin Components で探してXamarin側に追加（なければ <code class="highlighter-rouge">.jar</code> ファイルを入手して Xamarin で使えるように Binding Library を作成）</li>
+  <li>あとはひたすら try and error and error and error…</li>
 </ol>
 
-<h2>Android Data Binding を、Xamarin ではどうしたか？</h2>
+<h2 id="android-data-binding-xamarin-">Android Data Binding を、Xamarin ではどうしたか？</h2>
 
-<p>　DroidKaigi2016 のアプリには <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html">DataBinding</a> が使われています。ただ、 <code>BaseObservable</code> や <code>ObservalbeField</code> によるガッツリとした OneWay/TwoWay のデータバインディングではなく、POJOなデータクラスを使う <a href="https://msdn.microsoft.com/ja-jp/library/system.windows.data.bindingmode(v=vs.110).aspx">OneTime</a> なものしかなかったので、Xamarin への移植に際しては <a href="https://github.com/runceel/ReactiveProperty/blob/master/README-ja.md">ReactiveProperty</a> や、 <a href="https://github.com/MvvmCross/MvvmCross">MVVMCross</a> などのデータバインディング機能に頼る必要はありませんでした。</p>
+<p>　DroidKaigi2016 のアプリには <a href="http://developer.android.com/intl/ja/tools/data-binding/guide.html">DataBinding</a> が使われています。ただ、 <code class="highlighter-rouge">BaseObservable</code> や <code class="highlighter-rouge">ObservalbeField</code> によるガッツリとした OneWay/TwoWay のデータバインディングではなく、POJOなデータクラスを使う <a href="https://msdn.microsoft.com/ja-jp/library/system.windows.data.bindingmode(v=vs.110).aspx">OneTime</a> なものしかなかったので、Xamarin への移植に際しては <a href="https://github.com/runceel/ReactiveProperty/blob/master/README-ja.md">ReactiveProperty</a> や、 <a href="https://github.com/MvvmCross/MvvmCross">MVVMCross</a> などのデータバインディング機能に頼る必要はありませんでした。</p>
 
-<p>　一方、Android Data Binding のもう一つの(副次的な)機能である View binding(<code>findViewById</code> が要らなくなるアレ)の対応は大変でした。</p>
+<p>　一方、Android Data Binding のもう一つの(副次的な)機能である View binding(<code class="highlighter-rouge">findViewById</code> が要らなくなるアレ)の対応は大変でした。</p>
 
-<p>　まず、<code>activity_main.xml</code> などのデータバインド範囲を括る <code>&lt;layout&gt;&lt;/layout&gt;</code> ですが、このタグは Xamarin Studio は解釈してくれないのでエラーになります。このタグはもれなくコメントアウトが必要でした。また、カスタムデータバインディングが使われている箇所も同じくです。<br>
-　なので当然、Android Studio(gradle)が生成する <code>DataBinding</code> クラスも使用できません。<br>
-　仕方ない(というか始めからわかっていましたが) <code>ActivityMainBinding</code> などに相当するクラスを必要を満たす範囲で自作しました。レガシーな <code>FindViewByID()</code> を使って。</p>
+<p>　まず、<code class="highlighter-rouge">activity_main.xml</code> などのデータバインド範囲を括る <code class="highlighter-rouge">&lt;layout&gt;&lt;/layout&gt;</code> ですが、このタグは Xamarin Studio は解釈してくれないのでエラーになります。このタグはもれなくコメントアウトが必要でした。また、カスタムデータバインディングが使われている箇所も同じくです。<br />
+　なので当然、Android Studio(gradle)が生成する <code class="highlighter-rouge">DataBinding</code> クラスも使用できません。<br />
+　仕方ない(というか始めからわかっていましたが) <code class="highlighter-rouge">ActivityMainBinding</code> などに相当するクラスを必要を満たす範囲で自作しました。レガシーな <code class="highlighter-rouge">FindViewByID()</code> を使って。</p>
 
-<p>　Windowsアプリ開発の世界では、「DSL で記述された画面レイアウトからUI要素変数を自動生成する」ことは、IDE である Visual Sutdio が普通に行ってくれます。Xamarinアプリ開発のIDEである Xamarin Studio も、iOS の <code>.storyboard</code> ファイルを読んで、自動的に <code>HogeViewController.designer.cs</code> にUI要素変数を生成してくれます。<br>
-　Xamarin.Android でも <code>MainActivity.designer.cs</code> とか生成してくれてもいいのになー、とは頭の片隅で思い続けています。(自作Plug-inとかでなんとかできるのかな？)</p>
+<p>　Windowsアプリ開発の世界では、「DSL で記述された画面レイアウトからUI要素変数を自動生成する」ことは、IDE である Visual Sutdio が普通に行ってくれます。Xamarinアプリ開発のIDEである Xamarin Studio も、iOS の <code class="highlighter-rouge">.storyboard</code> ファイルを読んで、自動的に <code class="highlighter-rouge">HogeViewController.designer.cs</code> にUI要素変数を生成してくれます。<br />
+　Xamarin.Android でも <code class="highlighter-rouge">MainActivity.designer.cs</code> とか生成してくれてもいいのになー、とは頭の片隅で思い続けています。(自作Plug-inとかでなんとかできるのかな？)</p>
 
-<h2>DroidKaigi2016 で使われているJavaライブラリを、Xamarinではどうしたか？</h2>
+<h2 id="droidkaigi2016-javaxamarin">DroidKaigi2016 で使われているJavaライブラリを、Xamarinではどうしたか？</h2>
 
-<p>　DroidKaigi2016アプリでは非常にたくさんのOSSライブラリが<a href="https://github.com/konifar/droidkaigi2016#libraries">使用されており</a>、それを眺めるだけでも非常に勉強になります。このソースを読んで初めて知ったものが何個もありました。<br>
+<p>　DroidKaigi2016アプリでは非常にたくさんのOSSライブラリが<a href="https://github.com/konifar/droidkaigi2016#libraries">使用されており</a>、それを眺めるだけでも非常に勉強になります。このソースを読んで初めて知ったものが何個もありました。<br />
 　アプリを Xamarin.Android へ移植するにあたり、これらにどのように対応したかを記します。</p>
 
-<h3>Android Support Libraries</h3>
+<h3 id="android-support-libraries">Android Support Libraries</h3>
 
 <p>これらは、nuget パッケージが用意されています。要注意なのは、Xamarin Component にも<a href="https://components.xamarin.com/view/xamandroidsupportdesign">同じものが存在</a>していて、大抵はそちらの方が古くて動かない、ということです。</p>
 
 <ul>
-<li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/">Xamarin.Android.Support.CustomTabs</a></li>
-<li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.Design/">Xamarin.Android.Support.Design</a></li>
-<li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v4/">Xamarin.Android.Support.v4</a></li>
-<li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/">Xamarin.Android.Support.v7.AppCompat</a></li>
-<li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.CardView/">Xamarin.Android.Support.v7.CardView</a></li>
-<li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.RecyclerView/">Xamarin.Android.Support.v7.RecyclerView</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/">Xamarin.Android.Support.CustomTabs</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.Design/">Xamarin.Android.Support.Design</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v4/">Xamarin.Android.Support.v4</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/">Xamarin.Android.Support.v7.AppCompat</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.CardView/">Xamarin.Android.Support.v7.CardView</a></li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.RecyclerView/">Xamarin.Android.Support.v7.RecyclerView</a></li>
 </ul>
 
-<h3><a href="http://google.github.io/dagger/">Dagger2</a></h3>
+<h3 id="dagger2httpgooglegithubiodagger"><a href="http://google.github.io/dagger/">Dagger2</a></h3>
 
-<p>　Dependency Injection を Annotation ベースで行うライブラリ。<br>
+<p>　Dependency Injection を Annotation ベースで行うライブラリ。<br />
 　これはないかなーと思いましたがありました。Dagger(短剣) に対して、その名も Stiletto(短剣)ｗ</p>
 
 <ul>
-<li><a href="http://stiletto.bendb.com/">Stiletto</a> - Stiletto is a .NET port of Dagger, the lightweight Android dependency injector from Square.</li>
+  <li><a href="http://stiletto.bendb.com/">Stiletto</a> - Stiletto is a .NET port of Dagger, the lightweight Android dependency injector from Square.</li>
 </ul>
 
-<p>　使い方も殆ど一緒。どうも Dagger1 相当の機能のようですが、アプリ側は少しの修正で対応できました。<br>
-　もっとも Dagger すら使ったことがなかったので、その理解に少々時間を要しました。<br>
+<p>　使い方も殆ど一緒。どうも Dagger1 相当の機能のようですが、アプリ側は少しの修正で対応できました。<br />
+　もっとも Dagger すら使ったことがなかったので、その理解に少々時間を要しました。<br />
 　Stiletto は、Xamarin.iOS でも使えるようですが、残念ながら PCL対応していなさそう。PCL対応のプルリクを送るのは今後やってみたいことの一つです。</p>
 
-<h3><a href="http://square.github.io/retrofit/">Retrofit2</a></h3>
+<h3 id="retrofit2httpsquaregithubioretrofit"><a href="http://square.github.io/retrofit/">Retrofit2</a></h3>
 
 <p>　RESTful API のクライアントをサクッと作れるライブラリ。これも Xamarin 用に移植してくれてる方がいます。</p>
 
 <ul>
-<li><a href="http://paulcbetts.github.io/refit/">Refit by paulcbetts</a> - Refit is a library heavily inspired by Square&#39;s Retrofit library</li>
+  <li><a href="http://paulcbetts.github.io/refit/">Refit by paulcbetts</a> - Refit is a library heavily inspired by Square’s Retrofit library</li>
 </ul>
 
 <p>　こちらも、 Xamarin.iOS でも利用可能、PCL対応済み、カンペキです。</p>
 
-<h3><a href="http://square.github.io/picasso/">Picasso</a></h3>
+<h3 id="picassohttpsquaregithubiopicasso"><a href="http://square.github.io/picasso/">Picasso</a></h3>
 
 <p>　多機能且つ使いやすい Image Loader の Picasso。これは Xamarin の人が nuget パッケージを用意してくれています。</p>
 
 <ul>
-<li><a href="https://www.nuget.org/packages/Square.Picasso">Square.Picasso</a></li>
+  <li><a href="https://www.nuget.org/packages/Square.Picasso">Square.Picasso</a></li>
 </ul>
 
-<p>Picasso が依存している <code>Square.OkHttp</code>, <code>Square.OkIO</code> も nuget パッケージが用意されていて、一緒に追加されます。</p>
+<p>Picasso が依存している <code class="highlighter-rouge">Square.OkHttp</code>, <code class="highlighter-rouge">Square.OkIO</code> も nuget パッケージが用意されていて、一緒に追加されます。</p>
 
-<h3><a href="https://github.com/gfx/Android-Orma">Android-Orma</a></h3>
+<h3 id="android-ormahttpsgithubcomgfxandroid-orma"><a href="https://github.com/gfx/Android-Orma">Android-Orma</a></h3>
 
-<p>　DroidKaigi当日には、作者 @gfx さんによる即席ランチセッションも聴けたORMライブラリ。若いライブラリなのでさすがに Xamarin版はありません。<br>
+<p>　DroidKaigi当日には、作者 @gfx さんによる即席ランチセッションも聴けたORMライブラリ。若いライブラリなのでさすがに Xamarin版はありません。<br />
 　Xamarin.Android での ORMライブラリといえば <a href="https://developer.xamarin.com/guides/cross-platform/application_fundamentals/data/part_3_using_sqlite_orm/">SQLite.NET</a> が有名ですが、使い方が面倒そうだったのと、このアプリのデータ構造と量で、リレーショナルDB使うこともないだろうと、 Key-Value Store である Akavache を使いました。これは以前 Qiita に書いたのでそちらを。</p>
 
 <ul>
-<li><a href="http://qiita.com/amay077/items/356ad0028b7e6fbf089f">クロスプラットフォーム対応KVS Akavache を使ってお手軽にデータを保存する</a></li>
+  <li><a href="http://qiita.com/amay077/items/356ad0028b7e6fbf089f">クロスプラットフォーム対応KVS Akavache を使ってお手軽にデータを保存する</a></li>
 </ul>
 
 <p>　とはいえ、移植の際には、かなり強引な実装をしてしまいました。パフォーマンス悪いのは私の実装が原因です。</p>
 
-<h3><a href="https://github.com/ReactiveX/RxJava">RxJava</a></h3>
+<h3 id="rxjavahttpsgithubcomreactivexrxjava"><a href="https://github.com/ReactiveX/RxJava">RxJava</a></h3>
 
 <p>　これはもう説明不要でしょう。本家 Rx.NET を使用します。</p>
 
 <ul>
-<li><a href="https://github.com/Reactive-Extensions/Rx.NET">Reactive-Extensions/Rx.NET: The Reactive Extensions for .NET</a></li>
+  <li><a href="https://github.com/Reactive-Extensions/Rx.NET">Reactive-Extensions/Rx.NET: The Reactive Extensions for .NET</a></li>
 </ul>
 
-<h3><a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a></h3>
+<h3 id="rxandroidhttpsgithubcomreactivexrxandroid"><a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a></h3>
 
-<p>　これを使う最大の理由である <code>AndroidSchedulers.mainThread()</code> は、 Rx.NET では、 <code>observable.ObserveOn(SynchronizationContext.Current)</code> で代用できるので、不要でした。</p>
+<p>　これを使う最大の理由である <code class="highlighter-rouge">AndroidSchedulers.mainThread()</code> は、 Rx.NET では、 <code class="highlighter-rouge">observable.ObserveOn(SynchronizationContext.Current)</code> で代用できるので、不要でした。</p>
 
-<h3><a href="https://github.com/JakeWharton/ThreeTenABP">ThreeTenABP</a></h3>
+<h3 id="threetenabphttpsgithubcomjakewhartonthreetenabp"><a href="https://github.com/JakeWharton/ThreeTenABP">ThreeTenABP</a></h3>
 
-<p>　これも .NET の日付時刻系クラス(<code>DateTime</code>, <code>DateTimeOffset</code>, <code>TimeSpan</code>) で特に問題ありませんでした。しかし恥ずかしながらこのライブラリも知りませんで、Java では必須になりそうですね。</p>
+<p>　これも .NET の日付時刻系クラス(<code class="highlighter-rouge">DateTime</code>, <code class="highlighter-rouge">DateTimeOffset</code>, <code class="highlighter-rouge">TimeSpan</code>) で特に問題ありませんでした。しかし恥ずかしながらこのライブラリも知りませんで、Java では必須になりそうですね。</p>
 
-<h3><a href="http://facebook.github.io/stetho/">Stetho</a></h3>
+<h3 id="stethohttpfacebookgithubiostetho"><a href="http://facebook.github.io/stetho/">Stetho</a></h3>
 
 <p>　デバッグを強力に支援してくれるライブラリですね。これも知りませんでした。移植の時にはとりあえず関係なさそう、と思って代替品は探していません（汗</p>
 
-<h3><a href="https://github.com/LyndonChin/AndroidFlowLayout">AndroidFlowLayout</a></h3>
+<h3 id="androidflowlayouthttpsgithubcomlyndonchinandroidflowlayout"><a href="https://github.com/LyndonChin/AndroidFlowLayout">AndroidFlowLayout</a></h3>
 
 <p>　View をいい感じに並べてくれるライブラリ。Xamarin.Android用の nuget パッケージがありました。</p>
 
 <ul>
-<li><a href="https://www.nuget.org/packages/AndroidFlowLayout/">AndroidFlowLayout - NuGet Gallery</a></li>
+  <li><a href="https://www.nuget.org/packages/AndroidFlowLayout/">AndroidFlowLayout - NuGet Gallery</a></li>
 </ul>
 
-<h3>Google Play services</h3>
+<h3 id="google-play-services">Google Play services</h3>
 
 <p>　Map とか、Analytics とか。こちらも nuget に一通りパッケージが揃っています。Xamarin Components より優先的に使いましょう。</p>
 
 <ul>
-<li><a href="https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps/">Xamarin Google Play Services - Maps - NuGet Gallery</a>　</li>
-<li><a href="https://www.nuget.org/packages/Xamarin.GooglePlayServices.Analytics/">Xamarin Google Play Services - Analytics - Maps - NuGet Gallery</a>　</li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps/">Xamarin Google Play Services - Maps - NuGet Gallery</a>　</li>
+  <li><a href="https://www.nuget.org/packages/Xamarin.GooglePlayServices.Analytics/">Xamarin Google Play Services - Analytics - Maps - NuGet Gallery</a>　</li>
 </ul>
 
-<h3><a href="https://github.com/jd-alexander/LikeButton">LikeButton</a></h3>
+<h3 id="likebuttonhttpsgithubcomjd-alexanderlikebutton"><a href="https://github.com/jd-alexander/LikeButton">LikeButton</a></h3>
 
-<p>　Facebook の いいね!、Twitter の Fav! のようなボタンを提供してくれるライブラリ。押した時のアニメーションがイイ感じです。<br>
-　これの Xamarin 版は探してもなかったので、 LikeButton の <code>.jar</code> ファイルを入手して、自前で Java Binding Library プロジェクトを作って使用しています。</p>
+<p>　Facebook の いいね!、Twitter の Fav! のようなボタンを提供してくれるライブラリ。押した時のアニメーションがイイ感じです。<br />
+　これの Xamarin 版は探してもなかったので、 LikeButton の <code class="highlighter-rouge">.jar</code> ファイルを入手して、自前で Java Binding Library プロジェクトを作って使用しています。</p>
 
 <ul>
-<li><a href="https://github.com/amay077/DroidKaigi2016Xamarin/tree/master/LikeButton">DroidKaigi2016Xamarin/LikeButton · amay077/DroidKaigi2016Xamarin</a></li>
+  <li><a href="https://github.com/amay077/DroidKaigi2016Xamarin/tree/master/LikeButton">DroidKaigi2016Xamarin/LikeButton · amay077/DroidKaigi2016Xamarin</a></li>
 </ul>
 
 <p>　これを nuget に放流するのはやりたいことの2つ目。いくつかやったら <a href="https://resources.xamarin.com/open-source-contributor.html">Xamarin から subscription もらえる</a>だろうか。。。</p>
 
-<h3><a href="https://github.com/johncarl81/parceler">parceler</a></h3>
+<h3 id="parcelerhttpsgithubcomjohncarl81parceler"><a href="https://github.com/johncarl81/parceler">parceler</a></h3>
 
-<p>　Parcel のことが大嫌いじゃなくなるライブラリ。移植に際しては、ModelクラスはPOCO(POJOの.NET版と思ってください)にしたかったので直接の代替品は探しませんでした。<br>
+<p>　Parcel のことが大嫌いじゃなくなるライブラリ。移植に際しては、ModelクラスはPOCO(POJOの.NET版と思ってください)にしたかったので直接の代替品は探しませんでした。<br />
 　ModelクラスのParcel化はなんと <a href="http://www.newtonsoft.com/json">JSON.NET</a> でJSONを介しちゃいました。悪手ですがパフォーマンスが気になる程でないならいいでしょ。</p>
 
-<h3><a href="https://try.crashlytics.com/">Crashlytics</a></h3>
+<h3 id="crashlyticshttpstrycrashlyticscom"><a href="https://try.crashlytics.com/">Crashlytics</a></h3>
 
 <p>　クラッシュレポート解析サービスですね。Xamarin なら <a href="https://xamarin.com/insights">Xamarin Insights</a> がビルトインで使えるので、通常はそうするでしょう。Crashlytics 自体の Xamarin.Android 用ライブラリは、今のところ<a href="https://twittercommunity.com/t/xamarin-and-fabric/37289/13">存在しないみたい</a>です。</p>
 
-<h3><a href="https://github.com/opacapp/multiline-collapsingtoolbar">multiline-collapsingtoolbar</a></h3>
+<h3 id="multiline-collapsingtoolbarhttpsgithubcomopacappmultiline-collapsingtoolbar"><a href="https://github.com/opacapp/multiline-collapsingtoolbar">multiline-collapsingtoolbar</a></h3>
 
-<p>　 Android Design Support Library の <code>CollapsingToolbarLayout</code> って、タイトルが複数行あると、展開しても表示されない(!)んですね。なんじゃそら！ってのを解決してくれるライブラリです。<br>
-　 Xamarin.Android向けのは探したけど見つかりませんでした。移植に際してクリティカルじゃなかったので、複数行にならない <code>CollapsingToolbarLayout</code> のままです。これも nuget パッケージ化したら需要あるかも。</p>
+<p>　 Android Design Support Library の <code class="highlighter-rouge">CollapsingToolbarLayout</code> って、タイトルが複数行あると、展開しても表示されない(!)んですね。なんじゃそら！ってのを解決してくれるライブラリです。<br />
+　 Xamarin.Android向けのは探したけど見つかりませんでした。移植に際してクリティカルじゃなかったので、複数行にならない <code class="highlighter-rouge">CollapsingToolbarLayout</code> のままです。これも nuget パッケージ化したら需要あるかも。</p>
 
-<h3><a href="https://github.com/ozodrukh/CircularReveal">CircularReveal</a></h3>
+<h3 id="circularrevealhttpsgithubcomozodrukhcircularreveal"><a href="https://github.com/ozodrukh/CircularReveal">CircularReveal</a></h3>
 
-<p>　Lollipop で追加された CircularReveal アニメーションを、それ以前のOSでも行えるライブラリです。<br>
+<p>　Lollipop で追加された CircularReveal アニメーションを、それ以前のOSでも行えるライブラリです。<br />
 　これもクリティカルでないので、Xamarin版には移植していません。</p>
 
-<h2>まとめ</h2>
+<h2 id="section">まとめ</h2>
 
-<p>　DroidKaigi2016 の公式アプリは、ホストの @konifar さんはじめ、 <a href="https://github.com/konifar/droidkaigi2016/graphs/contributors">35名</a> の精鋭有志の皆さんによる爆速開発で、 2/13 に v1.00 がリリース、イベント当日もアップデートされ、私も便利に利用させていただきました。<br>
-　<br>
-　一方、私の Xamarin.Android への移植は今やっと &quot;とりあえず&quot; 終わったばかり。<br>
-　しかも、移植の元にしたのが 2/10 付けのソースですが、その日から現在に至るまで本家にマージされた <strong>Pull Request の数は 200超！</strong> 。<br>
-　「これが若さか…。」これらの Xamarin版への移植はおじさんにはとても行う気が起きません。DroidKaigi2016公式アプリの Contributors の皆さんを尊敬します。<br>
-　<br>
+<p>　DroidKaigi2016 の公式アプリは、ホストの @konifar さんはじめ、 <a href="https://github.com/konifar/droidkaigi2016/graphs/contributors">35名</a> の精鋭有志の皆さんによる爆速開発で、 2/13 に v1.00 がリリース、イベント当日もアップデートされ、私も便利に利用させていただきました。<br />
+　<br />
+　一方、私の Xamarin.Android への移植は今やっと “とりあえず” 終わったばかり。<br />
+　しかも、移植の元にしたのが 2/10 付けのソースですが、その日から現在に至るまで本家にマージされた <strong>Pull Request の数は 200超！</strong> 。<br />
+　「これが若さか…。」これらの Xamarin版への移植はおじさんにはとても行う気が起きません。DroidKaigi2016公式アプリの Contributors の皆さんを尊敬します。<br />
+　<br />
 　が、ひとまず動くようになったので、ソースを公開します。モダンな Androidアプリを Xamarin.Android で実現する例としては有用だと思います。</p>
 
 <ul>
-<li><a href="https://github.com/amay077/DroidKaigi2016Xamarin">amay077/DroidKaigi2016Xamarin: DroidKaigi2016 アプリをこっそりXamarinに移植</a></li>
+  <li><a href="https://github.com/amay077/DroidKaigi2016Xamarin">amay077/DroidKaigi2016Xamarin: DroidKaigi2016 アプリをこっそりXamarinに移植</a></li>
 </ul>
 
 <p>（できればこれを、 プラットフォーム非互換にできる箇所はPCLへ移動、各画面にViewModelを置いてMVVM化、Xamarin.iOS対応、Xamarin.Forms対応とか、いろいろと育てていきたいと思っているのですが、DroidKaigi参加直後で、あれもこれもやりたい病なので、実現は未定です。）</p>

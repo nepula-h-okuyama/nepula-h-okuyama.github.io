@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>MVVMフレームワーク「ReactiveUI」を Xamarin.iOS で使ってみる</title>
-  <meta name="description" content="ReactiveUI は、Reactive Extensions を全面的に取り入れた クロスプラットフォームな MVVMフレームワークです。&lt;!--more--&gt;* ReactiveUI">
+  <meta name="description" content="ReactiveUI は、Reactive Extensions を全面的に取り入れた クロスプラットフォームな MVVMフレームワークです。  ReactiveUI">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/02/27/using-reactiveui-on-xamarin-ios/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "MVVMフレームワーク「ReactiveUI」を Xamarin.iOS で使ってみる",
   "datePublished": "2014-02-27T21:34:00+09:00",
   "dateModified": "2014-02-27T21:34:00+09:00",
-  "description": "ReactiveUI は、Reactive Extensions を全面的に取り入れた クロスプラットフォームな MVVMフレームワークです。&lt;!--more--&gt;* ReactiveUI",
+  "description": "ReactiveUI は、Reactive Extensions を全面的に取り入れた クロスプラットフォームな MVVMフレームワークです。  ReactiveUI",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,9 +621,11 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>ReactiveUI は、Reactive Extensions を全面的に取り入れた クロスプラットフォームな MVVMフレームワークです。<br>
-&lt;!--more--&gt;<br>
-* <a href="http://www.reactiveui.net/">ReactiveUI</a></p>
+      <p>ReactiveUI は、Reactive Extensions を全面的に取り入れた クロスプラットフォームな MVVMフレームワークです。<br />
+<!--more--></p>
+<ul>
+  <li><a href="http://www.reactiveui.net/">ReactiveUI</a></li>
+</ul>
 
 <p>作者は GitHub の中の人 <a href="http://twitter.com/xpaulbettsx">Paul Betts</a> 氏、<a href="http://xamarin.com/mvp">Xamarin の MVP</a> でもあります。</p>
 
@@ -763,75 +633,76 @@ img {
 
 <p>Visual Studio + WPF 等なら、nuget から取得できて楽なんでしょうけども、なにせ Mac なので、Xamarin Studio のみでいきます。</p>
 
-<h2>とりあえず使ってみる</h2>
+<h2 id="section">とりあえず使ってみる</h2>
 
-<p>Github が公開した <a href="http://log.paulbetts.org/open-source-githubs-xamarin-starter-apps/">GitHub&#39;s Xamarin starter apps</a>, これに ReactiveUI も含まれているので、こちらを Clone して Xamarin Studio で開いてビルド、すぐ動きます。</p>
+<p>Github が公開した <a href="http://log.paulbetts.org/open-source-githubs-xamarin-starter-apps/">GitHub’s Xamarin starter apps</a>, これに ReactiveUI も含まれているので、こちらを Clone して Xamarin Studio で開いてビルド、すぐ動きます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_reactiveui_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_reactiveui_01.png" alt="" /></p>
 
 <p>これ、ViewModel側で UUID を生成して、View側の Label にバインドしているのですが、何ともシンプル過ぎて…。</p>
 
 <p>それでもこのフレームワークの構成を知るには十分です。</p>
 
-<h2>ReactiveUI に必要なもの</h2>
+<h2 id="reactiveui-">ReactiveUI に必要なもの</h2>
 
 <p>ソリューションツリーを見ると次の4つのプロジェクトがあります。</p>
 
 <ul>
-<li>Starter-Core-Android</li>
-<li>Starter-Core-iOS</li>
-<li>Starter-Android</li>
-<li>Starter-iOS</li>
+  <li>Starter-Core-Android</li>
+  <li>Starter-Core-iOS</li>
+  <li>Starter-Android</li>
+  <li>Starter-iOS</li>
 </ul>
 
-<h3>ViewModel-Model層</h3>
+<h3 id="viewmodel-model">ViewModel-Model層</h3>
 
 <p>Starter-Core-xxx は、ディレクトリ的には同じ場所にあり、Android用とiOS用のプロジェクトファイル(.csproj)が用意してあるだけです。ここはアプリケーションの ViewModel-Model層になります。PCL化はされていないようですね(その内、とサイトに書いてありました)。</p>
 
 <p>サンプルで用意されてる ViewModel を見てみます。</p>
 
-<p>```csharp TestViewModel.cs<br>
-using System;<br>
-using ReactiveUI;<br>
+<p>```csharp TestViewModel.cs<br />
+using System;<br />
+using ReactiveUI;<br />
 using System.Runtime.Serialization;</p>
 
-<p>namespace Starter.Core.ViewModels<br>
-{<br>
-    [DataContract]<br>
-    public class TestViewModel : ReactiveObject<br>
-    {<br>
-        string _TheGuid;<br>
-        [DataMember] public string TheGuid {<br>
-            get { return _TheGuid; }<br>
-            set { this.RaiseAndSetIfChanged(ref _TheGuid, value); }<br>
+<p>namespace Starter.Core.ViewModels<br />
+{<br />
+    [DataContract]<br />
+    public class TestViewModel : ReactiveObject<br />
+    {<br />
+        string _TheGuid;<br />
+        [DataMember] public string TheGuid {<br />
+            get { return _TheGuid; }<br />
+            set { this.RaiseAndSetIfChanged(ref _TheGuid, value); }<br />
         }</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public TestViewModel()
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    public TestViewModel()
     {
         TheGuid = Guid.NewGuid().ToString();
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
-<p>MvvmCross とか、他の MVVM-FW とだいたい同じですね(そりゃそうだ)。<br>
-基底クラスの <code>ReactiveObject</code> が、BaseViewModel的な役割をします。(が、Reactive を冠しているだけに、随所で Rx の力が発揮される、はずです←まだ分かってない)</p>
+<p>MvvmCross とか、他の MVVM-FW とだいたい同じですね(そりゃそうだ)。<br />
+基底クラスの <code class="highlighter-rouge">ReactiveObject</code> が、BaseViewModel的な役割をします。(が、Reactive を冠しているだけに、随所で Rx の力が発揮される、はずです←まだ分かってない)</p>
 
-<p>このコードでは、TestViewModel の生成と同時に、Guid を生成して、<code>TheGuid</code> プロパティに設定しています。</p>
+<p>このコードでは、TestViewModel の生成と同時に、Guid を生成して、<code class="highlighter-rouge">TheGuid</code> プロパティに設定しています。</p>
 
-<h3>View層</h3>
+<h3 id="view">View層</h3>
 
 <p>Starter-Android, Starter-iOS はそれぞれの View層になります。</p>
 
 <p>Starter-iOS の TestViewController.cs を見てみます。</p>
 
-<p>```csharp TestViewController.cs<br>
-namespace Starter.Views<br>
-{<br>
-    public partial class TestViewController : ReactiveViewController, IViewFor<TestViewModel><br>
-    {<br>
-        [省略]</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public override async void ViewDidLoad()
+<p>```csharp TestViewController.cs<br />
+namespace Starter.Views<br />
+{<br />
+    public partial class TestViewController : ReactiveViewController, IViewFor<TestViewModel>
+    {
+		[省略]</TestViewModel></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    public override async void ViewDidLoad()
     {
         base.ViewDidLoad();
         this.OneWayBind(ViewModel, vm =&gt; vm.TheGuid, v =&gt; v.TheGuid.Text);
@@ -847,43 +718,43 @@ namespace Starter.Views<br>
         set { this.RaiseAndSetIfChanged(ref _ViewModel, value); }
     }
 
-    [省略]
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+	[省略]
+} } ```
+</code></pre>
+</div>
 
-<p><code>UIViewController</code> ではなく <code>ReactiveViewController</code> から派生させてます。この辺もよくあるやり方。<code>IViewFor</code> は、今はスルーで。</p>
+<p><code class="highlighter-rouge">UIViewController</code> ではなく <code class="highlighter-rouge">ReactiveViewController</code> から派生させてます。この辺もよくあるやり方。<code class="highlighter-rouge">IViewFor</code> は、今はスルーで。</p>
 
-<p>バインドは <code>this.OneWayBind</code> で。<br>
+<p>バインドは <code class="highlighter-rouge">this.OneWayBind</code> で。<br />
 ViewModel の TheGuid プロパティを、View の TheGuidラベルの Text プロパティへ単方向(OneWay)バインドしてます。</p>
 
-<p>TestViewModel の生成は、ここでは Akavache というストレージライブラリの生成を待ってから行っていますが、Akavache を使わない場合は普通に <code>this.ViewModel = new TestViewModel()</code> で OK でしょう。</p>
+<p>TestViewModel の生成は、ここでは Akavache というストレージライブラリの生成を待ってから行っていますが、Akavache を使わない場合は普通に <code class="highlighter-rouge">this.ViewModel = new TestViewModel()</code> で OK でしょう。</p>
 
 <p>これで、TestViewModelの生成 → Guidの生成 → vm.TheGuidプロパティへ設定 → vm より TheGuid の変更が通知される → View側のBindingが変更を検知 → Viewのラベルを書き換える、という流れになります。</p>
 
-<h2>ちょっと拡張してみる</h2>
+<h2 id="section-1">ちょっと拡張してみる</h2>
 
-<h3>双方向バインディング</h3>
+<h3 id="section-2">双方向バインディング</h3>
 
 <p>ViewModel→View だけでなく、View→ViewModel もやってみましょう。</p>
 
-<p>まず TestViewModel にプロパティを追加します。<br>
-プロパティは <code>MyName</code> とします。<br>
-初期値として &quot;Enter your name&quot; とでも設定しましょうか。 </p>
+<p>まず TestViewModel にプロパティを追加します。<br />
+プロパティは <code class="highlighter-rouge">MyName</code> とします。<br />
+初期値として “Enter your name” とでも設定しましょうか。</p>
 
-<p>```csharp TestViewModel.cs<br>
-namespace Starter.Core.ViewModels<br>
-{<br>
-    [DataContract]<br>
-    public class TestViewModel : ReactiveObject<br>
-    {<br>
-        string _TheGuid;<br>
-        [DataMember] public string TheGuid {<br>
-            get { return _TheGuid; }<br>
-            set { this.RaiseAndSetIfChanged(ref _TheGuid, value); }<br>
+<p>```csharp TestViewModel.cs<br />
+namespace Starter.Core.ViewModels<br />
+{<br />
+    [DataContract]<br />
+    public class TestViewModel : ReactiveObject<br />
+    {<br />
+        string _TheGuid;<br />
+        [DataMember] public string TheGuid {<br />
+            get { return _TheGuid; }<br />
+            set { this.RaiseAndSetIfChanged(ref _TheGuid, value); }<br />
         }</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    string _myName;
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    string _myName;
     [DataMember] public string MyName {
         get { return _myName; }
         set { this.RaiseAndSetIfChanged(ref _myName, value); }
@@ -892,25 +763,25 @@ namespace Starter.Core.ViewModels<br>
     public TestViewModel()
     {
         TheGuid = Guid.NewGuid().ToString();
-
+        
         this.MyName = "Enter your name";
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
-<p>次に Interface Builder で TestViewController に、UITextField と UILabel を追加し、Outlet を &quot;MyText&quot;, &quot;MyLabel&quot; とします。これで Xamarin.iOS から <code>MyText</code>, <code>MyLabel</code> でインスタンスにアクセスできるはず、ですよね。</p>
+<p>次に Interface Builder で TestViewController に、UITextField と UILabel を追加し、Outlet を “MyText”, “MyLabel” とします。これで Xamarin.iOS から <code class="highlighter-rouge">MyText</code>, <code class="highlighter-rouge">MyLabel</code> でインスタンスにアクセスできるはず、ですよね。</p>
 
-<p><code>MyText</code>, <code>MyLabel</code> に、vm.MyName をバインドします。</p>
+<p><code class="highlighter-rouge">MyText</code>, <code class="highlighter-rouge">MyLabel</code> に、vm.MyName をバインドします。</p>
 
-<p>```csharp TestViewController.cs<br>
-namespace Starter.Views<br>
-{<br>
-    public partial class TestViewController : ReactiveViewController, IViewFor<TestViewModel><br>
-    {<br>
-        [省略]</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    public override async void ViewDidLoad()
+<p>```csharp TestViewController.cs<br />
+namespace Starter.Views<br />
+{<br />
+    public partial class TestViewController : ReactiveViewController, IViewFor<TestViewModel>
+    {
+		[省略]</TestViewModel></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    public override async void ViewDidLoad()
     {
         base.ViewDidLoad();
         this.OneWayBind(ViewModel, vm =&gt; vm.TheGuid, v =&gt; v.TheGuid.Text);
@@ -923,17 +794,16 @@ namespace Starter.Views<br>
         });
     }
 
-    [省略]
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+	[省略]
+} } ```
+</code></pre>
+</div>
 
-<p>編集できる <code>MyText</code> は <code>this.Bind</code> を使って双方向バインドします。プロパティの値を表示するだけの <code>MyLabel</code> は、 <code>this.OneWayBind</code> で。</p>
+<p>編集できる <code class="highlighter-rouge">MyText</code> は <code class="highlighter-rouge">this.Bind</code> を使って双方向バインドします。プロパティの値を表示するだけの <code class="highlighter-rouge">MyLabel</code> は、 <code class="highlighter-rouge">this.OneWayBind</code> で。</p>
 
 <p>これで動かしてみます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_reactiveui_02.gif" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_reactiveui_02.gif" alt="" /></p>
 
 <p>UITextField への入力が、vm.MyName へ適用され、その変更を MyLabel に表示させる、という流れです。</p>
 
@@ -942,7 +812,8 @@ namespace Starter.Views<br>
 <p>ここまでのコードは、</p>
 
 <ul>
-<li><a href="https://github.com/amay077/starter-mobile/tree/N_plus_1">https://github.com/amay077/starter-mobile/tree/N_plus_1</a></li>
+  <li>
+    <p><a href="https://github.com/amay077/starter-mobile/tree/N_plus_1">https://github.com/amay077/starter-mobile/tree/N_plus_1</a></p>  </li>
 </ul>
 
 <p>に置いておきます。徐々に進化させていこうと思います。</p>

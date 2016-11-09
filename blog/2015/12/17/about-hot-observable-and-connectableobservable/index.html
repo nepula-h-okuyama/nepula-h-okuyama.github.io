@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -755,43 +623,44 @@ img {
       <a name="topofpage"></a>
       <p>　これは <a href="http://qiita.com/advent-calendar/2015/rxjava">RxJava Advent Calendar 2015 17日目</a> の記事です。</p>
 
-<p>空いてたので参加してみました。<br>
-普段は Xamarin(C#) + Reactive Extensions + ReactiveProperty で、Reactive + MVVM な Android/iOS両対応アプリを開発しています。<br>
-&lt;!--more--&gt;</p>
+<p>空いてたので参加してみました。<br />
+普段は Xamarin(C#) + Reactive Extensions + ReactiveProperty で、Reactive + MVVM な Android/iOS両対応アプリを開発しています。<br />
+<!--more--></p>
 
-<h2>Cold vs Hot</h2>
+<h2 id="cold-vs-hot">Cold vs Hot</h2>
 
-<p>Cold Observable は「あなただけの」Stream、Hot は「みんなの」Stream 。<br>
+<p>Cold Observable は「あなただけの」Stream、Hot は「みんなの」Stream 。<br />
 （私的にはニコ動かニコ生か、みたいに理解してますが、その話はいいや）</p>
 
-<p>Cold は、あなたが subscribe した瞬間からデータが流れ始めます。<br>
+<p>Cold は、あなたが subscribe した瞬間からデータが流れ始めます。<br />
 Hot は、あなたが subscribe してもデータは流れ始めません(流れるかも知れません？)。</p>
 
-<p>では Hot Observable はいつからデータが流れ始める？Observable が生成された瞬間から？<br>
+<p>では Hot Observable はいつからデータが流れ始める？Observable が生成された瞬間から？<br />
 その答え(の一つ)が <strong>ConnectableObservable</strong> 。</p>
 
-<h2>ConnectableObservable のデータ放流の開始と停止</h2>
+<h2 id="connectableobservable-">ConnectableObservable のデータ放流の開始と停止</h2>
 
-<p>Cold Observable を Hot化する publish メソッドの返り値は ConnectableObservable。<br>
+<p>Cold Observable を Hot化する publish メソッドの返り値は ConnectableObservable。<br />
 Hot は必ず ConnectableObservable。（←これ後で否定します）</p>
 
-<p>ConnectableObservable には connect メソッドがあります。<br>
-Hot Observable のデータが流れ始めるのは、このメソッドを呼んだ瞬間から。<br>
+<p>ConnectableObservable には connect メソッドがあります。<br />
+Hot Observable のデータが流れ始めるのは、このメソッドを呼んだ瞬間から。<br />
 なので、どれだけ subscriber が居ようとも connect を呼ばなければデータは流れません。逆に subscriber が居なくても connect を呼べばデータが流れ始めます。</p>
 
-<p>connect メソッドの返り値は Subscription です。<br>
-Subscription の unsubscribe メソッドを呼ぶと、データの放流が停止します。これも subscriber が居ようが居まいが停止します。<br>
+<p>connect メソッドの返り値は Subscription です。<br />
+Subscription の unsubscribe メソッドを呼ぶと、データの放流が停止します。これも subscriber が居ようが居まいが停止します。<br />
 再度 connect すると、 <strong>最初から</strong> データが流れ出します。再開ではありません。</p>
 
-<h2>実例</h2>
+<h2 id="section">実例</h2>
 
-<h3>Cold Observable</h3>
+<h3 id="cold-observable">Cold Observable</h3>
 
-<p>Observable.interval は、一定時間置きにインクリメントされた値を流す <strong>Cold</strong> Observable。<br>
+<p>Observable.interval は、一定時間置きにインクリメントされた値を流す <strong>Cold</strong> Observable。<br />
 なので、複数の subscriber が居たら、各々に独立した値を流します。</p>
 
 <p>Android の画面にボタンが２つ（buttonSubscribe1 と buttonSubscribe2）並んでるだけのサンプルです。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">Observable</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">tickObservable</span> <span class="o">=</span> <span class="n">Observable</span><span class="o">.</span><span class="na">interval</span><span class="o">(</span><span class="mi">1000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">final</span> <span class="n">Observable</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">tickObservable</span> <span class="o">=</span> <span class="n">Observable</span><span class="o">.</span><span class="na">interval</span><span class="o">(</span><span class="mi">1000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">);</span>
 
 <span class="c1">// 可視性向上の為のなんちゃってラムダ</span>
 <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">buttonSubscribe1</span><span class="o">).</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="o">{</span> 
@@ -803,33 +672,36 @@ Subscription の unsubscribe メソッドを呼ぶと、データの放流が停
     <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"buttonSubscribe2 click!"</span><span class="o">);</span>
     <span class="n">tickObservable</span><span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"subscriber2 - onNext - "</span> <span class="o">+</span> <span class="n">x</span><span class="o">));</span>
 <span class="o">});</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <blockquote>
-<p>結果:<br/><br>
-D/MainActivity: buttonSubscribe1 click!<br/><br>
-D/MainActivity: subscriber1 - onNext - 0<br/><br>
-D/MainActivity: subscriber1 - onNext - 1<br/><br>
-D/MainActivity: subscriber1 - onNext - 2<br/><br>
-D/MainActivity: subscriber1 - onNext - 3<br/><br>
-D/MainActivity: subscriber1 - onNext - 4<br/><br>
-D/MainActivity: subscriber1 - onNext - 5<br/><br>
-D/MainActivity: buttonSubscribe2 click!<br/><br>
-D/MainActivity: subscriber1 - onNext - 6<br/><br>
-D/MainActivity: subscriber2 - onNext - 0<br/><br>
-D/MainActivity: subscriber1 - onNext - 7<br/><br>
-D/MainActivity: subscriber2 - onNext - 1<br/><br>
-D/MainActivity: subscriber1 - onNext - 8<br/><br>
-D/MainActivity: subscriber2 - onNext - 2<br/></p>
+  <p>結果:<br /><br />
+D/MainActivity: buttonSubscribe1 click!<br /><br />
+D/MainActivity: subscriber1 - onNext - 0<br /><br />
+D/MainActivity: subscriber1 - onNext - 1<br /><br />
+D/MainActivity: subscriber1 - onNext - 2<br /><br />
+D/MainActivity: subscriber1 - onNext - 3<br /><br />
+D/MainActivity: subscriber1 - onNext - 4<br /><br />
+D/MainActivity: subscriber1 - onNext - 5<br /><br />
+D/MainActivity: buttonSubscribe2 click!<br /><br />
+D/MainActivity: subscriber1 - onNext - 6<br /><br />
+D/MainActivity: subscriber2 - onNext - 0<br /><br />
+D/MainActivity: subscriber1 - onNext - 7<br /><br />
+D/MainActivity: subscriber2 - onNext - 1<br /><br />
+D/MainActivity: subscriber1 - onNext - 8<br /><br />
+D/MainActivity: subscriber2 - onNext - 2<br /></p>
 </blockquote>
 
-<p>buttonSubscribe1 を押すとデータ(０から連番)が流れ始めます。<br>
+<p>buttonSubscribe1 を押すとデータ(０から連番)が流れ始めます。<br />
 しばらくして buttonSubscribe2 を押すと、1 とは関係なく、また 0 から流れ始めます。</p>
 
-<h3>Hot(Connectable) Observable</h3>
+<h3 id="hotconnectable-observable">Hot(Connectable) Observable</h3>
 
-<p>publish で Hot 化します。<br>
+<p>publish で Hot 化します。<br />
 connect と unsubscribe を呼ぶためのボタン（buttonConnect, buttonDisConnect）を画面に追加してます。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">Subscription</span> <span class="n">_connection</span><span class="o">;</span> <span class="c1">// field です</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="n">Subscription</span> <span class="n">_connection</span><span class="o">;</span> <span class="c1">// field です</span>
 
 
 <span class="kd">final</span> <span class="n">ConnectableObservable</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">tickObservable</span> <span class="o">=</span> 
@@ -857,54 +729,57 @@ connect と unsubscribe を呼ぶためのボタン（buttonConnect, buttonDisCo
         <span class="n">_connection</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">});</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <blockquote>
-<p>結果:<br/><br>
-D/MainActivity: buttonSubscribe1 click!<br/><br>
-D/MainActivity: buttonConnect click!      // ←数秒経過している<br/><br>
-D/MainActivity: subscriber1 - onNext - 0<br/><br>
-D/MainActivity: subscriber1 - onNext - 1<br/><br>
-D/MainActivity: subscriber1 - onNext - 2<br/><br>
-D/MainActivity: subscriber1 - onNext - 3<br/><br>
-D/MainActivity: buttonSubscribe2 click!<br/><br>
-D/MainActivity: subscriber1 - onNext - 4<br/><br>
-D/MainActivity: subscriber2 - onNext - 4<br/><br>
-D/MainActivity: subscriber1 - onNext - 5<br/><br>
-D/MainActivity: subscriber2 - onNext - 5<br/><br>
-D/MainActivity: subscriber1 - onNext - 6<br/><br>
-D/MainActivity: subscriber2 - onNext - 6<br/><br>
-D/MainActivity: buttonDisConnect click!<br/><br>
--これ以降 onNext は出力されない-<br/></p>
+  <p>結果:<br /><br />
+D/MainActivity: buttonSubscribe1 click!<br /><br />
+D/MainActivity: buttonConnect click!      // ←数秒経過している<br /><br />
+D/MainActivity: subscriber1 - onNext - 0<br /><br />
+D/MainActivity: subscriber1 - onNext - 1<br /><br />
+D/MainActivity: subscriber1 - onNext - 2<br /><br />
+D/MainActivity: subscriber1 - onNext - 3<br /><br />
+D/MainActivity: buttonSubscribe2 click!<br /><br />
+D/MainActivity: subscriber1 - onNext - 4<br /><br />
+D/MainActivity: subscriber2 - onNext - 4<br /><br />
+D/MainActivity: subscriber1 - onNext - 5<br /><br />
+D/MainActivity: subscriber2 - onNext - 5<br /><br />
+D/MainActivity: subscriber1 - onNext - 6<br /><br />
+D/MainActivity: subscriber2 - onNext - 6<br /><br />
+D/MainActivity: buttonDisConnect click!<br /><br />
+-これ以降 onNext は出力されない-<br /></p>
 </blockquote>
 
-<p>buttonSubscribe1 を押しても、まだデータは流れてきません。<br>
-数秒後、buttonConnect を押すとデータが流れ始めます。<br>
+<p>buttonSubscribe1 を押しても、まだデータは流れてきません。<br />
+数秒後、buttonConnect を押すとデータが流れ始めます。<br />
 buttonSubscribe2 を押すと、subscriber2 が増えますが、Hot(みんなの)Observable なので、流れてくる値とタイミングは subscriber1 と全く同じです。</p>
 
-<p>buttonDisConnect を押すと、データの放流が停止されます。(ちなみにもう一度 CONNECT すると、また 0 から値が流れます)<br>
+<p>buttonDisConnect を押すと、データの放流が停止されます。(ちなみにもう一度 CONNECT すると、また 0 から値が流れます)<br />
 subscriber1, subscriber2 にはもう onNext は呼ばれません。</p>
 
 <p>※サンプルでは onNext しか受信していませんが、 buttonDisConnect を押しても、 subscriber1, subscriber2 の onComplete や onError も呼ばれません。つまり、 <strong>「データの放流が停止されても、 subscriber はそれに気付けない」</strong> ということになります。これはこれでいいんだろか、という感じです。</p>
 
-<h2>ConnectableObservable.refCount について</h2>
+<h2 id="connectableobservablerefcount-">ConnectableObservable.refCount について</h2>
 
 <blockquote>
-<p>Hot は必ず ConnectableObservable。（←これ後で否定します）</p>
+  <p>Hot は必ず ConnectableObservable。（←これ後で否定します）</p>
 </blockquote>
 
 <p>否定始めます。</p>
 
 <p>ConnectableObservable では、データ放流の開始と停止は、 connect と unsubscribe に委ねられていました。</p>
 
-<p>refCount() を使うとそれを自動化できます。(refCount？参照カウントを返すメソッド？そう思っていましたが全然違いました。)<br>
-どういうことかと言うと、最初の subscriber が現れたらデータ放流を開始し、誰も subscriber が居なくなったら放流を停止する、というものです。<br>
+<p>refCount() を使うとそれを自動化できます。(refCount？参照カウントを返すメソッド？そう思っていましたが全然違いました。)<br />
+どういうことかと言うと、最初の subscriber が現れたらデータ放流を開始し、誰も subscriber が居なくなったら放流を停止する、というものです。<br />
 refCount() の返値はただの Observable です、でも Hot です。はい否定しましたー。</p>
 
-<h3>実例</h3>
+<h3 id="section-1">実例</h3>
 
-<p>publish した Hot Observable を refCount してデータ放流を自動制御してもらいます。<br>
+<p>publish した Hot Observable を refCount してデータ放流を自動制御してもらいます。<br />
 画面には、 buttonConnect, buttonDisConnect に代わり、buttonUnsubscribe1, buttonUnsubscribe2 を用意します。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">Subscription</span> <span class="n">_subscription1</span><span class="o">;</span> <span class="c1">// field です</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="n">Subscription</span> <span class="n">_subscription1</span><span class="o">;</span> <span class="c1">// field です</span>
 <span class="kd">private</span> <span class="n">Subscription</span> <span class="n">_subscription2</span><span class="o">;</span> <span class="c1">// field です</span>
 <span class="kd">private</span> <span class="n">Subscription</span> <span class="n">_connection</span><span class="o">;</span>    <span class="c1">// field です</span>
 
@@ -937,54 +812,56 @@ refCount() の返値はただの Observable です、でも Hot です。はい�
         <span class="n">_subscription2</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">});</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <blockquote>
-<p>結果:<br/><br>
-D/MainActivity: buttonSubscribe1 click!<br/><br>
-D/MainActivity: subscriber1 - onNext - 0<br/><br>
-D/MainActivity: subscriber1 - onNext - 1<br/><br>
-D/MainActivity: subscriber1 - onNext - 2<br/><br>
-D/MainActivity: buttonSubscribe2 click!<br/><br>
-D/MainActivity: subscriber1 - onNext - 3<br/><br>
-D/MainActivity: subscriber2 - onNext - 3<br/><br>
-D/MainActivity: subscriber1 - onNext - 4<br/><br>
-D/MainActivity: subscriber2 - onNext - 4<br/><br>
-D/MainActivity: subscriber1 - onNext - 5<br/><br>
-D/MainActivity: subscriber2 - onNext - 5<br/><br>
-D/MainActivity: subscriber1 - onNext - 6<br/><br>
-D/MainActivity: subscriber2 - onNext - 6<br/><br>
-D/MainActivity: subscriber1 - onNext - 7<br/><br>
-D/MainActivity: subscriber2 - onNext - 7<br/><br>
-D/MainActivity: buttonUnsubscribe1 click!<br/><br>
-D/MainActivity: subscriber2 - onNext - 8<br/><br>
-D/MainActivity: subscriber2 - onNext - 9<br/><br>
-D/MainActivity: subscriber2 - onNext - 10<br/><br>
-D/MainActivity: subscriber2 - onNext - 11<br/><br>
-D/MainActivity: buttonUnsubscribe2 click!<br/><br>
--これ以降 onNext は出力されない-<br/></p>
+  <p>結果:<br /><br />
+D/MainActivity: buttonSubscribe1 click!<br /><br />
+D/MainActivity: subscriber1 - onNext - 0<br /><br />
+D/MainActivity: subscriber1 - onNext - 1<br /><br />
+D/MainActivity: subscriber1 - onNext - 2<br /><br />
+D/MainActivity: buttonSubscribe2 click!<br /><br />
+D/MainActivity: subscriber1 - onNext - 3<br /><br />
+D/MainActivity: subscriber2 - onNext - 3<br /><br />
+D/MainActivity: subscriber1 - onNext - 4<br /><br />
+D/MainActivity: subscriber2 - onNext - 4<br /><br />
+D/MainActivity: subscriber1 - onNext - 5<br /><br />
+D/MainActivity: subscriber2 - onNext - 5<br /><br />
+D/MainActivity: subscriber1 - onNext - 6<br /><br />
+D/MainActivity: subscriber2 - onNext - 6<br /><br />
+D/MainActivity: subscriber1 - onNext - 7<br /><br />
+D/MainActivity: subscriber2 - onNext - 7<br /><br />
+D/MainActivity: buttonUnsubscribe1 click!<br /><br />
+D/MainActivity: subscriber2 - onNext - 8<br /><br />
+D/MainActivity: subscriber2 - onNext - 9<br /><br />
+D/MainActivity: subscriber2 - onNext - 10<br /><br />
+D/MainActivity: subscriber2 - onNext - 11<br /><br />
+D/MainActivity: buttonUnsubscribe2 click!<br /><br />
+-これ以降 onNext は出力されない-<br /></p>
 </blockquote>
 
-<p>buttonSubscribe1 を押すと、その時点でデータが流れ始めます(refCount による自動制御)。<br>
-buttonSubscribe2 を押すと、subscriber1 と同じタイミングで、同じ値を受信できます(Hot だから)。<br>
-buttonUnsubscribe1 を押すと、 subscriber1 は購読をやめますが、subscriber2 はまだ受信しています。<br>
+<p>buttonSubscribe1 を押すと、その時点でデータが流れ始めます(refCount による自動制御)。<br />
+buttonSubscribe2 を押すと、subscriber1 と同じタイミングで、同じ値を受信できます(Hot だから)。<br />
+buttonUnsubscribe1 を押すと、 subscriber1 は購読をやめますが、subscriber2 はまだ受信しています。<br />
 buttonUnsubscribe2 を押すと、subscriber2 も購読をやめ、この時点でデータ放流が停止します(refCount による自動制御)。</p>
 
 <p>※ほんとにデータ放流終わってんの？を確認するには、 tickObservable に doOnNext を繋げて確認するとよいと思います。</p>
 
-<h2>まとめ</h2>
+<h2 id="section-2">まとめ</h2>
 
-<p>Hot Observable は、ほとんどの場合(publish により生成されるので) ConnectableObservable。<br>
-ConnectableObservable は、購読者の有無に関係なく connect でデータ放流開始、Subscription.unsubscribe でデータ放流停止。<br>
+<p>Hot Observable は、ほとんどの場合(publish により生成されるので) ConnectableObservable。<br />
+ConnectableObservable は、購読者の有無に関係なく connect でデータ放流開始、Subscription.unsubscribe でデータ放流停止。<br />
 refCount により購読者の有無に連動したデータ放流の自動制御が可能。この場合 Hot だけど普通の Observable型。</p>
 
 <p>実際に Hot Observable を使う場合は、refCount() しとくのが無難かなー、と思いました。(購読者の unsubscribe を厳密に管理しておけば、という前提で)</p>
 
-<h2>参考</h2>
+<h2 id="section-3">参考</h2>
 
 <ul>
-<li><a href="http://www.introtorx.com/content/v1.0.10621.0/14_HotAndColdObservables.html">Intro to Rx - Hot and Cold observables</a></li>
-<li><a href="https://github.com/ReactiveX/RxJava/wiki/Connectable-Observable-Operators">Connectable Observable Operators · ReactiveX/RxJava Wiki</a></li>
-<li><a href="http://qiita.com/advent-calendar/2015/rxjava">RxJava Advent Calendar 2015 を書かれた皆さん</a></li>
+  <li><a href="http://www.introtorx.com/content/v1.0.10621.0/14_HotAndColdObservables.html">Intro to Rx - Hot and Cold observables</a></li>
+  <li><a href="https://github.com/ReactiveX/RxJava/wiki/Connectable-Observable-Operators">Connectable Observable Operators · ReactiveX/RxJava Wiki</a></li>
+  <li><a href="http://qiita.com/advent-calendar/2015/rxjava">RxJava Advent Calendar 2015 を書かれた皆さん</a></li>
 </ul>
 
     </section>

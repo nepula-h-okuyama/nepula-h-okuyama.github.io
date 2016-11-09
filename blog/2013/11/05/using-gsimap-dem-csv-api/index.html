@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>地理院地図の標高タイル(CSV)を描画してみた</title>
-  <meta name="description" content="国土地理院が提供している API の一つに「標高タイル」というものがあります。&lt;!--more--&gt;タイルというと、Googleマップや OpenStreetMap などの Web地図では通常、画像を指しますが、標高タイルAPIでは 「画素毎の高度(ｍ)」 が取得できます。">
+  <meta name="description" content="国土地理院が提供している API の一つに「標高タイル」というものがあります。タイルというと、Googleマップや OpenStreetMap などの Web地図では通常、画像を指しますが、標高タイルAPIでは 「画素毎の高度(ｍ)」 が取得できます。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/11/05/using-gsimap-dem-csv-api/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "地理院地図の標高タイル(CSV)を描画してみた",
   "datePublished": "2013-11-05T21:11:00+09:00",
   "dateModified": "2013-11-05T21:11:00+09:00",
-  "description": "国土地理院が提供している API の一つに「標高タイル」というものがあります。&lt;!--more--&gt;タイルというと、Googleマップや OpenStreetMap などの Web地図では通常、画像を指しますが、標高タイルAPIでは 「画素毎の高度(ｍ)」 が取得できます。",
+  "description": "国土地理院が提供している API の一つに「標高タイル」というものがあります。タイルというと、Googleマップや OpenStreetMap などの Web地図では通常、画像を指しますが、標高タイルAPIでは 「画素毎の高度(ｍ)」 が取得できます。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,59 +621,60 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>国土地理院が提供している API の一つに「標高タイル」というものがあります。<br>
-&lt;!--more--&gt;<br>
+      <p>国土地理院が提供している API の一つに「標高タイル」というものがあります。<br />
+<!--more--><br />
 タイルというと、Googleマップや OpenStreetMap などの Web地図では通常、画像を指しますが、標高タイルAPIでは <strong>「画素毎の高度(ｍ)」</strong> が取得できます。</p>
 
 <ul>
-<li><a href="http://portal.cyberjapan.jp/help/development/demtile.html">標高タイル仕様 - 地理院地図</a></li>
-<li><a href="http://cyberjapandata.gsi.go.jp/xyz/dem/14/14547/6463.txt">サンプルURL</a></li>
+  <li><a href="http://portal.cyberjapan.jp/help/development/demtile.html">標高タイル仕様 - 地理院地図</a></li>
+  <li><a href="http://cyberjapandata.gsi.go.jp/xyz/dem/14/14547/6463.txt">サンプルURL</a></li>
 </ul>
 
 <p>これは面白い、ということで使ってみました。</p>
 
-<h2>サンプル</h2>
+<h2 id="section">サンプル</h2>
 
 <ul>
-<li><a href="http://jsdo.it/amay077/jjod">地理院地図の標高タイル(CSV)を描画してみた - jsdo.it</a></li>
+  <li><a href="http://jsdo.it/amay077/jjod">地理院地図の標高タイル(CSV)を描画してみた - jsdo.it</a></li>
 </ul>
 
-<h3>Google Map</h3>
+<h3 id="google-map">Google Map</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_gsimap_dem_csv_api_01.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_gsimap_dem_csv_api_01.png" alt="img1" /></p>
 
-<h3>標高タイルAPI で取得した標高値を描画</h3>
+<h3 id="api-">標高タイルAPI で取得した標高値を描画</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_gsimap_dem_csv_api_02.png" alt="img1"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_gsimap_dem_csv_api_02.png" alt="img1" /></p>
 
-<h2>何をしているか？</h2>
+<h2 id="section-1">何をしているか？</h2>
 
 <p>下は、このサンプルのコードの抜粋ですが、ポイントは２つ</p>
 
 <ul>
-<li>getTile で通常 img 要素を生成して返すが、代わりに canvas 要素に返す</li>
-<li>標高API をコールして得られた CSV をパースし、 高さに応じた色を計算して、canvas に矩形を描画する</li>
+  <li>getTile で通常 img 要素を生成して返すが、代わりに canvas 要素に返す</li>
+  <li>標高API をコールして得られた CSV をパースし、 高さに応じた色を計算して、canvas に矩形を描画する</li>
 </ul>
 
 <p>さすがに1ピクセル毎に描画すると重すぎるので、初期値では 16ピクセルずつに間引きしています(画面の DotSize で変更できます)。</p>
 
 <p>クライアント側でレンダリングしているので、色などが動的に変更できます。</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">map</span><span class="p">.</span><span class="nx">mapTypes</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"GsiMaps"</span><span class="p">,</span> <span class="p">{</span>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>    <span class="nx">map</span><span class="p">.</span><span class="nx">mapTypes</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"GsiMaps"</span><span class="p">,</span> <span class="p">{</span>
       <span class="na">name</span><span class="p">:</span><span class="s2">"標高タイル"</span><span class="p">,</span>
       <span class="na">tileSize</span><span class="p">:</span><span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">Size</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span><span class="mi">256</span><span class="p">),</span>
       <span class="na">minZoom</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="c1">// 標高タイルは Lv:14 しか用意されてないので</span>
       <span class="na">maxZoom</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> 
       <span class="na">getTile</span><span class="p">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">tileCoord</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">,</span> <span class="nx">ownerDocument</span><span class="p">)</span> <span class="p">{</span>
-
+          
         <span class="c1">// 普通は img だけど、標高タイルは CSV で画素毎の標高値が取得できるので、</span>
         <span class="c1">// クライアント側で描画するために Canvas を使う</span>
         <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">ownerDocument</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"canvas"</span><span class="p">);</span>
         <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
         <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
-
+        
         <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">(</span><span class="nx">tileCoord</span><span class="p">.</span><span class="nx">x</span> <span class="o">%</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nx">zoom</span><span class="p">)).</span><span class="nx">toString</span><span class="p">();</span>
         <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">tileCoord</span><span class="p">.</span><span class="nx">y</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
-
+        
         <span class="c1">// 各画素の標高値を取得する</span>
         <span class="nx">canvas</span><span class="p">.</span><span class="nx">tileUrl</span> <span class="o">=</span> <span class="s2">"http://cyberjapandata.gsi.go.jp/xyz/dem/"</span> <span class="o">+</span> <span class="nx">zoom</span> <span class="o">+</span>  <span class="s2">"/"</span> <span class="o">+</span> <span class="nx">x</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">+</span> <span class="s2">".txt"</span><span class="p">;</span>
         <span class="c1">// 標高を描画する</span>
@@ -814,12 +683,12 @@ img {
         <span class="k">return</span> <span class="nx">canvas</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">});</span>
-
+    
     <span class="c1">// 標高タイルを描画する</span>
     <span class="kd">function</span> <span class="nx">renderDem</span><span class="p">(</span><span class="nx">canvas</span><span class="p">)</span> <span class="p">{</span>
       <span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
       <span class="nx">ctx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">);</span>
-
+      
       <span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">tileUrl</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// CSV が得られるのでパース</span>
         <span class="kd">var</span> <span class="nx">lines</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/</span><span class="se">\r\n</span><span class="sr">|</span><span class="se">\r</span><span class="sr">|</span><span class="se">\n</span><span class="sr">/</span><span class="p">);</span>
@@ -829,7 +698,7 @@ img {
             <span class="k">if</span> <span class="p">(</span><span class="nx">cols</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'e'</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// エラーの画素には 'e' が入ってる</span>
               <span class="k">continue</span><span class="p">;</span>
             <span class="p">}</span>
-
+              
             <span class="c1">// 標高0ｍ を startColor、標高1000ｍを endColor としたグラデーション色を設定する。</span>
             <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">xcolor</span>
             <span class="p">.</span><span class="nx">gradientlevel</span><span class="p">(</span><span class="nx">startColor</span><span class="p">,</span> <span class="nx">endColor</span><span class="p">,</span> <span class="nx">cols</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1000.0</span> <span class="o">*</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -839,8 +708,10 @@ img {
         <span class="p">}</span>
       <span class="p">});</span>
     <span class="p">}</span>
-</code></pre></div>
-<h2>まとめ</h2>
+</code></pre>
+</div>
+
+<h2 id="section-2">まとめ</h2>
 
 <p>ただの標高値を地図に表すなら画像でいいじゃん！とか言われそうですが、よいアイデアが浮かばなかったのでまずは素直に使ってみました。</p>
 

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin で Windows Azure モバイルサービスを使う(その１)</title>
-  <meta name="description" content="Xamarin で BaaS を使うことについて、 koji_yusa さんや kochizufan さん が、Parse の使用方法について書いてくれました。&lt;!--more--&gt;BaaS の中では Parse が一番知名度が高いでしょう。しかし！Microsoft も BaaS を提供しています。">
+  <meta name="description" content="Xamarin で BaaS を使うことについて、 koji_yusa さんや kochizufan さん が、Parse の使用方法について書いてくれました。BaaS の中では Parse が一番知名度が高いでしょう。しかし！Microsoft も BaaS を提供しています。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/12/14/using-azure-mobile-services-in-xamarin-1/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin で Windows Azure モバイルサービスを使う(その１)",
   "datePublished": "2013-12-14T00:00:00+09:00",
   "dateModified": "2013-12-14T00:00:00+09:00",
-  "description": "Xamarin で BaaS を使うことについて、 koji_yusa さんや kochizufan さん が、Parse の使用方法について書いてくれました。&lt;!--more--&gt;BaaS の中では Parse が一番知名度が高いでしょう。しかし！Microsoft も BaaS を提供しています。",
+  "description": "Xamarin で BaaS を使うことについて、 koji_yusa さんや kochizufan さん が、Parse の使用方法について書いてくれました。BaaS の中では Parse が一番知名度が高いでしょう。しかし！Microsoft も BaaS を提供しています。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,17 +621,17 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Xamarin で BaaS を使うことについて、 <a href="http://qiita.com/koji_yusa/items/a6878bef10577ee744b5">koji_yusa さん</a>や <a href="http://qiita.com/kochizufan/items/c91b3a59a56d8fc54bb7">kochizufan さん</a> が、Parse の使用方法について書いてくれました。<br>
-&lt;!--more--&gt;<br>
+      <p>Xamarin で BaaS を使うことについて、 <a href="http://qiita.com/koji_yusa/items/a6878bef10577ee744b5">koji_yusa さん</a>や <a href="http://qiita.com/kochizufan/items/c91b3a59a56d8fc54bb7">kochizufan さん</a> が、Parse の使用方法について書いてくれました。<br />
+<!--more--><br />
 BaaS の中では Parse が一番知名度が高いでしょう。しかし！Microsoft も BaaS を提供しています。</p>
 
 <p>Azure の名を冠しているため、「どうせ IaaS でしょ」とスルーする人が多いんじゃないかと思うので、今回は Microsoft の BaaS である「Azure モバイルサービス」について書きます。</p>
 
-<h2>Azureモバイルサービス vs Parse</h2>
+<h2 id="azure-vs-parse">Azureモバイルサービス vs Parse</h2>
 
 <ul>
-<li><a href="http://www.windowsazure.com/ja-jp/pricing/details/mobile-services/">Windows Azure モバイルサービス - 料金詳細</a></li>
-<li><a href="https://parse.com/plans">Parse - Pricing</a></li>
+  <li><a href="http://www.windowsazure.com/ja-jp/pricing/details/mobile-services/">Windows Azure モバイルサービス - 料金詳細</a></li>
+  <li><a href="https://parse.com/plans">Parse - Pricing</a></li>
 </ul>
 
 <p>実際のところは、Parse に比べて Azure の方がスペックは低いです。無料版では、API呼び出し回数は、Azure が50万回に対して、Parse は100万回、ストレージは、Azyreが20MB(!)に対して Parse が1GB などです。</p>
@@ -772,7 +640,7 @@ BaaS の中では Parse が一番知名度が高いでしょう。しかし！Mi
 
 <p><a href="http://mb.cloud.nifty.com/price.htm">Nifty の BaaS</a> と比べても劣勢ですね、あれれ？</p>
 
-<h2>Azure モバイルサービスを Xamarin から使う</h2>
+<h2 id="azure--xamarin-">Azure モバイルサービスを Xamarin から使う</h2>
 
 <p>Microsoft と Xamarin との提携により、Xamarin から Azure モバイルサービスは、簡単に利用することができます。提携前からライブラリの提供など対応は充実していましたが、提携により Microsoft のサイトでチュートリアルが公開されるなど、より充実しました。</p>
 
@@ -780,128 +648,147 @@ BaaS の中では Parse が一番知名度が高いでしょう。しかし！Mi
 
 <p>ちなみに環境は Mac + Xamarin Studio です。Win + Visual Studio でも同じ手順ですが、iOS 用のサンプルなので、iOS ならビルドと実行の為に Mac が必要です。Win しかないなら Android 用に置き換えて試せます。</p>
 
-<h3>1. Windows Azure にサインアップする</h3>
+<h3 id="windows-azure-">1. Windows Azure にサインアップする</h3>
 
 <p>モバイルサービスを利用するには、まず Windows Azure に登録しなければなりません。本人確認のために、クレジットカードや携帯電話番号が必要になるのが煩わしいかもですが、勝手に請求されたりはしませんのでご安心を。</p>
 
 <p>手順は↓が詳しいので割愛します。</p>
 
 <ul>
-<li><a href="http://wordpress-web.azurewebsites.net/guide">Windows Azureに登録する | 初心者でも30分でできる　ビジネスで使える！WordPressでWebサイト</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Windows Azureに登録する</td>
+          <td>初心者でも30分でできる　ビジネスで使える！WordPressでWebサイト](http://wordpress-web.azurewebsites.net/guide)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
-<h3>2. モバイルサービスを作成する</h3>
+<h3 id="section">2. モバイルサービスを作成する</h3>
 
 <p>サインアップできたら Windows Azure マネージメントポータルを開きます。迷ったらここ。アドレスは、</p>
 
 <ul>
-<li><a href="https://manage.windowsazure.com/">https://manage.windowsazure.com/</a></li>
+  <li>
+    <p><a href="https://manage.windowsazure.com/">https://manage.windowsazure.com/</a></p>  </li>
 </ul>
 
 <p>です。</p>
 
 <p>下のような画面になるので、左メニューから モバイルサービス → 新しいモバイル サービスを作成する と進みます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_01.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_01.png" alt="" /></p>
 
 <p>URL に任意のIDを入力します(世界で一意になる必要があります)。また、地域を「東アジア」にします。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_02.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_02.png" alt="" /></p>
 
 <p>続いて SQL Server の設定をします。ログイン名に任意のユーザー名、パスワードに任意のパスワードを設定します。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_03.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_03.png" alt="" /></p>
 
 <p>ウィザードを終わると、マネージメントポータルに戻ります。しばらくの「作製中…」の後、状態が「準備完了」となり、これでモバイルサービスは作成完了です。</p>
 
-<h3>3. Xamarin.iOS アプリケーションからモバイルサービスを使ってみる</h3>
+<h3 id="xamarinios-">3. Xamarin.iOS アプリケーションからモバイルサービスを使ってみる</h3>
 
 <p>作成したモバイルサービスをクリックします。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_04.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_04.png" alt="" /></p>
 
 <p>ここから、一気です。</p>
 
 <ol>
-<li>まずプラットフォームで「Xamarin」を選択し、</li>
-<li>「新しい XAMARIN アプリケーションを作成する」を展開、</li>
-<li>「TodoItem テーブルを作成する」をクリックして「作成されました」となるまで待ち、</li>
-<li>Xamarin.iOS 用のサンプルアプリケーションをダウンロードします。</li>
+  <li>まずプラットフォームで「Xamarin」を選択し、</li>
+  <li>「新しい XAMARIN アプリケーションを作成する」を展開、</li>
+  <li>「TodoItem テーブルを作成する」をクリックして「作成されました」となるまで待ち、</li>
+  <li>Xamarin.iOS 用のサンプルアプリケーションをダウンロードします。</li>
 </ol>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_05.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_05.png" alt="" /></p>
 
-<p>ダウンロードした zip ファイルを解答し、Xamarin Studio で開きます。<br>
+<p>ダウンロードした zip ファイルを解答し、Xamarin Studio で開きます。<br />
 参照 や Components を見ると、Azure Mobile Service 用のライブラリが組み込まれている事が分かります。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_06.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_06.png" alt="" /></p>
 
 <p>Debug で iPhone シミュレータで動かしてみます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_07.gif" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_07.gif" alt="" /></p>
 
 <p>上の動画のように適当なアイテムを追加した後、ブラウザのマネージメントポータルで追加したデータを確認してみます。</p>
 
 <p>上部のメニュー から データ → TodoItem と進むと、追加されたデータが確認できます。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_08.gif" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/using_azure_mobile_service_by_xamarin_1_08.gif" alt="" /></p>
 
 <p>以上です。Xamarin.iOS で Azure モバイルサービスにデータを登録するサンプルが手に入りました。</p>
 
-<h3>4. サンプルのコードを眺めてみる</h3>
+<h3 id="section-1">4. サンプルのコードを眺めてみる</h3>
 
-<p>これで終わってもアレなので、コードを見てみます。<br>
+<p>これで終わってもアレなので、コードを見てみます。<br />
 まず前述した Azure Mobile Service 用のライブラリが組みこまれていますが、これは、 Xamarin の Components ストアで提供されている、</p>
 
 <ul>
-<li><a href="http://components.xamarin.com/view/azure-mobile-services">Azure Mobile Services / Components / Xamarin</a></li>
+  <li><a href="http://components.xamarin.com/view/azure-mobile-services">Azure Mobile Services / Components / Xamarin</a></li>
 </ul>
 
-<p>です。これを主に使っているのは <code>QSTodoService.cs</code> です。</p>
+<p>です。これを主に使っているのは <code class="highlighter-rouge">QSTodoService.cs</code> です。</p>
 
-<p><code>QSTodoService.cs</code> を見てみると、まず NameSpace から。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">Microsoft.WindowsAzure.MobileServices</span><span class="p">;</span>
-</code></pre></div>
+<p><code class="highlighter-rouge">QSTodoService.cs</code> を見てみると、まず NameSpace から。</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">Microsoft.WindowsAzure.MobileServices</span><span class="p">;</span>
+</code></pre>
+</div>
+
 <p>次にコンストラクタなど。</p>
 
-<p><code>MobileServiceClient</code> がメインクラスですが、これを使う前に <code>CurrentPlatform.Init()</code> が必要です(DI だか IoC だかですかね)。</p>
+<p><code class="highlighter-rouge">MobileServiceClient</code> がメインクラスですが、これを使う前に <code class="highlighter-rouge">CurrentPlatform.Init()</code> が必要です(DI だか IoC だかですかね)。</p>
 
-<p>そして <code>MobileServiceClient.GetTable&lt;ToDoItem&gt;()</code> をすることで Azure 上のテーブルを取得しています。まだデータは読み込みません。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="n">MobileServiceClient</span> <span class="n">client</span><span class="p">;</span>
+<p>そして <code class="highlighter-rouge">MobileServiceClient.GetTable&lt;ToDoItem&gt;()</code> をすることで Azure 上のテーブルを取得しています。まだデータは読み込みません。</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">MobileServiceClient</span> <span class="n">client</span><span class="p">;</span>
 <span class="n">IMobileServiceTable</span><span class="p">&lt;</span><span class="n">ToDoItem</span><span class="p">&gt;</span> <span class="n">todoTable</span><span class="p">;</span>
 
 <span class="cm">/**省略*/</span>
 
 <span class="nf">QSTodoService</span> <span class="p">()</span>
 <span class="p">{</span>
-    <span class="n">CurrentPlatform</span><span class="p">.</span><span class="nf">Init</span> <span class="p">();</span>
+	<span class="n">CurrentPlatform</span><span class="p">.</span><span class="nf">Init</span> <span class="p">();</span>
 
-    <span class="c1">// Initialize the Mobile Service client with your URL and key
-</span>    <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MobileServiceClient</span> <span class="p">(</span><span class="n">applicationURL</span><span class="p">,</span> <span class="n">applicationKey</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+	<span class="c1">// Initialize the Mobile Service client with your URL and key
+</span>	<span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MobileServiceClient</span> <span class="p">(</span><span class="n">applicationURL</span><span class="p">,</span> <span class="n">applicationKey</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
 
-    <span class="c1">// Create an MSTable instance to allow us to work with the TodoItem table
-</span>    <span class="n">todoTable</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetTable</span> <span class="p">&lt;</span><span class="n">ToDoItem</span><span class="p">&gt;</span> <span class="p">();</span>
+	<span class="c1">// Create an MSTable instance to allow us to work with the TodoItem table
+</span>	<span class="n">todoTable</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetTable</span> <span class="p">&lt;</span><span class="n">ToDoItem</span><span class="p">&gt;</span> <span class="p">();</span>
 <span class="p">}</span>
-</code></pre></div>
-<p>データの読み込みは、<code>RefreshDataAsync</code> にて。さりげなく async で。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ToDoItem</span><span class="p">&gt;</span> <span class="n">Items</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;}</span>
+</code></pre>
+</div>
+
+<p>データの読み込みは、<code class="highlighter-rouge">RefreshDataAsync</code> にて。さりげなく async で。</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ToDoItem</span><span class="p">&gt;</span> <span class="n">Items</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;}</span>
 
 <span class="k">async</span> <span class="k">public</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">ToDoItem</span><span class="p">&gt;&gt;</span> <span class="nf">RefreshDataAsync</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-        <span class="c1">// This code refreshes the entries in the list view by querying the TodoItems table.
-</span>        <span class="c1">// The query excludes completed TodoItems
-</span>        <span class="n">Items</span> <span class="p">=</span> <span class="k">await</span> <span class="n">todoTable</span>
-            <span class="p">.</span><span class="nf">Where</span> <span class="p">(</span><span class="n">todoItem</span> <span class="p">=&gt;</span> <span class="n">todoItem</span><span class="p">.</span><span class="n">Complete</span> <span class="p">==</span> <span class="k">false</span><span class="p">).</span><span class="nf">ToListAsync</span> <span class="p">();</span>
+	<span class="k">try</span> <span class="p">{</span>
+		<span class="c1">// This code refreshes the entries in the list view by querying the TodoItems table.
+</span>		<span class="c1">// The query excludes completed TodoItems
+</span>		<span class="n">Items</span> <span class="p">=</span> <span class="k">await</span> <span class="n">todoTable</span>
+			<span class="p">.</span><span class="nf">Where</span> <span class="p">(</span><span class="n">todoItem</span> <span class="p">=&gt;</span> <span class="n">todoItem</span><span class="p">.</span><span class="n">Complete</span> <span class="p">==</span> <span class="k">false</span><span class="p">).</span><span class="nf">ToListAsync</span> <span class="p">();</span>
 
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">MobileServiceInvalidOperationException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Console</span><span class="p">.</span><span class="n">Error</span><span class="p">.</span><span class="nf">WriteLine</span> <span class="p">(</span><span class="s">@"ERROR {0}"</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
-        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
-    <span class="p">}</span>
+	<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">MobileServiceInvalidOperationException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">Console</span><span class="p">.</span><span class="n">Error</span><span class="p">.</span><span class="nf">WriteLine</span> <span class="p">(</span><span class="s">@"ERROR {0}"</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+		<span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+	<span class="p">}</span>
 
-    <span class="k">return</span> <span class="n">Items</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">Items</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>今回はこんなところで。</p>
 
 <p>次回は、 Azure モバイルサービスの続きで、このサンプルに認証周りの機能を実装してみます。</p>

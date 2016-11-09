@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin.Forms、Android での BACK キーの制御</title>
-  <meta name="description" content="Xamarin.Forms でどうにかしたい iOS と Android の違い の「BACKキーの制御」の 現時点(1.1.0.6201) での回答。&lt;!--more--&gt;">
+  <meta name="description" content="Xamarin.Forms でどうにかしたい iOS と Android の違い の「BACKキーの制御」の 現時点(1.1.0.6201) での回答。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/06/17/hooking-back-key-in-xamarin-forms/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin.Forms、Android での BACK キーの制御",
   "datePublished": "2014-06-17T01:00:00+09:00",
   "dateModified": "2014-06-17T01:00:00+09:00",
-  "description": "Xamarin.Forms でどうにかしたい iOS と Android の違い の「BACKキーの制御」の 現時点(1.1.0.6201) での回答。&lt;!--more--&gt;",
+  "description": "Xamarin.Forms でどうにかしたい iOS と Android の違い の「BACKキーの制御」の 現時点(1.1.0.6201) での回答。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,107 +621,109 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p><a href="http://qiita.com/amay077/items/12979585ac3e2dcacacb">Xamarin.Forms でどうにかしたい iOS と Android の違い</a> の「BACKキーの制御」の <strong>現時点(1.1.0.6201)</strong> での回答。<br>
-&lt;!--more--&gt;</p>
+      <p><a href="http://qiita.com/amay077/items/12979585ac3e2dcacacb">Xamarin.Forms でどうにかしたい iOS と Android の違い</a> の「BACKキーの制御」の <strong>現時点(1.1.0.6201)</strong> での回答。<br />
+<!--more--></p>
 
 <p>Android の BACKキーの制御を、Xamarin.Forms ではどう扱えるかを調べた。</p>
 
-<h2>シナリオ</h2>
+<h2 id="section">シナリオ</h2>
 
 <p>Xamarin.Forms による画面１(MainPage)、２(SecondPage)があり、MainPage では BACKキーで戻る(=アプリ終了)事ができるが、SecondPage ではBACKキーが効かない、ようにしたい。</p>
 
-<h2>対策</h2>
+<h2 id="section-1">対策</h2>
 
 <p>まず画面１と２はこんな感じ。ボタンを押したら画面２へ遷移するだけ。</p>
 
-<p>```csharp Pages.cs<br>
-// 画面１<br>
-public class MainPage : ContentPage<br>
-{<br>
-    public MainPage() <br>
-    {<br>
-        var button = new Button<br>
-        {<br>
-            Text = &quot;To Second&quot;,<br>
-            VerticalOptions = LayoutOptions.Center,<br>
+<p>```csharp Pages.cs<br />
+// 画面１<br />
+public class MainPage : ContentPage<br />
+{<br />
+    public MainPage() <br />
+    {<br />
+        var button = new Button<br />
+        {<br />
+            Text = “To Second”,<br />
+            VerticalOptions = LayoutOptions.Center,<br />
         };</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    button.Clicked += (sender, e) =&gt; 
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    button.Clicked += (sender, e) =&gt; 
     {
         this.Navigation.PushAsync(new SecondPage());
     };
 
     Content = button;
-}
-</code></pre></div>
-<p>}</p>
+} }
+</code></pre>
+</div>
 
-<p>// 画面２<br>
-public class SecondPage : ContentPage<br>
-{<br>
-    public SecondPage()<br>
-    {<br>
-        Content = new Label<br>
-        {<br>
-            Text = &quot;Second&quot;<br>
-        };<br>
-    }<br>
-}<br>
-```</p>
+<p>// 画面２<br />
+public class SecondPage : ContentPage<br />
+{<br />
+    public SecondPage()<br />
+    {<br />
+        Content = new Label<br />
+        {<br />
+            Text = “Second”<br />
+        };<br />
+    }<br />
+}</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+ここからが本題。
+まず Android側のエントリポイントである ``MainActivity.cs`` は以下のように、``ContentPage`` プロパティを設ける。そして ``OnBackPressed`` メソッドを override して、MainPage だったら OnBackPressed を親へ伝搬する。
 
-<p>ここからが本題。<br>
-まず Android側のエントリポイントである <code>MainActivity.cs</code> は以下のように、<code>ContentPage</code> プロパティを設ける。そして <code>OnBackPressed</code> メソッドを override して、MainPage だったら OnBackPressed を親へ伝搬する。</p>
-
-<p>```csharp MainActivity.cs<br>
-[Activity(Label = &quot;ScrollTest.Android.Android&quot;, MainLauncher = true)]<br>
-public class MainActivity : AndroidActivity<br>
-{<br>
-    protected override void OnCreate(Bundle bundle)<br>
-    {<br>
-        base.OnCreate(bundle);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">    Xamarin.Forms.Forms.Init(this, bundle);
-
-    SetPage(new NavigationPage(new MainPage()));
-}
-
-internal Page ContentPage
+```csharp MainActivity.cs
+[Activity(Label = "ScrollTest.Android.Android", MainLauncher = true)]
+public class MainActivity : AndroidActivity
 {
-    get;
-    set;
-}
-
-public override void OnBackPressed()
-{
-    if (this.ContentPage is MainPage)
+    protected override void OnCreate(Bundle bundle)
     {
-        base.OnBackPressed();
+        base.OnCreate(bundle);
+
+        Xamarin.Forms.Forms.Init(this, bundle);
+
+        SetPage(new NavigationPage(new MainPage()));
+    }
+
+    internal Page ContentPage
+    {
+        get;
+        set;
+    }
+
+    public override void OnBackPressed()
+    {
+        if (this.ContentPage is MainPage)
+        {
+            base.OnBackPressed();
+        }
     }
 }
-</code></pre></div>
-<p>}<br>
-```</p>
+</code></pre>
+</div>
 
-<p>次に、MainActivity.ContentPage への設定を行うコードは以下の通り。<br>
+<p>次に、MainActivity.ContentPage への設定を行うコードは以下の通り。<br />
 PageRenderer を拡張して ExportRenderer することで、すべての Page にフックをかけ、Page の表示時に MainActivity.ContentPage に設定する。</p>
 
-<p>```csharp MyPageRenderer.cs<br>
-using System;<br>
-using Xamarin.Forms.Platform.Android;<br>
-using Android.App;<br>
-using Xamarin.Forms;<br>
-using ScrollTest.Android;<br>
-using Android.Views;<br>
+<p>```csharp MyPageRenderer.cs<br />
+using System;<br />
+using Xamarin.Forms.Platform.Android;<br />
+using Android.App;<br />
+using Xamarin.Forms;<br />
+using ScrollTest.Android;<br />
+using Android.Views;<br />
 using Android.Graphics;</p>
 
 <p>[assembly:ExportRenderer(typeof(ContentPage), typeof(MyPageRenderer))]</p>
 
-<p>namespace ScrollTest.Android<br>
-{<br>
-    public class MyPageRenderer : PageRenderer<br>
-    {<br>
-        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page> e)<br>
-        {<br>
-            base.OnElementChanged(e);</p>
-<div class="highlight"><pre><code class="language-" data-lang="">        // なんとなく不安なので weak にしてみた
+<p>namespace ScrollTest.Android<br />
+{<br />
+    public class MyPageRenderer : PageRenderer<br />
+    {<br />
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page> e)
+        {
+            base.OnElementChanged(e);</Xamarin.Forms.Page></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>        // なんとなく不安なので weak にしてみた
         var activity = new WeakReference&lt;MainActivity&gt;(this.Context as MainActivity);
 
         e.NewElement.Appearing += (_, __) =&gt;
@@ -864,24 +734,24 @@ using Android.Graphics;</p>
             }
         };
     }
-}
-</code></pre></div>
-<p>}<br>
-```</p>
+} } ```
+</code></pre>
+</div>
 
 <p>これで、画面１(MainPage)の時だけ BACKキーが効くようにできる。</p>
 
-<h3><code>Appearing</code> イベントが必要なの？</h3>
+<h3 id="appearing-"><code class="highlighter-rouge">Appearing</code> イベントが必要なの？</h3>
 
-<p>　Xamarin.Forms の Android実装では、画面遷移の度に <strong>「同じインスタンスの MainActivity」</strong> が使いまわされる、さらに <code>OnElementChanged</code> は、各Pageにつき１度しか発生しない。その為、画面１→２→１と遷移すると <code>MainActivity.ContentPage</code> は <code>SecondPage</code> のままになってしまう。ので <code>Appearing</code> イベントで表示の度に MainActivity.ContentPage を設定する必要がある。</p>
+<p>　Xamarin.Forms の Android実装では、画面遷移の度に <strong>「同じインスタンスの MainActivity」</strong> が使いまわされる、さらに <code class="highlighter-rouge">OnElementChanged</code> は、各Pageにつき１度しか発生しない。その為、画面１→２→１と遷移すると <code class="highlighter-rouge">MainActivity.ContentPage</code> は <code class="highlighter-rouge">SecondPage</code> のままになってしまう。ので <code class="highlighter-rouge">Appearing</code> イベントで表示の度に MainActivity.ContentPage を設定する必要がある。</p>
 
-<h3><code>AndroidActivity</code> に static な <code>BackPressed</code> イベントがあるんだけど…</h3>
+<h3 id="androidactivity--static--backpressed-"><code class="highlighter-rouge">AndroidActivity</code> に static な <code class="highlighter-rouge">BackPressed</code> イベントがあるんだけど…</h3>
 
-<p>イベントハンドラの定義は <br>
-<code>public delegate bool BackButtonPressedEventHandler(object sender, EventArgs e);</code><br>
-となっていて、<code>true</code> を返すと BACK キーを無効にできるようなのだけど、<code>sender</code> は <code>MainActivity</code>だし、<code>EventArgs</code> は Page を取得できないしで使えないじゃん。。。</p>
+<p>イベントハンドラの定義は <br />
+<code class="highlighter-rouge">public delegate bool BackButtonPressedEventHandler(object sender, EventArgs e);</code><br />
+となっていて、<code class="highlighter-rouge">true</code> を返すと BACK キーを無効にできるようなのだけど、<code class="highlighter-rouge">sender</code> は <code class="highlighter-rouge">MainActivity</code>だし、<code class="highlighter-rouge">EventArgs</code> は Page を取得できないしで使えないじゃん。。。</p>
 
 <p>なんだかすごく発展途上な気がする、その内いろいろ整備されそうなので、それまで待った方が良い気がします。。。</p>
+
 
     </section>
     <footer class="post-footer">

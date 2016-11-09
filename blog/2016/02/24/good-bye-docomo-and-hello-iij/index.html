@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>docomo から MNP で IIJ mio に移行した</title>
-  <meta name="description" content="　今月、スマートフォンを docomo から解約し、MNP で IIJ mio（BIC SIM） に移行した。&lt;!--more--&gt;">
+  <meta name="description" content="　今月、スマートフォンを docomo から解約し、MNP で IIJ mio（BIC SIM） に移行した。">
 
   <link rel="canonical" href="http://localhost:4000/blog/2016/02/24/good-bye-docomo-and-hello-iij/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "docomo から MNP で IIJ mio に移行した",
   "datePublished": "2016-02-24T00:40:46+09:00",
   "dateModified": "2016-02-24T00:40:46+09:00",
-  "description": "　今月、スマートフォンを docomo から解約し、MNP で IIJ mio（BIC SIM） に移行した。&lt;!--more--&gt;",
+  "description": "　今月、スマートフォンを docomo から解約し、MNP で IIJ mio（BIC SIM） に移行した。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,8 +621,8 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>　今月、スマートフォンを docomo から解約し、MNP で IIJ mio（BIC SIM） に移行した。<br>
-&lt;!--more--&gt;</p>
+      <p>　今月、スマートフォンを docomo から解約し、MNP で IIJ mio（BIC SIM） に移行した。<br />
+<!--more--></p>
 
 <p>　docomo の端末は、2年前のお正月に EDION で、当時新機種だった Xperia Z1f の一括0円セールをやっていたので飛びついたもの。それまでは au を使っていたけど、月々のコストが高いので脱庭を考えていた。その時 <a href="http://blog.amay077.net/blog/2013/08/28/au-vs-ipphone-with-mvno/">MVNO に移行しようか考えたこともあった</a> けど、当時は au 回線のMVNOに選択肢はなかったので、docomo を2年間踏み台にして、MVNO にしようと思っていた(SOFTBANK はすでに眼中になかった)。今回それを実行したことになる。</p>
 
@@ -764,7 +632,7 @@ img {
 
 <p>　MNP する直前の数ヶ月で、ちょっとした気づきがあったので、書いておこうと思う。</p>
 
-<h2>キャリアの端末補償サービスを利用したら Xperia Z1f が Xperia Z3 compact になった！</h2>
+<h2 id="xperia-z1f--xperia-z3-compact-">キャリアの端末補償サービスを利用したら Xperia Z1f が Xperia Z3 compact になった！</h2>
 
 <p>　docomo の <a href="https://www.nttdocomo.co.jp/support/trouble/delivery/hoshyo_02/index.html">ケータイ補償サービス</a> というのに加入していると、月々500円(2年総額12,000円)で、端末故障時には5,000円(今は7,500円らしい)で、リフレッシュ品とやらに交換してくれる。</p>
 
@@ -778,21 +646,21 @@ img {
 
 <p>　「交換機がなくて上位機種に代替」というケースは稀だと思うが、そうでなくても前述の通り、ケータイ補償サービスの利用審査? はゆるいっぽいので、利用しないと損なのではないかと思う。</p>
 
-<h2>契約更新月が実質25か月目だった罠</h2>
+<h2 id="section">契約更新月が実質25か月目だった罠</h2>
 
 <p>　docomo の契約はいわゆる「2年縛り」。契約日が1月3日だったので、2年後の1月4日だったらMNP可能かと思ったら違った。</p>
 
 <p><a href="https://www.nttdocomo.co.jp/charge/data_xi/data_plan_ninen/notice/">docomo のサイト</a> より引用</p>
 
 <blockquote>
-<p>契約期間は2年間（24か月）とし、 <strong>お申込み当日から翌月末日</strong> まで（ただし、お申込みが1日の場合は、当月末日まで）を1か月目とします。</p>
+  <p>契約期間は2年間（24か月）とし、 <strong>お申込み当日から翌月末日</strong> まで（ただし、お申込みが1日の場合は、当月末日まで）を1か月目とします。</p>
 </blockquote>
 
 <p>　「お申込み当日から翌月末日を1か月目とします」というのがクセもので、1月3日の契約の場合、2月が1ヶ月目になる。そこから24ヶ月、2年後の1月末日が契約最終日となり、2月が更新可能月となる。1月3日に契約した身としてはほとんど <strong>「2年縛り＝25ヶ月縛り」</strong> だった。</p>
 
 <p>　しかも、月々サポートは上記のようなことはなく、契約日の月を1ヶ月目として処理されていく。なので、 <strong>「25ヶ月縛りの最終月は月々サポートが効かない(終了している) ので、それまでより高い利用料を請求される」</strong> ことになる。なんか損した気分だった。</p>
 
-<h2>IIJ mio （というか BIC SIM）を選んだ理由</h2>
+<h2 id="iij-mio--bic-sim">IIJ mio （というか BIC SIM）を選んだ理由</h2>
 
 <p>　最近は MVNO でググっても、アフィ目的の比較サイトばかりで、有用な情報がなかなか得られなくなってしまった感がある。</p>
 
@@ -800,32 +668,32 @@ img {
 
 <p>　プランも、おそらく大多数の人が利用しているであろう「音声通話付きSIM 3GB 1,600円/月」。 docomo でも月々のデータ使用量は2GB未満だった（何せ在宅勤務で家から出ないので）。</p>
 
-<h2>MNP 後に行ったこと</h2>
+<h2 id="mnp-">MNP 後に行ったこと</h2>
 
-<h3>テザリングの有効化</h3>
+<h3 id="section-1">テザリングの有効化</h3>
 
 <p>　悪しき docomo の亡霊さんは、 すでに知られている方法でお祓いした。一応、 Android アプリ開発者なので。</p>
 
 <ul>
-<li><a href="http://app-roid.com/blog-entry-1498.html">ドコモ版XPERIA Z3（SO-01G）でMVNOのIIJmioでテザリングを有効化させる手順 Approid大好き</a></li>
+  <li><a href="http://app-roid.com/blog-entry-1498.html">ドコモ版XPERIA Z3（SO-01G）でMVNOのIIJmioでテザリングを有効化させる手順 Approid大好き</a></li>
 </ul>
 
-<h3>docomo プリインアプリを無効化</h3>
+<h3 id="docomo-">docomo プリインアプリを無効化</h3>
 
 <p>　電話帳やら、メールやら、オートGPSとか。root取らないと消せないので「無効」状態に。なんか電池持ちが良くなった気がする？</p>
 
-<h3>みおぽん アプリ</h3>
+<h3 id="section-2">みおぽん アプリ</h3>
 
 <p>　高速通信を ON/OFF できるのは良い。試しに OFF 状態で Google Play Music をストリーミング再生してみたが、切れることなく再生できた。常用OFFでもそんなに困らないのではないか説。</p>
 
-<h2>MVNO向け端末補償サービスを検討中</h2>
+<h2 id="mvno">MVNO向け端末補償サービスを検討中</h2>
 
 <p>　前出のとおり、うまく Xperia Z3 compact を入手できたわけだが、キャリアの補償サービスのようなものは MVNO では、MVNOが販売する端末を買わない限り期待できない。</p>
 
 <p>　中古のスマホでも補償してくれるサービスがいくつかあるので、それらを検討しているところ。私は割と安心を求めるタイプらしい。検討中の中で最有力なのがこれ:</p>
 
 <ul>
-<li><a href="http://www.next-bb.com/terminal/">NEXT BB 端末補償サービス</a></li>
+  <li><a href="http://www.next-bb.com/terminal/">NEXT BB 端末補償サービス</a></li>
 </ul>
 
 <p>　月々600円と他サービスより高いが、「盗難」「紛失」も補償対象なのがポイント。キャリアの補償サービスに近い内容なのはこれくらいしかない。</p>

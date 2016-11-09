@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Xamarin に Reactive Extensions を導入する</title>
-  <meta name="description" content="昨日の ポスト を使ったのに、肝心の導入部分を説明するのを忘れていました。まあ Components から追加するだけなのですが。他のアドベントカレンダーとの掛け持ちで疲れたので、今日は軽く書いて済ませます。&lt;!--more--&gt;Reactive Extensions を導入する">
+  <meta name="description" content="昨日の ポスト を使ったのに、肝心の導入部分を説明するのを忘れていました。まあ Components から追加するだけなのですが。他のアドベントカレンダーとの掛け持ちで疲れたので、今日は軽く書いて済ませます。Reactive Extensions を導入する">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/12/12/installing-rx-in-xamarin/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "Xamarin に Reactive Extensions を導入する",
   "datePublished": "2013-12-12T00:00:00+09:00",
   "dateModified": "2013-12-12T00:00:00+09:00",
-  "description": "昨日の ポスト を使ったのに、肝心の導入部分を説明するのを忘れていました。まあ Components から追加するだけなのですが。他のアドベントカレンダーとの掛け持ちで疲れたので、今日は軽く書いて済ませます。&lt;!--more--&gt;Reactive Extensions を導入する",
+  "description": "昨日の ポスト を使ったのに、肝心の導入部分を説明するのを忘れていました。まあ Components から追加するだけなのですが。他のアドベントカレンダーとの掛け持ちで疲れたので、今日は軽く書いて済ませます。Reactive Extensions を導入する",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,78 +621,77 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>昨日の <a href="http://qiita.com/amay077/items/49681b2de5d8cf208112">ポスト</a> を使ったのに、肝心の導入部分を説明するのを忘れていました。まあ Components から追加するだけなのですが。他のアドベントカレンダーとの掛け持ちで疲れたので、今日は軽く書いて済ませます。<br>
-&lt;!--more--&gt;</p>
-
-<h2>Reactive Extensions を導入する</h2>
+      <p>昨日の <a href="http://qiita.com/amay077/items/49681b2de5d8cf208112">ポスト</a> を使ったのに、肝心の導入部分を説明するのを忘れていました。まあ Components から追加するだけなのですが。他のアドベントカレンダーとの掛け持ちで疲れたので、今日は軽く書いて済ませます。<br />
+<!--more--></p>
+<h2 id="reactive-extensions-">Reactive Extensions を導入する</h2>
 
 <p>Components で右クリック → Get more components → Reactive とかで検索 → 見つけたら Add to App で OK です。あ、この手順は .iOS でも .Android でも同じです。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/install_rx_to_xamarin_ios_01.gif" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/install_rx_to_xamarin_ios_01.gif" alt="" /></p>
 
-<h2>使ってみましょうか</h2>
+<h2 id="section">使ってみましょうか</h2>
 
 <p>イベントを Stream に変換する例を示してお茶を濁します。</p>
 
 <p>まずこんな感じのどうでもいい画面を用意しまして、</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/install_rx_to_xamarin_ios_02.png" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/install_rx_to_xamarin_ios_02.png" alt="" /></p>
 
-<p><code>UIButton.TouchUpInside</code> を <code>IObservable</code> に変換する拡張メソッドを用意します。</p>
+<p><code class="highlighter-rouge">UIButton.TouchUpInside</code> を <code class="highlighter-rouge">IObservable</code> に変換する拡張メソッドを用意します。</p>
 
-<p><code>csharp UIButtonExtensions.cs<br>
-public static class UIButtonExtensions<br>
-{<br>
-    public static IObservable&lt;string&gt; ClickAsObservable(this UIButton button)<br>
-    {<br>
-        return Observable.FromEventPattern&lt;EventArgs&gt;(button, &quot;TouchUpInside&quot;)<br>
-                .Select(e =&gt; ((UIButton)e.Sender).TitleLabel.Text);<br>
-    }<br>
-}<br>
-</code></p>
+<p>```csharp UIButtonExtensions.cs<br />
+public static class UIButtonExtensions<br />
+{<br />
+    public static IObservable<string> ClickAsObservable(this UIButton button)
+    {
+        return Observable.FromEventPattern<EventArgs>(button, "TouchUpInside")
+                .Select(e =&gt; ((UIButton)e.Sender).TitleLabel.Text);
+    }
+}</EventArgs></string></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+で、こんなコードを書きます。
 
-<p>で、こんなコードを書きます。</p>
+```csharp MainViewController_amb.cs
+public override void ViewDidLoad()
+{
+    base.ViewDidLoad();
 
-<p>```csharp MainViewController_amb.cs<br>
-public override void ViewDidLoad()<br>
-{<br>
-    base.ViewDidLoad();</p>
-<div class="highlight"><pre><code class="language-" data-lang="">Button1.ClickAsObservable()
-    .Publish(_ =&gt; 
-        Button2.ClickAsObservable()
-        .Amb(
-            Button3.ClickAsObservable()))
-    .Subscribe(btnName =&gt; InvokeOnMainThread(() =&gt; 
-        Label1.Text = btnName + " Clicked"));
-</code></pre></div>
-<p>}<br>
-```</p>
+    Button1.ClickAsObservable()
+        .Publish(_ =&gt; 
+            Button2.ClickAsObservable()
+            .Amb(
+                Button3.ClickAsObservable()))
+        .Subscribe(btnName =&gt; InvokeOnMainThread(() =&gt; 
+            Label1.Text = btnName + " Clicked"));
+}
+</code></pre>
+</div>
 
-<h3>Observable.Amb (先にきた値を流す)</h3>
+<h3 id="observableamb-">Observable.Amb (先にきた値を流す)</h3>
 
-<p>Button1 を押すと処理の開始です。<br>
+<p>Button1 を押すと処理の開始です。<br />
 Publish で分配して <strong>Amb</strong> は Button2 のクリックと Button3 のクリックで先に行われた方を Label1 に表示します。</p>
 
-<h3>Observable.Zip (どちらの値も待つ)</h3>
+<h3 id="observablezip-">Observable.Zip (どちらの値も待つ)</h3>
 
 <p>Amb を Zip に変えてみます。</p>
 
-<p><code>csharp MainViewController_zip.cs<br>
-    Button1.ClickAsObservable()<br>
-        .Publish(_ =&gt; <br>
-            Button2.ClickAsObservable()<br>
-            .Zip(<br>
-                Button3.ClickAsObservable(), (l,r) =&gt; new {l, r}))<br>
-        .Subscribe(p =&gt; InvokeOnMainThread(() =&gt; <br>
-            Label1.Text = p.l + &quot; and &quot; + p.r + &quot;Clicked&quot;));<br>
+<p><code class="highlighter-rouge">csharp MainViewController_zip.cs
+    Button1.ClickAsObservable()
+        .Publish(_ =&gt; 
+            Button2.ClickAsObservable()
+            .Zip(
+                Button3.ClickAsObservable(), (l,r) =&gt; new {l, r}))
+        .Subscribe(p =&gt; InvokeOnMainThread(() =&gt; 
+            Label1.Text = p.l + " and " + p.r + "Clicked"));
 </code></p>
 
-<p>Zip は2つのシーケンスの結果を待ってから後続へ流します。<br>
+<p>Zip は2つのシーケンスの結果を待ってから後続へ流します。<br />
 なので、Button2 と Button3 の両方が押されると、Label1 に表示されます。</p>
 
 <p>どちらもフツーに書くとフラグ変数なんか使って実現すると思うんですけど、Rx を使うと読みやすいコードになると思います。</p>
 
-<p>あと、私は Android-Java の開発では <a href="https://code.google.com/p/reactive4java/">reactive4Java</a> を使ってるんですが、あれには <code>Observable.FromEventPattern</code> が無い(Java のイベントの Listener はイベントのマルチキャストに対応してないから仕方ない)ので、Xamarin にすることで「完全な」Rx を使うことができて、こりゃ勉強のしがいがあるなあと思ったのでした。</p>
+<p>あと、私は Android-Java の開発では <a href="https://code.google.com/p/reactive4java/">reactive4Java</a> を使ってるんですが、あれには <code class="highlighter-rouge">Observable.FromEventPattern</code> が無い(Java のイベントの Listener はイベントのマルチキャストに対応してないから仕方ない)ので、Xamarin にすることで「完全な」Rx を使うことができて、こりゃ勉強のしがいがあるなあと思ったのでした。</p>
 
 <p>何の記事でしたっけ？という感じですけど Xamarin なら Linq も Rx も使えてハッピーという事で、今日は以上です。</p>
 

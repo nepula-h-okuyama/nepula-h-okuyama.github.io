@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -755,34 +623,38 @@ img {
       <a name="topofpage"></a>
       <p>　これは <a href="http://qiita.com/advent-calendar/2014/xamarin">Xamarin Advent Calendar 2014 23日目</a> の記事です。</p>
 
-<p>　なんか空いてたのでエントリーしましたが、急だったので軽い話です。<br>
-&lt;!--more--&gt;</p>
+<p>　なんか空いてたのでエントリーしましたが、急だったので軽い話です。<br />
+<!--more--></p>
 
 <ul>
-<li><a href="http://qiita.com/amay077/items/56abeeaa188f33cd56de">iOS アプリでアラート出してボタンが押されるまで待つ？方法を Objective-C と Xamarin.iOS で比べてみた - Qiita</a></li>
+  <li><a href="http://qiita.com/amay077/items/56abeeaa188f33cd56de">iOS アプリでアラート出してボタンが押されるまで待つ？方法を Objective-C と Xamarin.iOS で比べてみた - Qiita</a></li>
 </ul>
 
 <p>の焼き直しみたいなものです。</p>
 
-<p>　iOS8 では、<code>UIAlertDialog</code> が非推奨になり、代わりに <code>UIAlertController</code> を使えとのこと。</p>
+<p>　iOS8 では、<code class="highlighter-rouge">UIAlertDialog</code> が非推奨になり、代わりに <code class="highlighter-rouge">UIAlertController</code> を使えとのこと。</p>
 
 <p>　普通に使うとこうなります。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
 <span class="p">{</span>
     <span class="kt">var</span> <span class="n">alert</span> <span class="p">=</span> <span class="n">UIAlertController</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="s">""</span><span class="p">,</span> <span class="s">"こんぼう をすてますか？"</span><span class="p">,</span> <span class="n">UIAlertControllerStyle</span><span class="p">.</span><span class="n">Alert</span><span class="p">);</span>
     <span class="n">alert</span><span class="p">.</span><span class="nf">AddAction</span><span class="p">(</span><span class="n">UIAlertAction</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="s">"はい"</span><span class="p">,</span> 
         <span class="n">UIAlertActionStyle</span><span class="p">.</span><span class="n">Default</span><span class="p">,</span> <span class="n">x</span><span class="p">=&gt;</span> <span class="n">label1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">"こんぼう をすてました"</span><span class="p">));</span> 
     <span class="n">alert</span><span class="p">.</span><span class="nf">AddAction</span><span class="p">(</span><span class="n">UIAlertAction</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="s">"いいえ"</span><span class="p">,</span>  
         <span class="n">UIAlertActionStyle</span><span class="p">.</span><span class="n">Default</span><span class="p">,</span> <span class="n">x</span><span class="p">=&gt;</span> <span class="p">{}));</span> 
-
+     
     <span class="k">this</span><span class="p">.</span><span class="nf">PresentViewController</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="k">null</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>　このくらいなら問題ありません。</p>
 
-<p>　次に、こんぼう をすてる前にもう一度問いかけるようにします。<br>
-２つ目の <code>UIAlertController</code> が入れ子になってしまって見づらい、 <strong>残念な感じ</strong> です。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+<p>　次に、こんぼう をすてる前にもう一度問いかけるようにします。<br />
+２つ目の <code class="highlighter-rouge">UIAlertController</code> が入れ子になってしまって見づらい、 <strong>残念な感じ</strong> です。</p>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
 <span class="p">{</span>
     <span class="kt">var</span> <span class="n">alert</span> <span class="p">=</span> <span class="n">UIAlertController</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="s">""</span><span class="p">,</span> <span class="s">"こんぼう をすてますか？"</span><span class="p">,</span> <span class="n">UIAlertControllerStyle</span><span class="p">.</span><span class="n">Alert</span><span class="p">);</span>
     <span class="n">alert</span><span class="p">.</span><span class="nf">AddAction</span><span class="p">(</span><span class="n">UIAlertAction</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="s">"はい"</span><span class="p">,</span> 
@@ -805,11 +677,14 @@ img {
 
     <span class="k">this</span><span class="p">.</span><span class="nf">PresentViewController</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="k">null</span><span class="p">);</span>
 <span class="p">};</span>
-</code></pre></div>
-<p>　Objective-C や Swift なら、ここで打つ手は今のところ無いでしょう。<br>
-しかし <strong>Xamarin には、C# には async/await がありまぁす！</strong> <br>
+</code></pre>
+</div>
+
+<p>　Objective-C や Swift なら、ここで打つ手は今のところ無いでしょう。<br />
+しかし <strong>Xamarin には、C# には async/await がありまぁす！</strong> <br />
 アラートの表示を async/await（というか Task）対応してみましょう。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nf">ShowDialog</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">,</span> <span class="kt">string</span> <span class="n">button1Title</span><span class="p">,</span> <span class="kt">string</span> <span class="n">button2Title</span><span class="p">)</span>
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">private</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nf">ShowDialog</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">,</span> <span class="kt">string</span> <span class="n">button1Title</span><span class="p">,</span> <span class="kt">string</span> <span class="n">button2Title</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">var</span> <span class="n">comp</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TaskCompletionSource</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
 
@@ -827,11 +702,14 @@ img {
 
     <span class="k">return</span> <span class="n">comp</span><span class="p">.</span><span class="n">Task</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div>
-<p><code>Task&lt;int&gt;</code> を返すメソッド <code>ShowDialog</code> です。<code>UIAlertController</code> のボタンが押されたら <code>SetResult</code> して Task の値を決定します。</p>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">Task&lt;int&gt;</code> を返すメソッド <code class="highlighter-rouge">ShowDialog</code> です。<code class="highlighter-rouge">UIAlertController</code> のボタンが押されたら <code class="highlighter-rouge">SetResult</code> して Task の値を決定します。</p>
 
 <p>　このメソッドを使う方は、こうなります。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="k">await</span> <span class="nf">ShowDialog</span><span class="p">(</span><span class="s">"こんぼう をすてますか？"</span><span class="p">,</span> <span class="s">"はい"</span><span class="p">,</span> <span class="s">"いいえ"</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> 
         <span class="k">return</span><span class="p">;</span>
@@ -841,29 +719,35 @@ img {
 
     <span class="n">label1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">"こんぼう をすてました"</span><span class="p">;</span>
 <span class="p">};</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>なんて見やすいコードになったことでしょう。すばらしい！</p>
 
 <p>入れ子でなく、フラットに書けるので、こんな事もできます。</p>
-<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+
+<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="n">button1</span><span class="p">.</span><span class="n">TouchUpInside</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
 <span class="p">{</span>
     <span class="k">while</span> <span class="p">(</span><span class="k">await</span> <span class="nf">ShowDialog</span><span class="p">(</span><span class="s">"こんぼう をすてますか？"</span><span class="p">,</span> <span class="s">"はい"</span><span class="p">,</span> <span class="s">"いいえ"</span><span class="p">)</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span> 
     <span class="p">{</span>
         <span class="n">label1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">"それをすてるなんてとんでもない！"</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">label1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">"すてるのをやめました"</span><span class="p">;</span>
+	<span class="n">label1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">"すてるのをやめました"</span><span class="p">;</span>
 <span class="p">};</span>
-</code></pre></div>
-<p>こんぼうを捨てるのをあきらめるまで、なんどでも聞いてきます。<br>
+</code></pre>
+</div>
+
+<p>こんぼうを捨てるのをあきらめるまで、なんどでも聞いてきます。<br />
 コールバックスタイルのメソッドでループとか、ベタに書くと頭痛いです。</p>
 
 <p>動かすとこんな感じです。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/uialertcontroller_with_async_await_01.gif" alt=""></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/uialertcontroller_with_async_await_01.gif" alt="" /></p>
 
-<p><code>ShowDialog</code> は拡張メソッドとして作成しておくと、呼び出しに便利かもしれません。<br>
-コールバックスタイルの機能を、Task化するパターンはよく使いそうな気がします。<code>TaskCompletionSource</code>、覚えておきましょう。</p>
+<p><code class="highlighter-rouge">ShowDialog</code> は拡張メソッドとして作成しておくと、呼び出しに便利かもしれません。<br />
+コールバックスタイルの機能を、Task化するパターンはよく使いそうな気がします。<code class="highlighter-rouge">TaskCompletionSource</code>、覚えておきましょう。</p>
+
 
     </section>
     <footer class="post-footer">

@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,24 +621,24 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>ハムスターを飼い始めました（子供が）。<br>
+      <p>ハムスターを飼い始めました（子供が）。<br />
 ２月からかな、初めてです。</p>
 
 <!--more-->
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/started_keep_a_hamster_02.jpg" alt="image02"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/started_keep_a_hamster_02.jpg" alt="image02" /></p>
 
 <p>ジャンガリアンです。</p>
 
 <p>ハムスターはストレスに弱い生き物なのであまり構い過ぎるのはよくない、しかし観たい！というわけで、Webカメラを使ってケージの様子を観察することにしました。</p>
 
 <ul>
-<li><a href="http://com.nicovideo.jp/community/co2173122">伊藤くんのハムスター中継-ニコニコミュニティ</a></li>
+  <li><a href="http://com.nicovideo.jp/community/co2173122">伊藤くんのハムスター中継-ニコニコミュニティ</a></li>
 </ul>
 
 <p>にインスパイアされまして。</p>
 
-<h2>配信先</h2>
+<h2 id="section">配信先</h2>
 
 <p>はじめは家庭内でのみ見られるようにしてたんですが、だんだんと外出先からも観たくなり、オンラインの配信サイトを使うようになりました。</p>
 
@@ -784,7 +652,7 @@ img {
 
 <p>ニコニコ生放送は、30分置きに「枠」を撮り直さないといけないようだったので試していません。</p>
 
-<h2>配信機材</h2>
+<h2 id="section-1">配信機材</h2>
 
 <p>家庭内、UStream を使っていた時は iPad や Surface Pro3 搭載のカメラで配信していました。</p>
 
@@ -793,16 +661,16 @@ img {
 <p>これです、</p>
 
 <ul>
-<li><a href="http://www.amazon.co.jp/Logicool-%E3%83%AD%E3%82%B8%E3%82%AF%E3%83%BC%E3%83%AB-HD-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A0-c920r/dp/B0158F77Z2">Logicool ロジクール HD プロ ウェブカム c920r: パソコン・周辺機器</a></li>
+  <li><a href="http://www.amazon.co.jp/Logicool-%E3%83%AD%E3%82%B8%E3%82%AF%E3%83%BC%E3%83%AB-HD-%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A0-c920r/dp/B0158F77Z2">Logicool ロジクール HD プロ ウェブカム c920r: パソコン・周辺機器</a></li>
 </ul>
 
 <p>PC は Surface Pro 3 を使っています、こんな感じです。</p>
 
-<p><img src="https://pbs.twimg.com/media/CfB5Q5eUIAAtdMM.jpg" alt="image01"></p>
+<p><img src="https://pbs.twimg.com/media/CfB5Q5eUIAAtdMM.jpg" alt="image01" /></p>
 
 <p>Surface Pro 3 をこんな事に使っちゃうなんて、贅沢でしょうか。画質うんぬん言うわりには、通信は無線LANなんですよね（-_-;）</p>
 
-<h2>ソフトウェア</h2>
+<h2 id="section-2">ソフトウェア</h2>
 
 <p>YouTube Live では、 <a href="https://obsproject.com/">Open Broadcast Software</a> （通称OBS）を使っています。</p>
 
@@ -810,15 +678,15 @@ img {
 
 <p>それから配信する映像に「日付と時刻」をオーバーレイさせたかったので、<a href="https://obsproject.com/forum/resources/snaz.96/">Snaz</a> というソフトを使って実現させました。</p>
 
-<h2>こんな感じ</h2>
+<h2 id="section-3">こんな感じ</h2>
 
 <p>今のところこんな感じで配信しています。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/started_keep_a_hamster_01.png" alt="image02"></p>
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/started_keep_a_hamster_01.png" alt="image02" /></p>
 
 <p>アドレスはここでは公開しませんが、適当なキーワードで検索すれば見つかるのでしょう。</p>
 
-<h2>これからやりたい事</h2>
+<h2 id="section-4">これからやりたい事</h2>
 
 <p>前出のとおり、ハムスターは夜行性なので、昼間はエサか水を摂るためにたま（数時間毎）にしか出てきません。それ以外の時間は巣穴で寝ているかくつろいでいます。夜は２時間くらい活発に動いているようです。</p>
 

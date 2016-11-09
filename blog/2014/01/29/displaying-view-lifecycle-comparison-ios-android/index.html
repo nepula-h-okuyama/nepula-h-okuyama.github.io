@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>iOS と Android で画面表示時のコールバックを比較する</title>
-  <meta name="description" content="モバイル開発における画面のライフサイクル、重要ですね。iOS と Android で「ざっくりとは同じでしょ？」などと思っていましたが、調べてみたら結構違ってました。&lt;!--more--&gt;と言うのも、こちら">
+  <meta name="description" content="モバイル開発における画面のライフサイクル、重要ですね。iOS と Android で「ざっくりとは同じでしょ？」などと思っていましたが、調べてみたら結構違ってました。と言うのも、こちら">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/01/29/displaying-view-lifecycle-comparison-ios-android/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "iOS と Android で画面表示時のコールバックを比較する",
   "datePublished": "2014-01-29T15:55:00+09:00",
   "dateModified": "2014-01-29T15:55:00+09:00",
-  "description": "モバイル開発における画面のライフサイクル、重要ですね。iOS と Android で「ざっくりとは同じでしょ？」などと思っていましたが、調べてみたら結構違ってました。&lt;!--more--&gt;と言うのも、こちら",
+  "description": "モバイル開発における画面のライフサイクル、重要ですね。iOS と Android で「ざっくりとは同じでしょ？」などと思っていましたが、調べてみたら結構違ってました。と言うのも、こちら",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,166 +621,188 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>モバイル開発における画面のライフサイクル、重要ですね。<br>
-iOS と Android で「ざっくりとは同じでしょ？」などと思っていましたが、調べてみたら結構違ってました。<br>
-&lt;!--more--&gt;<br>
+      <p>モバイル開発における画面のライフサイクル、重要ですね。<br />
+iOS と Android で「ざっくりとは同じでしょ？」などと思っていましたが、調べてみたら結構違ってました。<br />
+<!--more--><br />
 と言うのも、こちら</p>
 
 <ul>
-<li><a href="http://blog.jarinosuke.com/entry/uiviewcontroller_view_coding_pattern">メモリ管理・レイアウトの観点からみた UIViewController の view の扱い - jarinosuke blog</a></li>
+  <li><a href="http://blog.jarinosuke.com/entry/uiviewcontroller_view_coding_pattern">メモリ管理・レイアウトの観点からみた UIViewController の view の扱い - jarinosuke blog</a></li>
 </ul>
 
 <p>のエントリが大変参考になったので、「Android と比べるとどうか？」と興味が沸いたのです。</p>
 
-<h2>画面が表示される時</h2>
+<h2 id="section">画面が表示される時</h2>
 
-<p>iOS/Android の <code>UIViewController</code>, <code>Activity</code> に備わってるコールバックの、画面表示時での発生順をそれぞれ調べて発生順に並べてみました。同じような意味のコールバックは横に並べて書きました。</p>
+<p>iOS/Android の <code class="highlighter-rouge">UIViewController</code>, <code class="highlighter-rouge">Activity</code> に備わってるコールバックの、画面表示時での発生順をそれぞれ調べて発生順に並べてみました。同じような意味のコールバックは横に並べて書きました。</p>
 
-<table><thead>
-<tr>
-<th>順番</th>
-<th>イベント</th>
-<th>iOS(UIViewController)</th>
-<th>Android(Activity)</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>1</td>
-<td>クラスが生成された時</td>
-<td>init</td>
-<td>ctor(コンストラクタ)</td>
-</tr>
-<tr>
-<td>2</td>
-<td>画面がロードされる前</td>
-<td>loadView</td>
-<td>onCreate</td>
-</tr>
-<tr>
-<td>3</td>
-<td>(画面が再度開始される前)</td>
-<td></td>
-<td>onRestart ※停止状態(onStop)から復帰する時のみ</td>
-</tr>
-<tr>
-<td>4</td>
-<td>画面が開始される前</td>
-<td></td>
-<td>onStart</td>
-</tr>
-<tr>
-<td>5</td>
-<td>画面がロードされた後</td>
-<td>viewDidLoad</td>
-<td>onPostCreate</td>
-</tr>
-<tr>
-<td>6</td>
-<td>画面が表示され始める前</td>
-<td></td>
-<td>onResume ※一時停止(Pause)からの復帰はここから</td>
-</tr>
-<tr>
-<td>7</td>
-<td>画面が表示され始めた後</td>
-<td></td>
-<td>onPostResume</td>
-</tr>
-<tr>
-<td>8</td>
-<td>UIの配置が行われる前</td>
-<td>viewWillLayoutSubviews</td>
-<td></td>
-</tr>
-<tr>
-<td>9</td>
-<td>UIの配置が行われた後</td>
-<td>viewDidLayoutSubviews</td>
-<td></td>
-</tr>
-<tr>
-<td>10</td>
-<td>画面が表示される直前</td>
-<td>viewWillAppear</td>
-<td></td>
-</tr>
-<tr>
-<td>11</td>
-<td>画面が表示された直後</td>
-<td>viewDidAppear</td>
-<td></td>
-</tr>
-<tr>
-<td>12</td>
-<td>画面にフォーカスが移った直後</td>
-<td></td>
-<td>onWindowFocusChanged(true) ※表示される度に呼ばれる</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>順番</th>
+      <th>イベント</th>
+      <th>iOS(UIViewController)</th>
+      <th>Android(Activity)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>クラスが生成された時</td>
+      <td>init</td>
+      <td>ctor(コンストラクタ)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>画面がロードされる前</td>
+      <td>loadView</td>
+      <td>onCreate</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>(画面が再度開始される前)</td>
+      <td> </td>
+      <td>onRestart ※停止状態(onStop)から復帰する時のみ</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>画面が開始される前</td>
+      <td> </td>
+      <td>onStart</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>画面がロードされた後</td>
+      <td>viewDidLoad</td>
+      <td>onPostCreate</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>画面が表示され始める前</td>
+      <td> </td>
+      <td>onResume ※一時停止(Pause)からの復帰はここから</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>画面が表示され始めた後</td>
+      <td> </td>
+      <td>onPostResume</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>UIの配置が行われる前</td>
+      <td>viewWillLayoutSubviews</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>UIの配置が行われた後</td>
+      <td>viewDidLayoutSubviews</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>画面が表示される直前</td>
+      <td>viewWillAppear</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>画面が表示された直後</td>
+      <td>viewDidAppear</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>画面にフォーカスが移った直後</td>
+      <td> </td>
+      <td>onWindowFocusChanged(true) ※表示される度に呼ばれる</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>onCreate は生成前？後？</h3>
+<h3 id="oncreate-">onCreate は生成前？後？</h3>
 
-<p>iOS というか CocoaTouch の命名文化って、will とか did とか、時系列が明確に分かるものが多いので良いですね。<br>
+<p>iOS というか CocoaTouch の命名文化って、will とか did とか、時系列が明確に分かるものが多いので良いですね。<br />
 それに比べて Android は…。 onCreate は前？後？ onPostCreate があるので「前」ですね。</p>
 
-<h3>UIパーツのサイズはいつ決まるのか？</h3>
+<h3 id="ui">UIパーツのサイズはいつ決まるのか？</h3>
 
-<p>iOS の方は 9. <code>viewDidLayoutSubviews</code> の時です。<br>
+<p>iOS の方は 9. <code class="highlighter-rouge">viewDidLayoutSubviews</code> の時です。<br />
 冒頭で紹介したエントリにも以下のように書かれています。</p>
 
 <blockquote>
-<p>self.view の subviews.frame の調整、すなわちレイアウト処理は全てここで記述するべきです。</p>
+  <p>self.view の subviews.frame の調整、すなわちレイアウト処理は全てここで記述するべきです。</p>
 </blockquote>
 
-<p>Android の方は問題です。<br>
-<code>Button</code> などの生成は <code>onCreate</code> で行うのが一般的ですが、この時点では、まだレイアウトされていません。なので大抵の場合 <code>button1.Height = 0</code> です。<br>
-では、いつのタイミングで <code>button1.Height</code> に適切な値が格納されるかと言うと…、 12. <code>onWindowFocusChanged(true)</code> まで待たないといけません。しかもこのコールバックは、Focus が変わる度に呼ばれるので、「最初の１回」だけを取得しようと思ったら別のフラグが必要になります、あーめんどい。</p>
+<p>Android の方は問題です。<br />
+<code class="highlighter-rouge">Button</code> などの生成は <code class="highlighter-rouge">onCreate</code> で行うのが一般的ですが、この時点では、まだレイアウトされていません。なので大抵の場合 <code class="highlighter-rouge">button1.Height = 0</code> です。<br />
+では、いつのタイミングで <code class="highlighter-rouge">button1.Height</code> に適切な値が格納されるかと言うと…、 12. <code class="highlighter-rouge">onWindowFocusChanged(true)</code> まで待たないといけません。しかもこのコールバックは、Focus が変わる度に呼ばれるので、「最初の１回」だけを取得しようと思ったら別のフラグが必要になります、あーめんどい。</p>
 
 <p>続きは</p>
 
 <ul>
-<li><a href="http://stackoverflow.com/questions/4393612/when-can-i-first-measure-a-view">android - When Can I First Measure a View? - Stack Overflow</a></li>
+  <li><a href="http://stackoverflow.com/questions/4393612/when-can-i-first-measure-a-view">android - When Can I First Measure a View? - Stack Overflow</a></li>
 </ul>
 
-<p>で。私は <code>View.post</code> する方法が一番簡単だと思いました。</p>
+<p>で。私は <code class="highlighter-rouge">View.post</code> する方法が一番簡単だと思いました。</p>
 
-<h3>onResume/onPostResume の命名が...</h3>
+<h3 id="onresumeonpostresume-">onResume/onPostResume の命名が…</h3>
 
-<p>「画面が表示され始める前/画面が表示され始めた後」なんて無理やりな名前を付けてしまいました。<br>
-特に <code>onPostResume</code> は無理がありすぎ。<br>
-名前からは <code>viewDidAppear</code> に相当するとも捉えられますが、まだこの時点ではレイアウトが完了していないという、中途半端なタイミングです。何のために使えば良いのでしょう？</p>
+<p>「画面が表示され始める前/画面が表示され始めた後」なんて無理やりな名前を付けてしまいました。<br />
+特に <code class="highlighter-rouge">onPostResume</code> は無理がありすぎ。<br />
+名前からは <code class="highlighter-rouge">viewDidAppear</code> に相当するとも捉えられますが、まだこの時点ではレイアウトが完了していないという、中途半端なタイミングです。何のために使えば良いのでしょう？</p>
 
-<h3>回転したらどうなるの？</h3>
+<h3 id="section-1">回転したらどうなるの？</h3>
 
-<p>iOS の場合は、8.<code>viewWillLayoutSubviews</code> からやり直しです。つまり、ここに適切に縦横対応のレイアウト処理を記述しておけば、<code>didRotateFromInterfaceOrientation</code>など、他のコールバックでの処理は通常必要ないと思います。</p>
+<p>iOS の場合は、8.<code class="highlighter-rouge">viewWillLayoutSubviews</code> からやり直しです。つまり、ここに適切に縦横対応のレイアウト処理を記述しておけば、<code class="highlighter-rouge">didRotateFromInterfaceOrientation</code>など、他のコールバックでの処理は通常必要ないと思います。</p>
 
-<p>Android の場合は、AndroidManifest.xml への設定なしだと、なんと 1.コンストラクタ からやりなおしです。とその前に当然 <code>onDestroy</code> や <code>OnSaveInstanceState</code> が呼ばれるわけですが、、、それはまた別の機会に。</p>
+<p>Android の場合は、AndroidManifest.xml への設定なしだと、なんと 1.コンストラクタ からやりなおしです。とその前に当然 <code class="highlighter-rouge">onDestroy</code> や <code class="highlighter-rouge">OnSaveInstanceState</code> が呼ばれるわけですが、、、それはまた別の機会に。</p>
 
-<h2>まとめっぽいもの</h2>
+<h2 id="section-2">まとめっぽいもの</h2>
 
-<p>iOS プログラミングでは今まで <code>viewDidLoad</code> で、UIパーツを生成してレイアウト処理してるプログラムが多いように思いますが、それは間違いで、「loadView で生成して、viewDidLayoutSubviews でレイアウト」とするのが最も効率的なようです。</p>
+<p>iOS プログラミングでは今まで <code class="highlighter-rouge">viewDidLoad</code> で、UIパーツを生成してレイアウト処理してるプログラムが多いように思いますが、それは間違いで、「loadView で生成して、viewDidLayoutSubviews でレイアウト」とするのが最も効率的なようです。</p>
 
 <p>Android でも、onCreate でレイアウト処理するとハマることがありそうです(<a href="http://qiita.com/amay077/items/070ac1db6b52dd03505f">実際ありました</a>)。ちょっと注意しといた方がよさそうです。</p>
 
 <p>「画面が破棄される時」「メモリが足りなくなった時」「回転した時」とか、書くこと沢山あるんですけど、ありすぎてもうダメです。</p>
 
-<h2>参考</h2>
+<h2 id="section-3">参考</h2>
 
-<h3>iOS</h3>
-
-<ul>
-<li><a href="https://developer.apple.com/library/ios/Documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instm/UIViewController">UIViewController Class Reference</a></li>
-<li><a href="http://blog.jarinosuke.com/entry/uiviewcontroller_view_coding_pattern">メモリ管理・レイアウトの観点からみた UIViewController の view の扱い - jarinosuke blog</a></li>
-<li><a href="https://gist.github.com/shinyaohira/6482235">iOS View Controllerプログラミングガイド</a></li>
-</ul>
-
-<h3>Android</h3>
+<h3 id="ios">iOS</h3>
 
 <ul>
-<li><a href="http://developer.android.com/training/basics/activity-lifecycle/starting.html">Starting an Activity | Android Developers</a></li>
-<li><a href="http://developer.android.com/reference/android/app/Activity.html">Activity | Android Developers</a></li>
-<li><a href="http://qiita.com/amay077/items/070ac1db6b52dd03505f">moveCamera(CameraUpdateFactory.newLatLngBounds(… で落ちる</a></li>
+  <li><a href="https://developer.apple.com/library/ios/Documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instm/UIViewController">UIViewController Class Reference</a></li>
+  <li><a href="http://blog.jarinosuke.com/entry/uiviewcontroller_view_coding_pattern">メモリ管理・レイアウトの観点からみた UIViewController の view の扱い - jarinosuke blog</a></li>
+  <li><a href="https://gist.github.com/shinyaohira/6482235">iOS View Controllerプログラミングガイド</a></li>
 </ul>
+
+<h3 id="android">Android</h3>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Starting an Activity</td>
+          <td>Android Developers](http://developer.android.com/training/basics/activity-lifecycle/starting.html)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Activity</td>
+          <td>Android Developers](http://developer.android.com/reference/android/app/Activity.html)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://qiita.com/amay077/items/070ac1db6b52dd03505f">moveCamera(CameraUpdateFactory.newLatLngBounds(… で落ちる</a></li>
+</ul>
+
 
     </section>
     <footer class="post-footer">

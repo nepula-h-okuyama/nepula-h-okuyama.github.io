@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>AsyncTask を cancel した時の動き【その１】</title>
-  <meta name="description" content="Android 開発でユーザービリティを向上させるのに良く利用する AsyncTask ですが、cancel した時の内部の動作が不明だったので調べまてみました。 知りたいのは、 「cancel を呼び出したら、doInBackgroud で行われている処理はどうなるのか？」 です。&lt;!--more--&g...">
+  <meta name="description" content="Android 開発でユーザービリティを向上させるのに良く利用する AsyncTask ですが、cancel した時の内部の動作が不明だったので調べまてみました。 知りたいのは、 「cancel を呼び出したら、doInBackgroud で行われている処理はどうなるのか？」 です。そこで用意したのが下のプログラ...">
 
   <link rel="canonical" href="http://localhost:4000/blog/2010/11/17/asynctask-cancel-doinbk/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "AsyncTask を cancel した時の動き【その１】",
   "datePublished": "2010-11-17T02:43:00+09:00",
   "dateModified": "2010-11-17T02:43:00+09:00",
-  "description": "Android 開発でユーザービリティを向上させるのに良く利用する AsyncTask ですが、cancel した時の内部の動作が不明だったので調べまてみました。 知りたいのは、 「cancel を呼び出したら、doInBackgroud で行われている処理はどうなるのか？」 です。&lt;!--more--&g...",
+  "description": "Android 開発でユーザービリティを向上させるのに良く利用する AsyncTask ですが、cancel した時の内部の動作が不明だったので調べまてみました。 知りたいのは、 「cancel を呼び出したら、doInBackgroud で行われている処理はどうなるのか？」 です。そこで用意したのが下のプログラ...",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,116 +621,125 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Android 開発でユーザービリティを向上させるのに良く利用する AsyncTask ですが、cancel した時の内部の動作が不明だったので調べまてみました。 知りたいのは、 「cancel を呼び出したら、doInBackgroud で行われている処理はどうなるのか？」 です。<br>
-&lt;!--more--&gt;<br>
+      <p>Android 開発でユーザービリティを向上させるのに良く利用する AsyncTask ですが、cancel した時の内部の動作が不明だったので調べまてみました。 知りたいのは、 「cancel を呼び出したら、doInBackgroud で行われている処理はどうなるのか？」 です。<br />
+<!--more--><br />
 そこで用意したのが下のプログラムです。 これはクラス変数 count を MyTask によって 100 まで加算します。 MyTask のインスタンスを二つ用意し、</p>
 
 <ol>
-<li>タスクAを開始</li>
-<li>５秒待つ</li>
-<li>タスクAをキャンセル</li>
-<li>タスクBを開始</li>
+  <li>タスクAを開始</li>
+  <li>５秒待つ</li>
+  <li>タスクAをキャンセル</li>
+  <li>タスクBを開始</li>
 </ol>
 
 <p>という処理をしています。 タスク A と B で count は共有しています。</p>
 
 <p>AsyncTask のテストプログラム１</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AsyncTestActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">MyTask</span> <span class="n">task</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">main</span><span class="o">);</span>
+<p>```java<br />
+public class AsyncTestActivity extends Activity {<br />
+    private int count = 0;<br />
+    private MyTask task = null;</p>
 
-        <span class="n">Button</span> <span class="n">btn</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span><span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">Button01</span><span class="o">);</span>
-        <span class="n">btn</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
 
-            <span class="nd">@Override</span>
-            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+    Button btn = (Button)findViewById(R.id.Button01);
+    btn.setOnClickListener(new OnClickListener() {
 
-                <span class="c1">// タスク A を実行</span>
-                <span class="n">task</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyTask</span><span class="o">(</span><span class="s">"taskA"</span><span class="o">);</span>
-                <span class="n">task</span><span class="o">.</span><span class="na">execute</span><span class="o">((</span><span class="n">Void</span><span class="o">)</span><span class="kc">null</span><span class="o">);</span>
+        @Override
+        public void onClick(View view) {
 
-                <span class="c1">// ５秒待つ</span>
-                <span class="n">SystemClock</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">5000</span><span class="o">);</span>
+            // タスク A を実行
+            task = new MyTask("taskA");
+            task.execute((Void)null);
 
-                <span class="c1">// タスク A を中断</span>
-                <span class="n">task</span><span class="o">.</span><span class="na">cancel</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            // ５秒待つ
+            SystemClock.sleep(5000);
 
-                <span class="c1">// タスク B を実行</span>
-                <span class="n">task</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyTask</span><span class="o">(</span><span class="s">"taskB"</span><span class="o">);</span>
-                <span class="n">task</span><span class="o">.</span><span class="na">execute</span><span class="o">((</span><span class="n">Void</span><span class="o">)</span><span class="kc">null</span><span class="o">);</span>
-            <span class="o">}</span>
-        <span class="o">});</span>
-    <span class="o">}</span>
+            // タスク A を中断
+            task.cancel(true);
 
-    <span class="cm">/** 非同期で加算を行う内部クラス */</span>
-    <span class="kd">class</span> <span class="nc">MyTask</span> <span class="kd">extends</span> <span class="n">AsyncTask</span> <span class="o">{</span>
-        <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+            // タスク B を実行
+            task = new MyTask("taskB");
+            task.execute((Void)null);
+        }
+    });
+}
 
-        <span class="n">MyTask</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
-        <span class="o">}</span>
+/** 非同期で加算を行う内部クラス */
+class MyTask extends AsyncTask {
+    private String name = "";
 
-        <span class="cm">/** 非同期処理 */</span>
-        <span class="nd">@Override</span>
-        <span class="kd">protected</span> <span class="n">Long</span> <span class="nf">doInBackground</span><span class="o">(</span><span class="n">Void</span><span class="o">...</span> <span class="n">params</span><span class="o">)</span> <span class="o">{</span>
-            <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+    MyTask(String name) {
+        this.name = name;
+    }
 
-            <span class="c1">// count を 0～100 まで 100ms 毎に加算する処理</span>
-            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-                <span class="n">SystemClock</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
-                <span class="n">count</span><span class="o">++;</span>
-            <span class="o">}</span>
+    /** 非同期処理 */
+    @Override
+    protected Long doInBackground(Void... params) {
+        long start = System.currentTimeMillis();
 
-            <span class="c1">// 処理にかかった時間を返す</span>
-            <span class="k">return</span> <span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">-</span> <span class="n">start</span><span class="o">;</span>
-        <span class="o">}</span>
+        // count を 0～100 まで 100ms 毎に加算する処理
+        count = 0;
+        for (int i = 0; i &lt; 100; i++) {
+            SystemClock.sleep(100);
+            count++;
+        }
 
-        <span class="cm">/** doInBackground が終わったら呼び出される。 */</span>
-        <span class="nd">@Override</span>
-        <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPostExecute</span><span class="o">(</span><span class="n">Long</span> <span class="n">result</span><span class="o">)</span> <span class="o">{</span>
-            <span class="c1">// 結果を表示 "タスク名 - カウンタ値 - 処理時間ms"</span>
-            <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">AsyncTestActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span>
-                <span class="n">name</span> <span class="o">+</span> <span class="s">" - "</span> <span class="o">+</span> <span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">count</span><span class="o">)</span> <span class="o">+</span> <span class="s">" - "</span> 
-                            <span class="o">+</span> <span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">+</span> <span class="s">"ms"</span><span class="o">,</span>
-                <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+        // 処理にかかった時間を返す
+        return System.currentTimeMillis() - start;
+    }
 
-<span class="err">まず前提として、タスクを１つだけ実行した時は、こんな結果になります。</span>
+    /** doInBackground が終わったら呼び出される。 */
+    @Override
+    protected void onPostExecute(Long result) {
+        // 結果を表示 "タスク名 - カウンタ値 - 処理時間ms"
+        Toast.makeText(AsyncTestActivity.this,
+            name + " - " + String.valueOf(count) + " - " 
+                        + String.valueOf(result) + "ms",
+            Toast.LENGTH_LONG).show();
+    }
+} }
+</code></pre>
+</div>
 
-<span class="err">###タスク</span> <span class="n">A</span> <span class="err">だけを実行した時の結果</span>
+<p>まず前提として、タスクを１つだけ実行した時は、こんな結果になります。</p>
 
-<span class="o">&gt;</span><span class="n">taskA</span> <span class="o">-</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">100029</span><span class="n">ms</span>
+<p>###タスク A だけを実行した時の結果</p>
 
-<span class="mi">100</span><span class="err">ミリ秒毎に</span><span class="mi">100</span><span class="err">回加算しているので、妥当な結果といえます。</span>
+<blockquote>
+  <p>taskA - 100 - 100029ms</p>
+</blockquote>
 
-<span class="err">このコードを実行すると次のような結果になりました。</span>
+<p>100ミリ秒毎に100回加算しているので、妥当な結果といえます。</p>
 
-<span class="err">####</span> <span class="err">テストプログラム１の結果</span>
+<p>このコードを実行すると次のような結果になりました。</p>
 
-<span class="o">&gt;</span><span class="n">taskB</span> <span class="o">-</span> <span class="mi">151</span> <span class="o">-</span> <span class="mi">100031</span><span class="n">ms</span>
+<h4 id="section">テストプログラム１の結果</h4>
 
-<span class="n">taskA</span> <span class="err">の結果は出力されないので</span> <span class="n">cancel</span> <span class="err">した場合は</span> <span class="n">onPostExecute</span> <span class="err">は呼び出されない事が分かります。</span>
+<blockquote>
+  <p>taskB - 151 - 100031ms</p>
+</blockquote>
 
-<span class="err">しかし、カウント値が</span> <span class="mi">151</span> <span class="err">と異常になってます。</span> <span class="err">どうやら</span> <span class="n">taskA</span> <span class="err">と</span> <span class="n">taskB</span> <span class="err">が並列処理されてしまっているようです。</span> <span class="err">なので、</span><span class="n">cancel</span> <span class="err">を呼び出しても、</span><span class="n">doInBackground</span> <span class="err">の処理は継続して行われている事が分かります。</span>
+<p>taskA の結果は出力されないので cancel した場合は onPostExecute は呼び出されない事が分かります。</p>
 
-<span class="err">今回分かったことは</span>
+<p>しかし、カウント値が 151 と異常になってます。 どうやら taskA と taskB が並列処理されてしまっているようです。 なので、cancel を呼び出しても、doInBackground の処理は継続して行われている事が分かります。</p>
 
-<span class="o">*</span> <span class="n">AsyncTask</span><span class="o">.</span><span class="na">cancel</span> <span class="err">を呼ぶと、</span><span class="n">onPostExecute</span> <span class="err">は呼び出されない。</span>
-<span class="o">*</span> <span class="n">AsyncTask</span><span class="o">.</span><span class="na">cancel</span> <span class="err">を呼んだだけでは</span> <span class="n">doInBackground</span> <span class="err">の処理は中断されない。</span>
-<span class="err">です。</span>
+<p>今回分かったことは</p>
 
-<span class="err">じゃあ、どうやって中断させようか、という事で次回↓へ続く。</span>
+<ul>
+  <li>AsyncTask.cancel を呼ぶと、onPostExecute は呼び出されない。</li>
+  <li>AsyncTask.cancel を呼んだだけでは doInBackground の処理は中断されない。<br />
+です。</li>
+</ul>
 
-<span class="n">AsyncTask</span> <span class="err">を</span> <span class="n">cancel</span> <span class="err">した時の動き【その２】</span>
-</code></pre></div>
+<p>じゃあ、どうやって中断させようか、という事で次回↓へ続く。</p>
+
+<p>AsyncTask を cancel した時の動き【その２】</p>
+
     </section>
     <footer class="post-footer">
 

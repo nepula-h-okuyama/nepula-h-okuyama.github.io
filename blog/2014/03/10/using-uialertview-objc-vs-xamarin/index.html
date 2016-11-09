@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>iOS アプリでアラート出してボタンが押されるまで待つ？方法を Objective-C と Xamarin.iOS で比べてみた</title>
-  <meta name="description" content="なんか割とニーズがあるみたいで。&lt;!--more--&gt;* 【Objective-C】アラート（UIAlertView）でボタンを押すまで次の処理を待つ方法 - creativi.tea* Cocoaの日々: [iOS] 非同期処理を同期処理に変える* [Objective-C] UIAlertView...">
+  <meta name="description" content="なんか割とニーズがあるみたいで。  【Objective-C】アラート（UIAlertView）でボタンを押すまで次の処理を待つ方法 - creativi.tea  Cocoaの日々: [iOS] 非同期処理を同期処理に変える  [Objective-C] UIAlertViewを同期処理する - Qiita ">
 
   <link rel="canonical" href="http://localhost:4000/blog/2014/03/10/using-uialertview-objc-vs-xamarin/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "iOS アプリでアラート出してボタンが押されるまで待つ？方法を Objective-C と Xamarin.iOS で比べてみた",
   "datePublished": "2014-03-10T22:09:00+09:00",
   "dateModified": "2014-03-10T22:09:00+09:00",
-  "description": "なんか割とニーズがあるみたいで。&lt;!--more--&gt;* 【Objective-C】アラート（UIAlertView）でボタンを押すまで次の処理を待つ方法 - creativi.tea* Cocoaの日々: [iOS] 非同期処理を同期処理に変える* [Objective-C] UIAlertView...",
+  "description": "なんか割とニーズがあるみたいで。  【Objective-C】アラート（UIAlertView）でボタンを押すまで次の処理を待つ方法 - creativi.tea  Cocoaの日々: [iOS] 非同期処理を同期処理に変える  [Objective-C] UIAlertViewを同期処理する - Qiita ",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,96 +621,109 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>なんか割とニーズがあるみたいで。<br>
-&lt;!--more--&gt;<br>
-* <a href="http://teapipin.blog10.fc2.com/blog-entry-224.html">【Objective-C】アラート（UIAlertView）でボタンを押すまで次の処理を待つ方法 - creativi.tea</a><br>
-* <a href="http://cocoadays.blogspot.jp/2011/05/ios.html">Cocoaの日々: [iOS] 非同期処理を同期処理に変える</a><br>
-* <a href="http://qiita.com/edo_m18/items/cb1d9061d91e572b58eb">[Objective-C] UIAlertViewを同期処理する - Qiita </a></p>
+      <p>なんか割とニーズがあるみたいで。<br />
+<!--more--></p>
+<ul>
+  <li><a href="http://teapipin.blog10.fc2.com/blog-entry-224.html">【Objective-C】アラート（UIAlertView）でボタンを押すまで次の処理を待つ方法 - creativi.tea</a></li>
+  <li><a href="http://cocoadays.blogspot.jp/2011/05/ios.html">Cocoaの日々: [iOS] 非同期処理を同期処理に変える</a></li>
+  <li><a href="http://qiita.com/edo_m18/items/cb1d9061d91e572b58eb">[Objective-C] UIAlertViewを同期処理する - Qiita </a></li>
+</ul>
 
-<h2>Objective-C の場合</h2>
+<h2 id="objective-c-">Objective-C の場合</h2>
 
-<p><code>UIAlertView</code> は、結果を受け取るのが deletgate で、 Objective-C では、(Blocks を使わなければ) 受け取りが別メソッドになってしまう、しかも複数のアラートの結果が同じメソッドに飛んでくるので、tag値で分岐…とかいろいろで、ホントに使うのが面倒ですね。</p>
+<p><code class="highlighter-rouge">UIAlertView</code> は、結果を受け取るのが deletgate で、 Objective-C では、(Blocks を使わなければ) 受け取りが別メソッドになってしまう、しかも複数のアラートの結果が同じメソッドに飛んでくるので、tag値で分岐…とかいろいろで、ホントに使うのが面倒ですね。</p>
 
 <p>さらに、「アラートの結果を受け取ってから、次の処理を行う」という処理を素直に記述したいと思うと、上で示したような「アラートを表示して、結果が得られるまで while で待つ」というなんとも不格好なコードになってしまいます。下にも書いてみました。（あ、メンバ変数も使わざるを得ないし。）</p>
 
-<p>```objective-c HogeViewController.m<br>
-@implementation HogeViewController {<br>
-    NSInteger _buttonIndex;<br>
+<p>```objective-c HogeViewController.m<br />
+@implementation HogeViewController {<br />
+    NSInteger _buttonIndex;<br />
 }</p>
 
 <ul>
-<li><p>(IBAction)buttonTouchUp:(id)sender<br>
-{<br>
-UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil<br>
-                            message:NSLocalizedString(@&quot;なにか押して&quot;,@&quot;&quot;)<br>
-                           delegate:self<br>
-                  cancelButtonTitle:@&quot;Cancel&quot;<br>
-                  otherButtonTitles:@&quot;OK&quot;, nil];<br>
-[alert show];</p>
+  <li>
+    <p>(IBAction)buttonTouchUp:(id)sender<br />
+{<br />
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil<br />
+                              message:NSLocalizedString(@”なにか押して”,@””)<br />
+                             delegate:self<br />
+                    cancelButtonTitle:@”Cancel”<br />
+                    otherButtonTitles:@”OK”, nil];<br />
+  [alert show];</p>
 
-<p>// ボタンが押されるまで待つ<br>
-<em>buttonIndex = -1;<br>
-while (</em>buttonIndex == -1) {<br>
-    [[NSRunLoop currentRunLoop]<br>
-     runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5f]]; // 0.5秒<br>
+    <p>// ボタンが押されるまで待つ<br />
+  _buttonIndex = -1;<br />
+  while (_buttonIndex == -1) {<br />
+      [[NSRunLoop currentRunLoop]<br />
+       runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5f]]; // 0.5秒<br />
+  }</p>
+
+    <p>label1.text = [NSString stringWithFormat:@”%d 番目のボタンを押したね”, (int)_buttonIndex];<br />
 }</p>
-
-<p>label1.text = [NSString stringWithFormat:@&quot;%d 番目のボタンを押したね&quot;, (int)_buttonIndex];<br>
-}</p></li>
+  </li>
 </ul>
 
-<p>-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex<br>
-{<br>
-    _buttonIndex = buttonIndex;<br>
-}<br>
-```</p>
-
-<p><code>[NSRunLoop runUntilDate]</code> なんて VB6 の <code>DoEvents</code> ですもんねなつかしい。</p>
-
-<h2>Xamarin.iOS(C#) の場合</h2>
-
-<p>Objective-C ではややこしかった「アラートを出す→ボタンを押す→次の処理へ」という流れ、 Xamarin.iOS と C# ならこんなにシンプルに書けます。</p>
-
-<p>```csharp HogeViewController.cs<br>
-async void OnButtonTouch(object sender, EventArgs e)<br>
-{<br>
-    var buttonIndex = await MsgBox(&quot;&quot;, &quot;なにか押して&quot;, &quot;Cancel&quot;, &quot;OK&quot;);<br>
-    label1.Text = buttonIndex.ToString() + &quot;番目を押したね&quot;;<br><br>
+<p>-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex<br />
+{<br />
+	_buttonIndex = buttonIndex;<br />
 }</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+``[NSRunLoop runUntilDate]`` なんて VB6 の ``DoEvents`` ですもんねなつかしい。
 
-<p>static Task<int> MsgBox(string title, string message, <br>
-    string cancelButtonTitle, params string[] buttons)<br>
-{<br>
-    var comp = new TaskCompletionSource<int>();</p>
-<div class="highlight"><pre><code class="language-" data-lang="">var alert = new UIAlertView(title, message, null, cancelButtonTitle, buttons);
-alert.Clicked += (_, e) =&gt; comp.TrySetResult(e.ButtonIndex);
-alert.Show();
+## Xamarin.iOS(C#) の場合
 
-return comp.Task;
-</code></pre></div>
-<p>}<br>
-```</p>
+Objective-C ではややこしかった「アラートを出す→ボタンを押す→次の処理へ」という流れ、 Xamarin.iOS と C# ならこんなにシンプルに書けます。
 
-<p>VB6 が懐かしくて <code>MsgBox</code> ってメソッドにしちゃいましたよ。</p>
+```csharp HogeViewController.cs
+async void OnButtonTouch(object sender, EventArgs e)
+{
+    var buttonIndex = await MsgBox("", "なにか押して", "Cancel", "OK");
+    label1.Text = buttonIndex.ToString() + "番目を押したね";  
+}
 
-<p><code>MsgBox</code> は、Task を返す <strong>非同期な</strong> メソッドです。この非同期処理が終了するのは、<code>TaskCompletionSource.TrySetResult</code> が呼び出された時、つまりアラートのボタンが押された時です。この非同期処理の戻り値はもちろん押したボタンのインデックスです。</p>
+static Task&lt;int&gt; MsgBox(string title, string message, 
+    string cancelButtonTitle, params string[] buttons)
+{
+    var comp = new TaskCompletionSource&lt;int&gt;();
+    
+    var alert = new UIAlertView(title, message, null, cancelButtonTitle, buttons);
+    alert.Clicked += (_, e) =&gt; comp.TrySetResult(e.ButtonIndex);
+    alert.Show();
+    
+    return comp.Task;
+}
+</code></pre>
+</div>
 
-<p>非同期メソッドである <code>MsgBox</code> を呼び出す側には、キーワード <code>await</code> が付いています。<br>
-これをつけると、次行以降の処理は、非同期の MsgBox が完了した後、順次実行されます、つまり待っているわけではなく、どちらかというと、 <strong>処理を後続に付け足す</strong> 感じ。<br>
+<p>VB6 が懐かしくて <code class="highlighter-rouge">MsgBox</code> ってメソッドにしちゃいましたよ。</p>
+
+<p><code class="highlighter-rouge">MsgBox</code> は、Task を返す <strong>非同期な</strong> メソッドです。この非同期処理が終了するのは、<code class="highlighter-rouge">TaskCompletionSource.TrySetResult</code> が呼び出された時、つまりアラートのボタンが押された時です。この非同期処理の戻り値はもちろん押したボタンのインデックスです。</p>
+
+<p>非同期メソッドである <code class="highlighter-rouge">MsgBox</code> を呼び出す側には、キーワード <code class="highlighter-rouge">await</code> が付いています。<br />
+これをつけると、次行以降の処理は、非同期の MsgBox が完了した後、順次実行されます、つまり待っているわけではなく、どちらかというと、 <strong>処理を後続に付け足す</strong> 感じ。<br />
 さらに、この後続処理はUIスレッドで実行されるので、UIパーツへのアクセスも問題ありません。</p>
 
-<p><code>async</code> はメソッド内で <code>await</code> を使うときにつけるお約束。</p>
+<p><code class="highlighter-rouge">async</code> はメソッド内で <code class="highlighter-rouge">await</code> を使うときにつけるお約束。</p>
 
 <p>async/await は一見、ただの同期処理に見えるので理解して使う必要がありますが、Objective-C のコードに比べて、とても簡潔に、流れるように書くことができるのが分かると思います。</p>
 
 <p><strong>C# の非常に強力な言語機能は、<a href="https://xamarin.com/">Xamarin</a> を選択する大きな理由の一つです。</strong></p>
 
-<h2>参考</h2>
+<h2 id="section">参考</h2>
 
 <ul>
-<li><a href="http://stackoverflow.com/questions/4613071/messagebox-show-and-dialogresult-equivalent-in-monotouch">c# - Messagebox.Show and DialogResult equivalent in MonoTouch - Stack Overflow</a></li>
-<li><a href="http://ufcpp.wordpress.com/2012/11/12/asyncawait%e3%81%a8%e5%90%8c%e6%99%82%e5%ae%9f%e8%a1%8c%e5%88%b6%e5%be%a1/">async/awaitと同時実行制御 | ++C++; // 未確認飛行 C ブログ</a></li>
-<li><a href="http://www.slideshare.net/bleistift/asyncawait2">async/await不要論</a></li>
+  <li><a href="http://stackoverflow.com/questions/4613071/messagebox-show-and-dialogresult-equivalent-in-monotouch">c# - Messagebox.Show and DialogResult equivalent in MonoTouch - Stack Overflow</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[async/awaitと同時実行制御</td>
+          <td>++C++; // 未確認飛行 C ブログ](http://ufcpp.wordpress.com/2012/11/12/asyncawait%e3%81%a8%e5%90%8c%e6%99%82%e5%ae%9f%e8%a1%8c%e5%88%b6%e5%be%a1/)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><a href="http://www.slideshare.net/bleistift/asyncawait2">async/await不要論</a></li>
 </ul>
 
     </section>

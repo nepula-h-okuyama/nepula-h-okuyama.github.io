@@ -3,6 +3,7 @@
   <head>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 
   <meta charset="utf-8">
@@ -10,7 +11,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>ExecutorService の復習</title>
-  <meta name="description" content="Android で非同期処理っていうと、真っ先に AsyncTask が出てくるんですが、なるべくなら Java 標準のマルチスレッドAPI である ExecutorService を使った方が良いと思ってます。&lt;!--more--&gt;* (2007年の記事だけど) Java技術最前線 - 「Java ...">
+  <meta name="description" content="Android で非同期処理っていうと、真っ先に AsyncTask が出てくるんですが、なるべくなら Java 標準のマルチスレッドAPI である ExecutorService を使った方が良いと思ってます。  (2007年の記事だけど) Java技術最前線 - 「Java SE 6完全攻略」第49回 Con...">
 
   <link rel="canonical" href="http://localhost:4000/blog/2013/09/01/re-studying-executorservice/">
   <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
@@ -24,7 +25,7 @@
   "headline": "ExecutorService の復習",
   "datePublished": "2013-09-01T19:52:00+09:00",
   "dateModified": "2013-09-01T19:52:00+09:00",
-  "description": "Android で非同期処理っていうと、真っ先に AsyncTask が出てくるんですが、なるべくなら Java 標準のマルチスレッドAPI である ExecutorService を使った方が良いと思ってます。&lt;!--more--&gt;* (2007年の記事だけど) Java技術最前線 - 「Java ...",
+  "description": "Android で非同期処理っていうと、真っ先に AsyncTask が出てくるんですが、なるべくなら Java 標準のマルチスレッドAPI である ExecutorService を使った方が良いと思ってます。  (2007年の記事だけど) Java技術最前線 - 「Java SE 6完全攻略」第49回 Con...",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -51,148 +52,7 @@
   
   <style amp-custom>
   
-  /**
- * Syntax highlighting styles
- */
-.highlight {
-  background: #fff; }
-  .highlighter-rouge .highlight {
-    background: #eef; }
-  .highlight .c {
-    color: #998;
-    font-style: italic; }
-  .highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2; }
-  .highlight .k {
-    font-weight: bold; }
-  .highlight .o {
-    font-weight: bold; }
-  .highlight .cm {
-    color: #998;
-    font-style: italic; }
-  .highlight .cp {
-    color: #999;
-    font-weight: bold; }
-  .highlight .c1 {
-    color: #998;
-    font-style: italic; }
-  .highlight .cs {
-    color: #999;
-    font-weight: bold;
-    font-style: italic; }
-  .highlight .gd {
-    color: #000;
-    background-color: #fdd; }
-  .highlight .gd .x {
-    color: #000;
-    background-color: #faa; }
-  .highlight .ge {
-    font-style: italic; }
-  .highlight .gr {
-    color: #a00; }
-  .highlight .gh {
-    color: #999; }
-  .highlight .gi {
-    color: #000;
-    background-color: #dfd; }
-  .highlight .gi .x {
-    color: #000;
-    background-color: #afa; }
-  .highlight .go {
-    color: #888; }
-  .highlight .gp {
-    color: #555; }
-  .highlight .gs {
-    font-weight: bold; }
-  .highlight .gu {
-    color: #aaa; }
-  .highlight .gt {
-    color: #a00; }
-  .highlight .kc {
-    font-weight: bold; }
-  .highlight .kd {
-    font-weight: bold; }
-  .highlight .kp {
-    font-weight: bold; }
-  .highlight .kr {
-    font-weight: bold; }
-  .highlight .kt {
-    color: #458;
-    font-weight: bold; }
-  .highlight .m {
-    color: #099; }
-  .highlight .s {
-    color: #d14; }
-  .highlight .na {
-    color: #008080; }
-  .highlight .nb {
-    color: #0086B3; }
-  .highlight .nc {
-    color: #458;
-    font-weight: bold; }
-  .highlight .no {
-    color: #008080; }
-  .highlight .ni {
-    color: #800080; }
-  .highlight .ne {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nf {
-    color: #900;
-    font-weight: bold; }
-  .highlight .nn {
-    color: #555; }
-  .highlight .nt {
-    color: #000080; }
-  .highlight .nv {
-    color: #008080; }
-  .highlight .ow {
-    font-weight: bold; }
-  .highlight .w {
-    color: #bbb; }
-  .highlight .mf {
-    color: #099; }
-  .highlight .mh {
-    color: #099; }
-  .highlight .mi {
-    color: #099; }
-  .highlight .mo {
-    color: #099; }
-  .highlight .sb {
-    color: #d14; }
-  .highlight .sc {
-    color: #d14; }
-  .highlight .sd {
-    color: #d14; }
-  .highlight .s2 {
-    color: #d14; }
-  .highlight .se {
-    color: #d14; }
-  .highlight .sh {
-    color: #d14; }
-  .highlight .si {
-    color: #d14; }
-  .highlight .sx {
-    color: #d14; }
-  .highlight .sr {
-    color: #009926; }
-  .highlight .s1 {
-    color: #d14; }
-  .highlight .ss {
-    color: #990073; }
-  .highlight .bp {
-    color: #999; }
-  .highlight .vc {
-    color: #008080; }
-  .highlight .vg {
-    color: #008080; }
-  .highlight .vi {
-    color: #008080; }
-  .highlight .il {
-    color: #099; }
-
-.icon > svg {
+  .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -213,7 +73,7 @@ main {
 
 body {
   background-color: #fff;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -360,7 +220,7 @@ body {
       color: #333333; }
 
 .post .post-meta {
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
 .post .post-title {
   font-weight: 700;
   font-style: normal;
@@ -388,15 +248,15 @@ body {
   font-style: normal;
   font-size: 14px;
   overflow: hidden;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif;
+  font-family: Arial, YuGothic;
   white-space: nowrap;
   text-overflow: ellipsis; }
 .post .post-content {
   width: 100%;
-  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  font-family: Verdana, YuGothic;
   color: #333333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -405,7 +265,7 @@ body {
     line-height: 1.3;
     margin-top: 50px;
     margin-bottom: 0px;
-    font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+    font-family: Arial, YuGothic; }
   .post .post-content h3 {
     font-size: 36px; }
   .post .post-content h2, .post .post-content h1 {
@@ -418,7 +278,14 @@ body {
     margin-bottom: 0px; }
   .post .post-content table {
     border-collapse: collapse; }
-  .post .post-content table, .post .post-content th, .post .post-content td {
+  .post .post-content .highlight {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    background-color: #f8f8f8; }
+    .post .post-content .highlight table {
+      line-height: 20px;
+      border: 1px solid transparent; }
+  .post .post-content table::not(".highlight"), .post .post-content th, .post .post-content td {
     border: 1px solid black;
     padding: 5px;
     text-align: left; }
@@ -489,7 +356,7 @@ body {
     list-style-type: decimal; }
 .post .bottom-teaser {
   padding: 50px 0 0 0;
-  font-family: "Helvetica Neue", YuGothic, Arial, Helvetica, sans-serif; }
+  font-family: Arial, YuGothic; }
   .post .bottom-teaser hr {
     border: 0;
     padding: 0;
@@ -599,10 +466,11 @@ body {
 
 pre,
 code {
+  font-family: Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;
   font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eeeeff; }
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  background-color: #f8f8f8; }
 
 code {
   padding: 1px 5px; }
@@ -753,366 +621,398 @@ img {
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Android で非同期処理っていうと、真っ先に <code>AsyncTask</code> が出てくるんですが、なるべくなら Java 標準のマルチスレッドAPI である ExecutorService を使った方が良いと思ってます。<br>
-&lt;!--more--&gt;<br>
-* (2007年の記事だけど) <a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20071001/283395/">Java技術最前線 - 「Java SE 6完全攻略」第49回 Concurrency Utilitiesの変更点 その1：ITpro</a></p>
+      <p>Android で非同期処理っていうと、真っ先に <code class="highlighter-rouge">AsyncTask</code> が出てくるんですが、なるべくなら Java 標準のマルチスレッドAPI である ExecutorService を使った方が良いと思ってます。<br />
+<!--more--></p>
+<ul>
+  <li>(2007年の記事だけど) <a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20071001/283395/">Java技術最前線 - 「Java SE 6完全攻略」第49回 Concurrency Utilitiesの変更点 その1：ITpro</a></li>
+</ul>
 
 <p>Android で初めて Java を書いたので細かい仕様がよく分からず、勉強がてら動きを確認してみました。</p>
 
-<h2>1. 1つのワーカスレッドに実行させる</h2>
+<h2 id="section">1. 1つのワーカスレッドに実行させる</h2>
 
-<p><code>newSingleThreadExecutor</code> でワーカスレッドを一つ持つ Executor を生成して、2つのタスク(=非同期で実行させる処理)を順に実行。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadExecutorBasicTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadExecutor</span><span class="o">();</span>
+<p><code class="highlighter-rouge">newSingleThreadExecutor</code> でワーカスレッドを一つ持つ Executor を生成して、2つのタスク(=非同期で実行させる処理)を順に実行。</p>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadExecutorBasicTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadExecutor</span><span class="o">();</span>
+	
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
 
-    <span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-1">出力</h3>
 
 <blockquote>
-<p>08-29 17:18:12.891: D/ExecutorTest(391): Primary ThreadID:4943<br/><br>
-08-29 17:18:12.891: D/ExecutorTest(391): Run task A. ThreadId:4944<br/><br>
-08-29 17:18:12.891: D/ExecutorTest(391): Run task B. ThreadId:4944<br/></p>
+  <p>08-29 17:18:12.891: D/ExecutorTest(391): Primary ThreadID:4943<br /><br />
+08-29 17:18:12.891: D/ExecutorTest(391): Run task A. ThreadId:4944<br /><br />
+08-29 17:18:12.891: D/ExecutorTest(391): Run task B. ThreadId:4944<br /></p>
 </blockquote>
 
-<p>A→B の順で（=submit した順で）実行される。<br>
+<p>A→B の順で（=submit した順で）実行される。<br />
 Primary と task で ThreadID が異なる、2つの task は同じ ThreadID であることに注目。</p>
 
-<h2>2. 最初のタスクに時間がかかったら？</h2>
+<h2 id="section-2">2. 最初のタスクに時間がかかったら？</h2>
 
 <p>タスクA の実行に時間がかかる場合、タスクB はどうなる？</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadExecutor</span><span class="o">();</span>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadExecutor</span><span class="o">();</span>
+	
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
 
-    <span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+			
+			<span class="c1">// Wait</span>
+			<span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
+			
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A end."</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
 
-            <span class="c1">// Wait</span>
-            <span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
-
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A end."</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
-
-    <span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-3">出力</h3>
 
 <blockquote>
-<p>08-29 17:22:04.288: D/ExecutorTest(1511): Primary ThreadID:5063<br/><br>
-08-29 17:22:04.288: D/ExecutorTest(1511): Run task A start. ThreadId:5064<br/><br>
-08-29 17:22:07.291: D/ExecutorTest(1511): Run task A end.<br/><br>
-08-29 17:22:07.291: D/ExecutorTest(1511): Run task B. ThreadId:5064<br/></p>
+  <p>08-29 17:22:04.288: D/ExecutorTest(1511): Primary ThreadID:5063<br /><br />
+08-29 17:22:04.288: D/ExecutorTest(1511): Run task A start. ThreadId:5064<br /><br />
+08-29 17:22:07.291: D/ExecutorTest(1511): Run task A end.<br /><br />
+08-29 17:22:07.291: D/ExecutorTest(1511): Run task B. ThreadId:5064<br /></p>
 </blockquote>
 
 <p>A→B の順で実行される。シングルスレッドなので、並列に処理されることはない。</p>
 
-<h2>3. ThreadPoolExecutor を使ったら？</h2>
+<h2 id="threadpoolexecutor-">3. ThreadPoolExecutor を使ったら？</h2>
 
-<p><code>Executors.newSingleThreadExecutor()</code> の代わりに <code>Executors.newFixedThreadPool(2)</code> としてみる。これによりワーカスレッドを2つ使う Execurot が生成される。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">threadPoolExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<p><code class="highlighter-rouge">Executors.newSingleThreadExecutor()</code> の代わりに <code class="highlighter-rouge">Executors.newFixedThreadPool(2)</code> としてみる。これによりワーカスレッドを2つ使う Execurot が生成される。</p>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">threadPoolExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+	
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
 
-    <span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+			
+			<span class="c1">// Wait</span>
+			<span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
+			
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A end."</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
 
-            <span class="c1">// Wait</span>
-            <span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
-
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A end."</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
-
-    <span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">});</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">});</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-4">出力</h3>
 
 <blockquote>
-<p>08-29 17:29:01.731: D/ExecutorTest(3017): Primary ThreadID:5255<br/><br>
-08-29 17:29:01.731: D/ExecutorTest(3017): Run task A start. ThreadId:5256<br/><br>
-08-29 17:29:01.731: D/ExecutorTest(3017): Run task B. ThreadId:5257<br/><br>
-08-29 17:29:04.725: D/ExecutorTest(3017): Run task A end.<br/></p>
+  <p>08-29 17:29:01.731: D/ExecutorTest(3017): Primary ThreadID:5255<br /><br />
+08-29 17:29:01.731: D/ExecutorTest(3017): Run task A start. ThreadId:5256<br /><br />
+08-29 17:29:01.731: D/ExecutorTest(3017): Run task B. ThreadId:5257<br /><br />
+08-29 17:29:04.725: D/ExecutorTest(3017): Run task A end.<br /></p>
 </blockquote>
 
-<p>タスクA と タスクB で ThreadID が異なる事に注目。<br>
+<p>タスクA と タスクB で ThreadID が異なる事に注目。<br />
 スレッドが２つ使えるので、タスクA の終了を<strong>待たず</strong>にタスクB が実行される。というか、タスクA から始まる保証もない。</p>
 
-<h2>3. SingleThreadScheduledExecutor を使ってみる</h2>
+<h2 id="singlethreadscheduledexecutor-">3. SingleThreadScheduledExecutor を使ってみる</h2>
 
 <p>話題を変えて、タスクの実行時間を制御できる Scheduled系 の Executor を使ってみる。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorBasicTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorBasicTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
 
-    <span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+
+	<span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-5">出力</h3>
 
 <blockquote>
-<p>08-29 17:36:16.125: D/ExecutorTest(3547): Primary ThreadID:5285<br/><br>
-08-29 17:36:19.128: D/ExecutorTest(3547): Run task B. ThreadId:5286<br/><br>
-08-29 17:36:21.130: D/ExecutorTest(3547): Run task A. ThreadId:5286<br/></p>
+  <p>08-29 17:36:16.125: D/ExecutorTest(3547): Primary ThreadID:5285<br /><br />
+08-29 17:36:19.128: D/ExecutorTest(3547): Run task B. ThreadId:5286<br /><br />
+08-29 17:36:21.130: D/ExecutorTest(3547): Run task A. ThreadId:5286<br /></p>
 </blockquote>
 
-<p>開始から3秒後にタスクBが、開始から5秒後にタスクAが実行される。<br>
+<p>開始から3秒後にタスクBが、開始から5秒後にタスクAが実行される。<br />
 submit した順は関係ないことに注意。</p>
 
-<h2>4. スケジュールされた時間に別のタスクが実行中だったら？</h2>
+<h2 id="section-6">4. スケジュールされた時間に別のタスクが実行中だったら？</h2>
 
 <p>3秒後に実行されるタスクBの処理が終わらない時、5秒後に実行されるタスクAはどうなる？</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 
-    <span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 
-            <span class="c1">// Wait</span>
-            <span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
-
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B end."</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+			
+			<span class="c1">// Wait</span>
+			<span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
+			
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B end."</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-7">出力</h3>
 
 <blockquote>
-<p>08-29 17:44:18.139: D/ExecutorTest(4737): Primary ThreadID:5456<br/><br>
-08-29 17:44:21.142: D/ExecutorTest(4737): Run task B start. ThreadId:5457<br/><br>
-08-29 17:44:31.143: D/ExecutorTest(4737): Run task B end.<br/><br>
-08-29 17:44:31.143: D/ExecutorTest(4737): Run task A. ThreadId:5457<br/></p>
+  <p>08-29 17:44:18.139: D/ExecutorTest(4737): Primary ThreadID:5456<br /><br />
+08-29 17:44:21.142: D/ExecutorTest(4737): Run task B start. ThreadId:5457<br /><br />
+08-29 17:44:31.143: D/ExecutorTest(4737): Run task B end.<br /><br />
+08-29 17:44:31.143: D/ExecutorTest(4737): Run task A. ThreadId:5457<br /></p>
 </blockquote>
 
 <p>5秒後とスケジュールされたタスクAだが、タスクB が終わるまで待たされる。シングルスレッドなので。</p>
 
-<h2>5. そこで ScheduledThreadPoolExecutor を使ってみる</h2>
+<h2 id="scheduledthreadpoolexecutor-">5. そこで ScheduledThreadPoolExecutor を使ってみる</h2>
 
-<p><code>Executors.newSingleThreadScheduledExecutor()</code> の代わりに <code>Executors.newScheduledThreadPool(2)</code> としてみる。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">threadPoolScheduledExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newScheduledThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+<p><code class="highlighter-rouge">Executors.newSingleThreadScheduledExecutor()</code> の代わりに <code class="highlighter-rouge">Executors.newScheduledThreadPool(2)</code> としてみる。</p>
 
-    <span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">threadPoolScheduledExecutorHeavyWorkTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newScheduledThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 
-            <span class="c1">// Wait</span>
-            <span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
-
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B end."</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">schedule</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+			
+			<span class="c1">// Wait</span>
+			<span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span> 
+			
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task B end."</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <blockquote>
-<p>08-29 17:48:28.536: D/ExecutorTest(5439): Primary ThreadID:5558<br/><br>
-08-29 17:48:31.550: D/ExecutorTest(5439): Run task B start. ThreadId:5559<br/><br>
-08-29 17:48:<strong>33</strong>.542: D/ExecutorTest(5439): Run task A. ThreadId:5560<br/><br>
-08-29 17:48:41.550: D/ExecutorTest(5439): Run task B end.<br/></p>
+  <p>08-29 17:48:28.536: D/ExecutorTest(5439): Primary ThreadID:5558<br /><br />
+08-29 17:48:31.550: D/ExecutorTest(5439): Run task B start. ThreadId:5559<br /><br />
+08-29 17:48:<strong>33</strong>.542: D/ExecutorTest(5439): Run task A. ThreadId:5560<br /><br />
+08-29 17:48:41.550: D/ExecutorTest(5439): Run task B end.<br /></p>
 </blockquote>
 
 <p>スレッドが２つ使えるので、タスクA は、スケジュール通り（タスクBの終了を待たずに submit してから5秒後に実行される。</p>
 
-<h2>6. Scheduled系Executor の Timer 的機能を使ってみる</h2>
+<h2 id="scheduledexecutor--timer-">6. Scheduled系Executor の Timer 的機能を使ってみる</h2>
 
-<p><code>schedule()</code> は、一発だけ(Javascript の <code>setTimeout</code> みたいな)、繰り返し処理するには、<code>scheduleAtFixedRate</code> か <code>scheduleWithFixedDelay</code> を使う。<br>
-まずは <code>scheduleAtFixedRate</code> から。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorTimerBasicTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+<p><code class="highlighter-rouge">schedule()</code> は、一発だけ(Javascript の <code class="highlighter-rouge">setTimeout</code> みたいな)、繰り返し処理するには、<code class="highlighter-rouge">scheduleAtFixedRate</code> か <code class="highlighter-rouge">scheduleWithFixedDelay</code> を使う。<br />
+まずは <code class="highlighter-rouge">scheduleAtFixedRate</code> から。</p>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span> <span class="nf">scheduleAtFixedRate</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorTimerBasicTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span> <span class="nf">scheduleAtFixedRate</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-8">出力</h3>
 
 <blockquote>
-<p>08-29 17:59:33.556: D/ExecutorTest(7228): Primary ThreadID:5795<br/><br>
-08-29 17:59:38.561: D/ExecutorTest(7228): Run task A. ThreadId:5796<br/><br>
-08-29 17:59:41.565: D/ExecutorTest(7228): Run task A. ThreadId:5796<br/><br>
-08-29 17:59:44.568: D/ExecutorTest(7228): Run task A. ThreadId:5796<br/><br>
+  <p>08-29 17:59:33.556: D/ExecutorTest(7228): Primary ThreadID:5795<br /><br />
+08-29 17:59:38.561: D/ExecutorTest(7228): Run task A. ThreadId:5796<br /><br />
+08-29 17:59:41.565: D/ExecutorTest(7228): Run task A. ThreadId:5796<br /><br />
+08-29 17:59:44.568: D/ExecutorTest(7228): Run task A. ThreadId:5796<br /><br />
 …</p>
 </blockquote>
 
 <p>最初は５秒、その後は３秒毎にタスクAが実行される。</p>
 
-<h2>7. 繰り返し実行されるタスクが重かったら？</h2>
+<h2 id="section-9">7. 繰り返し実行されるタスクが重かったら？</h2>
 
 <p>繰り返しは３秒だけど、タスクAの実行に１０秒かかったら、どうなる？</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorTimerHeavyTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">scheduleAtFixedRate</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorTimerHeavyTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">scheduleAtFixedRate</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-10">出力</h3>
 
 <blockquote>
-<p>08-29 18:15:49.397: D/ExecutorTest(10157): Primary ThreadID:6188<br/><br>
-08-29 18:15:54.413: D/ExecutorTest(10157): Run task A start. ThreadId:6189<br/><br>
-08-29 18:16:04.403: D/ExecutorTest(10157): Run task A end.<br/><br>
-08-29 18:16:04.403: D/ExecutorTest(10157): Run task A start. ThreadId:6189<br/><br>
-08-29 18:16:14.404: D/ExecutorTest(10157): Run task A end.<br/><br>
-08-29 18:16:14.404: D/ExecutorTest(10157): Run task A start. ThreadId:6189<br/><br>
-08-29 18:16:24.405: D/ExecutorTest(10157): Run task A end.<br/><br>
+  <p>08-29 18:15:49.397: D/ExecutorTest(10157): Primary ThreadID:6188<br /><br />
+08-29 18:15:54.413: D/ExecutorTest(10157): Run task A start. ThreadId:6189<br /><br />
+08-29 18:16:04.403: D/ExecutorTest(10157): Run task A end.<br /><br />
+08-29 18:16:04.403: D/ExecutorTest(10157): Run task A start. ThreadId:6189<br /><br />
+08-29 18:16:14.404: D/ExecutorTest(10157): Run task A end.<br /><br />
+08-29 18:16:14.404: D/ExecutorTest(10157): Run task A start. ThreadId:6189<br /><br />
+08-29 18:16:24.405: D/ExecutorTest(10157): Run task A end.<br /><br />
 …</p>
 </blockquote>
 
 <p>３秒置きに設定しているが、タスクAが終わらないので、終わったら<strong>すぐに</strong>、次のタスクを実行する。</p>
 
-<h2>8. scheduleWithFixedDelay ではどうなる？</h2>
+<h2 id="schedulewithfixeddelay-">8. scheduleWithFixedDelay ではどうなる？</h2>
 
-<p><code>scheduleAtFixedRate</code> の代わりに <code>scheduleWithFixedDelay</code> にしてみた。</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorFixedDelayHeavyTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+<p><code class="highlighter-rouge">scheduleAtFixedRate</code> の代わりに <code class="highlighter-rouge">scheduleWithFixedDelay</code> にしてみた。</p>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">scheduleWithFixedDelay</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorFixedDelayHeavyTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadScheduledExecutor</span><span class="o">();</span>
+
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">scheduleWithFixedDelay</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-11">出力</h3>
 
 <blockquote>
-<p>08-29 18:22:37.183: D/ExecutorTest(10663): Primary ThreadID:6245<br/><br>
-08-29 18:22:42.178: D/ExecutorTest(10663): Run task A start. ThreadId:6246<br/><br>
-08-29 18:22:52.179: D/ExecutorTest(10663): Run task A end.<br/><br>
-08-29 18:22:<strong>55</strong>.182: D/ExecutorTest(10663): Run task A start. ThreadId:6246<br/><br>
-08-29 18:23:05.182: D/ExecutorTest(10663): Run task A end.<br/><br>
-08-29 18:23:08.176: D/ExecutorTest(10663): Run task A start. ThreadId:6246<br/><br>
+  <p>08-29 18:22:37.183: D/ExecutorTest(10663): Primary ThreadID:6245<br /><br />
+08-29 18:22:42.178: D/ExecutorTest(10663): Run task A start. ThreadId:6246<br /><br />
+08-29 18:22:52.179: D/ExecutorTest(10663): Run task A end.<br /><br />
+08-29 18:22:<strong>55</strong>.182: D/ExecutorTest(10663): Run task A start. ThreadId:6246<br /><br />
+08-29 18:23:05.182: D/ExecutorTest(10663): Run task A end.<br /><br />
+08-29 18:23:08.176: D/ExecutorTest(10663): Run task A start. ThreadId:6246<br /><br />
 …</p>
 </blockquote>
 
-<p>タスクAが終わって、<strong>さらに３秒待って</strong>、次のタスクを実行する。<br>
-<code>FixedDelay</code> は、前回のタスクが終わってからｎ秒待つ。<br>
-<code>FixedRate</code> は、の終了を待たずにｎ秒置きに実行するが、終わってない場合は仕方がないので終わるまで待つ、という感じらしい。</p>
+<p>タスクAが終わって、<strong>さらに３秒待って</strong>、次のタスクを実行する。<br />
+<code class="highlighter-rouge">FixedDelay</code> は、前回のタスクが終わってからｎ秒待つ。<br />
+<code class="highlighter-rouge">FixedRate</code> は、の終了を待たずにｎ秒置きに実行するが、終わってない場合は仕方がないので終わるまで待つ、という感じらしい。</p>
 
-<h2>9. ScheduledThreadPoolExecutor ではどうか？</h2>
+<h2 id="scheduledthreadpoolexecutor--1">9. ScheduledThreadPoolExecutor ではどうか？</h2>
 
-<p>ScheduledThreadPoolExecutor  と <code>scheduleAtFixedRate</code> の組み合わせではどうか？</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorFixedDelayHeavyTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newScheduledThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<p>ScheduledThreadPoolExecutor  と <code class="highlighter-rouge">scheduleAtFixedRate</code> の組み合わせではどうか？</p>
 
-    <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
-    <span class="n">executor</span><span class="o">.</span><span class="na">scheduleAtFixedRate</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-        <span class="nd">@Override</span>
-        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">singleThreadScheduledExecutorFixedDelayHeavyTest</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="kd">final</span> <span class="n">ScheduledExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newScheduledThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
 
-            <span class="c1">// Wait</span>
-            <span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span> <span class="o">}</span> 
-            <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">Log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Interrupted task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span> <span class="o">}</span> 
-
-            <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A end."</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
+	<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Primary ThreadID:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+	<span class="n">executor</span><span class="o">.</span><span class="na">scheduleAtFixedRate</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Override</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A start. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+			
+			<span class="c1">// Wait</span>
+			<span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span> <span class="o">}</span> 
+			<span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">Log</span><span class="o">.</span><span class="na">w</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Interrupted task A. ThreadId:"</span> <span class="o">+</span> <span class="n">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span> <span class="o">}</span> 
+			
+			<span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Run task A end."</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">},</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div>
-<h3>出力</h3>
+</code></pre>
+</div>
+
+<h3 id="section-12">出力</h3>
 
 <blockquote>
-<p>08-29 19:09:39.707: D/ExecutorTest(14173): Primary ThreadID:6605<br/><br>
-08-29 19:09:44.712: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br/><br>
-08-29 19:09:54.713: D/ExecutorTest(14173): Run task A end.<br/><br>
-08-29 19:09:54.713: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br/><br>
-08-29 19:10:04.713: D/ExecutorTest(14173): Run task A end.<br/><br>
-08-29 19:10:04.713: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br/><br>
-08-29 19:10:14.714: D/ExecutorTest(14173): Run task A end.<br/><br>
-08-29 19:10:14.714: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br/><br>
-08-29 19:10:24.705: D/ExecutorTest(14173): Run task A end.<br/><br>
-08-29 19:10:24.705: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br/><br>
-08-29 19:10:34.705: D/ExecutorTest(14173): Run task A end.<br/><br>
+  <p>08-29 19:09:39.707: D/ExecutorTest(14173): Primary ThreadID:6605<br /><br />
+08-29 19:09:44.712: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br /><br />
+08-29 19:09:54.713: D/ExecutorTest(14173): Run task A end.<br /><br />
+08-29 19:09:54.713: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br /><br />
+08-29 19:10:04.713: D/ExecutorTest(14173): Run task A end.<br /><br />
+08-29 19:10:04.713: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br /><br />
+08-29 19:10:14.714: D/ExecutorTest(14173): Run task A end.<br /><br />
+08-29 19:10:14.714: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br /><br />
+08-29 19:10:24.705: D/ExecutorTest(14173): Run task A end.<br /><br />
+08-29 19:10:24.705: D/ExecutorTest(14173): Run task A start. ThreadId:6606<br /><br />
+08-29 19:10:34.705: D/ExecutorTest(14173): Run task A end.<br /><br />
 …</p>
 </blockquote>
 
 <p>あれ？２つのスレッドを使ってくれない。を登録した時点でスレッドは決まってるということかな。</p>
 
-<h2>まとめ</h2>
+<h2 id="section-13">まとめ</h2>
 
 <p>「タスクが実行されるスレッド」を意識すればハマることはなさそう。</p>
 
-<p>シングルスレッドの場合は、<code>submit</code> あるいは <code>schedule</code> されたタスクは、一つのスレッドで順次処理される。スレッドプールを使っている場合は、スレッドの数だけ並列処理される。<br>
-ただし、<code>scheduleAtFixedRate</code> など繰り返し処理では、登録時にスレッドが決まるので、タスクの実行に時間がかかっても並列処理されない。</p>
+<p>シングルスレッドの場合は、<code class="highlighter-rouge">submit</code> あるいは <code class="highlighter-rouge">schedule</code> されたタスクは、一つのスレッドで順次処理される。スレッドプールを使っている場合は、スレッドの数だけ並列処理される。<br />
+ただし、<code class="highlighter-rouge">scheduleAtFixedRate</code> など繰り返し処理では、登録時にスレッドが決まるので、タスクの実行に時間がかかっても並列処理されない。</p>
 
-<p><code>scheduleAtFixedRate</code> や <code>scheduleWithFixedDelay</code> はタイマー的な動きをするが、タスクの処理に時間がかかる場合は、意図した時間間隔で実行されない。タイマーとして使いたければ、Executor を２つ用意し、一つはタイマー専用、もうひとつをタスク実行専用とした方が良さそう。</p>
+<p><code class="highlighter-rouge">scheduleAtFixedRate</code> や <code class="highlighter-rouge">scheduleWithFixedDelay</code> はタイマー的な動きをするが、タスクの処理に時間がかかる場合は、意図した時間間隔で実行されない。タイマーとして使いたければ、Executor を２つ用意し、一つはタイマー専用、もうひとつをタスク実行専用とした方が良さそう。</p>
 
 <p>長くなってしまったので、タスクのキャンセルとか、Terminate 系は別の機会に。</p>
 
