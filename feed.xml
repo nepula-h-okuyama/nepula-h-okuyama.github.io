@@ -4,10 +4,10 @@
     <title>Experiments Never Fail</title>
     <description>Try and try again
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Nov 2016 23:00:35 +0900</pubDate>
-    <lastBuildDate>Wed, 09 Nov 2016 23:00:35 +0900</lastBuildDate>
+    <link>http://blog.amay077.net/</link>
+    <atom:link href="http://blog.amay077.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 09 Nov 2016 23:06:53 +0900</pubDate>
+    <lastBuildDate>Wed, 09 Nov 2016 23:06:53 +0900</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -58,8 +58,8 @@
 &lt;p&gt;参加登録していただいた皆さんは、担当日忘れないでくださいね(ﾆｯｺﾘ)&lt;/p&gt;
 </description>
         <pubDate>Thu, 27 Oct 2016 22:11:37 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/10/27/join-xamarin-advent-calendar-2016/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/27/join-xamarin-advent-calendar-2016/</guid>
+        <link>http://blog.amay077.net/blog/2016/10/27/join-xamarin-advent-calendar-2016/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/10/27/join-xamarin-advent-calendar-2016/</guid>
         
         
         <category>Xamarin</category>
@@ -147,8 +147,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;hr&gt;
 </description>
         <pubDate>Tue, 25 Oct 2016 02:42:51 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/10/25/submit-cfp-for-droidkaigi2017/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/25/submit-cfp-for-droidkaigi2017/</guid>
+        <link>http://blog.amay077.net/blog/2016/10/25/submit-cfp-for-droidkaigi2017/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/10/25/submit-cfp-for-droidkaigi2017/</guid>
         
         
         <category>Xamarin</category>
@@ -199,8 +199,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;やっぱり、「Xamarin はいいぞ」&lt;/p&gt;
 </description>
         <pubDate>Tue, 18 Oct 2016 23:59:59 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/10/18/who-dont-need-xamarin/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/18/who-dont-need-xamarin/</guid>
+        <link>http://blog.amay077.net/blog/2016/10/18/who-dont-need-xamarin/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/10/18/who-dont-need-xamarin/</guid>
         
         
         <category>Xamarin</category>
@@ -261,8 +261,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;最後に、「喫茶店で朝￥500円以上払ったらそれはモーニングサービスとは言わない」これはガチ。&lt;/p&gt;
 </description>
         <pubDate>Sun, 16 Oct 2016 19:29:05 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/10/16/gave-presentation-in-xamarin-jxugc-17/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/16/gave-presentation-in-xamarin-jxugc-17/</guid>
+        <link>http://blog.amay077.net/blog/2016/10/16/gave-presentation-in-xamarin-jxugc-17/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/10/16/gave-presentation-in-xamarin-jxugc-17/</guid>
         
         
         <category>Xamarin</category>
@@ -300,8 +300,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;MVPのセンパイ方も、初めて受賞したときはこういう事したんだろうなーと思いながら自分もやってしまったｗ&lt;/p&gt;
 </description>
         <pubDate>Wed, 12 Oct 2016 02:08:57 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/10/12/received-mvp-award-kit/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/12/received-mvp-award-kit/</guid>
+        <link>http://blog.amay077.net/blog/2016/10/12/received-mvp-award-kit/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/10/12/received-mvp-award-kit/</guid>
         
         
         <category>Microsoft</category>
@@ -339,8 +339,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;よろしくおねがいします。&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Oct 2016 17:40:18 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/10/02/become-microsoft-mvp-for-the-first-timme/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/02/become-microsoft-mvp-for-the-first-timme/</guid>
+        <link>http://blog.amay077.net/blog/2016/10/02/become-microsoft-mvp-for-the-first-timme/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/10/02/become-microsoft-mvp-for-the-first-timme/</guid>
         
         
         <category>Xamarin</category>
@@ -406,8 +406,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;　最後に宣伝ですが、 Xamarin.Forms.GoogleMaps にコントリビュートしていただければ、来年のライセンス更新時に「Number of commiters」を増やせて、参加して頂いた方にもライセンス供給できるかもしれませんので、プルリクなどよろしくおねがいします。&lt;a href=&quot;https://github.com/amay077/Xamarin.Forms.GoogleMaps/issues&quot;&gt;ISSUES&lt;/a&gt; が溜まってきているのですｗ&lt;/p&gt;
 </description>
         <pubDate>Thu, 29 Sep 2016 21:28:17 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/09/29/got-jetbrains-opensource-lisence/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/29/got-jetbrains-opensource-lisence/</guid>
+        <link>http://blog.amay077.net/blog/2016/09/29/got-jetbrains-opensource-lisence/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/09/29/got-jetbrains-opensource-lisence/</guid>
         
         
         <category>opensource</category>
@@ -483,8 +483,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;　日頃スタートアップのWebサービスのニュースは見るけど、使う機会はなかなか無いので、もっといろいろ使っていかないとなあとも思ってます。&lt;a href=&quot;https://www.uber.com/ja/&quot;&gt;Uber&lt;/a&gt; も使ってみたいぞ！&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Sep 2016 23:59:59 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/09/16/airbnb_first_impression/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/16/airbnb_first_impression/</guid>
+        <link>http://blog.amay077.net/blog/2016/09/16/airbnb_first_impression/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/09/16/airbnb_first_impression/</guid>
         
         
         <category>民泊</category>
@@ -571,8 +571,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 よろしくおねがいします。&lt;/p&gt;
 </description>
         <pubDate>Sat, 10 Sep 2016 20:43:45 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/09/10/joined-xamarin-hads-on-ad-hamamatsu-revenge/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/10/joined-xamarin-hads-on-ad-hamamatsu-revenge/</guid>
+        <link>http://blog.amay077.net/blog/2016/09/10/joined-xamarin-hads-on-ad-hamamatsu-revenge/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/09/10/joined-xamarin-hads-on-ad-hamamatsu-revenge/</guid>
         
         
         <category>Xamarin</category>
@@ -616,8 +616,8 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
 &lt;p&gt;WiFi とかセルラーとか細かいステータスもあるので、あとはコードを見てください。&lt;/p&gt;
 </description>
         <pubDate>Fri, 26 Aug 2016 23:59:59 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/08/26/ger_is_network_available_on_xamarin_ios/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/08/26/ger_is_network_available_on_xamarin_ios/</guid>
+        <link>http://blog.amay077.net/blog/2016/08/26/ger_is_network_available_on_xamarin_ios/</link>
+        <guid isPermaLink="true">http://blog.amay077.net/blog/2016/08/26/ger_is_network_available_on_xamarin_ios/</guid>
         
         
         <category>Xamarin</category>
