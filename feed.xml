@@ -6,9 +6,67 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Nov 2016 22:47:48 +0900</pubDate>
-    <lastBuildDate>Wed, 09 Nov 2016 22:47:48 +0900</lastBuildDate>
+    <pubDate>Wed, 09 Nov 2016 23:00:35 +0900</pubDate>
+    <lastBuildDate>Wed, 09 Nov 2016 23:00:35 +0900</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>Xamarin Advent Calendar 2016 参加者募集中です</title>
+        <description>&lt;p&gt;4年目の Xamarin Advent Calendar です。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.qiita.com/post/152366526084/adventcalendar2016&quot;&gt;「Qiita Advent Calendar 2016」の募集が始まりました - Qiita Blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;とのことでさっそく&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/advent-calendar/2016/xamarin&quot;&gt;Xamarin Advent Calendar 2016 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;を作成しました。&lt;/p&gt;
+
+&lt;p&gt;なんと、募集開始からたったの2時間で25枠全部埋まりました(嬉しくて泣きそう&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/ytabuchi&quot;&gt;@ytabuchi&lt;/a&gt; さん始め &lt;a href=&quot;http://jxug.org&quot;&gt;JXUG&lt;/a&gt; の皆さん、 &lt;a href=&quot;https://twitter.com/chomado&quot;&gt;@chomado&lt;/a&gt; さん始めＭＳの方々のおかげです、本当にありがとうございます。&lt;/p&gt;
+
+&lt;p&gt;仕事中ずっと監視してました(ぉぃ)が、 Qiita 内では最速ｗｗｗ （下は記念スクショ）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/join_xamarin_advent_calendar_2016_01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/Fumiya_Kume&quot;&gt;@Fumiya_Kume&lt;/a&gt; 君が作ってくれた 学生さん、初心者さん向け、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://qiita.com/advent-calendar/2016/xamarin-student&quot;&gt;[学生さん・初心者さん大歓迎！]Xamarin Advent Calendar 2016 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;も満席、すご！（「どこがビギナーやねんｗ」というラインナップだがｗｗ）&lt;/p&gt;
+
+&lt;p&gt;なので、それぞれ「その2」 を作りました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://qiita.com/advent-calendar/2016/xamarin2&quot;&gt;Xamarin(その2) Advent Calendar 2016 - Qiita&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://qiita.com/advent-calendar/2016/xamarin-welcome&quot;&gt;[初心者さん・学生さん大歓迎！] Xamarin その2 Advent Calendar 2016 - Qiita&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これらはまだ空きがありますので、奮ってご応募下さい。&lt;/p&gt;
+
+&lt;p&gt;あ、Xamarin Advent Calendar 4つ、購読もよろしくおねがいします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://qiita.com/advent-calendar/2016/xamarin&quot;&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/join_xamarin_advent_calendar_2016_02.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;参加登録していただいた皆さんは、担当日忘れないでくださいね(ﾆｯｺﾘ)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Oct 2016 22:11:37 +0900</pubDate>
+        <link>http://localhost:4000/blog/2016/10/27/join-xamarin-advent-calendar-2016/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/27/join-xamarin-advent-calendar-2016/</guid>
+        
+        
+        <category>Xamarin</category>
+        
+        <category>AdventCalendar</category>
+        
+      </item>
     
       <item>
         <title>DroidKaigi2017 に Xamarin ネタでトーク応募したよ</title>
@@ -565,232 +623,6 @@ Xamarin を使うと、MVVMパターンと Rx を使用し、大部分のコー�
         <category>Xamarin</category>
         
         <category>Xamarin.iOS</category>
-        
-        <category>iOS</category>
-        
-        <category>C#</category>
-        
-      </item>
-    
-      <item>
-        <title>NavigationPage + MasterDetailPage の時に iOS の NavigationBar の左ボタンをカスタマイズする</title>
-        <description>&lt;p&gt;Xamarin.Forms では、左からスライドして出てくるメニューを持つ画面を &lt;code&gt;MasterDetailPage&lt;/code&gt; で作成します。&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/master-detail-page/&quot;&gt;Master-Detail Page - Xamarin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;一方、普通に画面遷移していく場合は ContentPage などを &lt;code&gt;NavigationPage&lt;/code&gt; でラップしてあげます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/hierarchical/&quot;&gt;Hierarchical Navigation - Xamarin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;やりたいこと&lt;/h2&gt;
-
-&lt;p&gt;何がしたいかというと、両者を組み合わせたいんです。こういうことってよくありませんかね？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/customizing_left_navvigationbar_button_in_masterdetail_with_navigation_pages_01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;起動画面で「新規ユーザー登録」があって、「ユーザー登録画面」を経て、メインの画面に遷移する、メイン画面にはスライドメニューがある、というパターン。これを Xamarin.Forms でやりたいのです。&lt;/p&gt;
-
-&lt;h2&gt;問題&lt;/h2&gt;
-
-&lt;p&gt;ところが、 &lt;code&gt;NavigationPage&lt;/code&gt; で遷移していく画面の中に &lt;code&gt;MasterDetailPage&lt;/code&gt; があると、 &lt;code&gt;NavigationPage&lt;/code&gt; の方が勝ってしまい、ナビゲーションバーには「BACK」ボタンが表示されてしまいます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/customizing_left_navvigationbar_button_in_masterdetail_with_navigation_pages_02.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;これを消そうと、&lt;code&gt;MasterDetailPage&lt;/code&gt; のコンストラクタで &lt;code&gt;NavigationPage.SetHasBackButton(this, false)&lt;/code&gt; してみます。&lt;/p&gt;
-
-&lt;p&gt;その結果がこれ。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/customizing_left_navvigationbar_button_in_masterdetail_with_navigation_pages_03.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Android の方は望む結果になったけど、iOSの方はうーん…、BACKボタンは消えたけど、メニューを表示させるボタンが出ません。&lt;/p&gt;
-
-&lt;p&gt;しょうがないので、iOS の場合だけ、ナビゲーションバーの左ボタンをどうにかして追加してみます。&lt;/p&gt;
-
-&lt;h2&gt;私が求めていたソリューション（CustomRenderer編）&lt;/h2&gt;
-
-&lt;p&gt;Xamarin.Forms のお供、CustomRenderer です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.xamarin.com/guides/xamarin-forms/custom-renderer/&quot;&gt;Customizing Controls on Each Platform - Xamarin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ticktack.hatenablog.jp/entry/2016/06/11/124751&quot;&gt;【Xamarin.Forms】ViewRendererと仲良くなるための簡易チュートリアル - ぴーさんログ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;MasterDetailPage&lt;/code&gt; の iOS向けCustomRenderer を作って、ネイティブ側でナビゲーションバーをカスタマイズしてみます。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// CustomMasterDetailRenderer.cs
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;MasterDetail.iOS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;MonoTouch.UIKit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Xamarin.Forms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Xamarin.Forms.Platform.iOS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;[assembly: ExportRenderer(typeof(MasterDetailPage), typeof(CustomMasterDetailRenderer))]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;MasterDetail.iOS&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomMasterDetailRenderer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PhoneMasterDetailRenderer&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ViewWillAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ViewWillAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Element&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MasterDetailPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;navigationItem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NavigationController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TopViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NavigationItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;navigationItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LeftBarButtonItems&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIBarButtonItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UIBarButtonItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MENU&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIBarButtonItemStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Plain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; 
-                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IsPresented&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IsPresented&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-                &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;「MENU」ってボタンを、ナビゲーションバーの左側に追加しています。&lt;br&gt;
-こんな CustomRenderer を iOS 側のプロジェクトに追加して実行してみます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/customizing_left_navvigationbar_button_in_masterdetail_with_navigation_pages_04.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;オーケーオーケー、これが私が求めていたソリューションです。&lt;/p&gt;
-
-&lt;h2&gt;私が求めていたソリューション（Effects編）&lt;/h2&gt;
-
-&lt;p&gt;が、CustomRenderer にはいくつか考えなければならないことがあります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;上で作った &lt;code&gt;CustomMasterDetailRenderer.cs&lt;/code&gt; は &lt;code&gt;PhoneMasterDetailRenderer&lt;/code&gt; というクラスを継承しています。が、実はこれは iPhone 用で、実はタブレット（iPad）用に &lt;code&gt;TabletMasterDetailRenderer&lt;/code&gt; というクラスもあります。これの CustomRenderer も用意しなければなりませんか？&lt;/li&gt;
-&lt;li&gt;CustomRenderer はベースとなる ViewRenderer を「継承」して作ります。そして C# は多重継承を許していません、この意味が分かるな？別の機能を拡張したいと思ったら&lt;code&gt;CustomMasterDetailRenderer&lt;/code&gt;から派生させるしかなくなります。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;で、 Xamarin.Forms には、v2.1 から既存機能の拡張に Effects という選択肢が加わりました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.xamarin.com/guides/xamarin-forms/effects/&quot;&gt;Customizing Controls with Effects - Xamarin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ticktack.hatenablog.jp/entry/2016/01/26/020248&quot;&gt;【Xamarin.Forms 2.1.0(プレビュー)】Effects - ぴーさんログ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;では、&lt;code&gt;CustomMasterDetailRenderer.cs&lt;/code&gt; を Effects に変えてみましょう。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// CustomMasterDetailEffect.cs
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;MasterDetail.iOS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;MonoTouch.UIKit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Xamarin.Forms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Xamarin.Forms.Platform.iOS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;[assembly: ResolutionGroupName(&quot;mycompany&quot;)]&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;[assembly: ExportEffect(typeof(CustomMasterDetailEffect), &quot;CustomMasterDetailEffect&quot;)]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;MasterDetail.iOS&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomMasterDetailEffect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PlatformEffect&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnAttached&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Element&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MasterDetailPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Appearing&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Page_Appearing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnDetached&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Element&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MasterDetailPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Appearing&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Page_Appearing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Page_Appearing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EventArgs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetParentViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Element&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MasterDetailPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;navigationItem&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NavigationController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TopViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NavigationItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;navigationItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LeftBarButtonItems&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIBarButtonItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UIBarButtonItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MENU&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIBarButtonItemStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Plain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; 
-                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IsPresented&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IsPresented&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-                &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;UIViewController&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetParentViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;UIResponder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;responder&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;responder&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;responder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NextResponder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;responder&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;responder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Effect は、 &lt;code&gt;ResolutionGroupName&lt;/code&gt; と &lt;code&gt;ExportEffect&lt;/code&gt; で定義した名称を使って、PCL側プロジェクトで Page に追加します。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// RootPage.cs
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RootPage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MasterDetailPage&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RootPage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;NavigationPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;SetHasBackButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Effect を追加する
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;Effects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Effect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mycompany.CustomMasterDetailEffect&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;// 以下省略
-&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/264530/qiita/customizing_left_navvigationbar_button_in_masterdetail_with_navigation_pages_05.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;こちらも、CustomRenderer と同じことができました。&lt;/p&gt;
-
-&lt;p&gt;が、ちょっと黒魔術っぽいの使ってます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Effects.Container&lt;/code&gt; から取得できるのは &lt;code&gt;UIView&lt;/code&gt; です。親の &lt;code&gt;UIViewController&lt;/code&gt; を得るには、 &lt;code&gt;GetParentViewController()&lt;/code&gt; でやってるような事をしなければなりません&lt;/li&gt;
-&lt;li&gt;CustomRenderer はそれ自体は &lt;code&gt;ViewController&lt;/code&gt; だったので &lt;code&gt;ViewWillAppear()&lt;/code&gt; など画面のライフサイクルコールバックを override することができました。が、Effects から ViewController のライフサイクルイベントをハンドリングできません。代わりに Xamarin.Forms 側の &lt;code&gt;Page&lt;/code&gt; のライフサイクルから &lt;code&gt;Appearing&lt;/code&gt; イベントで処理するようにしています。そのため、「MENU」ボタンが表示されるタイミングが若干遅れます。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;CustomRenderer と Effects 、どちらを使えばいいの？&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CustomRenderer はできる事は多いが、複数の CustomRenderer を適用することはできない&lt;/li&gt;
-&lt;li&gt;Effects はできる事は少ないが、複数の機能拡張を同時に適用できる&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;以上を考えると、&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;まずあなたの行いたいことが Effects で実現できないか、試してみる&lt;/li&gt;
-&lt;li&gt;Effects でできないレベルなら CustomRenderer を選択する&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;となるでしょう。&lt;/p&gt;
-
-&lt;p&gt;本件のネタは、 Effects ではかなりムリをして実現しているので、CustomRenderer の方が相応しいと思われます。&lt;br&gt;
-が、CustomRenderer はここぞという時にとっておきたい気もします。&lt;br&gt;
-このさじ加減は、作るアプリの規模・深度、汎用性、再利用性などによって変わってくるでしょう。Effects の方が汎用性・再利用性は高いですが、ネイティブのUIパーツをごっそり入れ替えるような深い事は、CustomRenderer でなければできません。&lt;/p&gt;
-
-&lt;p&gt;今回のプログラムは Github に上げてあります。（&lt;code&gt;CustomMasterDetailRenderer.cs&lt;/code&gt; はコメントアウトしてあって、Effects の方を活かしてます。）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/amay077/XFNavigationWithMasterDetailSample/blob/master/README.md&quot;&gt;XFNavigationWithMasterDetailSample/README.md at master · amay077/XFNavigationWithMasterDetailSample&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;私は「Effects で頑張りたい派」かな。&lt;/p&gt;
-</description>
-        <pubDate>Fri, 22 Jul 2016 23:59:59 +0900</pubDate>
-        <link>http://localhost:4000/blog/2016/07/22/customizing_left_button_on_-NavigationBar_in_using_navigationpage_with_masterdetailpage/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/07/22/customizing_left_button_on_-NavigationBar_in_using_navigationpage_with_masterdetailpage/</guid>
-        
-        
-        <category>Xamarin</category>
-        
-        <category>Xamarin.Forms</category>
         
         <category>iOS</category>
         
