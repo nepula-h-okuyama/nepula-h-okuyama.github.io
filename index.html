@@ -5,6 +5,8 @@
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
   <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,18 +16,18 @@
   <meta name="description" content="Try and try again
 ">
 
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://blog.amay077.net/">
+  <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://blog.amay077.net/feed.xml">
 
   <script type="application/ld+json">
   
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4000/",
+  "mainEntityOfPage": "http://blog.amay077.net/",
   "headline": "Experiments Never Fail",
-  "datePublished": "2016-11-10T03:26:43+09:00",
-  "dateModified": "2016-11-10T03:26:43+09:00",
+  "datePublished": "2016-11-15T01:01:28+09:00",
+  "dateModified": "2016-11-15T01:01:28+09:00",
   "description": "Try and try again
 ",
   "author": {
@@ -37,14 +39,14 @@
     "name": "Experiments Never Fail",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4000/assets/images/logo.png",
+      "url": "http://blog.amay077.net/assets/images/logo.png",
       "width": "60",
       "height": "60"
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4000/assets/images/logo.png",
+    "url": "http://blog.amay077.net/assets/images/logo.png",
     "height": "60",
     "width": "60"
   }
@@ -532,24 +534,27 @@ img {
 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-224332-7']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
 </head>
 
   <body>
+    
+  <amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-224332-7"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+  </amp-analytics>
+
+
     <header class="site-header">
   <a href="/" class="logo"><span class="logo"><amp-img src="/assets/images/logo.png" width="48" height="48" /></span></a>
 
@@ -624,6 +629,55 @@ img {
   </header>
 
   <div class="cf frame">
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <div class="article-item">
+          <header class="post-header">
+            <h2 class="post-title" itemprop="name"><a href="/blog/2016/11/11/reactive_ppap_in_csharp-%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC/" itemprop="url">C# で Reactive PPAP</a></h2>
+          </header>
+          <section class="post-excerpt" itemprop="description">
+            <p>エンジニア立ち居振舞いには乗らないが、こういうのには乗ってしまうｗ
+
+
+</p>
+          </section>
+          <div class="post-meta">
+            <time datetime="11 November 2016">11 November 2016</time>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <div class="article-item">
+          <header class="post-header">
+            <h2 class="post-title" itemprop="name"><a href="/blog/2016/11/05/hiding_and_changing_title_back_button_in_navigation_page_on_xamarin_forms/" itemprop="url">Xamarin.Forms の NavigationPage で戻るボタンを消す＆タイトルを変える</a></h2>
+          </header>
+          <section class="post-excerpt" itemprop="description">
+            <p>Xamarin.Forms で NavigationPage を使うと、 iOS では ナビゲーションバー(UINavigationBar)、Android では Action Bar がそれぞれ使用されます。
+
+</p>
+          </section>
+          <div class="post-meta">
+            <time datetime="05 November 2016">05 November 2016</time>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <div class="article-item">
+          <header class="post-header">
+            <h2 class="post-title" itemprop="name"><a href="/blog/2016/11/02/convert_nsdate_to_datetime_in_xamarin_ios/" itemprop="url">Xamarin.iOS で NSDate を DateTime に変換する</a></h2>
+          </header>
+          <section class="post-excerpt" itemprop="description">
+            <p>なんで NSDate ってこんなにわけわからんの？
+
+</p>
+          </section>
+          <div class="post-meta">
+            <time datetime="02 November 2016">02 November 2016</time>
+          </div>
+        </div>
+      </article>
     
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
         <div class="article-item">
@@ -733,56 +787,6 @@ img {
           </section>
           <div class="post-meta">
             <time datetime="29 September 2016">29 September 2016</time>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-        <div class="article-item">
-          <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="/blog/2016/09/16/airbnb_first_impression/" itemprop="url">東京出張で AirBnB を初めて使ってみた</a></h2>
-          </header>
-          <section class="post-excerpt" itemprop="description">
-            <p>　仕事で東京に１週間滞在する機会があったので、初めて AirBnB を使ってみました。
-
-</p>
-          </section>
-          <div class="post-meta">
-            <time datetime="16 September 2016">16 September 2016</time>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-        <div class="article-item">
-          <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="/blog/2016/09/10/joined-xamarin-hads-on-ad-hamamatsu-revenge/" itemprop="url">Xamarinハンズオン浜松(再び) で講師をしました</a></h2>
-          </header>
-          <section class="post-excerpt" itemprop="description">
-            <p>
-  Xamarinハンズオン浜松(再び) #JXUG #jaghama - connpass
-
-
-</p>
-          </section>
-          <div class="post-meta">
-            <time datetime="10 September 2016">10 September 2016</time>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-        <div class="article-item">
-          <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="/blog/2016/08/26/ger_is_network_available_on_xamarin_ios/" itemprop="url">Xamarin.iOS でインターネット通信が可能かを取得する</a></h2>
-          </header>
-          <section class="post-excerpt" itemprop="description">
-            <p>Xamarin.iOS で、「端末からインターネット通信が可能か？」を調べたい。
-
-</p>
-          </section>
-          <div class="post-meta">
-            <time datetime="26 August 2016">26 August 2016</time>
           </div>
         </div>
       </article>

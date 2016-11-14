@@ -5,27 +5,29 @@
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
   <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all" />
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>My New Post</title>
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit!">
+  <title>Xamarin.Forms の NavigationPage で戻るボタンを消す＆タイトルを変える</title>
+  <meta name="description" content="Xamarin.Forms で NavigationPage を使うと、 iOS では ナビゲーションバー(UINavigationBar)、Android では Action Bar がそれぞれ使用されます。">
 
-  <link rel="canonical" href="http://localhost:4000/blog/2016/03/13/my-new-post/">
-  <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://blog.amay077.net/blog/2016/11/05/hiding_and_changing_title_back_button_in_navigation_page_on_xamarin_forms/">
+  <link rel="alternate" type="application/rss+xml" title="Experiments Never Fail" href="http://blog.amay077.net/feed.xml">
 
   <script type="application/ld+json">
   
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4000/blog/2016/03/13/my-new-post/",
-  "headline": "My New Post",
-  "datePublished": "2016-03-13T00:00:00+09:00",
-  "dateModified": "2016-03-13T00:00:00+09:00",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit!",
+  "mainEntityOfPage": "http://blog.amay077.net/blog/2016/11/05/hiding_and_changing_title_back_button_in_navigation_page_on_xamarin_forms/",
+  "headline": "Xamarin.Forms の NavigationPage で戻るボタンを消す＆タイトルを変える",
+  "datePublished": "2016-11-05T23:59:59+09:00",
+  "dateModified": "2016-11-05T23:59:59+09:00",
+  "description": "Xamarin.Forms で NavigationPage を使うと、 iOS では ナビゲーションバー(UINavigationBar)、Android では Action Bar がそれぞれ使用されます。",
   "author": {
     "@type": "Person",
     "name": "amay077"
@@ -35,14 +37,14 @@
     "name": "Experiments Never Fail",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4000/assets/images/logo.png",
+      "url": "http://blog.amay077.net/assets/images/logo.png",
       "width": "60",
       "height": "60"
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4000/assets/images/logo.png",
+    "url": "http://blog.amay077.net/assets/images/logo.png",
     "height": "60",
     "width": "60"
   }
@@ -530,24 +532,27 @@ img {
 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-224332-7']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
 </head>
 
   <body>
+    
+  <amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-224332-7"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+  </amp-analytics>
+
+
     <header class="site-header">
   <a href="/" class="logo"><span class="logo"><amp-img src="/assets/images/logo.png" width="48" height="48" /></span></a>
 
@@ -616,37 +621,90 @@ img {
     <main class="content" role="main">
   <article class="post">
     <div class="post-meta">
-      <h1 class="post-title">My New Post</h1>
+      <h1 class="post-title">Xamarin.Forms の NavigationPage で戻るボタンを消す＆タイトルを変える</h1>
     </div>
 
     <section class="post-content">
       <a name="topofpage"></a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit!</p>
+      <p>Xamarin.Forms で <code class="highlighter-rouge">NavigationPage</code> を使うと、 iOS では <a href="https://developer.apple.com/jp/documentation/UserExperience/Conceptual/MobileHIG/Bars/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW3">ナビゲーションバー(UINavigationBar)</a>、Android では <a href="https://developer.android.com/design/patterns/actionbar.html">Action Bar</a> がそれぞれ使用されます。</p>
 
-<amp-img width="600" height="500" layout="responsive" src="http://lorempixel.com/600/500/transport"></amp-img>
+<!--more-->
 
-<p>Nulla dapibus vestibulum ligula in sodales. Phasellus eu metus quam. Sed id varius diam. Morbi pellentesque lorem vitae ex commodo, sed dapibus ex dignissim. Etiam facilisis pellentesque gravida. Sed tempus diam sed odio tempor, tristique elementum erat condimentum. Ut volutpat dui ex, a auctor dolor pretium eget.</p>
+<p>プラットフォーム標準のナビゲーション機能が共通の定義で使えるのは便利ですが、アプリの要件によっては、カスタマイズした場面もあるでしょう。</p>
 
-<p>Vivamus nec mauris suscipit enim viverra tristique ut eget risus. Vestibulum ullamcorper at sem eu sodales. Praesent felis tellus, condimentum vitae purus id, consectetur interdum urna. Pellentesque laoreet non arcu volutpat euismod. Suspendisse sed enim non ex interdum sodales. Quisque vitae vestibulum turpis. Aenean nec est dolor.</p>
+<h2 id="section">戻るボタンを消す</h2>
 
-<blockquote>
-  <p>Pellentesque quis mi at erat iaculis cursus. Phasellus ligula neque, pulvinar sed malesuada id, feugiat ac magna. Proin sed scelerisque metus. Pellentesque mi augue, egestas nec ante a, faucibus ullamcorper enim. Sed nisi felis, rutrum imperdiet aliquam nec, placerat vel odio. Nulla quis urna ut risus aliquam tempor.</p>
-</blockquote>
+<p>戻るボタンを消したい場合、 Page の XAML に <code class="highlighter-rouge">NavigationPage.HasBackButton="false"</code> を追加します。</p>
 
-<amp-img width="600" height="300" layout="responsive" src="http://lorempixel.com/600/300/transport"></amp-img>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;ContentPage</span> <span class="na">xmlns=</span><span class="s">"http://xamarin.com/schemas/2014/forms"</span> 
+			 <span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2009/xaml"</span> 
+			 <span class="na">x:Class=</span><span class="s">"WorkingWithNavigation.Page2Xaml"</span>
+			 <span class="na">NavigationPage.HasBackButton=</span><span class="s">"false"</span>
+			 <span class="na">Title=</span><span class="s">"Page 2"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
 
-<p>Nulla mi risus, lobortis quis lectus vel, gravida eleifend lacus. Proin mattis odio elit, nec vehicula diam varius vitae. Nunc a ipsum at justo rhoncus mattis. Proin auctor lorem quis libero viverra aliquam. Suspendisse quis tristique sapien. Integer eu felis vel orci dignissim suscipit pharetra vitae nisl. Ut viverra sed enim quis pretium. Etiam auctor a ante sed pharetra.</p>
+<p>コードでは、 <code class="highlighter-rouge">NavigationPage.SetHasBackButton(page2, false)</code> と書けます。</p>
+
+<p>これを実行すると、下のようになります。</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/customize_back_button_in_Xamarin_forms_01.gif" alt="" /></p>
+
+<p>Page2 に仕掛けているので、iOS では Page2 だけ、戻るボタンが表示されないのが確認できます。<br />
+Android はちょっとわかりにくいですが、ActionBar のアイコンの横に着いている ＜ のアイコンが、 Page2 だけ表示されないのが確認できます。</p>
+
+<h2 id="section-1">戻るボタンのタイトルを変える</h2>
+
+<p>iOS の UINavigationBar では、戻るボタンには前画面のタイトルが表示されます。<br />
+Xamarin.Forms の NavigationPage も同じくです。<br />
+これを変更するには、 <code class="highlighter-rouge">NavigationPage.BackButtonTitle="たいとる"</code> を使います。</p>
+
+<p>要注意なのは、これを仕掛けたPageの戻るボタンタイトルが変わるのではなく、 <strong>これを仕掛けたPageが戻り先となる場合に、戻るボタンタイトルが変わる</strong> ということです。</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;ContentPage</span> <span class="na">xmlns=</span><span class="s">"http://xamarin.com/schemas/2014/forms"</span> 
+			 <span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2009/xaml"</span> 
+			 <span class="na">x:Class=</span><span class="s">"WorkingWithNavigation.Page2Xaml"</span>
+			 <span class="na">NavigationPage.BackButtonTitle=</span><span class="s">"BACK"</span>
+			 <span class="na">Title=</span><span class="s">"Page 2"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>コードでは、 <code class="highlighter-rouge">NavigationPage.SetBackButtonTitle(page2, "BACK")</code> と書けます。</p>
+
+<p>これを実行すると、下のようになります。</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/264530/qiita/customize_back_button_in_Xamarin_forms_02.gif" alt="" /></p>
+
+<p>Page2 に <code class="highlighter-rouge">BackButtonTitle="BACK"</code> を仕掛けているので、Page2 ではなく、それが戻り先となる Page3 の戻るボタンが「BACK」になっています。</p>
+
+<p>尚、Android では、戻るボタンは「＜」のアイコンだけなので、この機能は無視されます。</p>
+
+<h2 id="section-2">参考</h2>
+
+<ul>
+  <li><a href="https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/hierarchical/">Hierarchical Navigation - Xamarin</a></li>
+  <li><a href="https://github.com/xamarin/xamarin-forms-samples/tree/master/Navigation/Hierarchical">サンプル：Hierarchical Navigation - GitHub</a></li>
+  <li><a href="http://motzcod.es/post/136765476207/changing-ioss-back-button-text-in-xamarinforms">MotzCod.es by James Montemagno — Changing iOS’s Back Button Text in Xamarin.Forms</a></li>
+</ul>
 
     </section>
     <footer class="post-footer">
 
       <section class="categories">
         
-        <p class="published">published <time datetime="2016-03-13 00:00">13 Mar 2016</time></p>
+        <div class="category">Xamarin</div>
+        
+        <div class="category">Android</div>
+        
+        <div class="category">iOS</div>
+        
+        <p class="published">published <time datetime="2016-11-05 23:59">05 Nov 2016</time></p>
       </section>
       
       <section class="share">
-        <a class="icon" href="https://twitter.com/intent/tweet?url=http://localhost:4000/blog/2016/03/13/my-new-post&text=My+New+Post&via=amay077" target="_blank">
+        <a class="icon" href="https://twitter.com/intent/tweet?url=http://blog.amay077.net/blog/2016/11/05/hiding_and_changing_title_back_button_in_navigation_page_on_xamarin_forms&text=Xamarin.Forms+%E3%81%AE+NavigationPage+%E3%81%A7%E6%88%BB%E3%82%8B%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%B6%88%E3%81%99%EF%BC%86%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B&via=amay077" target="_blank">
           Share on
           
 <span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
@@ -658,30 +716,19 @@ img {
 
       <div class="amazon-ads">
         <h4>Ads</h4>
-        <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?t=oku2008-22&o=9&p=48&l=st1&mode=books-jp&search=&lt1=_blank&lc1=469AF6&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+        <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?t=oku2008-22&o=9&p=48&l=st1&mode=books-jp&search=Xamarin%7CAndroid%7CiOS&lt1=_blank&lc1=469AF6&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
       </div>
       
       <section class="disqus">
         <div id="disqus_thread"></div>
-        <script>
-
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = '//experimentsneverfail.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <amp-iframe
+          height="300"
+          sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          resizable
+          frameborder="0"
+          src="https://s3.amazonaws.com/dangoldin.com/amp-disqus.html?url=http%3A%2F%2Fblog.amay077.net%2Fblog%2F2016%2F11%2F05%2Fhiding_and_changing_title_back_button_in_navigation_page_on_xamarin_forms&disqus_name=https%3A%2F%2Fexperimentsneverfail.disqus.com%2Fembed.js">
+          <div overflow tabindex="0" role="button" aria-label="Read more">Read more!</div>
+        </amp-iframe>
       </section>
 
     </footer>
